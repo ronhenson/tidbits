@@ -1,0 +1,75 @@
+---
+title: "Gnome Wayland or X11 command"
+created: 20210613184530
+tags: [ devops ]
+---
+
+links
+: [[placeholder]]
+
+# Gnome Wayland or X11 command
+
+! How to know whether Wayland or X11 is being used and set
+
+```bsh
+$loginctl
+SESSION  UID  USER    SEAT  TTY
+      5  1001 debiron seat0 tty2
+
+$ loginctl show-session 5 -p Type
+Type=X11
+# or 
+Type=wayland
+```
+
+**NOTE** stackexchange: 2017-07 (not very new)
+
+Recent versions of Fedora uses Wayland by default. However, things can prevent Fedora from using it, mainly drivers. Most likely, it is only one thing: NVIDIA proprietary drivers.
+
+To enable Wayland for Gnome in Fedora, two main actions are needed, as explained below in details:
+
+TL;DR: Enable Wayland in the GDM configurations in `/etc/gdm/custom.conf`
+
+Open `/etc/gdm/custom.conf` for editing (as you know, you must be root).
+
+Go to the line which looks like the following:
+
+```yml
+        [daemon]
+        WaylandEnable=false
+```
+
+        Change it to (even if the line was commented):
+		
+```yml
+        [daemon]
+        WaylandEnable=true
+```
+        Save the file and exit.
+
+TL;DR: Comment out all Wayland-disabling lines in `/usr/lib/udev/rules.d/61-gdm.rules` (thanks to this forum thread)
+
+        Open `/usr/lib/udev/rules.d/61-gdm.rules` for editing (root, again).
+
+        Comment lines which causes Wayland not to start; usually, it's related to proprietary NVIDIA drivers. The comments before each line should help you on that. For example, I commented the following line:
+
+```yml
+# disable Wayland when using the proprietary nvidia driver
+DRIVER=="nvidia", RUN+="/usr/libexec/gdm-disable-wayland"
+```
+
+Save the file and exit.
+
+Note: As you are probably using NVIDIA proprietary drivers, this step should make you able to use Wayland alongside these drivers. See egl-wayland and this.
+
+However, you may not experience the best performance, as well as having other problems. For example, nvidia-settings only work in `X11`, `Xwayland` has problems with 3D hardware accelerations, and as a result, `glxinfo` shows `llvmpipe` as the renderer (also the About section on recent version of Gnome Settings). Nonetheless, you can verify the running driver by 
+		
+```bsh
+lspci -vnn
+```
+
+, if you did the steps correctly. See this, also.
+
+Duh. It's NVIDIA, BTW.
+
+Restart your computer (a logout and login should not be enough). Before logging in, inside logging options, you should now see both "Gnome" and "Gnome on Xorg", which the first one is the Wayland option. Using it, you should able to use Wayland on Gnome. Enjoy it!

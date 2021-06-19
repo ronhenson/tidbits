@@ -1,0 +1,72 @@
+---
+title: "Vim change to upper lower case"
+created: 20210611175511
+tags: [ vim, howto ]
+keywords: [ uppercase, lowercase, capitalization, capital ]
+---
+
+links
+: [[vim-paste-yanked-text-into-command-line]]
+# Vim change to upper lower case
+
+~
+: Toggle case of the character under the cursor, or all visually-selected characters.
+
+3~
+: Toggle case of the next three characters.
+
+g~3w
+: Toggle case of the next three words.
+
+g~iw
+: Toggle case of the current word (inner word – cursor anywhere in word).
+
+g~$
+: Toggle case of all characters to end of line.
+
+g~~
+: Toggle case of the current line (same as V~).
+
+The above uses ~ to toggle case. In each example, you can replace ~ with u to convert to lowercase, or with U to convert to uppercase. For example:
+
+U
+: Uppercase the visually-selected text.
+  First press v or V then move to select text.
+  If you don't select text, pressing U will undo all changes to the current line.
+
+gUU
+: Change the current line to uppercase (same as VU).
+
+gUiw
+: Change current word to uppercase.
+
+u
+: Lowercase the visually-selected text.
+  If you don't select text, pressing u will undo the last change.
+
+guu
+: Change the current line to lowercase (same as Vu).
+
+## Title case
+
+The :s substitute command can change case (see :help s/\u).
+
+The following converts the current line to Title Case (all lowercase, except for initial uppercase letters):
+
+```vim
+:s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g
+```
+
+Explanation The search pattern is `\<\(\w\)\(\w*\)\>` which searches for \< (beginning of word), then \w (a word character), then \w* (zero or more word characters), then \> (end of word). The \(...\) create subexpressions to be recalled with \1 and \2 in the replacement. The replacement is \u\1\L\2 which substitutes the two subexpressions transformed: The \u converts the first character of what follows to uppercase, while \L converts all of what follows to lowercase.
+
+This approach has shortcomings in cases where words may contain what the regular expression recognizes as non-word characters, such as an apostrophe in "I'll" or "she's". An alternative based on whitespace for word boundaries is:
+
+```vim
+:s/\<\(\w\)\(\S*\)/\u\1\L\2/g
+```vim
+
+Another alternative is to replace the separator with # and use \v (very magic) to reduce the need to escape characters.
+
+```vim
+:s#\v(\w)(\S*)#\u\1\L\2#g
+```
