@@ -267,18 +267,4 @@ Here you see the huge advantages of auto-type: it not only doesn't require any a
 
 When you would use window/sequence associations (instead of entry title matching), you can achieve the same browser-independent effect using wildcards: you could for example have used `Test Form - KeePass - *` as window filter. This filter matches both the Internet Explorer and the Firefox window.
 
-[1]: https://keepass.info/help/base/tans.html "TAN entries"
-[2]: https://keepass.info/help/v2/autotype_obfuscation.html "Two-Channel Auto-Type Obfuscation"
-[3]: https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/bb625963%28v=msdn.10%29 "Windows Integrity Mechanism Design"
-[4]: https://en.wikipedia.org/wiki/Spacing_Modifier_Letters "spacing modifier letters"
-[5]: https://keepass.info/help/kb/autotype_wayland.html "Auto-Type on Wayland"
-[6]: https://keepass.info/help/base/placeholders.html "placeholders"
-[7]: https://keepass.info/help/base/placeholders.html#envvars "environment variables"
-[8]: https://keepass.info/help/base/fieldrefs.html "field references"
-[9]: https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes "virtual key"
-[10]: https://keepass.info/help/base/autotype.html#vkey "below"
-[11]: https://docs.microsoft.com/en-us/windows/win32/inputdev/about-keyboard-input#extended-key-flag "extended key"
-[12]: https://keepass.info/help/base/placeholders.html#cmd "`{CMD:/.../}`"
-[13]: https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference "regular expressions"
-[14]: https://keepass.info/help/base/autotype.html "Keepass Auto-Type"
-[15]: https://keepass.info/help/kb/testform.html "test page"
+

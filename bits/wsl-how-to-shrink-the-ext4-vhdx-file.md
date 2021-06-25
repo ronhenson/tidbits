@@ -4,9 +4,6 @@ created: 2021-06-13 18:52:22
 tags: [devops]
 ---
 
-links
-: [[placeholder]]
-
 # WSL how to shrink the ext4 vhdx file
 
 # **Make sure the wsl is not running**
@@ -18,7 +15,6 @@ wsl.exe --list --verbose  	#  ffind out what is running
 wsl.exe --terminate <name>	# will stop if needed
 ```
 
-
 ```powershell
 diskpart.exe
 DISKPART> select vdisk file="D:\wsl\ubuntu-2\ext4.vhdx"
@@ -27,3 +23,8 @@ DISKPART> compact vdisk
 Diskpart succesfully compacted the virtual disk file.
 DISKPART>exit
 ```
+
+links
+: [[mwin]]
+
+
