@@ -39,4 +39,3 @@ The following properties can be used:
 ```
 
 The above configuration would create a file `journal/daily-note-2020-07-25.mdx`, with the heading `Journal Entry, Sunday, July 25`.
-

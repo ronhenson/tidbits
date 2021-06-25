@@ -1,11 +1,8 @@
 ---
 title: "AWS allocated IPv4 address"
-created: 20210613190216
+created: 2021-06-13 19:02:16
 tags: [ devops ]
 ---
-links
-: [[placeholder]]
-
 # AWS-allocated-IPv4-address
 
 ```text

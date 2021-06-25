@@ -1,11 +1,8 @@
 ---
 title: "Mysql Database timezone 20 03 21"
-created: 200321101010
+created: 2003-11-10 10:10:10
 tags: [ database, issue, spring-boot ]
 ---
-
-links
-: [[Smoothstack-WSS-Utopia-Airlines-application-properties]]
 
 # Mysql Database timezone 20 03 21
 

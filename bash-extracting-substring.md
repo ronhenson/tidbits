@@ -1,11 +1,8 @@
 ---
 title: "BASH extracting substring"
-created: 20150124203600
+created: 2015-01-24 20:36:00
 tags: [ bash, example ]
 ---
-
-links
-: [[placeholder]]
 
 # BASH extracting substring
 

@@ -1,6 +1,6 @@
 ---
 title: "WSL how to shrink the ext4 vhdx file"
-created: 20210613185222
+created: 2021-06-13 18:52:22
 tags: [ devops ]
 ---
 

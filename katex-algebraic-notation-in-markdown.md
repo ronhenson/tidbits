@@ -1,14 +1,9 @@
 ---
 title: "Katex algebraic notation in markdown"
-created: 20210613075051
+created: 2021-06-13 07:50:51
 tags: [ markdown, exammple ]
 ---
 # Katex-algebraic-notation-in-markdown
-
-links
-: [[placeholder]]
-
-# Katex algebraic notation in markdown
 
 Area of a circle is $\pi r^2$
 ***

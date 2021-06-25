@@ -1,11 +1,8 @@
 ---
 title: "mermaid"
-created: 20210613075503
+created: 2021-06-13 07:55:03
 tags: [ markdown, example ]
 ---
-
-links
-: [[placeholder]]
 
 # mermaid
 

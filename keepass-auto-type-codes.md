@@ -1,11 +1,8 @@
 ---
 title: "Keepass auto type codes"
-created: 20210614060723
+created: 2021-06-14 06:07:23
 tags: [ keepass ]
 ---
-
-links
-: [[placeholder]]
 
 # [Keepass auto type codes][14]
 

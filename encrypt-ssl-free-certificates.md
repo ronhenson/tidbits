@@ -1,11 +1,8 @@
 ---
 title: "Encrypt ssl free certificates"
-created: 20210425162900
+created: 2021-04-25 16:29:00
 tags: [ web, security ]
 ---
-
-links
-: [[placeholder]]
 
 # Encrypt ssl free certificates
 

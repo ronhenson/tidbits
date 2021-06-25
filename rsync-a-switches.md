@@ -1,11 +1,8 @@
 ---
 title: "rsync a switches"
-created: 20210614063858
+created: 2021-06-14 06:38:58
 tags: [ rsync ]
 ---
-
-links
-: [[placeholder]]
 
 # rsync a switches
 

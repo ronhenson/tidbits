@@ -1,6 +1,6 @@
 ---
 title: "WSL how to export and import to another folder"
-created: 20210613185716
+created: 2021-06-13 18:57:16
 tags: [ devops ]
 ---
 

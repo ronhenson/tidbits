@@ -1,11 +1,8 @@
 ---
 title: "Imposter syndrome"
-created: 20210613182158
+created: 2021-06-13 18:21:58
 tags: [health self-help ]
 ---
-
-links:
-: [[placeholder]]
 
 #  Imposter syndrome 
 

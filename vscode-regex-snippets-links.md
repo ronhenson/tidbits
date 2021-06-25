@@ -14,7 +14,7 @@ tags: []
 - [VSCode chaining regex transforms in a snippet]
   - `${TM_FILENAME_BASE/([^-]+)(-*)/${1:/capitalize}${2:+ }/g}`
   
-[vscode regex]: https://docs.microsoft.com/en-us/visualstudio/ide/using-regular-expressions-in-visual-studio?view=vs-2019
+[vscode regex]: https://docs.microsoft.com/en-us/visualstudio/ide/using-regular-e20210301101000xpressions-in-visual-studio?view=vs-2019
 [vscode snippets]: https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax
 [vscode snippets Microsoft github]: https://github.com/microsoft/vscode-docs/blob/main/docs/editor/userdefinedsnippets.md
 [vscode titlecase]: https://stackoverflow.com/questions/52874954/when-creating-a-vscode-snippet-how-can-i-transform-a-variable-to-title-case-li

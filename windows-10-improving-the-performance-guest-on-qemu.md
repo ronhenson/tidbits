@@ -1,11 +1,8 @@
 ---
 title: "Windows 10 improving the performance guest on QEMU"
-created: 20210301101000
+created: 2021-03-01 10:10:00
 tags: [ vm ]
 ---
-
-links
-: [[placeholder]]
 
 # [Windows 10 improving the performance guest on QEMU](https://leduccc.medium.com/improving-the-performance-of-a-windows-10-guest-on-qemu-a5b3f54d9cf5)
 

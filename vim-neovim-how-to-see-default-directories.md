@@ -1,11 +1,8 @@
 ---
 title: "Vim Neovim how to see default directories"
-created: 20210613193633
+created: 2021-06-13 19:36:33
 tags: [ vim ]
 ---
-
-links
-: [[placeholder]]
 
 # Vim Neovim how to see default directories
 

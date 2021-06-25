@@ -1,11 +1,8 @@
 ---
 title: "Fedora dnf installing deb packages"
-created: 20210613190546
+created: 2021-06-13 19:05:46
 tags: [ linux, devops ]
 ---
-
-links
-: [[placeholder]]
 
 # Fedora dnf installing deb packages
 
