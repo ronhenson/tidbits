@@ -6,7 +6,7 @@
 	],
 	"settings": {
 		"files.defaultLanguage": "markdown",
-		"foam.edit.linkReferenceDefinitions": "withoutExtensions",
+		"foam.edit.linkReferenceDefinitions": "withExtensions",
 		"foam.openDailyNote.directory": "journal",
 		"foam.openDailyNote.titleFormat": "fullDate",
 		"pasteImage.path": "${projectRoot}/attachments",
