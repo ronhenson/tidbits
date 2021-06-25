@@ -1,7 +1,7 @@
 ---
 title: "rsync a switches"
 created: 2021-06-14 06:38:58
-tags: [ rsync ]
+tags: [rsync]
 ---
 
 # rsync a switches

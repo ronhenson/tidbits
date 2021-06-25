@@ -1,7 +1,7 @@
 ---
 title: "Katex algebraic notation in markdown"
 created: 2021-06-13 07:50:51
-tags: [ markdown, exammple ]
+tags: [markdown, exammple]
 ---
 # Katex-algebraic-notation-in-markdown
 

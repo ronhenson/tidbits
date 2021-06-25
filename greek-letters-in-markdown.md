@@ -1,7 +1,7 @@
 ---
 title: "Greek letters in markdown"
 created: 2021-06-13 07:55:03
-tags: [ markdown ]
+tags: [markdown]
 ---
 
 # Greek letters in markdown

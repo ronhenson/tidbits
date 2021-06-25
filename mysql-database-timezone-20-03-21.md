@@ -1,7 +1,7 @@
 ---
 title: "Mysql Database timezone 20 03 21"
 created: 2003-11-10 10:10:10
-tags: [ database, issue, spring-boot ]
+tags: [database, issue, spring-boot]
 ---
 
 # Mysql Database timezone 20 03 21

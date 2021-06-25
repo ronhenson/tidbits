@@ -1,7 +1,7 @@
 ---
 title: "Encrypt ssl free certificates"
 created: 2021-04-25 16:29:00
-tags: [ web, security ]
+tags: [web, security]
 ---
 
 # Encrypt ssl free certificates

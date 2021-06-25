@@ -1,7 +1,7 @@
 ---
 title: "Keepass auto type codes"
 created: 2021-06-14 06:07:23
-tags: [ keepass ]
+tags: [keepass]
 ---
 
 # [Keepass auto type codes][14]

@@ -1,7 +1,7 @@
 ---
 title: "Vim Neovim installing latest release on Fedora"
 created: 2021-06-13 19:34:51
-tags: [ vim ]
+tags: [vim]
 ---
 
 # Vim Neovim installing latest release on Fedora

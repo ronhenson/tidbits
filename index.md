@@ -1,7 +1,7 @@
 ---
 title: inbox
 created: 2021-06-23 10:37:44
-tags: [  ]
+tags: []
 ---
 
 # inbox

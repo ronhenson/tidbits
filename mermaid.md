@@ -1,7 +1,7 @@
 ---
 title: "mermaid"
 created: 2021-06-13 07:55:03
-tags: [ markdown, example ]
+tags: [markdown, example]
 ---
 
 # mermaid

@@ -1,7 +1,7 @@
 ---
 title: "Gnome Wayland or X11 command"
 created: 2021-06-13 18:45:30
-tags: [ devops ]
+tags: [devops]
 ---
 
 # Gnome Wayland or X11 command

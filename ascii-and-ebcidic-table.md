@@ -1,7 +1,7 @@
 ---
 title: "ASCII and EBCIDIC table"
 created: 2021-06-13 07:08:45
-tags: [ data ]
+tags: [data]
 ---
 
 # ASCII-and-EBCIDIC-table

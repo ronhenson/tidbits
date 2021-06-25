@@ -1,7 +1,7 @@
 ---
 title: "Windows 10 GPU passthrough on high end laptops"
 created: 2021-06-14 06:14:50
-tags: [ vm ]
+tags: [vm]
 ---
 
 links
