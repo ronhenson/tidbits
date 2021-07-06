@@ -1,9 +1,9 @@
 ---
 title: "Vim"
 created: 2021-06-25 14:18:53
-tags: [vim]
+tags: #ide, #toc
+keywords: vim, neovim, nvim, menu
 ---
-
 # Vim
 
 - [[vim-paste-yanked-text-into-command-line]]

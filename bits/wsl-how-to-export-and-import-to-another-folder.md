@@ -1,7 +1,8 @@
 ---
 title: "WSL how to export and import to another folder"
 created: 2021-06-13 18:57:16
-tags: [devops]
+tags: #devops
+keywords: wsl, windows 10, powershell, microsoft
 ---
 
 # WSL how to export and import to another folder

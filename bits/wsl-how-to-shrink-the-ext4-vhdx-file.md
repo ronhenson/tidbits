@@ -1,7 +1,8 @@
 ---
 title: "WSL how to shrink the ext4 vhdx file"
 created: 2021-06-13 18:52:22
-tags: [devops]
+tags: #devops
+keywords: wsl, windows 10, microsoft, vhdx
 ---
 
 # WSL how to shrink the ext4 vhdx file
@@ -19,7 +20,7 @@ wsl.exe --terminate <name>	# will stop if needed
 diskpart.exe
 DISKPART> select vdisk file="D:\wsl\ubuntu-2\ext4.vhdx"
 DISKPART> compact vdisk
-	100 percent completed
+  100 percent completed
 Diskpart succesfully compacted the virtual disk file.
 DISKPART>exit
 ```

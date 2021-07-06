@@ -1,19 +1,19 @@
 ---
 title: "mermaid"
 created: 2021-06-13 07:55:03
-tags: [markdown, example]
+tags: #markdown, #example
+keywords: graph, flowchart
 ---
-
 # mermaid
 
 ## Example 1
 
 ```mermaid
 graph TD;
-	A-->B; A-->G; G-->A; B-->C
-	A-->C;
-	B-->D;
-	C-->D;
+  A-->B; A-->G; G-->A; B-->C
+  A-->C;
+  B-->D;
+  C-->D;
 ```
 ## Example 2
 

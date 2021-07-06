@@ -1,7 +1,8 @@
 ---
 title: "AWS allocated IPv4 address"
 created: 2021-06-13 19:02:16
-tags: [devops]
+tags: #devops
+keywords: aws, ipaddress
 ---
 # AWS-allocated-IPv4-address
 

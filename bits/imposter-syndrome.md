@@ -1,9 +1,9 @@
 ---
 title: "Imposter syndrome"
 created: 2021-06-13 18:21:58
-tags: [health self-help ]
+tags: #health
+keywords: self-help, goals
 ---
-
 #  Imposter syndrome 
 
 - Set an audacious goal

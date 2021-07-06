@@ -1,9 +1,9 @@
 ---
 title: "Vscode Regex Snippets Links"
 created: 2021-06-25 07:48:03
-tags: []
+tags: #ide
+keywords: code, vscode, regex, snippets
 ---
-
 # Vscode Regex Snippets Links
 
 - [Use regular expressions in Visual Studio][vscode regex]

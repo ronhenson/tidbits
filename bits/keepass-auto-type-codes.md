@@ -1,9 +1,9 @@
 ---
 title: "Keepass auto type codes"
 created: 2021-06-14 06:07:23
-tags: [keepass]
+tags: #security
+keywords: keepass, passwords
 ---
-
 # [Keepass auto type codes][14]
 
 ## Basic Auto-Type Information
@@ -266,5 +266,3 @@ Why did this work? The window title of your browser window was *"Test Form - Kee
 Here you see the huge advantages of auto-type: it not only doesn't require any additional browser software (the browser knows nothing of KeePass – there are no helper browser plugins required), it is also browser-independent: the one entry that you created within KeePass works for Internet Explorer *and* Mozilla Firefox (and other browsers) without requiring any modifications or definitions.
 
 When you would use window/sequence associations (instead of entry title matching), you can achieve the same browser-independent effect using wildcards: you could for example have used `Test Form - KeePass - *` as window filter. This filter matches both the Internet Explorer and the Firefox window.
-
-

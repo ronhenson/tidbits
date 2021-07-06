@@ -1,7 +1,8 @@
 ---
 title: "Windows 10 GPU passthrough on high end laptops"
 created: 2021-06-14 06:14:50
-tags: [vm]
+tags: #devops
+keywords: vm, windows 10, linux, kvm, qemu, boxes
 ---
 
 links
@@ -78,10 +79,10 @@ Make it executable and execute it from your home
 # From your home, execute
 $ ./Documents/iommu.sh
 IOMMU Group 10:
-	00:1d.0 USB controller: Intel Corporation 7 Series/C210 Series Chipset Family USB Enhanced Host Controller #1 [8086:0e26] (rev 04)
+  00:1d.0 USB controller: Intel Corporation 7 Series/C210 Series Chipset Family USB Enhanced Host Controller #1 [8086:0e26] (rev 04)
 IOMMU Group 13:
-	06:00.0 VGA compatible controller: NVIDIA Corporation GM204 [GeForce GTX 970] [10de:13c2] (rev a1)
-	06:00.1 Audio device: NVIDIA Corporation GM204 High Definition Audio Controller [10de:0fbb] (rev a1)
+  06:00.0 VGA compatible controller: NVIDIA Corporation GM204 [GeForce GTX 970] [10de:13c2] (rev a1)
+  06:00.1 Audio device: NVIDIA Corporation GM204 High Definition Audio Controller [10de:0fbb] (rev a1)
 ```
 
 If you see several groups then your machine is correctly configured. Now locate your graphics card IOMMU group and note the IDs of the audio device and the card itself (`ex: 10de:13c2`).

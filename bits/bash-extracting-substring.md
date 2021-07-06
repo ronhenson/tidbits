@@ -1,9 +1,9 @@
 ---
 title: "BASH extracting substring"
 created: 2015-01-24 20:36:00
-tags: [bash, example]
+tags: #shell, #script, #example
+keywords: bash, substring
 ---
-
 # BASH extracting substring
 
 ## ${BASH_REMATCH\[1\]}

@@ -1,7 +1,8 @@
 ---
 title: "BASH command line how to use arguments from previous commands"
 created: 2021-06-13 19:17:10
-tags: [linux]
+tags: #shell
+keywords: bash, parameters, arguments
 ---
 
 links

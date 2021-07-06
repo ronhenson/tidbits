@@ -1,7 +1,8 @@
 ---
 title: "Katex algebraic notation in markdown"
 created: 2021-06-13 07:50:51
-tags: [markdown, exammple]
+tags: #markdown, #example
+keywords: math
 ---
 # Katex-algebraic-notation-in-markdown
 
@@ -15,6 +16,6 @@ $$
 ***
 $$
 f(x) = \int_{-\infty}^\infty
-	\hat f(\xi)\,e^(2 \pi i \xi x)
-	\,d\xi
+  \hat f(\xi)\,e^(2 \pi i \xi x)
+  \,d\xi
 $$
