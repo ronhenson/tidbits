@@ -8,7 +8,7 @@ keywords: bash, parameters, arguments
 links
 : [[bash-extracting-substring]]
 
-## [[BASH-command-line-how-to-use-arguments-from-previous-commands](https://stackoverflow.com/questions/4009412/how-to-use-arguments-from-previous-command)
+# [BASH-command-line-how-to-use-arguments-from-previous-commands](https://stackoverflow.com/questions/4009412/how-to-use-arguments-from-previous-command)
 
 ```bash
 !^      first argument
