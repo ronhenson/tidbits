@@ -6,3 +6,5 @@ keywords: fences, language, tildas, codes, markdown
 ---
 
 # [Github Fence Languages](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
+
+Defines all languages known to github
