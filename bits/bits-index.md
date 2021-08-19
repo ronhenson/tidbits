@@ -1,7 +1,7 @@
 ---
 title: "Tidbits index"
 created: 2021-06-13 07:08:45
-tags:
+tags: #toc
 keywords:
 ---
 
@@ -18,11 +18,17 @@ keywords:
 - [[greek-letters-in-markdown]]
 - [[mermaid]]
 
+## VSCode ( code-insiders )
+
+- [[vscode-keyboard-shortcuts-customized]]
+- [[vscode-regex-snippets-links]]
+- [[vscode_python_import_could_not_be_resolved]]
 ## Software
 
 ### General Information
 
-- [[ascii-and-ebcidic-table]]
+- [[ascii-and-ebcidic-table]p]
+- [[html-page-find-modified-published-time]]
 
 ### BASH
 
@@ -39,7 +45,10 @@ keywords:
 [katex-algebraic-notation-in-markdown]: katex-algebraic-notation-in-markdown.md "Katex algebraic notation in markdown"
 [greek-letters-in-markdown]: greek-letters-in-markdown.md "Greek letters in markdown"
 [mermaid]: mermaid.md "mermaid"
-[ascii-and-ebcidic-table]: ascii-and-ebcidic-table.md "ASCII and EBCIDIC table"
+[vscode-keyboard-shortcuts-customized]: vscode-keyboard-shortcuts-customized.md "Vscode Keyboard Shortcuts Customized"
+[vscode-regex-snippets-links]: vscode-regex-snippets-links.md "Vscode Regex Snippets Links"
+[vscode_python_import_could_not_be_resolved]: vscode_python_import_could_not_be_resolved.md "Vscode_python_import_could_not_be_resolved"
+[html-page-find-modified-published-time]: html-page-find-modified-published-time.md "Html Page Find Modified Published Time"
 [bash-extracting-substring]: bash-extracting-substring.md "BASH extracting substring"
 [kitty-terminal-ssh-terminfo]: kitty-terminal-ssh-terminfo.md "Kitty Terminal Ssh Terminfo"
 [imposter-syndrome]: imposter-syndrome.md "Imposter syndrome"

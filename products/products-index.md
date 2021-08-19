@@ -1,7 +1,7 @@
 ---
 title: "Products Index"
 created: 2021-07-19 19:02:55
-tags:
+tags: #toc
 keywords: toc, index, menu
 ---
 # products-index

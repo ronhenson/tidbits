@@ -27,3 +27,7 @@ keywords: toyota, car, yaris, automobile
 | **transmission-oil-type** | Gear oil API GL-4 or GL-5 |
 | **transmission-oil-viscosity** | SAE 75W-90 |
 | **transmission-Fluid** |Mobile1: 104361 Valvoline VV975 |
+
+# Bookmarks
+
+- [2005-2012 Toyota Yaris (90) Fuse Box Diagram » Fuse Diagram](http://knigaproavto.ru/shemy/en/toyota/yaris/113-toyota-vitz-yaris-ii-fuse-box-diagram-20052011.html)
