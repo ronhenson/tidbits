@@ -5,7 +5,7 @@ tags: #backups
 keywords: rsync, copy, synchronizing
 ---
 
-# rsync a switches
+# rsync `a` switches
 
 ```text
 provides these switches: rlptgoD (no -H,-A,-X)
@@ -37,3 +37,25 @@ __-o__, __--owner__
 __-D__
 : __--devices__: preserve device files(super user only)
 : __--specials__: preserve special files
+
+## Additional flags that are useful
+
+```bash
+rsync -avPx --delete
+```
+
+__-a__
+: Explained above (-rlptgo)
+
+__-x__
+: Explained above (do not cross file boundaries)
+
+__-P__
+: __--progress
+: __--partial
+
+__--delete
+: Used to delete files during synch of target that do not exist on source
+: Good to use for backups so you do not restore everything
+: Do a backup with --delete to ./synch folder
+: Do not use --delete when backing up to ./backup folder
