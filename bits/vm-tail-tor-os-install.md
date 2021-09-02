@@ -1,11 +1,11 @@
 ---
-title: "Tail Tor Os Install"
+title: "VM Tail Tor Os Install"
 created: 2021-08-19 18:23:45
-tags: #tags
-keywords: template
+tags:
+keywords: vm, tor, virtual machine
 ---
 
-# [Tail Tor Os Install](https://fedoratips.wordpress.com/2013/05/29/run-tails-in-a-virtual-machine-for-anonymous-internet-access/)
+# [VM Tail Tor Os Install](https://fedoratips.wordpress.com/2013/05/29/run-tails-in-a-virtual-machine-for-anonymous-internet-access/)
 
 Utilize tails through the onion / tors network.  Does not write anything to disk
 

@@ -5,6 +5,33 @@ tags: #backups
 keywords: rsync, copy, synchronizing
 ---
 
+## rsync for synch backup example
+
+```bash
+# for d03 synch
+rsync -avPx --delete /data/ /run/media/ronh/d03/ronh/2021/synch/data/
+rsync -avPx --delete /home/ronh/ /run/media/ronh/d03/ronh/2021/synch/ronh/
+sudo rsync -avPx --delete /etc /run/media/ronh/d03/ronh/2021/synch/etc/
+# for d02 synch
+rsync -avPx --delete /data/ /run/media/ronh/d02/ronh/2021/synch/data/
+rsync -avPx --delete /home/ronh/ /run/media/ronh/d02/ronh/2021/synch/ronh/
+rds: backup rsync 
+---
+sudo rsync -avPx --delete /etc/ /run/media/ronh/d02/ronh/2021/synch/etc/
+```
+
+## rsync for  backup example
+
+```bash
+# for d03 synch
+rsync -avPx  /data/ /run/media/ronh/d03/ronh/2021/backup/data/
+rsync -avPx /home/ronh/ /run/media/ronh/d03/ronh/2021/backup/ronh/
+sudo rsync -avPx /etc /run/media/ronh/d03/ronh/2021/backup/etc/
+# for d02 synch
+rsync -avPx /data/ /run/media/ronh/d02/ronh/2021/backup/data/
+rsync -avPx /home/ronh/ /run/media/ronh/d02/ronh/2021/backup/ronh/
+sudo rsync -avPx /etc/ /run/media/ronh/d02/ronh/2021/backup/etc/
+```
 # rsync `a` switches
 
 ```text

@@ -1,8 +1,8 @@
 ---
 title: "Tompol Bug Zapper"
 created: 2021-07-17 17:21:17
-tags: #tags
-keywords: template
+tags:
+keywords: bugs, zapper
 ---
 
 # [Tompol Bug Zapper][web]

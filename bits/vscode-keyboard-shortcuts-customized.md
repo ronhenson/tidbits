@@ -1,8 +1,8 @@
 ---
 title: "Vscode Keyboard Shortcuts Customized"
 created: 2021-08-12 12:12:17
-tags: #tags
-keywords: template
+tags: #ide
+keywords: vscode, keyboard shortcuts, foam, markdown
 ---
 
 # Vscode Keyboard Shortcuts Customized

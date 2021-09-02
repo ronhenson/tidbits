@@ -1,11 +1,11 @@
 ---
-title: "NEXIGO 1080p WEBCAM N60"
+title: "NEXIGO 1080p webcam N60"
 created: 2021-01-14 17:57:10
 tags:
 keywords: webcam, camera, microphone, 
 ---
 
-# NEXIGO 1080p WEBCAM N60
+# NEXIGO 1080p webcam N60
 
 Bought around Jan 2021
 

@@ -1,8 +1,8 @@
 ---
 title: "Bash Delete Files By Inum"
 created: 2021-08-09 10:52:32
-tags: #tags
-keywords: template
+tags:
+keywords: bash
 ---
 
 # Bash Delete Files By Inum
