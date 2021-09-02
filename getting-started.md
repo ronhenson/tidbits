@@ -12,7 +12,7 @@ Let's go through this to set up your repo:
 
 - [ ] to see how your notes are connected, execute the `Foam: Show Graph` command. See [[graph-visualization]].
 
-- [ ] #tags can be used to further organize your content. Look at the `Tag Explorer` view on the left panel to find and navigate the tags in your knowledge base. See [[tags-and-tag-explorer]].
+- [ ] ${text:#tags} can be used to further organize your content. Look at the `Tag Explorer` view on the left panel to find and navigate the tags in your knowledge base. See [[tags-and-tag-explorer]].
 
 - [ ] Foam supports [[spell-checking]].
 
