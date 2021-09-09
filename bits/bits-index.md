@@ -48,6 +48,9 @@ keywords:
 - [[gnome-wayland-or-xll-command]]
 - [[vm-tail-tor-os-install]]
 - [[vm-kvm-qemu-change-storage-pool]]
+- [[aws-billing]]
+- [[aws-allocated-ipv4-address]]
+- [[gmail-filters]]
 ## Self Help
 
 - [[health-tips-dr-amy-lee]]
@@ -76,6 +79,9 @@ keywords:
 [gnome-wayland-or-xll-command]: gnome-wayland-or-xll-command.md "Gnome Wayland or X11 command"
 [vm-tail-tor-os-install]: vm-tail-tor-os-install.md "VM Tail Tor Os Install"
 [vm-kvm-qemu-change-storage-pool]: vm-kvm-qemu-change-storage-pool.md "Vm Kvm Qemu Change Storage Pool"
+[aws-billing]: aws-billing.md "Aws Billing"
+[aws-allocated-ipv4-address]: aws-allocated-ipv4-address.md "AWS allocated IPv4 address"
+[gmail-filters]: gmail-filters.md "Gmail Filters"
 [health-tips-dr-amy-lee]: health-tips-dr-amy-lee.md "Health Tips Dr Amy Lee"
 [imposter-syndrome]: imposter-syndrome.md "Imposter syndrome"
 [memory-kave-cogs-method]: memory-kave-cogs-method.md "Memory Kave Cogs Method"
