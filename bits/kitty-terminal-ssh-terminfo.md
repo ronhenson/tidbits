@@ -1,7 +1,7 @@
 ---
 title: "Kitty Terminal Ssh Terminfo"
 created: 2021-07-12 13:10:39
-tags: #devops
+tags: #devops, #terminal
 keywords: ssh, backspace key, no echo, keyboard
 ---
 

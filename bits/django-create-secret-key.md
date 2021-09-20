@@ -1,7 +1,7 @@
 ---
 title: "Django Create Secret Key"
 created: 2021-08-03 11:57:01
-tags:
+tags: #coding, #python
 keywords: django, coding, python, security
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Memory Kave Cogs Method"
 created: 2021-09-02 09:42:53
-tags:
+tags: #brain
 keywords: self help, memory
 ---
 

@@ -10,7 +10,7 @@ keywords: gnome, wayland, x11
 
 ! How to know whether Wayland or X11 is being used and set
 
-```bsh
+```bash
 $loginctl
 SESSION  UID  USER    SEAT  TTY
       5  1001 debiron seat0 tty2
@@ -28,7 +28,7 @@ Recent versions of Fedora uses Wayland by default. However, things can prevent F
 To enable Wayland for Gnome in Fedora, two main actions are needed, as explained below in details:
 
 TL;DR: Enable Wayland in the GDM configurations in `/etc/gdm/custom.conf`
-
+a != b
 Open `/etc/gdm/custom.conf` for editing (as you know, you must be root).
 
 Go to the line which looks like the following:

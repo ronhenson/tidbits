@@ -1,7 +1,7 @@
 ---
 title: "VM Tail Tor Os Install"
 created: 2021-08-19 18:23:45
-tags:
+tags: #devops
 keywords: vm, tor, virtual machine
 ---
 

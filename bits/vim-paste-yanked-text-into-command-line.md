@@ -1,7 +1,7 @@
 ---
 title: "Vim paste yanked text into command line"
 created: 2021-06-13 06:23:25
-tags: #ide
+tags: #ide, #vim
 keywords: vim, neovim, nvim, copy, registers
 ---
 

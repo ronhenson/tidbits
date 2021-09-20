@@ -1,7 +1,7 @@
 ---
 title: "BASH extracting substring"
 created: 2015-01-24 20:36:00
-tags: #shell, #script, #example
+tags: #shell, #example
 keywords: bash, substring
 ---
 # BASH extracting substring

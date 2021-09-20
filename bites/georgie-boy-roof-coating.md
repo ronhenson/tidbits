@@ -1,7 +1,7 @@
 ---
 title: "Georgie Boy Roof Coating"
 created: 2021-07-18 19:05:11
-tags:
+tags: #bites, #home, #rv
 keywords: georgieboy, roof, warranty, 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "NEXIGO 1080p webcam N60"
 created: 2021-01-14 17:57:10
-tags:
+tags: #bites, #hardware
 keywords: webcam, camera, microphone, 
 ---
 

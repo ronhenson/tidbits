@@ -1,7 +1,7 @@
 ---
 title: "Toyota Yaris 2008"
 created: 2018-10-09 16:45:19
-tags:
+tags: #bites, #car
 keywords: toyota, car, yaris, automobile
 ---
 

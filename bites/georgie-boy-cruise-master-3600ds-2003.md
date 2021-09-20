@@ -1,7 +1,7 @@
 ---
 title: "Georgie Boy Cruise Master 3600ds 2003"
 created: 2018-10-10 14:19:59
-tags:
+tags: #home, #rv
 keywords: georgie boy, rv, cruise master, home
 ---
 
