@@ -36,7 +36,7 @@ Pool default has been undefined
 ## Defining a new pool with name "default":
 
 ```bash
-virsh pool-define-as --name default --type dir --target /data/vm Pool default defined
+virsh pool-define-as --name default --type dir --target /home/ronh/data/vm
 Pool default defined
 ```
 
