@@ -9,5 +9,5 @@ keywords: bash, substring
 ## ${BASH_REMATCH\[1\]}
 
 ```bash
-$ [["US/Central - 10:26 PM (CST)" =~ -[[:space:]]*([0-9]{2}:[0-9]{2})]] &&  echo ${BASH_REMATCH[1]}
+[["US/Central - 10:26 PM (CST)" =~ -[[:space:]]*([0-9]{2}:[0-9]{2})]] &&  echo ${BASH_REMATCH[1]}
 ```

@@ -10,7 +10,6 @@ keywords: firefox, containerize
 - Author: [kintesh](https://addons.mozilla.org/en-US/firefox/user/12977780/?utm_source=firefox-browser&utm_medium=firefox-browser&utm_content=addons-manager-user-profile-link)
 - Homepage: [containerise](https://github.com/kintesh/containerise)
 
-
 ## CSV for add-on containerise
 
 Easy to lose the CSV settings.  If remove and re-install Firefox, It will be gone.  So, I'll try to keep somewhat current.

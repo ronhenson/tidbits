@@ -7,7 +7,7 @@ keywords: vm, kvm, qemu, virtual machine
 
 # Vm Kvm Qemu Change Storage Pool
 
-## List current pools:
+## List current pools
 
 ```bash
 virsh pool-list
@@ -19,41 +19,42 @@ virsh pool-list
  tails         active   yes
 ```
 
-## Destroying pool:
+## Destroying pool
 
 ```bash
 virsh pool-destroy default
 Pool default destroyed
 ```
 
-## Undefine pool:
+## Undefine pool
 
 ```bash
 virsh pool-undefine default
 Pool default has been undefined
 ```
 
-## Defining a new pool with name "default":
+## Defining a new pool with name "default"
 
 ```bash
 virsh pool-define-as --name default --type dir --target /home/ronh/data/vm
 Pool default defined
 ```
 
-## Set pool to be started when libvirt daemons starts:
+## Set pool to be started when libvirt daemons starts
 
 ```bash
 virsh pool-autostart default
 Pool default marked as autostarted
 ```
 
-## Start pool:
+## Start pool
 
 ```bash
 virsh pool-start default
 Pool default started
 ```
-## Checking pool state:
+
+## Checking pool state
 
 ```bash
 virsh pool-list

@@ -14,7 +14,7 @@ keywords: podman, virtual, backup, containers, toolbox
 To backup a toolbox container you will need it’s name and container ID which can be gotten by using toolbox list. For this example I am going to backup my golang development toolbox container, imaginatively named go.
 
 ```bash
-$ toolbox list
+toolbox list
 
 
 CONTAINER ID  CONTAINER NAME  CREATED      STATUS   IMAGE NAME
@@ -24,7 +24,7 @@ CONTAINER ID  CONTAINER NAME  CREATED      STATUS   IMAGE NAME
 If the container’s status shows as running , you should stop it using podman container stop container_name. Although the commit command has a -p for pause option, make sure that the Toolbox is not running, which helps it initialize correctly when restored from backup.
 
 ```bash
-$ podman container stop go
+podman container stop go
 ```
 
 To create an image of the toolbox container use
@@ -32,13 +32,13 @@ podman container commit -p container_ID backup-image-name
 Depending on the complexity of the Toolbox, this can take a little while.
 
 ```bash
-$ podman container commit -p 00ff783a102f  go-backup
+podman container commit -p 00ff783a102f  go-backup
 ```
 
 Now to confirm the image has been created type…
 
 ```bash
-$ toolbox list
+toolbox list
 
 # You should get output similar to what is below…
 
@@ -53,21 +53,21 @@ CONTAINER ID CONTAINER NAME CREATED STATUS IMAGE NAME
 Now to save the backup image to a tar archive file using podman save -o backup-filename.tar backup-image-name.
 
 ```bash
-$ podman save -o go.tar go-backup
+podman save -o go.tar go-backup
 ```
 
 Confirm the archive file, our toolbox container backup, was created.
 
 ```bash
-$ ls
+ls
 
-go.tar 
+go.tar
 ```
 
 Do some tidying up, remove the backup image and, if needed, remove the original Toolbox.
 
 ```bash
-$ podman rmi go-backup
+podman rmi go-backup
 
 $ toolbox rm go
 ```
@@ -77,13 +77,13 @@ $ toolbox rm go
 To create an image from the backup file that was made above, you do it with the command `podman load -i backup_filename`.
 
 ```bash
-$ podman load -i go.tar
+podman load -i go.tar
 ```
 
 Then you can confirm the image was created with…
 
 ```bash
-$ toolbox list
+toolbox list
 
 IMAGE ID      IMAGE NAME                  CREATED
 cfcb13046db7  localhost/go-backup:latest  17 minutes ago
@@ -92,13 +92,13 @@ cfcb13046db7  localhost/go-backup:latest  17 minutes ago
 Now create a toolbox container from the restored image, with toolbox create ––container container_name ––image image_name, specifying the full repository and version tag as the image name.
 
 ```bash
-$ toolbox create --container go --image localhost/go-backup:latest
+toolbox create --container go --image localhost/go-backup:latest
 ```
 
 Confirm that the toolbox was created.
 
 ```bash
-$ toolbox list
+toolbox list
 
 IMAGE ID      IMAGE NAME                CREATED
 cfcb13046db7 localhost/go-backup:latest 20 minutes ago
@@ -110,7 +110,7 @@ CONTAINER ID CONTAINER NAME CREATED STATUS IMAGE NAME
 Finally, you can test that the restored Toolbox works…
 
 ```bash
-$ toolbox enter --container go
+toolbox enter --container go
 ```
 
 If you can enter the newly created toolbox container, you will see the toolbox prompt and will have successfully backed up and restored your Pet toolbox container.

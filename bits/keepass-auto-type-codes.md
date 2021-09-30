@@ -14,7 +14,7 @@ By default, the sent keystroke sequence is `{USERNAME}{TAB}{PASSWORD}{ENTER}`, i
 
 For [TAN entries][1], the default sequence is `{PASSWORD}`, i.e. it just types the TAN into the target window, without pressing Enter.
 
-_KeePass 2.x Only_
+KeePass 2.x Only
 
 Auto-Type can be configured individually for each entry using the *Auto-Type* tab page on the entry dialog (select an entry → *Edit Entry*). On this page you can specify a default sequence and customize specific window/sequence associations.
 [Two-Channel Auto-Type Obfuscation][2] is supported (making Auto-Type resistant against keyloggers).
@@ -79,7 +79,7 @@ When you press the hot key, KeePass looks at the title of the currently opened w
 
 The second condition has been mentioned already, but the first one is new. By using entry titles as filters for window titles, the configuration amount for auto-type is almost zero: you only need to make sure that the entry title is contained in the window title of the window into which you want the entry to be auto-typed. Of course, this is not always possible (for example, if a webpage has a very generic title like *"Welcome"*), here you need to use custom window/sequence associations.
 
-_KeePass 2.x Only_
+KeePass 2.x Only
 
 Custom window/sequence associations can be specified on the *'Auto-Type'* tab page of each entry.
 The associations complement the KeePass entry title. Any associations specified will be used in addition to the KeePass entry title to determine a match.
@@ -97,11 +97,12 @@ Above you've seen already that the default auto-type is `{USERNAME}{TAB}{PASSWOR
 Of course, keystroke sequences can also contain simple characters to be sent. For example, the following string is perfectly valid as keystroke sequence string:
 `{USERNAME}{TAB}Some text to be sent!{ENTER}`.
 
-_KeePass 2.x Only_
+KeePass 2.x Only
 
 Special key codes are case-insensitive.
 
 **Special Keys:**
+
 The following codes for special keys are supported:
 
 | Special Key | Code |
@@ -140,7 +141,7 @@ The following codes for special keys are supported:
 | Ctrl | `^` |
 | Alt | `%` |
 
-_KeePass 2.x Only_
+KeePass 2.x Only
 
 |     |     |
 | --- | --- |
@@ -165,14 +166,14 @@ Additionally, some special commands are supported:
 | `{APPACTIVATE WindowTitle}` | Activates the window "*WindowTitle*". |
 | `{BEEP X Y}` | Beeps with a frequency of *X* hertz and a duration of *Y* milliseconds. |
 
-_KeePass 2.x Only_
+KeePass 2.x Only
 
 |     |     |
 | --- | --- |
 | Command Syntax | Action |
 | `{VKEY X F}` | Sends the [virtual key][9] of value *X*; see [below][10]. |
 
-_KeePass 2.x Only_
+KeePass 2.x Only
 
 **`{VKEY X F}`:**
 This command sends the [virtual key][9] of value *X*. The parameter *F* is optional and may be a combination of the following values:
@@ -200,7 +201,7 @@ On Linux systems, KeePass automatically converts most Windows virtual key codes 
 
 Do not use the `{VKEY ...}` command to change the state of the Shift, Ctrl and Alt modifiers. For this, use `+`, `^` and `%` instead (see above).
 
-_KeePass 2.x Only_
+KeePass 2.x Only
 
 Keys and special keys (not placeholders or commands) can be repeated by appending a number within the code. For example, `{TAB 5}` presses the Tab key 5 times.
 
@@ -238,7 +239,7 @@ When creating a custom window/sequence association, you need to tell KeePass how
 | *STRING | Matches all window titles that end with "STRING". |
 | \*STRING\* | Matches all window titles that have "STRING" somewhere in the window title. This includes |
 
-_KeePass 2.x Only_
+KeePass 2.x Only
 
 Wildcards may also appear inKeePass 2.x Onl the middle of patterns. For example, `*Windows*Explorer*` would match `Windows Internet Explorer`.
 Additionally, matching using [regular expressions][13] is supported. In order to tell KeePass that the pattern is a regular expression, enclose it in `//`. For example, `//B.?g Window//` would match `Big Window`, `Bug Window` and `Bg Window`.
@@ -249,7 +250,7 @@ By using wildcards, you can make your auto-type associations browser-independent
 
 The default auto-type sequence (i.e. the one which is used when you don't specify a custom one) is `{USERNAME}{TAB}{PASSWORD}{ENTER}`. KeePass allows you to change this default sequence. Normally you won't need to change it (use custom window/sequence definitions instead!), but it is quite useful when some other application is interfering with KeePass (for example a security software that always asks you for permission before allowing KeePass to auto-type).
 
-__KeePass 2.x Only__
+KeePass 2.x Only
 
 By default, entries inherit the auto-type sequence of their containing group. Groups also inherit the auto-type sequence of their parent groups. There is only one top group (the first group contains all other groups). Consequently, if you change the auto-type sequence of this very first group, all other groups and their entries will use this sequence. Practically, this is a global override. To change it, right-click on the first group, choose *'Edit Group'* and switch to the *'Auto-Type'* tab.
 

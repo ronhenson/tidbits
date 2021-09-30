@@ -12,6 +12,6 @@
 		"pasteImage.path": "${projectRoot}/attachments",
 		"pasteImage.showFilePathConfirmInputBox": true,
 		"vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
-		"vscodeMarkdownNotes.slugifyMethod": "github-slugger"
+    "vscodeMarkdownNotes.slugifyMethod": "github-slugger"
 	}
 }

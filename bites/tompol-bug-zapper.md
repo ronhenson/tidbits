@@ -22,7 +22,7 @@ keywords: bugs, zapper
 
 [(Amazon) SUNLITE FUL15T6 Fluorescent Black Light Bulb, 15 Watts, 05155-SU GX10q 4-Pin Base, UV Light, 365nm Color Wavelength, 5,000 Hour Life Span, Perfect for Bug Zappers, Clubs, Restaurants, Bars, 1 Pack](https://www.amazon.com/gp/product/B003RB82HW/ref=ox_sc_act_title_3?smid=ATVPDKIKX0DER&psc=1)
 
-**Bulb expiration estimate time (based upon 5000 hours)**: 2022-02-20 (if bulb arrives and installed 2021/09/24) 
+**Bulb expiration estimate time (based upon 5000 hours)**: 2022-02-20 (if bulb arrives and installed 2021/09/24)
 
 | Item                  | Description                                                                                |
 | :-------------------- | :----------------------------------------------------------------------------------------- |

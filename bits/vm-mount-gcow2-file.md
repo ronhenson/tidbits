@@ -7,7 +7,7 @@ keywords: template
 
 # Vm Mount Gcow2 File
 
-- Load nbd module 
+- Load nbd module
 
 ```bash
 sudo modprobe nbd

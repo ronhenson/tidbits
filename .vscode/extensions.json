@@ -3,7 +3,6 @@
   // for the documentation about the extensions.json format
   "recommendations": [
     "yzhang.markdown-all-in-one",
-    "mushan.vscode-paste-image",
-    "ban.spellright"
+    "mushan.vscode-paste-image"
   ]
 }

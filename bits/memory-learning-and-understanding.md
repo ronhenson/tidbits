@@ -10,7 +10,7 @@ keywords: memory, learning
 [How to Remember Everythin You Learn](https://www.youtube.com/watch?v=V-UvSKe8jW4)
 
 1. Recall
-  - After reading / watching a video, simply look away and recall the keypoints, material you just took in and repeat.  
+   - After reading / watching a video, simply look away and recall the keypoints, material you just took in and repeat.
 2. Feynman Technique
    1. Take something you want to Understanding
    2. Write out an explanation as if you were teaching it to someone who didn't understand the subject.

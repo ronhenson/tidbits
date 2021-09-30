@@ -8,6 +8,7 @@ keywords: georgie boy, rv, cruise master, home
 # Georgie Boy Cruise Master 3600ds 2003
 
 ## Dealer Information
+
 Two of the finest words in the English language, affordable + luxury, are together again in this beautiful Cruise Master 3600DS by Georgie Boy. Conceived with standard features and upgrades you might expect only from diesel models, this Cruise Master delivers high-end elements at a great price point! From its rich full-body paint to its glistening graphicsWander inside the Cruise Master and you'll be immediately charmed by its many luxurious appointments including the Velvet Cherry hardwood interior, tastefully appointed in the "Grapevine" version of premium fabrics. The living area features a flush floor slide-out, durable "Flexsteel" furniture, dramatic halogen accent lighting, day/night shades and 20" TV overhead. Driver and passenger seats have fingertip adjustment controls built into the arm rests and a passenger friendly slide-out computer work station built into the dash. There is also a Home Theater System.
 
 ## Georgie Boy Coach Information
@@ -43,7 +44,6 @@ Two of the finest words in the English language, affordable + luxury, are togeth
 | **Toilet** | Porcelain Toilet Bowl |
 | **VIN** | 584MP67G833357194 |
 | **Year** | 2003 |
-
 
 ## Georgie boy Engine and Chassis
 

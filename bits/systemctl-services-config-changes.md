@@ -1,11 +1,10 @@
 ---
-title: "Systemctl Servies Config Changes"
+title: "Systemctl Services Config Changes"
 created: 2021-07-27 12:47:47
 tags:
 keywords: systemctl, override, config, linux, postgres
 ---
-
-# Systemctl Servies Config Changes
+# Systemctl Services Config Changes
 
 ## Example using a change with postgres database location change
 
@@ -20,7 +19,7 @@ Environment=PGDATA=/data/pgsql/data
 ```
 
 The above suppose to write the changes to:
-``` /etc/systemd/system/postgresql.d/override.conf```
+``` /etc/systemd/system/postgresql.d/override.conf ```
 It kept cancelling, so I create the directory and file and made the changes.
 It worked.
 

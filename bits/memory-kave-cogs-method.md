@@ -27,9 +27,8 @@ keywords: self help, memory
 ## Memorize future things
 
 - Prospective memory
-  - 
 
 ## Books
 
-  - Happiness Beyond Thought - Gary Weber
-  - Victorious Mind - Anthony Metivier
+- Happiness Beyond Thought - Gary Weber
+- Victorious Mind - Anthony Metivier

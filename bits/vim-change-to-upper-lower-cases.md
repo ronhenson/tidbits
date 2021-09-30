@@ -7,6 +7,7 @@ keywords: vim, nvim, uppercase, lowercase, capitalization, capital
 
 links
 : [[vim-paste-yanked-text-into-command-line]]
+
 # Vim change to upper lower case
 
 ~

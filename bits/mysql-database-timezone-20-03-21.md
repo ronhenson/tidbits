@@ -51,4 +51,4 @@ default-time-zone = "-7:00"  # had to add this statement
 
 Added this to `my.cnf`.
 
-### Solved the problem
+## Solved the problem

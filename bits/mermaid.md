@@ -15,6 +15,7 @@ graph TD;
   B-->D;
   C-->D;
 ```
+
 ## Example 2
 
 ```mermaid
@@ -29,6 +30,7 @@ graph TD;
   H["Custom init Method"]-->I["Post initializaiont (BeanPostProcessors)"];
   I["Post initializaiont (BeanPostProcessors)"] --> J["BEANS are READY TO USE"];
 ```
+
 # Example 3
 
 ```mermaid

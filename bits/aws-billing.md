@@ -11,13 +11,13 @@ keywords: aws, billing, free, tier
 
 Shows summary of usage
 
-## [AWS Bills](https://console.aws.amazon.com/billing/home?#/**bills**?year=2021&month=9) 
+## [AWS Bills](https://console.aws.amazon.com/billing/home?#/**bills**?year=2021&month=9)
 
-**notice month at end of URL**
+## notice month at end of URL
 
 ## [Closing entire account](https://console.aws.amazon.com/billing/home?#/account)
 
-Account settings  
+Account settings
 
 ## EC2 dashboard
 
@@ -31,10 +31,10 @@ Shows types of offers, Always free, 12 months free, etc.
 
 Shows recently visited sites, building a solution and Getting Started
 
-**NOTE**
+## NOTE
 
 ### Disabled regions
 
-If you disable a Region and you still have resources in that Region, you continue to incur charges for those resources. (There is no charge for enabling a Region, only charges for the resources that you create in a Region.) For more information, see Enabling and disabling regions. 
+If you disable a Region and you still have resources in that Region, you continue to incur charges for those resources. (There is no charge for enabling a Region, only charges for the resources that you create in a Region.) For more information, see Enabling and disabling regions.
 
 ## [AWS free digitall training](https://www.aws.training/LearningLibrary/?query=&filters=Language%3A1&from=0&size=15&sort=_score)

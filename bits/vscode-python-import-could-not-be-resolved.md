@@ -14,7 +14,9 @@ Problem:  Pylance, "extension, `ms-python.python` Python Intellsense from Micros
 ```config
 "python.autoComplete.extraPaths": ["./path-to-your-code"],
 ```
+
 The above did not work.  The following did work:
+
 ```config
 "python.analysis.extraPaths": ["./path-to-code/"],
 ```
