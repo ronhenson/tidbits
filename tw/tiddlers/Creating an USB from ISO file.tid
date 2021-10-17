@@ -1,0 +1,18 @@
+created: 20160705060001880
+creator: ronh
+modified: 20200716152907985
+modifier: ronh
+revision: 0
+tags: #LinuxSystems #iso #DVD #Tech #Tidbit
+title: Creating an USB from ISO file
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+!! Using dd to create bootable USB from linux iso file
+
+<pre># Use 
+fdisk -l     # or 
+df           # to find dev file
+$ sudo dd bs=4M if=ISO.File.Name.iso of=/dev/sdc
+</pre>

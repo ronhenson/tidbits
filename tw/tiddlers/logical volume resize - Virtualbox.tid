@@ -1,0 +1,34 @@
+caption: Virtualbox logical volume resize
+created: 20180714234029782
+creator: ronh
+modified: 20200716152909064
+modifier: ronh
+revision: 0
+tags: #VirtualBox #Tidbit
+title: logical volume resize - Virtualbox
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+:VMResize
+! Resize on VirtualBox VM
+
+<h1 style="color:yellow;font-weight:bold;background-color:purple;">Remember to resize the snapshots!</h1>
+
+*  `.\VBoxManage.exe modifymedium D:\VM\CentOS7_A\CentOS7_A.vdi --resize 16384` 
+*  Boot the guest machine 
+*  `sudo bash` 
+*  Discover lvm name and device file (`df` and/or `blkid`) 
+*  This instance was on /dev/sda, `fdisk /dev/sda`
+*  `n` - add a new partition 
+*  `p` or `e` 
+*  Starting block 
+*  End block 
+*  `w`  <strong style="color:purple;">Don't forget to write</strong> 
+*  `reboot` or `partprobe` 
+
+End
+
+<hr>
+
+! See <$link to="logical volume resize">{{logical volume resize!!caption}}</$link>

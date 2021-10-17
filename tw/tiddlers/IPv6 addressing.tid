@@ -1,0 +1,212 @@
+caption: {{!!title}} - IP course on linkedin Learning IP addressing info taught by: Kevin Wallace
+created: 20200201171229028
+modified: 20200716155219366
+revision: 0
+tags: #IP #Tidbit
+title: IPv6 addressing
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+
+<style>
+strong {
+   	font-weight: 600;
+    color: brown;
+    }
+</style>
+
+ <p>Now that you've completed the Learning IP Addressing course, which was a non-mathematical approach to IP addressing, a great next step for you would be taking my <strong>Learning Subnetting</strong> course. In that course, we dive into the binary math and we use that skill to make network design decisions. And if you'd like to keep in touch with me, and see new content as it comes out, I invite you to visit my blog, at <strong>kwtrain.com</strong>, and my YouTube channel, at <a href="youtube.com/kwallaceccie">youtube.com/kwallaceccie</a>. </p>
+ 
+<h1 style="color:darkgreen;"> 
+	<span style="color:brown;font-weight:500;">IPv6</span> notation
+</h1>
+	<ul>
+    	<li>
+        	omit leading zeros in quartet
+        </li>
+        <li>
+        	represent consecutive quartets containing all
+            zeros with double colon (<strong>note:</strong>
+            this can only be used once per address)
+        </li>
+    </ul>
+    
+<pre><code>23A0:201A:00B2:0000:0000:0000:0400:0001:/64
+23A0:201A:B2::400:1/64
+</code></pre>
+
+<h1 style="color:darkgreen;">
+	<span style="color:brown;font-weight:500;">IPv6</span> different types
+</h1>
+	<ul>
+    	<li style="color:purple;"> Global unicast </li>
+        	<ul>
+            	<li>
+                	allows us to do one-to-one communication with IPv6 addresses
+                	that are routable on the public Internet
+                </li>
+            	<li>
+                	And the global unicast address has a 001 as its first
+                    three bits
+                </li>
+            	<li>
+                	So we can say that it has a prefix of 
+                    <strong>2000::/3</strong>
+                </li>
+            </ul>
+    	<li style="color:purple;"> Multicast </li>
+        	<ul>
+            	<li>
+                	almost always starts with <strong>FF</strong>
+                </li>
+            	<li>
+                	prefix: <strong>FF00::/8</strong>
+                </li>
+            	<li>
+                	So here at PC A it's sending traffic to
+                    <strong>FF04::10</strong>, that's a multicast
+                    group address, and PCs B and C they're 
+                    receiving it because they have joined that group
+                </li>
+            </ul>
+    	<li style="color:purple;"> Link-local </li>
+        	<ul>
+            	<li>
+                	prefix: <strong>FE80::/10</strong>
+                </li>
+            	<li>
+                	address is <strong>not routable</strong> at all, 
+                    not even within our network
+                </li>
+            	<li>
+                	However it can be used to communicate with another device on
+                    the same network segment.
+                </li>
+                	<ul>
+                    	<li>
+                        	For example it could be used for automatic 
+                            configuration of a global IPv6 address.
+                        </li>
+                        <li>
+                        	It could also be used for neighbor discovery.
+                        </li>
+                        <li>
+                        	And the last 64 bits in this address, those
+                            bits often come, even though we can set it
+                            manually, those events often come
+                            from using <strong>EUI-64</strong>, where
+                            we're using an interface's MAC address to
+                            generate the host portion of its address.
+                        </li>
+                    </ul>
+            </ul>
+    	<li style="color:purple;"> unspecified </li>
+        	<ul>
+            	<li>
+                	specified as a double colon: <strong>::</strong>
+                </li>
+            	<li>
+                	That means every bit, all the 128 bits, they're all 
+                    zeros, and we might assign this to an interface
+                    before it has obtained a global unique address
+                </li>
+            </ul>
+    	<li style="color:purple;"> Nolicted-node </li>
+        	<ul>
+            	<li>
+                	<strong>FF02::1 :FF00:0/104</strong>
+                </li>
+            	<li>
+                	That means this gives us the first 104 bits,
+                    but where do those last 24 bits come from?
+                    Those last 24 bits come from the last 24 bits
+                    of the corresponding IPv6 address.
+                </li>
+                <li>
+                	But why would we use this? 
+                </li>
+                	<ul>
+                    	<li>
+                        	Well we could use this to learn the MAC
+                            address corresponding to the known IPv6
+                            address to properly form a packet.
+                        </li>
+                        <li>
+                        	So what I would do is I would send out
+                            a solicited-node multicast saying can 
+                            somebody tell me the MAC address 
+                            corresponding to the IPv6 unicast address
+                            that's corresponding to this 
+                            <strong>solicited-node</strong> multicast
+                            address
+                        </li>
+                    </ul>
+            </ul>
+        <li style="color:purple;"> Solicted-node </li>
+        	<ul>
+            	<li>
+                	<strong>FF02::1 :FF00:0/104</strong>
+                </li>
+            	<li>
+                	That means this gives us the first 104 bits,
+                    but where do those last 24 bits come from?
+                </li> 
+                	<ul>
+                    	<li>
+                        	Those last 24 bits come from the last
+                            24 bits of the corresponding IPv6 address.
+                        </li>
+                        <li>
+                        	But why would we use this?
+                        </li> 
+                        	<ul>
+                            	<li>
+                                	Well we could use this to learn the
+                                    MAC address corresponding to the known
+                                    IPv6 address to properly form a packet.
+                             	</li> 
+                                <li>
+                                	So what I would do is I would send out
+                                    a solicited-node multicast saying can
+                                    somebody tell me the MAC address
+                                    corresponding to the IPv6 unicast
+                                    address that's corresponding to this
+                                    solicited-node multicast address
+                                </li>
+                            </ul>
+                    </ul>
+            </ul>
+        <li style="color:purple;"> Unique-node </li>
+        	<ul>
+            	<li>
+                	<strong>FC00::/7</strong>
+                </li>
+            	<li>
+                	Just like IP version 4 had a collection of private
+                    IP addresses with RFC 1918 and those addresses
+                    were not routable on the public Internet,
+                    IPv6 has something similar. 
+                </li>
+                <li>
+                	They're called unique local addresses.
+                </li>
+                <li>
+                	They're used for the same purpose.
+                </li>
+            </ul>
+        <li style="color:purple;"> loopback address </li>
+        	<ul>
+            	<li>
+                	<strong>::1</strong>
+                </li>
+            	<li>
+                	talking to ourselves (i. e. home) same as
+                    <strong>IPv4</strong>
+                    <strong>127.00.1</strong>
+                </li>
+                <li>
+                	<strong>There's no place like ::1</strong>
+                </li>
+            </ul>
+    </ul>

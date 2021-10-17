@@ -1,0 +1,2402 @@
+created: 20140403155200000
+creator: ronh
+modified: 20200716152911067
+modifier: ronh
+revision: 0
+tags: #dnf #Tidbit #Tech
+title: yum list installed
+type: text/vnd.tiddlywiki
+
+<$view field="created" format="date" template="Created: YYYY-0MM-0DD DDD"/>
+
+<div id="tidbitbody">
+
+    <pre>
+Loaded plugins: fastestmirror, langpacks, presto, refresh-packagekit
+Installed Packages
+GConf2.x86_64                  3.2.6-2.fc18         @updates                    
+GConf2-gtk.x86_64              3.2.6-2.fc18         @updates                    
+GitPython.noarch               0.3.2-0.3.RC1.fc18   @fedora                     
+LibRaw.x86_64                  0.14.8-2.fc18        @updates                    
+ModemManager.x86_64            0.6.0.0-3.fc18       @updates                    
+NetworkManager.x86_64          1:0.9.8.1-3.git20130514.fc18
+                                                    @updates                    
+NetworkManager-glib.x86_64     1:0.9.8.1-3.git20130514.fc18
+                                                    @updates                    
+NetworkManager-openconnect.x86_64
+                               0.9.7.0-1.git20120918.fc18
+                                                    @koji-override-0/$releasever
+NetworkManager-openvpn.x86_64  1:0.9.3.997-3.fc18   @koji-override-0/$releasever
+NetworkManager-pptp.x86_64     1:0.9.3.997-3.fc18   @koji-override-0/$releasever
+NetworkManager-vpnc.x86_64     1:0.9.3.997-3.fc18   @koji-override-0/$releasever
+ORBit2.x86_64                  2.14.19-6.fc18       @fedora                     
+OpenEXR-libs.x86_64            1.7.1-1.fc18         @koji-override-0/$releasever
+PackageKit.x86_64              0.8.9-1.fc18         @updates                    
+PackageKit-command-not-found.x86_64
+                               0.8.9-1.fc18         @updates                    
+PackageKit-device-rebind.x86_64
+                               0.8.9-1.fc18         @updates                    
+PackageKit-glib.x86_64         0.8.9-1.fc18         @updates                    
+PackageKit-gstreamer-plugin.x86_64
+                               0.8.9-1.fc18         @updates                    
+PackageKit-gtk3-module.x86_64  0.8.9-1.fc18         @updates                    
+PackageKit-yum.x86_64          0.8.9-1.fc18         @updates                    
+PackageKit-yum-plugin.x86_64   0.8.9-1.fc18         @updates                    
+PyQt4.x86_64                   4.10.1-4.fc18        @updates                    
+PySolFC.noarch                 2.0-6.fc18           @fedora                     
+PySolFC-cardsets.noarch        2.0-6.fc18           @fedora                     
+PyXML.x86_64                   0.8.4-28.fc18        @fedora                     
+RAIDar.i386                    4.3.4-1              @/RAIDar_Linux              
+SDL.x86_64                     1.2.15-3.fc18        @updates                    
+SDL_gfx.x86_64                 2.0.22-3.fc18        @fedora                     
+SDL_image.x86_64               1.2.12-3.fc18        @fedora                     
+SDL_mixer.x86_64               1.2.12-3.fc18        @fedora                     
+SDL_net.x86_64                 1.2.8-2.fc18         @fedora                     
+SDL_ttf.x86_64                 2.0.11-2.fc18        @fedora                     
+VirtualBox-4.2.x86_64          4.2.14_86644_fedora18-1
+                                                    @virtualbox                 
+a52dec.x86_64                  0.7.4-16.fc17        @rpmfusion-free             
+aalib-libs.x86_64              1.4.0-0.21.rc5.fc18  @fedora                     
+abattis-cantarell-fonts.noarch 0.0.10.1-1.fc18      @koji-override-0/$releasever
+abrt.x86_64                    2.1.5-1.fc18         @updates                    
+abrt-addon-ccpp.x86_64         2.1.5-1.fc18         @updates                    
+abrt-addon-kerneloops.x86_64   2.1.5-1.fc18         @updates                    
+abrt-addon-python.x86_64       2.1.5-1.fc18         @updates                    
+abrt-addon-uefioops.x86_64     2.1.5-1.fc18         @updates                    
+abrt-addon-vmcore.x86_64       2.1.5-1.fc18         @updates                    
+abrt-addon-xorg.x86_64         2.1.5-1.fc18         @updates                    
+abrt-dbus.x86_64               2.1.5-1.fc18         @updates                    
+abrt-desktop.x86_64            2.1.5-1.fc18         @updates                    
+abrt-gui.x86_64                2.1.5-1.fc18         @updates                    
+abrt-libs.x86_64               2.1.5-1.fc18         @updates                    
+abrt-plugin-bodhi.x86_64       2.1.5-1.fc18         @updates                    
+abrt-retrace-client.x86_64     2.1.5-1.fc18         @updates                    
+accountsservice.x86_64         0.6.25-2.fc18        @koji-override-0/$releasever
+accountsservice-libs.x86_64    0.6.25-2.fc18        @koji-override-0/$releasever
+acl.x86_64                     2.2.51-7.fc18        @koji-override-0/$releasever
+adobe-release-x86_64.noarch    1.0-1                @/adobe-release-x86_64-1.0-1.noarch
+adonthell.x86_64               0.3.5-0.14.fc18      @fedora                     
+adwaita-cursor-theme.noarch    3.6.5-1.fc18         @updates                    
+adwaita-gtk2-theme.x86_64      3.6.5-1.fc18         @updates                    
+adwaita-gtk3-theme.x86_64      3.6.5-1.fc18         @updates                    
+aic94xx-firmware.noarch        30-4.fc18            @koji-override-0/$releasever
+aisleriot.x86_64               1:3.2.3.2-3.fc18     @koji-override-0/$releasever
+akmod-nvidia-304xx.x86_64      304.88-1.fc18        @rpmfusion-nonfree-updates  
+akmods.noarch                  0.5.1-3.fc18         @rpmfusion-free             
+allegro.x86_64                 4.4.2-4.fc18         @fedora                     
+alsa-firmware.noarch           1.0.25-2.fc18        @koji-override-0/$releasever
+alsa-lib.i686                  1.0.26-2.fc18        @fedora                     
+alsa-lib.x86_64                1.0.26-2.fc18        @koji-override-0/$releasever
+alsa-plugins-pulseaudio.x86_64 1.0.26-2.fc18        @fedora                     
+alsa-tools-firmware.x86_64     1.0.26.1-1.fc18      @koji-override-0/$releasever
+alsa-utils.x86_64              1.0.26-1.fc18        @koji-override-0/$releasever
+anaconda.x86_64                18.37.11-1.fc18      @koji-override-0/$releasever
+anaconda-widgets.x86_64        18.37.11-1.fc18      @koji-override-0/$releasever
+anaconda-yum-plugins.noarch    1:1.0-8.fc18         @koji-override-0/$releasever
+ant.noarch                     1.8.4-5.fc18         @updates                    
+ant-antlr.noarch               1.8.4-5.fc18         @updates                    
+ant-apache-bcel.noarch         1.8.4-5.fc18         @updates                    
+ant-apache-bsf.noarch          1.8.4-5.fc18         @updates                    
+ant-apache-log4j.noarch        1.8.4-5.fc18         @updates                    
+ant-apache-oro.noarch          1.8.4-5.fc18         @updates                    
+ant-apache-regexp.noarch       1.8.4-5.fc18         @updates                    
+ant-apache-resolver.noarch     1.8.4-5.fc18         @updates                    
+ant-apache-xalan2.noarch       1.8.4-5.fc18         @updates                    
+ant-commons-logging.noarch     1.8.4-5.fc18         @updates                    
+ant-commons-net.noarch         1.8.4-5.fc18         @updates                    
+ant-javamail.noarch            1.8.4-5.fc18         @updates                    
+ant-jdepend.noarch             1.8.4-5.fc18         @updates                    
+ant-jmf.noarch                 1.8.4-5.fc18         @updates                    
+ant-jsch.noarch                1.8.4-5.fc18         @updates                    
+ant-junit.noarch               1.8.4-5.fc18         @updates                    
+ant-scripts.noarch             1.8.4-5.fc18         @updates                    
+ant-swing.noarch               1.8.4-5.fc18         @updates                    
+ant-testutil.noarch            1.8.4-5.fc18         @updates                    
+anthy.x86_64                   9100h-23.fc18        @updates                    
+antlr-tool.noarch              2.7.7-22.fc18        @fedora                     
+apache-commons-codec.noarch    1.6-5.fc18           @fedora                     
+apache-commons-discovery.noarch
+                               2:0.5-4.fc18         @fedora                     
+apache-commons-el.noarch       1.0-24.fc18          @fedora                     
+apache-commons-io.noarch       1:2.4-2.fc18         @fedora                     
+apache-commons-lang.noarch     2.6-7.fc18           @fedora                     
+apache-commons-logging.noarch  1.1.1-20.fc18        @fedora                     
+apache-commons-net.noarch      3.2-1.fc18           @fedora                     
+apache-mime4j.noarch           0.7.2-3.fc18         @fedora                     
+apr.x86_64                     1.4.6-3.fc18         @fedora                     
+apr-util.x86_64                1.4.1-6.fc18         @fedora                     
+argyllcms.x86_64               1.4.0-6.fc18         @koji-override-0/$releasever
+at.x86_64                      3.1.13-10.fc18       @koji-override-0/$releasever
+at-spi.x86_64                  1.32.0-9.fc18        @fedora                     
+at-spi2-atk.i686               2.6.2-1.fc18         @fedora                     
+at-spi2-atk.x86_64             2.6.2-1.fc18         @koji-override-0/$releasever
+at-spi2-core.i686              2.6.3-1.fc18         @updates                    
+at-spi2-core.x86_64            2.6.3-1.fc18         @updates                    
+atinject.noarch                1-8.20100611svn86.fc18
+                                                    @fedora                     
+atk.i686                       2.6.0-1.fc18         @fedora                     
+atk.x86_64                     2.6.0-1.fc18         @koji-override-0/$releasever
+atkmm.x86_64                   2.22.6-2.fc18        @koji-override-0/$releasever
+atlas.x86_64                   3.8.4-7.fc18         @fedora                     
+atmel-firmware.noarch          1.3-10.fc18          @koji-override-0/$releasever
+attr.x86_64                    2.4.46-7.fc18        @koji-override-0/$releasever
+audiofile.x86_64               1:0.2.7-4.fc18       @fedora                     
+audit.x86_64                   2.3.1-2.fc18         @updates                    
+audit-libs.i686                2.3.1-2.fc18         @updates                    
+audit-libs.x86_64              2.3.1-2.fc18         @updates                    
+audit-libs-python.x86_64       2.3.1-2.fc18         @updates                    
+augeas-libs.x86_64             1.0.0-1.fc18         @updates                    
+authconfig.x86_64              6.2.5-1.fc18.2       @koji-override-0/$releasever
+authconfig-gtk.x86_64          6.2.5-1.fc18.2       @koji-override-0/$releasever
+autoconf.noarch                2.69-3.fc18          @fedora                     
+autocorr-en.noarch             1:3.6.6.2-9.fc18     @updates                    
+autodownloader.noarch          0.3.0-6.fc18         @fedora                     
+automake.noarch                1.12.2-5.fc18        @fedora                     
+automake14.noarch              1.4p6-23.fc18        @fedora                     
+automake17.noarch              1.7.9-17.fc18        @fedora                     
+avahi.x86_64                   0.6.31-6.fc18        @koji-override-0/$releasever
+avahi-autoipd.x86_64           0.6.31-6.fc18        @koji-override-0/$releasever
+avahi-glib.x86_64              0.6.31-6.fc18        @koji-override-0/$releasever
+avahi-gobject.x86_64           0.6.31-6.fc18        @koji-override-0/$releasever
+avahi-libs.i686                0.6.31-6.fc18        @fedora                     
+avahi-libs.x86_64              0.6.31-6.fc18        @koji-override-0/$releasever
+avahi-ui-gtk3.x86_64           0.6.31-6.fc18        @koji-override-0/$releasever
+axis.noarch                    1.4-19.fc18          @updates                    
+b43-fwcutter.x86_64            016-1.fc18           @koji-override-0/$releasever
+b43-openfwwf.noarch            5.2-8.fc18           @koji-override-0/$releasever
+babl.x86_64                    0.1.10-4.fc18        @fedora                     
+baobab.x86_64                  3.6.4-1.fc18         @updates                    
+basesystem.noarch              10.0-7.fc18          @koji-override-0/$releasever
+bash.x86_64                    4.2.45-1.fc18        @updates                    
+bash-completion.noarch         1:2.1-2.fc18         @updates                    
+batik.noarch                   1.8-0.5.svn1230816.fc18
+                                                    @fedora                     
+bc.x86_64                      1.06.95-7.fc18       @koji-override-0/$releasever
+bcel.noarch                    5.2-13.fc18          @fedora                     
+bea-stax.noarch                1.2.0-4.fc18         @fedora                     
+bea-stax-api.noarch            1.2.0-4.fc18         @fedora                     
+bind-libs.x86_64               32:9.9.3-3.P1.fc18   @updates                    
+bind-libs-lite.x86_64          32:9.9.3-3.P1.fc18   @updates                    
+bind-license.noarch            32:9.9.3-3.P1.fc18   @updates                    
+bind-utils.x86_64              32:9.9.3-3.P1.fc18   @updates                    
+binutils.x86_64                2.23.51.0.1-6.fc18   @updates                    
+biosdevname.x86_64             0.4.1-2.fc18         @koji-override-0/$releasever
+bison.x86_64                   2.6.1-1.fc18         @fedora                     
+bluez.x86_64                   4.101-6.fc18         @updates                    
+bluez-cups.x86_64              4.101-6.fc18         @updates                    
+bluez-libs.x86_64              4.101-6.fc18         @updates                    
+bodhi-client.noarch            0.9.3-1.fc18         @fedora                     
+boost-chrono.x86_64            1.50.0-5.fc18        @updates                    
+boost-date-time.x86_64         1.50.0-5.fc18        @updates                    
+boost-iostreams.x86_64         1.50.0-5.fc18        @updates                    
+boost-program-options.x86_64   1.50.0-5.fc18        @updates                    
+boost-regex.x86_64             1.50.0-5.fc18        @updates                    
+boost-system.x86_64            1.50.0-5.fc18        @updates                    
+boost-thread.x86_64            1.50.0-5.fc18        @updates                    
+brasero.x86_64                 3.6.1-2.fc18         @updates                    
+brasero-libs.x86_64            3.6.1-2.fc18         @updates                    
+brasero-nautilus.x86_64        3.6.1-2.fc18         @updates                    
+bridge-utils.x86_64            1.5-4.fc18           @koji-override-0/$releasever
+brlapi.x86_64                  0.5.6-12.fc18        @updates                    
+brltty.x86_64                  4.3-12.fc18          @updates                    
+bsf.noarch                     2.4.0-15.fc18        @fedora                     
+btparser.x86_64                0.25-1.fc18          @updates                    
+btrfs-progs.x86_64             0.20.rc1.20121017git91d9eec-3.fc18
+                                                    @updates                    
+byacc.x86_64                   1.9.20120115-2.fc18  @fedora                     
+bzip2.x86_64                   1.0.6-7.fc18         @koji-override-0/$releasever
+bzip2-libs.i686                1.0.6-7.fc18         @fedora                     
+bzip2-libs.x86_64              1.0.6-7.fc18         @koji-override-0/$releasever
+c-ares.x86_64                  1.9.1-2.fc18         @koji-override-0/$releasever
+ca-certificates.noarch         2012.87-1.fc18       @updates                    
+cairo.i686                     1.12.14-2.fc18       @updates                    
+cairo.x86_64                   1.12.14-2.fc18       @updates                    
+cairo-gobject.i686             1.12.14-2.fc18       @updates                    
+cairo-gobject.x86_64           1.12.14-2.fc18       @updates                    
+cairomm.x86_64                 1.10.0-5.fc18        @koji-override-0/$releasever
+cal10n.noarch                  0.7.4-9.fc18         @fedora                     
+caribou.x86_64                 0.4.4.2-7.fc18       @updates                    
+caribou-gtk2-module.x86_64     0.4.4.2-7.fc18       @updates                    
+caribou-gtk3-module.x86_64     0.4.4.2-7.fc18       @updates                    
+ccache.x86_64                  3.1.9-1.fc18         @updates                    
+cdparanoia.x86_64              10.2-12.fc18         @koji-override-0/$releasever
+cdparanoia-libs.i686           10.2-12.fc18         @fedora                     
+cdparanoia-libs.x86_64         10.2-12.fc18         @koji-override-0/$releasever
+cdrdao.x86_64                  1.2.3-16.fc18        @koji-override-0/$releasever
+celt.x86_64                    0.11.1-4.fc18        @fedora                     
+celt051.x86_64                 0.5.1.3-5.fc18       @koji-override-0/$releasever
+ceph-libs.x86_64               0.56.3-1.fc18        @updates                    
+checkgmail.noarch              1.13-10.20091022svn.fc18
+                                                    @fedora                     
+checkpolicy.x86_64             2.1.12-3.fc18        @updates                    
+cheese.x86_64                  2:3.6.2-1.fc18       @koji-override-0/$releasever
+cheese-libs.x86_64             2:3.6.2-1.fc18       @koji-override-0/$releasever
+chkconfig.x86_64               1.3.59-2.fc18        @koji-override-0/$releasever
+chrony.x86_64                  1.27-0.5.pre1.git1ca844.fc18
+                                                    @koji-override-0/$releasever
+cifs-utils.x86_64              6.0-1.fc18           @updates                    
+cjkuni-uming-fonts.noarch      0.2.20080216.1-51.fc18
+                                                    @updates                    
+cloog-ppl.x86_64               0.15.11-4.fc18.1     @fedora                     
+clucene-contribs-lib.x86_64    2.3.3.4-7.fc18       @koji-override-0/$releasever
+clucene-core.x86_64            2.3.3.4-7.fc18       @koji-override-0/$releasever
+clutter.x86_64                 1.12.2-2.fc18        @updates                    
+clutter-gst.x86_64             1.6.0-3.fc18         @koji-override-0/$releasever
+clutter-gst2.x86_64            1.9.92-1.fc18        @koji-override-0/$releasever
+clutter-gtk.x86_64             1.4.2-1.fc18         @updates                    
+cogl.x86_64                    1.12.2-2.fc18        @updates                    
+color-filesystem.noarch        1-10                 @koji-override-0/$releasever
+colord.x86_64                  0.1.31-1.fc18        @updates                    
+colord-gtk.x86_64              0.1.24-1.fc18        @updates                    
+colord-libs.i686               0.1.31-1.fc18        @updates                    
+colord-libs.x86_64             0.1.31-1.fc18        @updates                    
+compat-readline5.x86_64        5.2-20.fc18          @koji-override-0/$releasever
+comps-extras.noarch            21-2.fc18            @updates                    
+control-center.x86_64          1:3.6.3-2.fc18       @updates                    
+control-center-filesystem.x86_64
+                               1:3.6.3-2.fc18       @updates                    
+coreutils.x86_64               8.17-8.fc18          @updates                    
+corosync.x86_64                2.3.0-1.fc18         @updates                    
+corosynclib.x86_64             2.3.0-1.fc18         @updates                    
+cpio.x86_64                    2.11-12.fc18         @koji-override-0/$releasever
+cpp.x86_64                     4.7.2-8.fc18         @fedora                     
+cracklib.i686                  2.8.22-2.fc18        @fedora                     
+cracklib.x86_64                2.8.22-2.fc18        @koji-override-0/$releasever
+cracklib-dicts.x86_64          2.8.22-2.fc18        @koji-override-0/$releasever
+crash.x86_64                   6.1.4-1.fc18         @updates                    
+crda.x86_64                    1.1.3_2013.02.13-2.fc18
+                                                    @updates                    
+createrepo.noarch              0.9.9-21.fc18        @updates                    
+cronie.x86_64                  1.4.10-1.fc18        @koji-override-0/$releasever
+cronie-anacron.x86_64          1.4.10-1.fc18        @koji-override-0/$releasever
+crontabs.noarch                1.11-4.20101115git.fc18
+                                                    @koji-override-0/$releasever
+cryptopp.x86_64                5.6.2-2.fc18         @updates                    
+cryptsetup.x86_64              1.6.1-1.fc18         @updates                    
+cryptsetup-libs.x86_64         1.6.1-1.fc18         @updates                    
+cryptsetup-python.x86_64       1.6.1-1.fc18         @updates                    
+crystalhd-firmware.noarch      3.10.0-2.fc18        @fedora                     
+cscope.x86_64                  15.8-3.fc18          @fedora                     
+ctags.x86_64                   5.8-9.fc18           @fedora                     
+cups.x86_64                    1:1.5.4-20.fc18      @updates                    
+cups-devel.x86_64              1:1.5.4-20.fc18      @updates                    
+cups-libs.i686                 1:1.5.4-20.fc18      @updates                    
+cups-libs.x86_64               1:1.5.4-20.fc18      @updates                    
+cups-pk-helper.x86_64          0.2.4-1.fc18         @koji-override-0/$releasever
+curl.x86_64                    7.27.0-10.fc18       @updates                    
+cvs.x86_64                     1.11.23-30.fc18      @updates                    
+cyrus-sasl.x86_64              2.1.23-37.fc18       @updates                    
+cyrus-sasl-gssapi.x86_64       2.1.23-37.fc18       @updates                    
+cyrus-sasl-lib.x86_64          2.1.23-37.fc18       @updates                    
+cyrus-sasl-md5.x86_64          2.1.23-37.fc18       @updates                    
+cyrus-sasl-plain.x86_64        2.1.23-37.fc18       @updates                    
+dbus.x86_64                    1:1.6.12-1.fc18      @updates                    
+dbus-devel.x86_64              1:1.6.12-1.fc18      @updates                    
+dbus-glib.x86_64               0.100-1.fc18         @koji-override-0/$releasever
+dbus-java.noarch               2.7-9.fc18           @fedora                     
+dbus-libs.i686                 1:1.6.12-1.fc18      @updates                    
+dbus-libs.x86_64               1:1.6.12-1.fc18      @updates                    
+dbus-python.x86_64             1.1.1-3.fc18         @updates                    
+dbus-x11.x86_64                1:1.6.12-1.fc18      @updates                    
+dconf.x86_64                   0.14.1-3.fc18        @koji-override-0/$releasever
+dconf-editor.x86_64            0.14.1-3.fc18        @fedora                     
+deja-dup.x86_64                26.0-1.fc18          @updates                    
+dejavu-fonts-common.noarch     2.33-4.fc18          @koji-override-0/$releasever
+dejavu-sans-fonts.noarch       2.33-4.fc18          @koji-override-0/$releasever
+dejavu-sans-mono-fonts.noarch  2.33-4.fc18          @koji-override-0/$releasever
+dejavu-serif-fonts.noarch      2.33-4.fc18          @koji-override-0/$releasever
+deltarpm.x86_64                3.6-0.11.20110223git.fc18
+                                                    @koji-override-0/$releasever
+desktop-backgrounds-gnome.noarch
+                               18.0.0-1.fc18        @koji-override-0/$releasever
+desktop-file-utils.x86_64      0.21-1.fc18          @koji-override-0/$releasever
+device-mapper.x86_64           1.02.77-4.fc18       @koji-override-0/$releasever
+device-mapper-event.x86_64     1.02.77-4.fc18       @koji-override-0/$releasever
+device-mapper-event-libs.x86_64
+                               1.02.77-4.fc18       @koji-override-0/$releasever
+device-mapper-libs.x86_64      1.02.77-4.fc18       @koji-override-0/$releasever
+device-mapper-multipath.x86_64 0.4.9-36.fc18        @koji-override-0/$releasever
+device-mapper-multipath-libs.x86_64
+                               0.4.9-36.fc18        @koji-override-0/$releasever
+device-mapper-persistent-data.x86_64
+                               0.1.4-2.fc18         @koji-override-0/$releasever
+dhclient.x86_64                12:4.2.5-12.fc18     @updates                    
+dhcp-common.x86_64             12:4.2.5-12.fc18     @updates                    
+dhcp-libs.x86_64               12:4.2.5-12.fc18     @updates                    
+dialog.x86_64                  1.1-17.20120706.fc18 @koji-override-0/$releasever
+diffstat.x86_64                1.55-2.fc18          @fedora                     
+diffutils.x86_64               3.2-12.fc18          @updates                    
+dirac-libs.x86_64              1.0.2-9.fc18         @fedora                     
+dmidecode.x86_64               1:2.12-3.fc18        @updates                    
+dmraid.x86_64                  1.0.0.rc16-18.fc18   @updates                    
+dmraid-events.x86_64           1.0.0.rc16-18.fc18   @updates                    
+dnsmasq.x86_64                 2.65-5.fc18          @updates                    
+dom4j.noarch                   1.6.1-11.fc18        @fedora                     
+dosfstools.x86_64              3.0.20-2.fc18        @updates                    
+dotconf.x86_64                 1.3-4.fc18           @koji-override-0/$releasever
+doxygen.x86_64                 1:1.8.3.1-2.fc18     @updates                    
+dracut.x86_64                  024-25.git20130205.fc18
+                                                    @updates                    
+dracut-network.x86_64          024-25.git20130205.fc18
+                                                    @updates                    
+drehatlas-widelands-fonts.noarch
+                               1.0.3.1-8.fc18       @fedora                     
+dumb.x86_64                    0.9.3-14.fc18        @fedora                     
+dump.x86_64                    1:0.4-0.14.b44.fc18  @updates                    
+duplicity.x86_64               0.6.21-1.fc18        @updates                    
+dvb-apps.x86_64                1.1.2-4.1488.f3a70b206f0f.fc18
+                                                    @updates                    
+dvd+rw-tools.x86_64            7.1-10.fc18          @koji-override-0/$releasever
+dwz.x86_64                     0.8-1.fc18           @fedora                     
+dyninst.x86_64                 8.1.2-1.fc18         @updates                    
+e2fsprogs.x86_64               1.42.5-1.fc18        @koji-override-0/$releasever
+e2fsprogs-libs.x86_64          1.42.5-1.fc18        @koji-override-0/$releasever
+easymock2.noarch               2.5.2-7.fc18         @fedora                     
+ebtables.x86_64                2.0.10-6.fc18        @koji-override-0/$releasever
+eclipse-cdt.x86_64             1:8.1.2-1.fc18       @updates                    
+eclipse-cdt-parsers.x86_64     1:8.1.2-1.fc18       @updates                    
+eclipse-changelog.noarch       2:2.8.0-8.fc18       @updates                    
+eclipse-collabnet-merge.noarch 3.0.9-1.fc18         @fedora                     
+eclipse-ecf-core.noarch        3.5.6-3.fc18         @fedora                     
+eclipse-egit.noarch            2.2.0-1.fc18         @updates                    
+eclipse-emf.noarch             2.8.1-7.fc18         @updates                    
+eclipse-emf-core.noarch        1:2.8.1-7.fc18       @updates                    
+eclipse-emf-xsd.noarch         2.8.1-7.fc18         @updates                    
+eclipse-equinox-osgi.x86_64    1:4.2.2-6.fc18       @updates                    
+eclipse-fedorapackager.noarch  0.4.1-2.fc18         @fedora                     
+eclipse-gef.noarch             3.8.1-5.fc18         @updates                    
+eclipse-jdt.x86_64             1:4.2.2-6.fc18       @updates                    
+eclipse-jgit.noarch            2.2.0-1.fc18         @updates                    
+eclipse-linuxtools.noarch      1.2.0-7.fc18         @updates                    
+eclipse-mpc.noarch             1.1.1-4.fc18         @updates                    
+eclipse-oprofile.noarch        1.2.0-7.fc18         @updates                    
+eclipse-p2-discovery.noarch    4.2.0-2.fc18         @fedora                     
+eclipse-packagekit.x86_64      0.0.2-4.fc18         @fedora                     
+eclipse-phpeclipse.noarch      1.2.3-4.fc17         @fedora                     
+eclipse-platform.x86_64        1:4.2.2-6.fc18       @updates                    
+eclipse-ptp.noarch             6.0.5-2.fc18         @updates                    
+eclipse-ptp-rdt.noarch         6.0.5-2.fc18         @updates                    
+eclipse-ptp-rdt-xlc.noarch     6.0.5-2.fc18         @updates                    
+eclipse-pydev.noarch           1:2.7.3-2.fc18       @updates                    
+eclipse-rpm-editor.noarch      1.2.0-7.fc18         @updates                    
+eclipse-rpmstubby.noarch       1.2.0-7.fc18         @updates                    
+eclipse-rse.noarch             3.4-3.fc18           @fedora                     
+eclipse-subclipse.noarch       1.8.13-3.fc18        @fedora                     
+eclipse-swt.x86_64             1:4.2.2-6.fc18       @updates                    
+eclipse-valgrind.noarch        1.2.0-7.fc18         @updates                    
+ed.x86_64                      1.8-1.fc18           @updates                    
+eekboard-libs.x86_64           1.0.8-2.fc18         @koji-override-0/$releasever
+eekboard-service.x86_64        1.0.8-2.fc18         @koji-override-0/$releasever
+efibootmgr.x86_64              0.5.4-14.fc18        @koji-override-0/$releasever
+elfutils.x86_64                0.155-1.fc18         @koji-override-0/$releasever
+elfutils-devel.x86_64          0.155-1.fc18         @fedora                     
+elfutils-libelf.x86_64         0.155-1.fc18         @koji-override-0/$releasever
+elfutils-libelf-devel.x86_64   0.155-1.fc18         @fedora                     
+elfutils-libs.x86_64           0.155-1.fc18         @koji-override-0/$releasever
+emacs-filesystem.noarch        1:24.2-19.fc18       @updates                    
+empathy.x86_64                 3.6.4-3.fc18         @updates                    
+enca.x86_64                    1.13-4.fc18          @koji-override-0/$releasever
+enchant.x86_64                 1:1.6.0-5.fc18       @koji-override-0/$releasever
+eog.x86_64                     3.6.2-1.fc18         @koji-override-0/$releasever
+esound-libs.x86_64             1:0.2.41-6.fc18      @fedora                     
+espeak.x86_64                  1.47.11-1.fc18       @updates                    
+ethtool.x86_64                 2:3.4.1-2.fc18       @koji-override-0/$releasever
+evince.x86_64                  3.6.1-2.fc18         @koji-override-0/$releasever
+evince-libs.x86_64             3.6.1-2.fc18         @koji-override-0/$releasever
+evince-nautilus.x86_64         3.6.1-2.fc18         @koji-override-0/$releasever
+evolution.x86_64               3.6.4-3.fc18         @updates                    
+evolution-data-server.x86_64   3.6.4-4.fc18         @updates                    
+evolution-ews.x86_64           3.6.4-1.fc18         @updates                    
+exempi.x86_64                  2.2.0-6.fc18         @updates                    
+exiv2-libs.x86_64              0.23-3.fc18          @koji-override-0/$releasever
+expat.i686                     2.1.0-4.fc18         @fedora                     
+expat.x86_64                   2.1.0-4.fc18         @koji-override-0/$releasever
+faac.x86_64                    1.28-4.fc17          @rpmfusion-nonfree          
+faad2-libs.x86_64              1:2.7-2.fc17         @rpmfusion-free             
+fakeroot.x86_64                1.12.4-5.fc18        @fedora                     
+fakeroot-libs.x86_64           1.12.4-5.fc18        @fedora                     
+farstream.x86_64               0.1.2-2.fc18         @koji-override-0/$releasever
+farstream02.x86_64             0.2.2-2.fc18         @updates                    
+fcoe-utils.x86_64              1.0.24-1.fc18        @koji-override-0/$releasever
+fedora-bookmarks.noarch        15-2.fc18            @updates                    
+fedora-cert.noarch             0.5.10.1-2.fc18      @updates                    
+fedora-logos.noarch            17.0.3-3.fc18        @updates                    
+fedora-packager.noarch         0.5.10.1-2.fc18      @updates                    
+fedora-release.noarch          18-1                 @koji-override-0/$releasever
+fedora-release-notes.noarch    18.0.0-5.fc18        @updates                    
+fedpkg.noarch                  1.11-2.fc18          @updates                    
+felix-bundlerepository.noarch  1.6.6-7.fc18         @fedora                     
+felix-framework.noarch         4.0.2-4.fc18         @fedora                     
+felix-gogo-command.noarch      0.12.0-4.fc18        @fedora                     
+felix-gogo-runtime.noarch      0.10.0-5.fc18        @fedora                     
+felix-gogo-shell.noarch        0.10.0-4.fc18        @fedora                     
+felix-osgi-compendium.noarch   1.4.0-12.fc18        @fedora                     
+felix-osgi-core.noarch         1.4.0-10.fc18        @fedora                     
+felix-osgi-foundation.noarch   1.2.0-9.fc18         @fedora                     
+felix-shell.noarch             1.4.2-7.fc18         @fedora                     
+felix-utils.noarch             1.1.0-5.fc18         @fedora                     
+festival.x86_64                1.96-21.fc18         @koji-override-0/$releasever
+festival-freebsoft-utils.noarch
+                               0.10-4.fc18          @koji-override-0/$releasever
+festival-lib.x86_64            1.96-21.fc18         @koji-override-0/$releasever
+festival-speechtools-libs.x86_64
+                               1.2.96-21.fc18       @koji-override-0/$releasever
+festvox-slt-arctic-hts.noarch  0.20061229-21.fc18   @koji-override-0/$releasever
+ffmpeg-libs.x86_64             1.0.7-1.fc18         @rpmfusion-free-updates     
+fftw-libs-double.i686          3.3.3-5.fc18         @updates                    
+fftw-libs-double.x86_64        3.3.3-5.fc18         @updates                    
+file.x86_64                    5.11-4.fc18          @koji-override-0/$releasever
+file-libs.x86_64               5.11-4.fc18          @koji-override-0/$releasever
+file-roller.x86_64             3.6.3-1.fc18         @koji-override-0/$releasever
+file-roller-nautilus.x86_64    3.6.3-1.fc18         @koji-override-0/$releasever
+filesystem.x86_64              3.1-2.fc18           @koji-override-0/$releasever
+findutils.x86_64               1:4.5.10-5.fc18      @koji-override-0/$releasever
+fipscheck.x86_64               1.3.1-2.fc18         @koji-override-0/$releasever
+fipscheck-lib.x86_64           1.3.1-2.fc18         @koji-override-0/$releasever
+firefox.x86_64                 22.0-1.fc18          @updates                    
+firewall-config.noarch         0.2.12-5.fc18        @updates                    
+firewalld.noarch               0.2.12-5.fc18        @updates                    
+firstboot.x86_64               18.6-2.fc18          @koji-override-0/$releasever
+flac.i686                      1.2.1-10.fc18        @fedora                     
+flac.x86_64                    1.2.1-10.fc18        @koji-override-0/$releasever
+flash-plugin.x86_64            11.2.202.291-release @adobe-linux-x86_64         
+flex.x86_64                    2.5.36-1.fc18        @fedora                     
+flite.x86_64                   1.3-18.fc18          @koji-override-0/$releasever
+fltk.x86_64                    1.3.0-8.fc18         @fedora                     
+fluid-soundfont-common.noarch  3.1-9.fc18           @fedora                     
+fluid-soundfont-lite-patches.noarch
+                               3.1-9.fc18           @fedora                     
+fluidsynth-libs.x86_64         1.1.6-1.fc18         @fedora                     
+folks.x86_64                   1:0.8.0-1.fc18       @koji-override-0/$releasever
+fontconfig.i686                2.10.2-2.fc18        @updates                    
+fontconfig.x86_64              2.10.2-2.fc18        @updates                    
+fontpackages-filesystem.noarch 1.44-5.fc18          @koji-override-0/$releasever
+foomatic-filters.x86_64        4.0.8-13.fc18        @koji-override-0/$releasever
+fpaste.noarch                  0.3.7.1-8.fc18       @updates                    
+fprintd.x86_64                 0.4.1-4.fc18         @koji-override-1/$releasever
+fprintd-pam.x86_64             0.4.1-4.fc18         @koji-override-1/$releasever
+freeglut.x86_64                2.8.0-7.fc18         @fedora                     
+freetype.i686                  2.4.10-4.fc18        @updates                    
+freetype.x86_64                2.4.10-4.fc18        @updates                    
+frei0r-plugins.x86_64          1.3-8.fc18           @koji-override-0/$releasever
+fribidi.x86_64                 0.19.4-1.fc18        @fedora                     
+ftgl.x86_64                    2.1.3-0.7.rc5.fc18   @fedora                     
+fuse.x86_64                    2.9.2-1.fc18         @koji-override-0/$releasever
+fuse-libs.x86_64               2.9.2-1.fc18         @koji-override-0/$releasever
+fuseiso.x86_64                 20070708-12.fc18     @koji-override-0/$releasever
+fxload.x86_64                  2002_04_11-12.fc18   @koji-override-0/$releasever
+game-music-emu.x86_64          0.5.5-3.fc18         @fedora                     
+gamin.i686                     0.1.10-13.fc18       @fedora                     
+gamin.x86_64                   0.1.10-13.fc18       @koji-override-0/$releasever
+gavl.x86_64                    1.4.0-1.fc18         @koji-override-0/$releasever
+gawk.x86_64                    4.0.1-2.fc18         @koji-override-0/$releasever
+gbrainy.x86_64                 1:2.1.3-3.fc18       @fedora                     
+gcalctool.x86_64               6.6.2-1.fc18         @koji-override-0/$releasever
+gcc.x86_64                     4.7.2-8.fc18         @fedora                     
+gcc-c++.x86_64                 4.7.2-8.fc18         @fedora                     
+gcc-gfortran.x86_64            4.7.2-8.fc18         @fedora                     
+gconf-editor.x86_64            3.0.1-3.fc18         @fedora                     
+gcr.x86_64                     3.6.2-4.fc18         @updates                    
+gd.x86_64                      2.0.35-18.fc18       @koji-override-0/$releasever
+gdb.x86_64                     7.5.1-38.fc18        @updates                    
+gdbm.x86_64                    1.10-3.fc18          @koji-override-0/$releasever
+gdisk.x86_64                   0.8.5-1.fc18         @koji-override-0/$releasever
+gdk-pixbuf2.i686               2.26.5-1.fc18        @fedora                     
+gdk-pixbuf2.x86_64             2.26.5-1.fc18        @koji-override-0/$releasever
+gdm.x86_64                     1:3.6.2-5.fc18       @koji-override-0/$releasever
+gdm-libs.x86_64                1:3.6.2-5.fc18       @koji-override-0/$releasever
+gedit.x86_64                   2:3.6.2-1.fc18       @koji-override-0/$releasever
+gegl.x86_64                    0.2.0-2.fc18         @fedora                     
+genisoimage.x86_64             1.1.11-14.fc18       @koji-override-0/$releasever
+geoclue.x86_64                 0.12.99-1.fc18       @koji-override-0/$releasever
+geronimo-annotation.noarch     1.0-8.fc18           @fedora                     
+geronimo-jms.noarch            1.1.1-12.fc18        @fedora                     
+geronimo-jta.noarch            1.1.1-10.fc18        @fedora                     
+geronimo-osgi-support.noarch   1.0-8.fc18           @fedora                     
+gettext.x86_64                 0.18.1.1-17.fc18     @koji-override-0/$releasever
+gettext-common-devel.noarch    0.18.1.1-17.fc18     @fedora                     
+gettext-devel.x86_64           0.18.1.1-17.fc18     @fedora                     
+gettext-libs.x86_64            0.18.1.1-17.fc18     @koji-override-0/$releasever
+gfs2-utils.x86_64              3.1.5-1.fc18         @koji-override-0/$releasever
+ghostscript.x86_64             9.06-4.fc18          @updates                    
+ghostscript-cups.x86_64        9.06-4.fc18          @updates                    
+ghostscript-fonts.noarch       5.50-29.fc18         @koji-override-0/$releasever
+giflib.x86_64                  4.1.6-6.fc18         @koji-override-0/$releasever
+gimp.x86_64                    2:2.8.4-5.fc18       @updates                    
+gimp-libs.x86_64               2:2.8.4-5.fc18       @updates                    
+git.x86_64                     1.8.1.4-2.fc18       @updates                    
+gjs.x86_64                     1.34.0-1.fc18        @koji-override-0/$releasever
+glade-libs.x86_64              3.14.2-2.fc18        @koji-override-0/$releasever
+glassfish-jsp.noarch           2.2.5-2.fc18         @fedora                     
+glassfish-jsp-api.noarch       2.2.1-4.fc18         @fedora                     
+glib.x86_64                    1:1.2.10-37.fc18     @fedora                     
+glib-networking.x86_64         2.34.2-1.fc18        @koji-override-0/$releasever
+glib2.i686                     2.34.2-2.fc18        @updates                    
+glib2.x86_64                   2.34.2-2.fc18        @updates                    
+glibc.i686                     2.16-31.fc18         @updates                    
+glibc.x86_64                   2.16-31.fc18         @updates                    
+glibc-common.x86_64            2.16-31.fc18         @updates                    
+glibc-devel.x86_64             2.16-31.fc18         @updates                    
+glibc-headers.x86_64           2.16-31.fc18         @updates                    
+glibmm24.x86_64                2.34.1-1.fc18        @koji-override-0/$releasever
+glusterfs.x86_64               3.3.1-15.fc18        @updates                    
+glusterfs-fuse.x86_64          3.3.1-15.fc18        @updates                    
+glx-utils.x86_64               8.1.0-3.fc18         @updates                    
+gmime.x86_64                   2.6.12-1.fc18        @koji-override-0/$releasever
+gmp.x86_64                     1:5.0.5-3.fc18       @koji-override-0/$releasever
+gnokii.x86_64                  0.6.31-4.fc18        @updates                    
+gnome-abrt.x86_64              0.2.12-2.fc18        @updates                    
+gnome-backgrounds.noarch       3.6.1-1.fc18         @koji-override-0/$releasever
+gnome-bluetooth.x86_64         1:3.6.1-3.fc18       @updates                    
+gnome-bluetooth-libs.x86_64    1:3.6.1-3.fc18       @updates                    
+gnome-boxes.x86_64             3.6.3-1.fc18         @updates                    
+gnome-clocks.noarch            0.1.5-1.fc18         @koji-override-0/$releasever
+gnome-color-manager.x86_64     3.6.1-1.fc18         @updates                    
+gnome-contacts.x86_64          3.6.2-1.fc18         @koji-override-0/$releasever
+gnome-desktop3.x86_64          3.6.3-1.fc18         @updates                    
+gnome-dictionary.x86_64        3.6.0-1.fc18         @koji-override-0/$releasever
+gnome-disk-utility.x86_64      3.6.1-1.fc18         @koji-override-0/$releasever
+gnome-documents.x86_64         3.6.2-1.fc18         @koji-override-0/$releasever
+gnome-dvb-daemon.x86_64        0.2.10-1.fc18        @koji-override-0/$releasever
+gnome-font-viewer.x86_64       3.6.2-1.fc18         @koji-override-0/$releasever
+gnome-games-data.noarch        1:3.6.1-2.fc18       @updates                    
+gnome-games-gnomine.x86_64     1:3.6.1-2.fc18       @updates                    
+gnome-games-gnotski.x86_64     1:3.6.1-2.fc18       @updates                    
+gnome-games-mahjongg.x86_64    1:3.6.1-2.fc18       @updates                    
+gnome-games-sudoku.noarch      1:3.6.1-2.fc18       @updates                    
+gnome-gmail.noarch             1.8.2-3.fc18         @fedora                     
+gnome-icon-theme.noarch        3.6.2-1.fc18         @koji-override-0/$releasever
+gnome-icon-theme-extras.noarch 3.6.2-1.fc18         @koji-override-0/$releasever
+gnome-icon-theme-legacy.noarch 3.6.2-1.fc18         @koji-override-0/$releasever
+gnome-icon-theme-symbolic.noarch
+                               3.6.2-1.fc18         @koji-override-0/$releasever
+gnome-js-common.noarch         0.1.2-6.fc18         @koji-override-0/$releasever
+gnome-keyring.x86_64           3.6.3-1.fc18         @updates                    
+gnome-keyring-pam.x86_64       3.6.3-1.fc18         @updates                    
+gnome-menus.x86_64             3.6.1-1.fc18         @koji-override-0/$releasever
+gnome-online-accounts.x86_64   3.6.3-1.fc18         @updates                    
+gnome-packagekit.x86_64        3.6.2-1.fc18         @updates                    
+gnome-panel.x86_64             3.6.2-2.fc18         @updates                    
+gnome-panel-libs.x86_64        3.6.2-2.fc18         @updates                    
+gnome-python2.x86_64           2.28.1-9.fc18        @koji-override-0/$releasever
+gnome-python2-bonobo.x86_64    2.28.1-9.fc18        @fedora                     
+gnome-python2-canvas.x86_64    2.28.1-9.fc18        @koji-override-0/$releasever
+gnome-python2-desktop.x86_64   2.32.0-12.fc18       @koji-override-0/$releasever
+gnome-python2-extras.x86_64    2.25.3-40.fc18       @fedora                     
+gnome-python2-gconf.x86_64     2.28.1-9.fc18        @fedora                     
+gnome-python2-gnome.x86_64     2.28.1-9.fc18        @fedora                     
+gnome-python2-gnomekeyring.x86_64
+                               2.32.0-12.fc18       @koji-override-0/$releasever
+gnome-python2-gnomevfs.x86_64  2.28.1-9.fc18        @fedora                     
+gnome-python2-libegg.x86_64    2.25.3-40.fc18       @fedora                     
+gnome-screensaver.x86_64       3.6.1-1.fc18         @koji-override-0/$releasever
+gnome-screenshot.x86_64        3.6.1-1.fc18         @koji-override-0/$releasever
+gnome-session.x86_64           3.6.2-4.fc18         @updates                    
+gnome-session-xsession.x86_64  3.6.2-4.fc18         @updates                    
+gnome-settings-daemon.x86_64   3.6.4-3.fc18         @updates                    
+gnome-settings-daemon-updates.x86_64
+                               3.6.4-3.fc18         @updates                    
+gnome-shell.x86_64             3.6.3.1-1.fc18       @updates                    
+gnome-shell-extension-common.noarch
+                               3.6.2-1.fc18         @updates                    
+gnome-shell-extension-user-theme.noarch
+                               3.6.2-1.fc18         @updates                    
+gnome-system-log.x86_64        1:3.6.1-2.fc18       @koji-override-0/$releasever
+gnome-system-monitor.x86_64    3.6.1-3.fc18         @koji-override-0/$releasever
+gnome-terminal.x86_64          3.6.1-2.fc18         @updates                    
+gnome-themes-standard.x86_64   3.6.5-1.fc18         @updates                    
+gnome-tweak-tool.noarch        3.6.1-2.fc18         @fedora                     
+gnome-user-docs.noarch         3.6.2-1.fc18         @koji-override-0/$releasever
+gnome-vfs2.x86_64              2.24.4-10.fc18       @updates                    
+gnome-video-effects.noarch     0.4.0-4.fc18         @koji-override-0/$releasever
+gnu-free-fonts-common.noarch   20120503-4.fc18      @updates                    
+gnu-free-mono-fonts.noarch     20120503-4.fc18      @updates                    
+gnu-free-sans-fonts.noarch     20120503-4.fc18      @updates                    
+gnu-free-serif-fonts.noarch    20120503-4.fc18      @updates                    
+gnu-regexp.noarch              1.1.4-16.fc18        @fedora                     
+gnubg.x86_64                   1:0.9.0.1-15.fc18    @fedora                     
+gnupg.x86_64                   1.4.13-2.fc18        @fedora                     
+gnupg2.x86_64                  2.0.19-7.fc18        @koji-override-1/$releasever
+gnutls.i686                    2.12.23-2.fc18       @updates                    
+gnutls.x86_64                  2.12.23-2.fc18       @updates                    
+gnutls-c++.x86_64              2.12.23-2.fc18       @updates                    
+gnutls-devel.x86_64            2.12.23-2.fc18       @updates                    
+gnutls-utils.x86_64            2.12.23-2.fc18       @updates                    
+gobject-introspection.x86_64   1.34.2-1.fc18        @koji-override-0/$releasever
+google-chrome-stable.x86_64    28.0.1500.68-209102  @google-chrome              
+google-gson.noarch             2.2.1-3.fc18         @fedora                     
+gpgme.x86_64                   1.3.2-1.fc18         @koji-override-0/$releasever
+gpm-libs.x86_64                1.20.6-26.fc18       @updates                    
+graphite2.i686                 1.1.1-4.fc18         @updates                    
+graphite2.x86_64               1.1.1-4.fc18         @updates                    
+graphviz.x86_64                2.28.0-26.fc18       @updates                    
+grep.x86_64                    2.14-1.fc18          @koji-override-0/$releasever
+grilo.x86_64                   0.2.4-1.fc18         @koji-override-0/$releasever
+grilo-plugins.x86_64           0.2.5-1.fc18         @updates                    
+groff-base.x86_64              1.22.1-2.fc18        @updates                    
+grub2.x86_64                   1:2.00-15.fc18       @updates                    
+grub2-efi.x86_64               1:2.00-15.fc18       @updates                    
+grub2-tools.x86_64             1:2.00-15.fc18       @updates                    
+grubby.x86_64                  8.22-1.fc18          @updates                    
+gsettings-desktop-schemas.x86_64
+                               3.6.1-1.fc18         @koji-override-0/$releasever
+gsm.i686                       1.0.13-7.fc18        @fedora                     
+gsm.x86_64                     1.0.13-7.fc18        @koji-override-0/$releasever
+gssdp.x86_64                   0.12.2.1-2.fc18      @koji-override-0/$releasever
+gstreamer.i686                 0.10.36-2.fc18       @fedora                     
+gstreamer.x86_64               0.10.36-2.fc18       @koji-override-0/$releasever
+gstreamer-ffmpeg.x86_64        0.10.13-8.fc18       @rpmfusion-free-updates     
+gstreamer-plugins-bad.x86_64   0.10.23-2.fc18       @rpmfusion-free             
+gstreamer-plugins-bad-free.i686
+                               0.10.23-13.fc18      @fedora                     
+gstreamer-plugins-bad-free.x86_64
+                               0.10.23-13.fc18      @koji-override-0/$releasever
+gstreamer-plugins-bad-nonfree.x86_64
+                               0.10.23-1.fc18       @rpmfusion-nonfree          
+gstreamer-plugins-base.i686    0.10.36-3.fc18       @fedora                     
+gstreamer-plugins-base.x86_64  0.10.36-3.fc18       @koji-override-0/$releasever
+gstreamer-plugins-espeak.x86_64
+                               0.4.0-1.fc18         @koji-override-0/$releasever
+gstreamer-plugins-good.x86_64  0.10.31-5.fc18       @koji-override-0/$releasever
+gstreamer-plugins-ugly.x86_64  0.10.19-5.fc18       @rpmfusion-free             
+gstreamer-python.x86_64        0.10.22-3.fc18       @koji-override-0/$releasever
+gstreamer-rtsp.x86_64          0.10.8-3.fc18        @koji-override-0/$releasever
+gstreamer-tools.x86_64         0.10.36-2.fc18       @koji-override-0/$releasever
+gstreamer1.x86_64              1.0.7-1.fc18         @updates                    
+gstreamer1-libav.x86_64        1.0.6-1.fc18         @rpmfusion-free-updates     
+gstreamer1-plugins-bad-free.x86_64
+                               1.0.7-1.fc18         @updates                    
+gstreamer1-plugins-bad-freeworld.x86_64
+                               1.0.6-1.fc18         @rpmfusion-free-updates     
+gstreamer1-plugins-base.x86_64 1.0.7-1.fc18         @updates                    
+gstreamer1-plugins-good.x86_64 1.0.7-1.fc18         @updates                    
+gstreamer1-plugins-ugly.x86_64 1.0.6-1.fc18         @rpmfusion-free-updates     
+gtk+.x86_64                    1:1.2.10-73.fc18     @fedora                     
+gtk-sharp2.x86_64              2.12.11-6.fc18       @fedora                     
+gtk-vnc2.x86_64                0.5.2-1.fc18         @updates                    
+gtk2.x86_64                    2.24.19-1.fc18       @updates                    
+gtk2-immodule-xim.x86_64       2.24.19-1.fc18       @updates                    
+gtk3.i686                      3.6.4-1.fc18         @updates                    
+gtk3.x86_64                    3.6.4-1.fc18         @updates                    
+gtk3-immodule-xim.x86_64       3.6.4-1.fc18         @updates                    
+gtkglext-libs.x86_64           1.2.0-18.fc18        @fedora                     
+gtkhtml3.x86_64                4.6.4-1.fc18         @updates                    
+gtkmm30.x86_64                 3.6.0-1.fc18         @koji-override-0/$releasever
+gtksourceview3.x86_64          3.6.3-1.fc18         @updates                    
+gts.x86_64                     0.7.6-21.20111025.fc18
+                                                    @fedora                     
+gucharmap.x86_64               3.6.1-1.fc18         @koji-override-0/$releasever
+guile.x86_64                   5:1.8.8-5.fc18.2     @koji-override-0/$releasever
+gupnp.x86_64                   0.18.4-1.fc18        @koji-override-0/$releasever
+gupnp-av.x86_64                0.10.3-1.fc18        @koji-override-0/$releasever
+gupnp-igd.x86_64               0.2.1-2.fc18         @koji-override-0/$releasever
+gutenprint.x86_64              5.2.9-7.fc18         @updates                    
+gutenprint-cups.x86_64         5.2.9-7.fc18         @updates                    
+gvfs.x86_64                    1.14.2-4.fc18        @updates                    
+gvfs-afc.x86_64                1.14.2-4.fc18        @updates                    
+gvfs-fuse.x86_64               1.14.2-4.fc18        @updates                    
+gvfs-gphoto2.x86_64            1.14.2-4.fc18        @updates                    
+gvfs-obexftp.x86_64            1.14.2-4.fc18        @updates                    
+gvfs-smb.x86_64                1.14.2-4.fc18        @updates                    
+gvnc.x86_64                    0.5.2-1.fc18         @updates                    
+gzip.x86_64                    1.5-3.fc18           @koji-override-0/$releasever
+hamcrest.noarch                1.1-21.fc18          @fedora                     
+hardlink.x86_64                1:1.0-16.fc18        @updates                    
+harfbuzz.i686                  0.9.12-2.fc18        @updates                    
+harfbuzz.x86_64                0.9.12-2.fc18        @updates                    
+hesiod.x86_64                  3.1.0-22.fc18        @koji-override-0/$releasever
+hfsplus-tools.x86_64           540.1.linux3-2.fc18  @koji-override-0/$releasever
+hicolor-icon-theme.noarch      0.12-5.fc18          @koji-override-0/$releasever
+hostname.x86_64                3.11-4.fc18          @koji-override-0/$releasever
+hpijs.x86_64                   1:3.13.5-1.fc18      @updates                    
+hplip.x86_64                   3.13.5-1.fc18        @updates                    
+hplip-common.x86_64            3.13.5-1.fc18        @updates                    
+hplip-gui.x86_64               3.13.5-1.fc18        @updates                    
+hplip-libs.x86_64              3.13.5-1.fc18        @updates                    
+hsqldb.noarch                  1:1.8.1.3-9.fc18     @fedora                     
+htmlparser.noarch              1.6-10.fc18          @fedora                     
+httpcomponents-client.noarch   4.2.1-3.fc18         @fedora                     
+httpcomponents-core.noarch     4.2.2-1.fc18         @fedora                     
+httpd.x86_64                   2.4.4-3.fc18         @updates                    
+httpd-tools.x86_64             2.4.4-3.fc18         @updates                    
+hunspell.x86_64                1.3.2-10.fc18        @updates                    
+hunspell-en.noarch             0.20110318-9.fc18    @fedora                     
+hunspell-en-GB.noarch          0.20110318-9.fc18    @fedora                     
+hunspell-en-US.noarch          0.20110318-9.fc18    @koji-override-0/$releasever
+hwdata.noarch                  0.244-1.fc18         @updates                    
+hyphen.x86_64                  2.8.5-2.fc18         @koji-override-0/$releasever
+hyphen-en.noarch               2.8.5-2.fc18         @koji-override-0/$releasever
+ibus.x86_64                    1.5.2-4.fc18         @updates                    
+ibus-anthy.x86_64              1.5.3-1.fc18         @updates                    
+ibus-chewing.x86_64            1.4.3-1.fc18         @koji-override-0/$releasever
+ibus-gtk2.x86_64               1.5.2-4.fc18         @updates                    
+ibus-gtk3.x86_64               1.5.2-4.fc18         @updates                    
+ibus-hangul.x86_64             1.4.1-7.fc18         @koji-override-0/$releasever
+ibus-libpinyin.x86_64          1.6.91-1.fc18        @updates                    
+ibus-libs.x86_64               1.5.2-4.fc18         @updates                    
+ibus-m17n.x86_64               1.3.4-8.fc18         @updates                    
+ibus-rawcode.x86_64            1.3.1.20100707-9.fc18
+                                                    @koji-override-0/$releasever
+ibus-typing-booster.noarch     0.0.32-1.fc18        @updates                    
+icedax.x86_64                  1.1.11-14.fc18       @koji-override-0/$releasever
+icu4j-eclipse.noarch           1:4.4.2.2-12.fc18    @fedora                     
+ilmbase.x86_64                 1.0.3-4.fc18         @koji-override-0/$releasever
+im-chooser.x86_64              1.6.3-1.fc18         @updates                    
+im-chooser-common.x86_64       1.6.3-1.fc18         @updates                    
+imsettings.x86_64              1.5.1-2.fc18         @updates                    
+imsettings-gnome.x86_64        1.5.1-2.fc18         @updates                    
+imsettings-libs.x86_64         1.5.1-2.fc18         @updates                    
+indent.x86_64                  2.2.11-7.fc18        @fedora                     
+info.x86_64                    4.13a-18.fc18        @koji-override-0/$releasever
+initscripts.x86_64             9.42.2-3.fc18        @updates                    
+intltool.noarch                0.50.2-3.fc18        @fedora                     
+iok.x86_64                     2.1.3-2.fc18         @koji-override-0/$releasever
+iproute.x86_64                 3.6.0-8.fc18         @updates                    
+iptables.x86_64                1.4.16.2-5.fc18      @koji-override-0/$releasever
+iptables-services.x86_64       1.4.16.2-5.fc18      @koji-override-0/$releasever
+iptstate.x86_64                2.2.2-8.fc18         @koji-override-0/$releasever
+iputils.x86_64                 20121221-2.fc18      @updates                    
+ipw2100-firmware.noarch        1.3-14.fc18          @koji-override-0/$releasever
+ipw2200-firmware.noarch        3.1-7.fc18           @koji-override-0/$releasever
+ipxe-roms-qemu.noarch          20120328-2.gitaac9718.fc18
+                                                    @koji-override-0/$releasever
+irda-utils.x86_64              0.9.18-16.fc18       @koji-override-0/$releasever
+irqbalance.x86_64              2:1.0.3-9.fc18       @updates                    
+iscsi-initiator-utils.x86_64   6.2.0.872-19.fc18    @koji-override-0/$releasever
+iso-codes.noarch               3.40-1.fc18          @koji-override-0/$releasever
+isomd5sum.x86_64               1:1.0.9-2.fc18       @koji-override-0/$releasever
+isorelax.noarch                1:0-0.10.release20050331.fc18
+                                                    @fedora                     
+ivtv-firmware.noarch           2:20080701-23        @koji-override-0/$releasever
+iw.x86_64                      3.7-1.fc18           @koji-override-0/$releasever
+iwl100-firmware.noarch         39.31.5.1-23.fc18    @updates                    
+iwl1000-firmware.noarch        1:39.31.5.1-23.fc18  @updates                    
+iwl105-firmware.noarch         18.168.6.1-23.fc18   @updates                    
+iwl135-firmware.noarch         18.168.6.1-23.fc18   @updates                    
+iwl2000-firmware.noarch        18.168.6.1-23.fc18   @updates                    
+iwl2030-firmware.noarch        18.168.6.1-23.fc18   @updates                    
+iwl3945-firmware.noarch        15.32.2.9-23.fc18    @updates                    
+iwl4965-firmware.noarch        228.61.2.24-23.fc18  @updates                    
+iwl5000-firmware.noarch        8.83.5.1_1-23.fc18   @updates                    
+iwl5150-firmware.noarch        8.24.2.2-23.fc18     @updates                    
+iwl6000-firmware.noarch        9.221.4.1-23.fc18    @updates                    
+iwl6000g2a-firmware.noarch     17.168.5.3-23.fc18   @updates                    
+iwl6000g2b-firmware.noarch     17.168.5.2-23.fc18   @updates                    
+iwl6050-firmware.noarch        41.28.5.1-23.fc18    @updates                    
+jack-audio-connection-kit.x86_64
+                               1.9.9.5-1.fc18       @updates                    
+jack-audio-connection-kit-example-clients.x86_64
+                               1.9.9.5-1.fc18       @updates                    
+jai-imageio-core.noarch        1.2-0.11.20100217cvs.fc18
+                                                    @updates                    
+jakarta-commons-httpclient.noarch
+                               1:3.1-12.fc18        @updates                    
+jakarta-oro.noarch             2.0.8-11.fc18        @fedora                     
+jasper-libs.i686               1.900.1-20.fc18      @fedora                     
+jasper-libs.x86_64             1.900.1-20.fc18      @koji-override-0/$releasever
+java-1.7.0-openjdk.x86_64      1:1.7.0.25-2.3.10.4.fc18
+                                                    @updates                    
+java-1.7.0-openjdk-devel.x86_64
+                               1:1.7.0.25-2.3.10.4.fc18
+                                                    @updates                    
+java-1.7.0-openjdk-javadoc.noarch
+                               1:1.7.0.25-2.3.10.4.fc18
+                                                    @updates                    
+java_cup.noarch                1:0.11a-10.fc18      @fedora                     
+javamail.noarch                1.4.3-12.fc18        @fedora                     
+javapackages-tools.noarch      0.9.1-1.fc18         @updates                    
+jaxen.noarch                   1.1.3-5.fc18         @fedora                     
+jbigkit-libs.i686              2.0-7.fc18           @fedora                     
+jbigkit-libs.x86_64            2.0-7.fc18           @koji-override-0/$releasever
+jdepend.noarch                 2.9.1-7.fc18         @fedora                     
+jdk.x86_64                     2000:1.7.0_21-fcs    @/jdk-7u21-linux-x64        
+jdom.noarch                    1.1.3-3.fc18         @updates                    
+jetty-continuation.noarch      8.1.5-6.fc18         @fedora                     
+jetty-http.noarch              8.1.5-6.fc18         @fedora                     
+jetty-io.noarch                8.1.5-6.fc18         @fedora                     
+jetty-jmx.noarch               8.1.5-6.fc18         @fedora                     
+jetty-parent.noarch            19-4.fc18            @fedora                     
+jetty-project.noarch           8.1.5-6.fc18         @fedora                     
+jetty-security.noarch          8.1.5-6.fc18         @fedora                     
+jetty-server.noarch            8.1.5-6.fc18         @fedora                     
+jetty-servlet.noarch           8.1.5-6.fc18         @fedora                     
+jetty-util.noarch              8.1.5-6.fc18         @fedora                     
+jline.noarch                   1.0-2.fc18           @koji-override-0/$releasever
+jomolhari-fonts.noarch         0.003-15.fc18        @koji-override-0/$releasever
+jpackage-utils.x86_64          1.7.5-21.fc18        @updates                    
+jpathwatch.x86_64              0.94-5.fc18          @fedora                     
+js.x86_64                      1:1.8.5-12.fc18      @updates                    
+jsch.noarch                    0.1.48-2.fc18        @fedora                     
+json-c.i686                    0.10-2.fc18          @fedora                     
+json-c.x86_64                  0.10-2.fc18          @koji-override-0/$releasever
+json-glib.x86_64               0.15.2-1.fc18        @koji-override-0/$releasever
+junit.noarch                   4.10-6.fc18          @fedora                     
+jvnet-parent.noarch            3-6.fc18             @fedora                     
+jython.noarch                  2.2.1-11.fc18        @updates                    
+jzlib.noarch                   1.1.0-3.fc18         @fedora                     
+kasumi.x86_64                  2.5-9.fc18           @koji-override-0/$releasever
+kbd.x86_64                     1.15.3-7.fc18        @updates                    
+kbd-misc.noarch                1.15.3-7.fc18        @updates                    
+kde-filesystem.x86_64          4-42.fc18            @updates                    
+kernel.x86_64                  3.9.4-200.fc18       @updates                    
+kernel.x86_64                  3.9.5-201.fc18       @updates                    
+kernel.x86_64                  3.9.6-200.fc18       @updates                    
+kernel-devel.x86_64            3.9.4-200.fc18       @updates                    
+kernel-devel.x86_64            3.9.5-201.fc18       @updates                    
+kernel-devel.x86_64            3.9.6-200.fc18       @updates                    
+kernel-headers.x86_64          3.9.6-200.fc18       @updates                    
+kernel-modules-extra.x86_64    3.9.4-200.fc18       @updates                    
+kernel-modules-extra.x86_64    3.9.5-201.fc18       @updates                    
+kernel-modules-extra.x86_64    3.9.6-200.fc18       @updates                    
+keyutils.x86_64                1.5.5-3.fc18         @koji-override-0/$releasever
+keyutils-libs.i686             1.5.5-3.fc18         @fedora                     
+keyutils-libs.x86_64           1.5.5-3.fc18         @koji-override-0/$releasever
+keyutils-libs-devel.x86_64     1.5.5-3.fc18         @fedora                     
+khmeros-base-fonts.noarch      5.0-15.fc18          @koji-override-0/$releasever
+khmeros-fonts-common.noarch    5.0-15.fc18          @koji-override-0/$releasever
+kmod.x86_64                    12-3.fc18            @updates                    
+kmod-libs.x86_64               12-3.fc18            @updates                    
+kmod-nvidia-304xx.x86_64       304.88-1.fc18.2      @rpmfusion-nonfree-updates  
+kmod-nvidia-304xx-3.9.4-200.fc18.x86_64.x86_64
+                               304.88-1.fc18        @rpmfusion-nonfree-updates  
+kmod-nvidia-304xx-3.9.5-201.fc18.x86_64.x86_64
+                               304.88-1.fc18.1      @rpmfusion-nonfree-updates  
+kmod-nvidia-304xx-3.9.6-200.fc18.x86_64.x86_64
+                               304.88-1.fc18.2      @rpmfusion-nonfree-updates  
+kmodtool.noarch                1-22.fc18            @rpmfusion-free-updates     
+koji.noarch                    1.8.0-1.fc18         @updates                    
+kpartx.x86_64                  0.4.9-36.fc18        @koji-override-0/$releasever
+krb5-devel.x86_64              1.10.3-17.fc18       @updates                    
+krb5-libs.i686                 1.10.3-17.fc18       @updates                    
+krb5-libs.x86_64               1.10.3-17.fc18       @updates                    
+kxml.noarch                    2.2.2-12.fc18        @fedora                     
+lame-libs.x86_64               3.99.5-1.fc18        @rpmfusion-free             
+lash.x86_64                    0.5.4-17.fc18        @fedora                     
+lasi.x86_64                    1.1.1-5.fc18         @fedora                     
+lcms-libs.i686                 1.19-7.fc18          @fedora                     
+lcms-libs.x86_64               1.19-7.fc18          @koji-override-0/$releasever
+lcms2.i686                     2.4-1.fc18           @fedora                     
+lcms2.x86_64                   2.4-1.fc18           @koji-override-0/$releasever
+less.x86_64                    444-9.fc18           @koji-override-0/$releasever
+leveldb.x86_64                 1.7.0-4.fc18         @fedora                     
+lftp.x86_64                    4.4.6-1.fc18         @updates                    
+libGLEW.x86_64                 1.7.0-3.fc18         @koji-override-0/$releasever
+libICE.i686                    1.0.8-2.fc18         @fedora                     
+libICE.x86_64                  1.0.8-2.fc18         @koji-override-0/$releasever
+libIDL.x86_64                  0.8.14-5.fc18        @fedora                     
+libSM.i686                     1.2.1-2.fc18         @fedora                     
+libSM.x86_64                   1.2.1-2.fc18         @koji-override-0/$releasever
+libX11.i686                    1.5.99.901-3.20130524gita3bdd2b09.fc18
+                                                    @updates                    
+libX11.x86_64                  1.5.99.901-3.20130524gita3bdd2b09.fc18
+                                                    @updates                    
+libX11-common.noarch           1.5.99.901-3.20130524gita3bdd2b09.fc18
+                                                    @updates                    
+libXScrnSaver.i686             1.2.2-2.fc18         @fedora                     
+libXScrnSaver.x86_64           1.2.2-2.fc18         @koji-override-0/$releasever
+libXau.i686                    1.0.6-4.fc18         @fedora                     
+libXau.x86_64                  1.0.6-4.fc18         @koji-override-0/$releasever
+libXaw.x86_64                  1.0.11-2.fc18        @fedora                     
+libXcomposite.i686             0.4.3-4.fc18         @fedora                     
+libXcomposite.x86_64           0.4.3-4.fc18         @koji-override-0/$releasever
+libXcursor.i686                1.1.13-5.20130524git8f677eaea.fc18
+                                                    @updates                    
+libXcursor.x86_64              1.1.13-5.20130524git8f677eaea.fc18
+                                                    @updates                    
+libXdamage.i686                1.1.3-4.fc18         @fedora                     
+libXdamage.x86_64              1.1.3-4.fc18         @koji-override-0/$releasever
+libXdmcp.x86_64                1.1.1-2.fc18         @koji-override-0/$releasever
+libXevie.i686                  1.0.3-4.fc18         @fedora                     
+libXevie.x86_64                1.0.3-4.fc18         @koji-override-0/$releasever
+libXext.i686                   1.3.1-3.20130524gitdfe6e1f3b.fc18
+                                                    @updates                    
+libXext.x86_64                 1.3.1-3.20130524gitdfe6e1f3b.fc18
+                                                    @updates                    
+libXfixes.i686                 5.0-6.20130524gitc480fe327.fc18
+                                                    @updates                    
+libXfixes.x86_64               5.0-6.20130524gitc480fe327.fc18
+                                                    @updates                    
+libXfont.x86_64                1.4.5-2.fc18         @koji-override-0/$releasever
+libXft.i686                    2.3.1-2.fc18         @fedora                     
+libXft.x86_64                  2.3.1-2.fc18         @koji-override-0/$releasever
+libXi.i686                     1.6.2.901-1.fc18     @updates                    
+libXi.x86_64                   1.6.2.901-1.fc18     @updates                    
+libXinerama.i686               1.1.2-5.20130524git99c644fc8.fc18
+                                                    @updates                    
+libXinerama.x86_64             1.1.2-5.20130524git99c644fc8.fc18
+                                                    @updates                    
+libXmu.x86_64                  1.1.1-2.fc18         @koji-override-0/$releasever
+libXpm.x86_64                  3.5.10-2.fc18        @koji-override-0/$releasever
+libXrandr.i686                 1.4.0-4.20130524gitc90f74497.fc18
+                                                    @updates                    
+libXrandr.x86_64               1.4.0-4.20130524gitc90f74497.fc18
+                                                    @updates                    
+libXrender.i686                0.9.7-5.20130524git786f78fd8.fc18
+                                                    @updates                    
+libXrender.x86_64              0.9.7-5.20130524git786f78fd8.fc18
+                                                    @updates                    
+libXres.x86_64                 1.0.6-5.20130524gitf46818496.fc18
+                                                    @updates                    
+libXt.x86_64                   1.1.3-4.20130524git1f4802b74.fc18
+                                                    @updates                    
+libXtst.i686                   1.2.1-6.20130524gite7e04b7be.fc18
+                                                    @updates                    
+libXtst.x86_64                 1.2.1-6.20130524gite7e04b7be.fc18
+                                                    @updates                    
+libXv.i686                     1.0.7-5.20130524git50fc4cb18.fc18
+                                                    @updates                    
+libXv.x86_64                   1.0.7-5.20130524git50fc4cb18.fc18
+                                                    @updates                    
+libXvMC.x86_64                 1.0.7-6.20130524gite9415ddef.fc18
+                                                    @updates                    
+libXxf86dga.x86_64             1.1.3-5.20130524gita8dc6be32.fc18
+                                                    @updates                    
+libXxf86misc.x86_64            1.0.3-4.fc18         @koji-override-0/$releasever
+libXxf86vm.i686                1.1.2-5.20130524git4c4123441.fc18
+                                                    @updates                    
+libXxf86vm.x86_64              1.1.2-5.20130524git4c4123441.fc18
+                                                    @updates                    
+libacl.x86_64                  2.2.51-7.fc18        @koji-override-0/$releasever
+libaio.x86_64                  0.3.109-6.fc18       @koji-override-0/$releasever
+libao.x86_64                   1.1.0-5.fc18         @koji-override-0/$releasever
+libarchive.x86_64              3.0.4-4.fc18         @updates                    
+libart_lgpl.x86_64             2.3.21-4.fc18        @koji-override-0/$releasever
+libass.x86_64                  0.10.1-2.fc18        @fedora                     
+libassuan.x86_64               2.0.3-3.fc18         @koji-override-0/$releasever
+libasyncns.i686                0.8-4.fc18           @fedora                     
+libasyncns.x86_64              0.8-4.fc18           @koji-override-0/$releasever
+libatasmart.x86_64             0.19-3.fc18          @koji-override-0/$releasever
+libattr.i686                   2.4.46-7.fc18        @fedora                     
+libattr.x86_64                 2.4.46-7.fc18        @koji-override-0/$releasever
+libavc1394.x86_64              0.5.3-12.fc18        @koji-override-0/$releasever
+libbasicobjects.x86_64         0.1.0-12.fc18        @koji-override-0/$releasever
+libblkid.i686                  2.22.2-6.fc18        @updates                    
+libblkid.x86_64                2.22.2-6.fc18        @updates                    
+libbluray.x86_64               0.2.3-1.fc18         @koji-override-0/$releasever
+libbonobo.x86_64               2.32.1-3.fc18        @fedora                     
+libbonoboui.x86_64             2.24.5-4.fc18        @fedora                     
+libbsd.x86_64                  0.4.2-2.fc18         @koji-override-0/$releasever
+libburn.x86_64                 1.2.8-1.fc18         @updates                    
+libcaca.x86_64                 0.99-0.15.beta17.fc18
+                                                    @fedora                     
+libcacard.x86_64               2:1.2.2-13.fc18      @updates                    
+libcanberra.x86_64             0.30-2.fc18          @koji-override-0/$releasever
+libcanberra-gtk2.x86_64        0.30-2.fc18          @koji-override-0/$releasever
+libcanberra-gtk3.x86_64        0.30-2.fc18          @koji-override-0/$releasever
+libcap.i686                    2.22-5.fc18          @updates                    
+libcap.x86_64                  2.22-5.fc18          @updates                    
+libcap-ng.x86_64               0.7.3-1.fc18         @koji-override-0/$releasever
+libcddb.x86_64                 1.3.2-9.fc18         @fedora                     
+libcdio.x86_64                 0.83-5.fc18          @koji-override-0/$releasever
+libcdr.x86_64                  0.0.14-1.fc18        @updates                    
+libcgroup.x86_64               0.38-3.fc18          @koji-override-0/$releasever
+libchamplain.x86_64            0.12.3-3.fc18        @koji-override-0/$releasever
+libchamplain-gtk.x86_64        0.12.3-3.fc18        @koji-override-0/$releasever
+libchewing.x86_64              0.3.4-3.fc18         @updates                    
+libcmis.x86_64                 0.2.3-3.fc18         @koji-override-0/$releasever
+libcollection.x86_64           0.6.2-12.fc18        @koji-override-0/$releasever
+libcom_err.i686                1.42.5-1.fc18        @fedora                     
+libcom_err.x86_64              1.42.5-1.fc18        @koji-override-0/$releasever
+libcom_err-devel.x86_64        1.42.5-1.fc18        @fedora                     
+libconfig.x86_64               1.4.8-3.fc18         @koji-override-0/$releasever
+libcroco.i686                  0.6.8-1.fc18         @fedora                     
+libcroco.x86_64                0.6.8-1.fc18         @koji-override-0/$releasever
+libcrystalhd.x86_64            3.10.0-2.fc18        @fedora                     
+libcue.x86_64                  1.3.0-5.fc18         @koji-override-0/$releasever
+libcurl.x86_64                 7.27.0-10.fc18       @updates                    
+libdaemon.x86_64               0.14-4.fc18          @koji-override-0/$releasever
+libdb.i686                     5.3.21-3.fc18        @fedora                     
+libdb.x86_64                   5.3.21-3.fc18        @koji-override-0/$releasever
+libdb-utils.x86_64             5.3.21-3.fc18        @koji-override-0/$releasever
+libdb4.x86_64                  4.8.30-5.fc18        @koji-override-0/$releasever
+libdc1394.x86_64               2.1.4-3.fc18         @koji-override-0/$releasever
+libdca.x86_64                  0.0.5-6.fc17         @rpmfusion-free             
+libdhash.x86_64                0.4.3-12.fc18        @koji-override-0/$releasever
+libdmapsharing.x86_64          2.9.14-3.fc18        @koji-override-0/$releasever
+libdmx.x86_64                  1.1.2-4.20130524git5074d9d64.fc18
+                                                    @updates                    
+libdrm.i686                    2.4.45-1.fc18        @updates                    
+libdrm.x86_64                  2.4.45-1.fc18        @updates                    
+libdv.x86_64                   1.0.0-14.fc18        @koji-override-0/$releasever
+libdvbpsi.x86_64               0.2.2-2.fc17         @rpmfusion-free             
+libdvdcss2.x86_64              1.2.13-7.fc18        @atrpms                     
+libdvdnav.i686                 4.2.0-3.fc18         @fedora                     
+libdvdnav.x86_64               4.2.0-3.fc18         @koji-override-0/$releasever
+libdvdread.i686                4.2.0-3.fc18         @fedora                     
+libdvdread.x86_64              4.2.0-3.fc18         @koji-override-0/$releasever
+libdwarf.x86_64                20130126-1.fc18      @updates                    
+libebml.x86_64                 1.2.2-3.fc18         @fedora                     
+libedit.x86_64                 3.0-7.20120601cvs.fc18
+                                                    @koji-override-0/$releasever
+libee.x86_64                   0.4.1-3.fc18         @koji-override-0/$releasever
+liberation-fonts-common.noarch 1:1.07.2-12.fc18     @koji-override-0/$releasever
+liberation-mono-fonts.noarch   1:1.07.2-12.fc18     @koji-override-0/$releasever
+liberation-sans-fonts.noarch   1:1.07.2-12.fc18     @koji-override-0/$releasever
+liberation-serif-fonts.noarch  1:1.07.2-12.fc18     @koji-override-0/$releasever
+libertas-usb8388-firmware.noarch
+                               2:20130418-0.1.gitb584174.fc18
+                                                    @updates                    
+libestr.x86_64                 0.1.5-1.fc18         @updates                    
+libevent.x86_64                2.0.18-2.fc18        @koji-override-0/$releasever
+libexif.x86_64                 0.6.21-2.fc18        @koji-override-0/$releasever
+libexttextcat.x86_64           3.3.1-2.fc18         @koji-override-0/$releasever
+libffado.x86_64                2.1.0-1.fc18         @fedora                     
+libffi.i686                    3.0.10-3.fc18        @fedora                     
+libffi.x86_64                  3.0.10-3.fc18        @koji-override-0/$releasever
+libfontenc.x86_64              1.1.1-2.fc18         @koji-override-0/$releasever
+libfprint.x86_64               0.5.0-1.fc18         @updates                    
+libgadu.x86_64                 1.11.2-1.fc18        @koji-override-0/$releasever
+libgcal.x86_64                 0.9.6-7.fc18         @fedora                     
+libgcc.i686                    4.7.2-8.fc18         @fedora                     
+libgcc.x86_64                  4.7.2-8.fc18         @koji-override-0/$releasever
+libgcrypt.i686                 1.5.0-8.fc18         @updates                    
+libgcrypt.x86_64               1.5.0-8.fc18         @updates                    
+libgcrypt-devel.x86_64         1.5.0-8.fc18         @updates                    
+libgdata.x86_64                0.13.1-2.fc18        @koji-override-0/$releasever
+libgdiplus.x86_64              2.10-6.fc18          @fedora                     
+libgdither.x86_64              0.6-5.fc18           @koji-override-0/$releasever
+libgee06.x86_64                0.6.6.1-1.fc18       @koji-override-0/$releasever
+libgexiv2.x86_64               0.5.0-6.fc18         @updates                    
+libgfortran.x86_64             4.7.2-8.fc18         @fedora                     
+libglade2.x86_64               2.6.4-8.fc18         @koji-override-0/$releasever
+libgnome.x86_64                2.32.1-5.fc18        @fedora                     
+libgnome-keyring.x86_64        3.6.0-1.fc18         @koji-override-0/$releasever
+libgnomecanvas.x86_64          2.30.3-5.fc18        @koji-override-0/$releasever
+libgnomekbd.x86_64             3.6.0-1.fc18         @koji-override-0/$releasever
+libgnomeui.x86_64              2.24.5-5.fc18        @fedora                     
+libgomp.i686                   4.7.2-8.fc18         @fedora                     
+libgomp.x86_64                 4.7.2-8.fc18         @koji-override-0/$releasever
+libgpg-error.i686              1.10-3.fc18          @fedora                     
+libgpg-error.x86_64            1.10-3.fc18          @koji-override-0/$releasever
+libgpg-error-devel.x86_64      1.10-3.fc18          @fedora                     
+libgphoto2.x86_64              2.5.2-1.fc18         @updates                    
+libgpod.x86_64                 0.8.2-7.fc18         @koji-override-0/$releasever
+libgsf.x86_64                  1.14.24-4.fc18       @updates                    
+libgssglue.x86_64              0.4-1.fc18           @koji-override-0/$releasever
+libgtop2.x86_64                2.28.4-4.fc18        @updates                    
+libgudev1.i686                 201-2.fc18.7         @updates                    
+libgudev1.x86_64               201-2.fc18.7         @updates                    
+libgusb.i686                   0.1.6-1.fc18         @updates                    
+libgusb.x86_64                 0.1.6-1.fc18         @updates                    
+libgweather.x86_64             3.6.2-1.fc18         @koji-override-0/$releasever
+libgxps.x86_64                 0.2.2-3.fc18         @koji-override-0/$releasever
+libhangul.x86_64               0.1.0-3.fc18         @koji-override-0/$releasever
+libhbaapi.x86_64               2.2-15.fc18          @koji-override-0/$releasever
+libhbalinux.x86_64             1.0.14-4.fc18        @koji-override-0/$releasever
+libibverbs.x86_64              1.1.6-5.fc18         @koji-override-0/$releasever
+libical.x86_64                 0.48-3.fc18          @koji-override-0/$releasever
+libicu.i686                    49.1.1-8.fc18        @updates                    
+libicu.x86_64                  49.1.1-8.fc18        @updates                    
+libidn.x86_64                  1.26-1.fc18          @updates                    
+libiec61883.x86_64             1.2.0-8.fc18         @koji-override-0/$releasever
+libieee1284.x86_64             0.2.11-12.fc18       @koji-override-0/$releasever
+libieee1284-devel.x86_64       0.2.11-12.fc18       @fedora                     
+libimobiledevice.x86_64        1.1.4-4.fc18         @koji-override-0/$releasever
+libini_config.x86_64           0.7.0-12.fc18        @koji-override-0/$releasever
+libipa_hbac.x86_64             1.9.4-8.fc18         @updates                    
+libiptcdata.x86_64             1.0.4-8.fc18         @koji-override-0/$releasever
+libiscsi.x86_64                1.7.0-4.fc18         @updates                    
+libisofs.x86_64                1.2.8-1.fc18         @updates                    
+libjpeg-turbo.i686             1.2.90-1.fc18        @updates                    
+libjpeg-turbo.x86_64           1.2.90-1.fc18        @updates                    
+libjpeg-turbo-devel.x86_64     1.2.90-1.fc18        @updates                    
+libkate.x86_64                 0.3.8-6.fc18         @fedora                     
+libldb.x86_64                  1.1.15-2.fc18        @updates                    
+liblognorm.x86_64              0.3.5-1.fc18         @updates                    
+liblouis.x86_64                2.4.1-3.fc18         @updates                    
+liblouis-python.noarch         2.4.1-3.fc18         @updates                    
+libmad.x86_64                  0.15.1b-15.fc18      @rpmfusion-free             
+libmash.x86_64                 0.2.0-7.fc18         @koji-override-0/$releasever
+libmatroska.x86_64             1.3.0-3.fc18         @fedora                     
+libmatthew-java.x86_64         0.8-4.fc18           @fedora                     
+libmcpp.x86_64                 2.7.2-8.fc18         @koji-override-0/$releasever
+libmcrypt.x86_64               2.5.8-12.fc18        @fedora                     
+libmicrohttpd.x86_64           0.9.22-1.fc18        @koji-override-0/$releasever
+libmikmod.x86_64               3.2.0-21.fc18        @updates                    
+libmimic.x86_64                1.0.4-5.fc17         @rpmfusion-free             
+libmms.x86_64                  0.6.2-2.fc18         @rpmfusion-free             
+libmng.i686                    1.0.10-8.fc18        @fedora                     
+libmng.x86_64                  1.0.10-8.fc18        @fedora                     
+libmnl.x86_64                  1.0.3-4.fc18         @koji-override-0/$releasever
+libmodman.x86_64               2.0.1-5.fc18         @koji-override-0/$releasever
+libmodplug.x86_64              1:0.8.8.4-3.fc18     @fedora                     
+libmount.x86_64                2.22.2-6.fc18        @updates                    
+libmp4v2.x86_64                1.5.0.1-13.fc18      @fedora                     
+libmpc.x86_64                  0.9-3.fc18.2         @fedora                     
+libmpcdec.i686                 1.2.6-9.fc18         @fedora                     
+libmpcdec.x86_64               1.2.6-9.fc18         @koji-override-0/$releasever
+libmpeg2.x86_64                0.5.1-9.fc17         @rpmfusion-free             
+libmpg123.x86_64               1.14.4-1.fc18        @rpmfusion-free-updates     
+libmtp.x86_64                  1.1.6-0.fc18         @updates                    
+libmusicbrainz5.x86_64         5.0.1-5.fc18         @updates                    
+libmx.x86_64                   1.4.7-2.fc18         @koji-override-0/$releasever
+libnetfilter_conntrack.x86_64  1.0.3-1.fc18         @updates                    
+libnfnetlink.x86_64            1.0.1-1.fc18         @koji-override-0/$releasever
+libnfsidmap.x86_64             0.25-4.fc18          @koji-override-0/$releasever
+libnice.x86_64                 0.1.3-1.fc18         @koji-override-0/$releasever
+libnl.x86_64                   1.1-16.fc18          @koji-override-0/$releasever
+libnl3.x86_64                  3.2.21-1.fc18        @updates                    
+libnm-gtk.x86_64               0.9.8.1-4.git20130514.fc18
+                                                    @updates                    
+libnotify.x86_64               0.7.5-3.fc18         @koji-override-0/$releasever
+liboauth.x86_64                0.9.7-1.fc18         @koji-override-0/$releasever
+libofa.i686                    0.9.3-21.fc18        @fedora                     
+libofa.x86_64                  0.9.3-21.fc18        @koji-override-0/$releasever
+libogg.i686                    2:1.3.0-5.fc18       @updates                    
+libogg.x86_64                  2:1.3.0-5.fc18       @updates                    
+libopenraw.x86_64              0.0.9-1.fc18         @fedora                     
+libopensync.x86_64             1:0.22-12.fc18       @fedora                     
+libopensync-plugin-google-calendar.x86_64
+                               1:0.22-7.fc18        @fedora                     
+libosinfo.x86_64               0.2.6-1.fc18         @updates                    
+libpath_utils.x86_64           0.2.1-12.fc18        @koji-override-0/$releasever
+libpcap.x86_64                 14:1.3.0-2.fc18      @koji-override-0/$releasever
+libpciaccess.i686              0.13.1-2.fc18        @fedora                     
+libpciaccess.x86_64            0.13.1-2.fc18        @koji-override-0/$releasever
+libpeas.x86_64                 1.6.2-1.fc18         @koji-override-0/$releasever
+libpinyin.x86_64               0.9.92-1.fc18        @updates                    
+libpinyin-data.x86_64          0.9.92-1.fc18        @updates                    
+libpipeline.x86_64             1.2.2-2.fc18         @koji-override-0/$releasever
+libplist.x86_64                1.8-5.fc18           @koji-override-0/$releasever
+libpng.i686                    2:1.5.13-1.fc18      @fedora                     
+libpng.x86_64                  2:1.5.13-1.fc18      @koji-override-0/$releasever
+libpng12.x86_64                1.2.50-2.fc18        @fedora                     
+libprojectM.x86_64             2.0.1-17.fc18        @fedora                     
+libproxy.x86_64                0.4.11-1.fc18        @updates                    
+libproxy-mozjs.x86_64          0.4.11-1.fc18        @updates                    
+libpurple.x86_64               2.10.7-2.fc18        @updates                    
+libpwquality.x86_64            1.2.1-1.fc18         @updates                    
+libqb.x86_64                   0.14.4-1.fc18        @updates                    
+libquadmath.x86_64             4.7.2-8.fc18         @fedora                     
+libquadmath-devel.x86_64       4.7.2-8.fc18         @fedora                     
+libquvi.x86_64                 0.4.1-2.fc18         @koji-override-0/$releasever
+libquvi-scripts.noarch         0.4.10-1.fc18        @updates                    
+libqzeitgeist.x86_64           0.8.0-8.fc18         @fedora                     
+libraw1394.x86_64              2.0.8-3.fc18         @koji-override-0/$releasever
+librdmacm.x86_64               1.0.17-1.fc18        @updates                    
+libreadline-java.x86_64        0.8.0-30.fc18        @fedora                     
+libref_array.x86_64            0.1.3-12.fc18        @koji-override-0/$releasever
+libreoffice-calc.x86_64        1:3.6.6.2-9.fc18     @updates                    
+libreoffice-core.x86_64        1:3.6.6.2-9.fc18     @updates                    
+libreoffice-draw.x86_64        1:3.6.6.2-9.fc18     @updates                    
+libreoffice-graphicfilter.x86_64
+                               1:3.6.6.2-9.fc18     @updates                    
+libreoffice-impress.x86_64     1:3.6.6.2-9.fc18     @updates                    
+libreoffice-langpack-en.x86_64 1:3.6.6.2-9.fc18     @updates                    
+libreoffice-math.x86_64        1:3.6.6.2-9.fc18     @updates                    
+libreoffice-opensymbol-fonts.noarch
+                               1:3.6.6.2-9.fc18     @updates                    
+libreoffice-pdfimport.x86_64   1:3.6.6.2-9.fc18     @updates                    
+libreoffice-presenter-screen.x86_64
+                               1:3.6.6.2-9.fc18     @updates                    
+libreoffice-ure.x86_64         1:3.6.6.2-9.fc18     @updates                    
+libreoffice-writer.x86_64      1:3.6.6.2-9.fc18     @updates                    
+libreoffice-xsltfilter.x86_64  1:3.6.6.2-9.fc18     @updates                    
+libreport.x86_64               2.1.5-1.fc18         @updates                    
+libreport-fedora.x86_64        2.1.5-1.fc18         @updates                    
+libreport-filesystem.x86_64    2.1.5-1.fc18         @updates                    
+libreport-gtk.x86_64           2.1.5-1.fc18         @updates                    
+libreport-newt.x86_64          2.1.5-1.fc18         @updates                    
+libreport-plugin-bugzilla.x86_64
+                               2.1.5-1.fc18         @updates                    
+libreport-plugin-kerneloops.x86_64
+                               2.1.5-1.fc18         @updates                    
+libreport-plugin-logger.x86_64 2.1.5-1.fc18         @updates                    
+libreport-plugin-reportuploader.x86_64
+                               2.1.5-1.fc18         @updates                    
+libreport-plugin-ureport.x86_64
+                               2.1.5-1.fc18         @updates                    
+libreport-python.x86_64        2.1.5-1.fc18         @updates                    
+libreport-web.x86_64           2.1.5-1.fc18         @updates                    
+librsvg2.i686                  2.36.4-1.fc18        @fedora                     
+librsvg2.x86_64                2.36.4-1.fc18        @koji-override-0/$releasever
+librsync.x86_64                0.9.7-18.fc18        @koji-override-0/$releasever
+librtmp.x86_64                 2.4-0.2.20110811gitc58cfb3e.fc17
+                                                    @rpmfusion-free             
+libsamplerate.x86_64           0.1.8-3.fc18         @koji-override-0/$releasever
+libsane-hpaio.x86_64           3.13.5-1.fc18        @updates                    
+libseccomp.x86_64              1.0.1-0.fc18         @koji-override-0/$releasever
+libsecret.x86_64               0.12-1.fc18          @koji-override-0/$releasever
+libselinux.i686                2.1.12-7.3.fc18      @updates                    
+libselinux.x86_64              2.1.12-7.3.fc18      @updates                    
+libselinux-devel.x86_64        2.1.12-7.3.fc18      @updates                    
+libselinux-python.x86_64       2.1.12-7.3.fc18      @updates                    
+libselinux-utils.x86_64        2.1.12-7.3.fc18      @updates                    
+libsemanage.x86_64             2.1.9-1.fc18         @koji-override-0/$releasever
+libsemanage-python.x86_64      2.1.9-1.fc18         @koji-override-0/$releasever
+libsepol.x86_64                2.1.8-2.fc18         @koji-override-0/$releasever
+libsepol-devel.x86_64          2.1.8-2.fc18         @fedora                     
+libsexy.x86_64                 0.1.11-20.fc18       @fedora                     
+libshout.x86_64                2.2.2-8.fc18         @koji-override-0/$releasever
+libsigc++20.x86_64             2.2.11-1.fc18        @koji-override-0/$releasever
+libsilc.x86_64                 1.1.10-7.fc18        @koji-override-0/$releasever
+libsmbclient.x86_64            2:4.0.6-3.fc18       @updates                    
+libsndfile.i686                1.0.25-4.fc18        @fedora                     
+libsndfile.x86_64              1.0.25-4.fc18        @koji-override-0/$releasever
+libsoup.x86_64                 2.40.3-1.fc18        @updates                    
+libspectre.x86_64              0.2.7-1.fc18         @koji-override-0/$releasever
+libspiro.x86_64                20071029-8.fc18      @fedora                     
+libss.x86_64                   1.42.5-1.fc18        @koji-override-0/$releasever
+libssh2.x86_64                 1.4.3-2.fc18         @updates                    
+libsss_idmap.x86_64            1.9.4-8.fc18         @updates                    
+libstdc++.i686                 4.7.2-8.fc18         @fedora                     
+libstdc++.x86_64               4.7.2-8.fc18         @koji-override-0/$releasever
+libstdc++-devel.x86_64         4.7.2-8.fc18         @fedora                     
+libsysfs.x86_64                2.1.0-12.fc18        @koji-override-0/$releasever
+libtalloc.x86_64               2.0.8-1.fc18         @updates                    
+libtar.x86_64                  1.2.11-23.fc18       @fedora                     
+libtasn1.i686                  2.14-1.fc18          @fedora                     
+libtasn1.x86_64                2.14-1.fc18          @koji-override-0/$releasever
+libtasn1-devel.x86_64          2.14-1.fc18          @fedora                     
+libtdb.x86_64                  1.2.11-1.fc18        @updates                    
+libtevent.x86_64               0.9.18-2.fc18        @updates                    
+libthai.i686                   0.1.14-6.fc18        @fedora                     
+libthai.x86_64                 0.1.14-6.fc18        @koji-override-0/$releasever
+libtheora.i686                 1:1.1.1-4.fc18       @fedora                     
+libtheora.x86_64               1:1.1.1-4.fc18       @koji-override-0/$releasever
+libtiff.i686                   4.0.3-6.fc18         @updates                    
+libtiff.x86_64                 4.0.3-6.fc18         @updates                    
+libtiff-devel.x86_64           4.0.3-6.fc18         @updates                    
+libtiger.x86_64                0.3.4-4.fc18         @fedora                     
+libtirpc.x86_64                0.2.2-42.fc18        @koji-override-0/$releasever
+libtool.x86_64                 2.4.2-7.fc18         @fedora                     
+libtool-ltdl.x86_64            2.4.2-7.fc18         @koji-override-0/$releasever
+libtranslit.x86_64             0.0.2-3.fc18         @koji-override-0/$releasever
+libtranslit-m17n.x86_64        0.0.2-3.fc18         @koji-override-0/$releasever
+libudisks2.x86_64              2.0.1-2.fc18         @updates                    
+libunistring.x86_64            0.9.3-6.fc18         @koji-override-0/$releasever
+libunwind.x86_64               1.0.1-5.fc18         @updates                    
+libupnp.x86_64                 1.6.18-1.fc18        @updates                    
+libusal.x86_64                 1.1.11-14.fc18       @koji-override-0/$releasever
+libusb.x86_64                  1:0.1.3-11.fc18      @koji-override-0/$releasever
+libusb-devel.x86_64            1:0.1.3-11.fc18      @fedora                     
+libusbx.i686                   1.0.14-1.fc18        @fedora                     
+libusbx.x86_64                 1.0.14-1.fc18        @koji-override-0/$releasever
+libusbx-devel.x86_64           1.0.14-1.fc18        @fedora                     
+libusbx-devel-doc.noarch       1.0.14-1.fc18        @fedora                     
+libuser.x86_64                 0.58-3.fc18          @updates                    
+libuser-python.x86_64          0.58-3.fc18          @updates                    
+libutempter.x86_64             1.1.6-1.fc18         @koji-override-0/$releasever
+libuuid.i686                   2.22.2-6.fc18        @updates                    
+libuuid.x86_64                 2.22.2-6.fc18        @updates                    
+libv4l.x86_64                  0.8.8-3.fc18         @koji-override-0/$releasever
+libva.x86_64                   1.1.1-2.fc18         @updates                    
+libva-utils.x86_64             1.1.1-2.fc18         @updates                    
+libva-vdpau-driver.x86_64      0.7.4-2.fc18         @rpmfusion-free             
+libvdpau.i686                  0.5-1.fc18           @fedora                     
+libvdpau.x86_64                0.5-1.fc18           @koji-override-0/$releasever
+libvirt-client.x86_64          0.10.2.6-1.fc18      @updates                    
+libvirt-daemon.x86_64          0.10.2.6-1.fc18      @updates                    
+libvirt-daemon-driver-interface.x86_64
+                               0.10.2.6-1.fc18      @updates                    
+libvirt-daemon-driver-network.x86_64
+                               0.10.2.6-1.fc18      @updates                    
+libvirt-daemon-driver-nodedev.x86_64
+                               0.10.2.6-1.fc18      @updates                    
+libvirt-daemon-driver-nwfilter.x86_64
+                               0.10.2.6-1.fc18      @updates                    
+libvirt-daemon-driver-qemu.x86_64
+                               0.10.2.6-1.fc18      @updates                    
+libvirt-daemon-driver-secret.x86_64
+                               0.10.2.6-1.fc18      @updates                    
+libvirt-daemon-driver-storage.x86_64
+                               0.10.2.6-1.fc18      @updates                    
+libvirt-daemon-kvm.x86_64      0.10.2.6-1.fc18      @updates                    
+libvirt-gconfig.x86_64         0.1.6-1.fc18         @updates                    
+libvirt-glib.x86_64            0.1.6-1.fc18         @updates                    
+libvirt-gobject.x86_64         0.1.6-1.fc18         @updates                    
+libvisio.x86_64                0.0.28-1.fc18        @updates                    
+libvisual.i686                 0.4.0-12.fc18        @fedora                     
+libvisual.x86_64               0.4.0-12.fc18        @koji-override-0/$releasever
+libvorbis.i686                 1:1.3.3-3.fc18       @fedora                     
+libvorbis.x86_64               1:1.3.3-3.fc18       @koji-override-0/$releasever
+libvpx.i686                    1.2.0-1.fc18         @updates                    
+libvpx.x86_64                  1.2.0-1.fc18         @updates                    
+libwacom.x86_64                0.7.1-2.fc18         @updates                    
+libwacom-data.noarch           0.7.1-2.fc18         @updates                    
+libwayland-client.i686         1.0.5-1.fc18         @updates                    
+libwayland-client.x86_64       1.0.5-1.fc18         @updates                    
+libwayland-server.i686         1.0.5-1.fc18         @updates                    
+libwayland-server.x86_64       1.0.5-1.fc18         @updates                    
+libwbclient.x86_64             2:4.0.6-3.fc18       @updates                    
+libwebp.i686                   0.2.1-1.fc18         @updates                    
+libwebp.x86_64                 0.2.1-1.fc18         @updates                    
+libwmf.x86_64                  0.2.8.4-33.fc18      @fedora                     
+libwmf-lite.x86_64             0.2.8.4-33.fc18      @fedora                     
+libwnck3.x86_64                3.4.4-1.fc18         @koji-override-0/$releasever
+libwpd.x86_64                  0.9.8-1.fc18         @updates                    
+libwpg.x86_64                  0.2.2-1.fc18         @updates                    
+libwps.x86_64                  0.2.9-1.fc18         @updates                    
+libwsman1.x86_64               2.3.6-1.fc18         @koji-override-0/$releasever
+libwvstreams.x86_64            4.6.1-7.fc18         @koji-override-0/$releasever
+libxcb.i686                    1.9-3.fc18           @updates                    
+libxcb.x86_64                  1.9-3.fc18           @updates                    
+libxkbfile.x86_64              1.0.8-2.fc18         @koji-override-0/$releasever
+libxklavier.x86_64             5.3-1.fc18           @koji-override-0/$releasever
+libxml++.x86_64                2.36.0-1.fc18        @fedora                     
+libxml2.i686                   2.9.1-1.fc18.1       @updates                    
+libxml2.x86_64                 2.9.1-1.fc18.1       @updates                    
+libxml2-python.x86_64          2.9.1-1.fc18.1       @updates                    
+libxslt.i686                   1.1.28-1.fc18        @updates                    
+libxslt.x86_64                 1.1.28-1.fc18        @updates                    
+libytnef.x86_64                1.5-9.fc18           @koji-override-0/$releasever
+libyubikey.x86_64              1.10-1.fc18          @updates                    
+libzapojit.x86_64              0.0.3-1.fc18         @updates                    
+libzeitgeist.x86_64            0.3.18-3.fc18        @koji-override-0/$releasever
+libzip.x86_64                  0.10.1-5.fc18        @fedora                     
+linux-atm-libs.x86_64          2.5.1-5.fc18         @koji-override-0/$releasever
+linux-firmware.noarch          20130418-0.1.gitb584174.fc18
+                                                    @updates                    
+lirc-libs.x86_64               0.9.0-10.fc18        @fedora                     
+live555.x86_64                 0-0.38.2012.10.18.fc18
+                                                    @rpmfusion-free             
+lklug-fonts.noarch             0.6-8.20090803cvs.fc18
+                                                    @koji-override-0/$releasever
+lldpad.x86_64                  0.9.45-2.fc18        @koji-override-0/$releasever
+llvm-libs.x86_64               3.3-0.4.rc2.fc18     @updates                    
+lm_sensors-devel.x86_64        3.3.2-5.fc18         @fedora                     
+lm_sensors-libs.x86_64         3.3.2-5.fc18         @fedora                     
+lockdev.x86_64                 1.0.4-0.6.20111007git.fc18
+                                                    @updates                    
+log4j.noarch                   1.2.17-3.fc18        @fedora                     
+logrotate.x86_64               3.8.3-1.fc18         @updates                    
+lohit-assamese-fonts.noarch    2.5.3-1.fc18         @updates                    
+lohit-bengali-fonts.noarch     2.5.3-1.fc18         @updates                    
+lohit-devanagari-fonts.noarch  2.5.3-2.fc18         @updates                    
+lohit-gujarati-fonts.noarch    2.5.2-1.fc18         @koji-override-0/$releasever
+lohit-kannada-fonts.noarch     2.5.3-1.fc18         @updates                    
+lohit-oriya-fonts.noarch       2.5.3-3.fc18         @updates                    
+lohit-punjabi-fonts.noarch     2.5.3-1.fc18         @updates                    
+lohit-tamil-fonts.noarch       2.5.3-1.fc18         @updates                    
+lohit-telugu-fonts.noarch      2.5.3-1.fc18         @updates                    
+lpairs.x86_64                  1.0.4-10.fc18        @fedora                     
+lpg-java-compat.noarch         1.1.0-8.fc18.1       @fedora                     
+lpsolve.x86_64                 5.5.2.0-5.fc18       @koji-override-0/$releasever
+lrzsz.x86_64                   0.12.20-31.fc18      @koji-override-0/$releasever
+lsof.x86_64                    4.87-1.fc18          @updates                    
+ltrace.x86_64                  0.7.2-1.fc18         @updates                    
+lua.x86_64                     5.1.4-11.fc18        @koji-override-0/$releasever
+lucene.noarch                  3.6.0-11.fc18        @updates                    
+lucene-contrib.noarch          3.6.0-11.fc18        @updates                    
+lure.noarch                    1.1-7.fc18           @fedora                     
+lvm2.x86_64                    2.02.98-4.fc18       @koji-override-0/$releasever
+lvm2-libs.x86_64               2.02.98-4.fc18       @koji-override-0/$releasever
+lzma-sdk457.x86_64             4.57-3.fc18          @fedora                     
+lzo.x86_64                     2.06-4.fc18          @updates                    
+lzop.x86_64                    1.03-5.fc18          @koji-override-0/$releasever
+m17n-contrib.noarch            1.1.14-1.fc18        @koji-override-0/$releasever
+m17n-db.noarch                 1.6.4-1.fc18         @koji-override-0/$releasever
+m17n-lib.x86_64                1.6.4-7.fc18         @updates                    
+m4.x86_64                      1.4.16-5.fc18        @fedora                     
+mactel-boot.x86_64             0.9-8.fc18           @koji-override-0/$releasever
+mailcap.noarch                 2.1.40-1.fc18        @koji-override-0/$releasever
+mailx.x86_64                   12.5-7.fc18          @fedora                     
+make.x86_64                    1:3.82-13.fc18       @koji-override-0/$releasever
+makebootfat.x86_64             1.4-14.fc18          @koji-override-0/$releasever
+man-db.x86_64                  2.6.3-2.fc18         @koji-override-0/$releasever
+mcelog.x86_64                  2:1.0-0.6.6e4e2a00.fc18
+                                                    @koji-override-0/$releasever
+mcpp.x86_64                    2.7.2-8.fc18         @koji-override-0/$releasever
+mdadm.x86_64                   3.2.6-14.fc18        @updates                    
+meanwhile.x86_64               1.1.0-10.fc18        @updates                    
+media-player-info.noarch       17-2.fc18            @updates                    
+memtest86+.x86_64              4.20-8.fc18          @updates                    
+mesa-dri-drivers.x86_64        9.2-0.7.20130528.fc18
+                                                    @updates                    
+mesa-filesystem.x86_64         9.2-0.7.20130528.fc18
+                                                    @updates                    
+mesa-libEGL.i686               9.2-0.7.20130528.fc18
+                                                    @updates                    
+mesa-libEGL.x86_64             9.2-0.7.20130528.fc18
+                                                    @updates                    
+mesa-libGL.i686                9.2-0.7.20130528.fc18
+                                                    @updates                    
+mesa-libGL.x86_64              9.2-0.7.20130528.fc18
+                                                    @updates                    
+mesa-libGLU.x86_64             9.0.0-1.fc18         @koji-override-0/$releasever
+mesa-libgbm.i686               9.2-0.7.20130528.fc18
+                                                    @updates                    
+mesa-libgbm.x86_64             9.2-0.7.20130528.fc18
+                                                    @updates                    
+mesa-libglapi.i686             9.2-0.7.20130528.fc18
+                                                    @updates                    
+mesa-libglapi.x86_64           9.2-0.7.20130528.fc18
+                                                    @updates                    
+mesa-libxatracker.x86_64       9.2-0.7.20130528.fc18
+                                                    @updates                    
+metacity.x86_64                2.34.13-1.fc18       @koji-override-0/$releasever
+microcode_ctl.x86_64           2:2.0-2.fc18         @koji-override-0/$releasever
+minizip.x86_64                 1.2.7-9.fc18         @fedora                     
+mjpegtools-libs.x86_64         2.0.0-5.fc18         @rpmfusion-free             
+mlocate.x86_64                 0.26-1.fc18          @koji-override-0/$releasever
+mobile-broadband-provider-info.noarch
+                               1.20120614-2.fc18    @koji-override-0/$releasever
+mock.noarch                    1.1.32-1.fc18        @updates                    
+mono-addins.x86_64             0.6.2-6.fc18         @fedora                     
+mono-core.x86_64               2.10.8-3.fc18        @fedora                     
+mousetweaks.x86_64             3.6.0-1.fc18         @koji-override-0/$releasever
+mozilla-filesystem.x86_64      1.9-8.fc18           @koji-override-0/$releasever
+mpfr.x86_64                    3.1.1-1.fc18         @koji-override-0/$releasever
+msttcorefonts.noarch           2.5-1                @/msttcorefonts-2.5-1.noarch
+msv-msv.noarch                 1:2009.1-12.fc18     @fedora                     
+msv-xsdlib.noarch              1:2009.1-12.fc18     @fedora                     
+mtdev.x86_64                   1.1.3-1.fc18         @koji-override-0/$releasever
+mtools.x86_64                  4.0.17-3.fc18        @koji-override-0/$releasever
+mutter.x86_64                  3.6.3-1.fc18         @updates                    
+mysql.x86_64                   5.5.32-1.fc18        @updates                    
+mysql-connector-java.noarch    1:5.1.22-1.fc18      @fedora                     
+mysql-libs.x86_64              5.5.32-1.fc18        @updates                    
+mythes.x86_64                  1.2.3-2.fc18         @koji-override-0/$releasever
+mythes-en.noarch               3.0-11.fc18          @fedora                     
+nautilus.x86_64                3.6.3-4.fc18         @updates                    
+nautilus-extensions.x86_64     3.6.3-4.fc18         @updates                    
+nautilus-sendto.x86_64         1:3.6.0-1.fc18       @koji-override-0/$releasever
+ncftp.x86_64                   2:3.2.5-4.fc18       @koji-override-0/$releasever
+ncurses.x86_64                 5.9-11.20130511.fc18 @updates                    
+ncurses-base.noarch            5.9-11.20130511.fc18 @updates                    
+ncurses-libs.i686              5.9-11.20130511.fc18 @updates                    
+ncurses-libs.x86_64            5.9-11.20130511.fc18 @updates                    
+neon.x86_64                    0.29.6-3.fc18        @koji-override-0/$releasever
+net-snmp-agent-libs.x86_64     1:5.7.2-5.fc18.1     @updates                    
+net-snmp-devel.x86_64          1:5.7.2-5.fc18.1     @updates                    
+net-snmp-libs.x86_64           1:5.7.2-5.fc18.1     @updates                    
+net-tools.x86_64               2.0-0.2.20121106git.fc18
+                                                    @koji-override-0/$releasever
+netcf-libs.x86_64              0.2.3-1.fc18         @updates                    
+netpbm.x86_64                  10.61.01-2.fc18      @updates                    
+network-manager-applet.x86_64  0.9.8.1-4.git20130514.fc18
+                                                    @updates                    
+newt.x86_64                    0.52.14-3.fc18       @koji-override-0/$releasever
+newt-python.x86_64             0.52.14-3.fc18       @koji-override-0/$releasever
+nfs-utils.x86_64               1:1.2.7-6.fc18       @updates                    
+nhn-nanum-gothic-fonts.noarch  3.020-4.fc18         @koji-override-0/$releasever
+nm-connection-editor.x86_64    0.9.8.1-4.git20130514.fc18
+                                                    @updates                    
+nmap.x86_64                    2:6.25-1.fc18        @updates                    
+nmap-frontend.noarch           2:6.25-1.fc18        @updates                    
+nmap-ncat.x86_64               2:6.25-1.fc18        @updates                    
+not-yet-commons-ssl.noarch     0.3.11-8.fc18        @fedora                     
+notification-daemon.x86_64     0.7.6-1.fc18         @koji-override-0/$releasever
+notify-python.x86_64           0.1.1-21.fc18        @koji-override-0/$releasever
+nspluginwrapper.x86_64         1.4.4-16.fc18        @updates                    
+nspr.x86_64                    4.9.6-1.fc18         @updates                    
+nss.x86_64                     3.14.3-2.fc18        @updates                    
+nss-mdns.x86_64                0.10-11.fc18         @koji-override-0/$releasever
+nss-myhostname.x86_64          0.3-3.fc18           @koji-override-0/$releasever
+nss-softokn.x86_64             3.14.3-1.fc18        @updates                    
+nss-softokn-freebl.i686        3.14.3-1.fc18        @updates                    
+nss-softokn-freebl.x86_64      3.14.3-1.fc18        @updates                    
+nss-sysinit.x86_64             3.14.3-2.fc18        @updates                    
+nss-tools.x86_64               3.14.3-2.fc18        @updates                    
+nss-util.x86_64                3.14.3-1.fc18        @updates                    
+ntfs-3g.x86_64                 2:2013.1.13-5.fc18   @updates                    
+ntfsprogs.x86_64               2:2013.1.13-5.fc18   @updates                    
+numactl-libs.x86_64            2.0.7-7.fc18         @koji-override-0/$releasever
+numad.x86_64                   0.5-8.20121130git.fc18
+                                                    @koji-override-0/$releasever
+numpy.x86_64                   1:1.7.1-1.fc18       @updates                    
+nvidia-settings.x86_64         1.0-29.fc18          @rpmfusion-nonfree-updates  
+nvidia-xconfig.x86_64          1.0-25.fc18          @rpmfusion-nonfree          
+obex-data-server.x86_64        1:0.4.6-4.fc18       @koji-override-0/$releasever
+obexd.x86_64                   1:0.46-3.fc18        @koji-override-0/$releasever
+objectweb-asm.noarch           3.3.1-4.fc18         @fedora                     
+openal-soft.x86_64             1.15.1-1.fc18        @updates                    
+opencc.x86_64                  0.4.3-1.fc18         @updates                    
+openconnect.x86_64             4.08-1.fc18          @updates                    
+opencore-amr.x86_64            0.1.3-2.fc18         @rpmfusion-free             
+opencv.x86_64                  2.4.5-1.fc18         @updates                    
+opencv-core.x86_64             2.4.5-1.fc18         @updates                    
+openjpeg-libs.x86_64           1.5.1-4.fc18         @koji-override-0/$releasever
+openldap.x86_64                2.4.35-4.fc18.1      @updates                    
+openobex.x86_64                1.5-7.fc18           @updates                    
+openpgm.x86_64                 5.1.118-3.fc18       @updates                    
+openssh.x86_64                 6.1p1-9.fc18         @updates                    
+openssh-clients.x86_64         6.1p1-9.fc18         @updates                    
+openssh-server.x86_64          6.1p1-9.fc18         @updates                    
+openssl.x86_64                 1:1.0.1e-4.fc18      @updates                    
+openssl-devel.x86_64           1:1.0.1e-4.fc18      @updates                    
+openssl-libs.i686              1:1.0.1e-4.fc18      @updates                    
+openssl-libs.x86_64            1:1.0.1e-4.fc18      @updates                    
+openvpn.x86_64                 2.3.2-1.fc18         @updates                    
+oprofile.x86_64                0.9.8-3.fc18         @updates                    
+oprofile-gui.x86_64            0.9.8-3.fc18         @updates                    
+opus.i686                      1.0.2-1.fc18         @updates                    
+opus.x86_64                    1.0.2-1.fc18         @updates                    
+orc.i686                       0.4.17-2.fc18        @updates                    
+orc.x86_64                     0.4.17-2.fc18        @updates                    
+orca.x86_64                    3.6.3-1.fc18         @koji-override-0/$releasever
+os-prober.x86_64               1.58-2.fc18          @updates                    
+p11-kit.i686                   0.14-2.fc18          @updates                    
+p11-kit.x86_64                 0.14-2.fc18          @updates                    
+p11-kit-devel.x86_64           0.14-2.fc18          @updates                    
+packagedb-cli.noarch           1.5.0-1.fc18         @updates                    
+pakchois.x86_64                0.4-6                @koji-override-0/$releasever
+paktype-naqsh-fonts.noarch     4.0-3.fc18           @updates                    
+pam.i686                       1.1.6-3.fc18.1       @fedora                     
+pam.x86_64                     1.1.6-3.fc18.1       @koji-override-0/$releasever
+pam_pkcs11.x86_64              0.6.2-9.fc18         @koji-override-0/$releasever
+pango.i686                     1.32.3-2.fc18        @updates                    
+pango.x86_64                   1.32.3-2.fc18        @updates                    
+pangomm.x86_64                 2.28.4-2.fc18        @koji-override-0/$releasever
+pangox-compat.x86_64           0.0.2-1.fc18         @fedora                     
+paps.x86_64                    0.6.8-23.fc18        @koji-override-0/$releasever
+paps-libs.x86_64               0.6.8-23.fc18        @koji-override-0/$releasever
+paratype-pt-sans-fonts.noarch  20101909-1.fc18      @koji-override-0/$releasever
+parted.x86_64                  3.1-12.fc18          @updates                    
+passwd.x86_64                  0.78.99-3.fc18       @koji-override-0/$releasever
+passwdqc.x86_64                1.2.2-4.fc18         @koji-override-0/$releasever
+passwdqc-lib.x86_64            1.2.2-4.fc18         @koji-override-0/$releasever
+patch.x86_64                   2.6.1-14.fc18        @fedora                     
+patchutils.x86_64              0.3.2-3.fc18         @fedora                     
+pavucontrol.x86_64             1.0-2.fc18           @fedora                     
+pax.x86_64                     3.4-14.fc18          @fedora                     
+pciutils.x86_64                3.1.10-2.fc18        @koji-override-0/$releasever
+pciutils-libs.x86_64           3.1.10-2.fc18        @koji-override-0/$releasever
+pcmciautils.x86_64             018-3.fc18           @koji-override-0/$releasever
+pcre.i686                      8.31-5.fc18          @updates                    
+pcre.x86_64                    8.31-5.fc18          @updates                    
+pcsc-lite-libs.x86_64          1.8.7-1.fc18         @koji-override-0/$releasever
+perl.x86_64                    4:5.16.3-244.fc18    @updates                    
+perl-CGI.noarch                3.59-235.fc18        @fedora                     
+perl-CPAN.noarch               1.9800-244.fc18      @updates                    
+perl-Cairo.x86_64              1.090-3.fc18         @fedora                     
+perl-Carp.noarch               1.26-243.fc18        @updates                    
+perl-Class-ISA.noarch          0.36-1009.fc18       @fedora                     
+perl-Compress-Raw-Bzip2.x86_64 2.059-1.fc18         @fedora                     
+perl-Compress-Raw-Zlib.x86_64  2.059-1.fc18         @fedora                     
+perl-Crypt-Blowfish.x86_64     2.10-16.fc18         @fedora                     
+perl-Crypt-CBC.noarch          2.29-14.fc18         @fedora                     
+perl-Crypt-SSLeay.x86_64       0.64-1.fc18          @fedora                     
+perl-Crypt-Simple.noarch       0.06-17.fc18         @fedora                     
+perl-Data-Dumper.x86_64        2.135.06-244.fc18    @updates                    
+perl-Digest.noarch             1.17-244.fc18        @updates                    
+perl-Digest-MD5.x86_64         2.51-244.fc18        @updates                    
+perl-Digest-SHA.x86_64         1:5.74-3.fc18        @updates                    
+perl-Encode-Locale.noarch      1.03-3.fc18          @fedora                     
+perl-Error.noarch              1:0.17018-4.fc18     @fedora                     
+perl-ExtUtils-Install.noarch   1.58-244.fc18        @updates                    
+perl-ExtUtils-MakeMaker.noarch 6.63.2-244.fc18      @updates                    
+perl-ExtUtils-Manifest.noarch  1.61-243.fc18        @updates                    
+perl-ExtUtils-ParseXS.noarch   1:3.16-244.fc18      @updates                    
+perl-FCGI.x86_64               1:0.74-5.fc18        @fedora                     
+perl-File-Listing.noarch       6.04-3.fc18          @fedora                     
+perl-Filter.x86_64             1.49-1.fc18          @updates                    
+perl-FreezeThaw.noarch         0.5001-8.fc18        @fedora                     
+perl-Git.noarch                1.8.1.4-2.fc18       @updates                    
+perl-Glib.x86_64               1.280-1.fc18         @updates                    
+perl-Gtk2.x86_64               1.247-1.fc18         @updates                    
+perl-Gtk2-Sexy.x86_64          0.05-14.fc18         @fedora                     
+perl-Gtk2-TrayIcon.x86_64      0.06-16.fc18         @fedora                     
+perl-HTML-Parser.x86_64        3.69-8.fc18          @fedora                     
+perl-HTML-Tagset.noarch        3.20-13.fc18         @fedora                     
+perl-HTML-Tree.noarch          1:5.02-5.fc18        @fedora                     
+perl-HTTP-Cookies.noarch       6.01-3.fc18          @fedora                     
+perl-HTTP-Daemon.noarch        6.01-3.fc18          @fedora                     
+perl-HTTP-Date.noarch          6.02-3.fc18          @fedora                     
+perl-HTTP-Message.noarch       6.03-5.fc18          @fedora                     
+perl-HTTP-Negotiate.noarch     6.01-3.fc18          @fedora                     
+perl-HTTP-Tiny.noarch          0.017-244.fc18       @updates                    
+perl-IO-Compress.noarch        2.058-1.fc18         @fedora                     
+perl-IO-Socket-IP.noarch       0.17-1.fc18          @fedora                     
+perl-IO-Socket-SSL.noarch      1.80-1.fc18          @fedora                     
+perl-LWP-MediaTypes.noarch     6.01-6.fc18          @fedora                     
+perl-Locale-Codes.noarch       3.26-1.fc18          @updates                    
+perl-Module-Pluggable.noarch   1:4.00-244.fc18      @updates                    
+perl-Net-HTTP.noarch           6.06-1.fc18          @updates                    
+perl-Net-LibIDN.x86_64         0.12-12.fc18         @fedora                     
+perl-Net-SSLeay.x86_64         1.49-1.fc18          @fedora                     
+perl-Pango.x86_64              1.221-6.fc18         @fedora                     
+perl-PathTools.x86_64          3.39.2-244.fc18      @updates                    
+perl-Pod-Escapes.noarch        1:1.04-244.fc18      @updates                    
+perl-Pod-Parser.noarch         1.51-244.fc18        @updates                    
+perl-Pod-Perldoc.noarch        3.17.00-244.fc18     @updates                    
+perl-Pod-Plainer.noarch        1.03-3.fc18          @fedora                     
+perl-Pod-Simple.noarch         1:3.20-244.fc18      @updates                    
+perl-Scalar-List-Utils.x86_64  1.25-244.fc18        @updates                    
+perl-Socket.x86_64             2.002-3.fc18         @fedora                     
+perl-Test-Harness.noarch       3.23-244.fc18        @updates                    
+perl-Test-Simple.noarch        0.98-243.fc18        @updates                    
+perl-TimeDate.noarch           1:1.20-8.fc18        @fedora                     
+perl-URI.noarch                1.60-4.fc18          @fedora                     
+perl-WWW-RobotRules.noarch     6.02-3.fc18          @fedora                     
+perl-XML-LibXML.x86_64         1:2.0004-1.fc18      @fedora                     
+perl-XML-NamespaceSupport.noarch
+                               1.11-8.fc18          @fedora                     
+perl-XML-Parser.x86_64         2.41-6.fc18          @fedora                     
+perl-XML-SAX.noarch            0.99-5.fc18          @fedora                     
+perl-XML-SAX-Base.noarch       1.08-4.fc18          @fedora                     
+perl-XML-Simple.noarch         2.20-3.fc18          @fedora                     
+perl-devel.x86_64              4:5.16.3-244.fc18    @updates                    
+perl-libs.x86_64               4:5.16.3-244.fc18    @updates                    
+perl-libwww-perl.noarch        6.05-1.fc18          @updates                    
+perl-macros.x86_64             4:5.16.3-244.fc18    @updates                    
+perl-parent.noarch             1:0.225-243.fc18     @updates                    
+perl-srpm-macros.noarch        1-5.fc18             @fedora                     
+perl-threads.x86_64            1.87-1.fc18          @updates                    
+perl-threads-shared.x86_64     1.40-244.fc18        @updates                    
+phonon.x86_64                  4.6.0-5.fc18         @fedora                     
+phonon-backend-gstreamer.x86_64
+                               2:4.6.3-1.fc18       @updates                    
+php.x86_64                     5.4.16-1.fc18        @updates                    
+php-cli.x86_64                 5.4.16-1.fc18        @updates                    
+php-common.x86_64              5.4.16-1.fc18        @updates                    
+php-gd.x86_64                  5.4.16-1.fc18        @updates                    
+php-mbstring.x86_64            5.4.16-1.fc18        @updates                    
+php-mcrypt.x86_64              5.4.16-1.fc18        @updates                    
+php-mysqlnd.x86_64             5.4.16-1.fc18        @updates                    
+php-pdo.x86_64                 5.4.16-1.fc18        @updates                    
+php-pear.noarch                1:1.9.4-11.fc18.2    @updates                    
+php-pecl-xdebug.x86_64         2.2.3-1.fc18         @updates                    
+php-php-gettext.noarch         1.0.11-6.fc18        @fedora                     
+phpMyAdmin.noarch              3.5.8.1-1.fc18       @updates                    
+physfs.x86_64                  2.0.2-3.fc18         @fedora                     
+pigz.x86_64                    2.2.5-1.fc18         @fedora                     
+pinentry.x86_64                0.8.1-8.fc18         @koji-override-0/$releasever
+pinentry-gtk.x86_64            0.8.1-8.fc18         @koji-override-0/$releasever
+pixman.i686                    0.28.0-1.fc18        @updates                    
+pixman.x86_64                  0.28.0-1.fc18        @updates                    
+pkcs11-helper.x86_64           1.09-3.fc18          @koji-override-0/$releasever
+pkgconfig.x86_64               1:0.27-1.fc18        @koji-override-0/$releasever
+plymouth.x86_64                0.8.8-5.fc18         @koji-override-0/$releasever
+plymouth-core-libs.x86_64      0.8.8-5.fc18         @koji-override-0/$releasever
+plymouth-graphics-libs.x86_64  0.8.8-5.fc18         @koji-override-0/$releasever
+plymouth-plugin-label.x86_64   0.8.8-5.fc18         @koji-override-0/$releasever
+plymouth-plugin-two-step.x86_64
+                               0.8.8-5.fc18         @koji-override-0/$releasever
+plymouth-scripts.x86_64        0.8.8-5.fc18         @koji-override-0/$releasever
+plymouth-system-theme.x86_64   0.8.8-5.fc18         @koji-override-0/$releasever
+plymouth-theme-charge.x86_64   0.8.8-5.fc18         @koji-override-0/$releasever
+pm-utils.x86_64                1.4.1-22.fc18        @koji-override-0/$releasever
+policycoreutils.x86_64         2.1.13-59.fc18       @updates                    
+policycoreutils-devel.x86_64   2.1.13-59.fc18       @updates                    
+policycoreutils-python.x86_64  2.1.13-59.fc18       @updates                    
+policycoreutils-restorecond.x86_64
+                               2.1.13-59.fc18       @updates                    
+polkit.x86_64                  0.107-5.fc18         @updates                    
+polkit-gnome.x86_64            0.105-3.fc18         @koji-override-0/$releasever
+poppler.x86_64                 0.20.2-15.fc18       @updates                    
+poppler-data.noarch            0.4.6-2.fc18         @updates                    
+poppler-glib.x86_64            0.20.2-15.fc18       @updates                    
+poppler-utils.x86_64           0.20.2-15.fc18       @updates                    
+popt.x86_64                    1.13-12.fc18         @koji-override-0/$releasever
+popt-devel.x86_64              1.13-12.fc18         @fedora                     
+portmidi.x86_64                217-7.fc18           @fedora                     
+ppl.x86_64                     0.11.2-10.fc18       @fedora                     
+ppl-pwl.x86_64                 0.11.2-10.fc18       @fedora                     
+ppp.x86_64                     2.4.5-25.fc18        @updates                    
+pptp.x86_64                    1.7.2-18.fc18        @koji-override-0/$releasever
+prelink.x86_64                 0.4.6-8.fc18         @koji-override-0/$releasever
+preupgrade.noarch              1.1.11-2.fc18        @koji-override-0/$releasever
+procmail.x86_64                3.22-31.fc18         @koji-override-0/$releasever
+procps-ng.x86_64               3.3.3-5.20120807git.fc18
+                                                    @updates                    
+psacct.x86_64                  6.5.5-8.fc18         @updates                    
+psmisc.x86_64                  22.20-1.fc18         @koji-override-0/$releasever
+pth.x86_64                     2.0.7-17.fc18        @koji-override-0/$releasever
+pulseaudio.x86_64              2.1-6.fc18           @updates                    
+pulseaudio-gdm-hooks.x86_64    2.1-6.fc18           @updates                    
+pulseaudio-libs.i686           2.1-6.fc18           @updates                    
+pulseaudio-libs.x86_64         2.1-6.fc18           @updates                    
+pulseaudio-libs-glib2.x86_64   2.1-6.fc18           @updates                    
+pulseaudio-module-bluetooth.x86_64
+                               2.1-6.fc18           @updates                    
+pulseaudio-module-x11.x86_64   2.1-6.fc18           @updates                    
+pulseaudio-utils.x86_64        2.1-6.fc18           @updates                    
+pyOpenSSL.x86_64               0.13-4.fc18          @koji-override-0/$releasever
+pyatspi.noarch                 2.6.0-1.fc18         @koji-override-0/$releasever
+pycairo.x86_64                 1.8.10-5.fc18        @koji-override-0/$releasever
+pycanberra.noarch              0-0.2.git65c3b3f.fc18
+                                                    @koji-override-0/$releasever
+pycryptopp.x86_64              0.6.0.1206569328141510525648634803928199668821045408958-2.fc18
+                                                    @koji-override-0/$releasever
+pygame.x86_64                  1.9.1-11.fc18        @updates                    
+pygobject2.x86_64              2.28.6-7.fc18        @koji-override-0/$releasever
+pygobject3.x86_64              3.4.2-6.fc18         @koji-override-0/$releasever
+pygobject3-base.x86_64         3.4.2-6.fc18         @koji-override-0/$releasever
+pygpgme.x86_64                 0.3-5.fc18           @updates                    
+pygtk2.x86_64                  2.24.0-5.fc18        @koji-override-0/$releasever
+pygtk2-libglade.x86_64         2.24.0-5.fc18        @koji-override-0/$releasever
+pykickstart.noarch             1.99.22-1.fc18       @koji-override-0/$releasever
+pyliblzma.x86_64               0.5.3-7.fc18         @koji-override-0/$releasever
+pylint.noarch                  0.26.0-1.fc18        @updates                    
+pyorbit.x86_64                 2.24.0-11.fc18       @fedora                     
+pyparted.x86_64                3.8-5.fc18           @koji-override-0/$releasever
+pyrpkg.noarch                  1.18-3.fc18          @fedora                     
+pytalloc.x86_64                2.0.8-1.fc18         @updates                    
+python.x86_64                  2.7.3-13.fc18        @koji-override-0/$releasever
+python-GnuPGInterface.noarch   0.3.2-10.fc18        @koji-override-0/$releasever
+python-IPy.noarch              0.75-3.fc18          @koji-override-0/$releasever
+python-async.x86_64            0.6.1-5.fc18         @fedora                     
+python-babel.noarch            0.9.6-5.fc18         @koji-override-0/$releasever
+python-backports-ssl_match_hostname.noarch
+                               3.2-0.3.a3.fc18      @updates                    
+python-beaker.noarch           1.5.4-6.fc18         @koji-override-0/$releasever
+python-boto.noarch             2.6.0-2.fc18         @koji-override-0/$releasever
+python-brlapi.x86_64           0.5.6-12.fc18        @updates                    
+python-bugzilla.noarch         0.8.0-2.fc18         @updates                    
+python-bunch.noarch            1.0.1-3.fc18         @fedora                     
+python-caribou.noarch          0.4.4.2-7.fc18       @updates                    
+python-chardet.noarch          2.0.1-5.fc18         @koji-override-0/$releasever
+python-cloudfiles.noarch       1.7.10-2.fc18        @koji-override-0/$releasever
+python-cups.x86_64             1.9.62-1.fc18        @koji-override-0/$releasever
+python-dateutil.noarch         1.5-5.fc18           @fedora                     
+python-decorator.noarch        3.4.0-1.fc18         @koji-override-0/$releasever
+python-decoratortools.noarch   1.8-5.fc18           @fedora                     
+python-deltarpm.x86_64         3.6-0.11.20110223git.fc18
+                                                    @koji-override-0/$releasever
+python-devel.x86_64            2.7.3-13.fc18        @fedora                     
+python-django.noarch           1.4.5-2.fc18         @updates                    
+python-enchant.noarch          1.6.5-7.fc18         @fedora                     
+python-ethtool.x86_64          0.7-4.fc18           @koji-override-0/$releasever
+python-fedora.noarch           0.3.32.3-1.fc18      @updates                    
+python-gdata.noarch            2.0.14-3.fc18        @fedora                     
+python-gitdb.x86_64            0.5.4-4.fc18         @fedora                     
+python-httplib2.noarch         0.7.7-1.fc18         @updates                    
+python-imaging.x86_64          1.1.7-7.fc18         @fedora                     
+python-imaging-tk.x86_64       1.1.7-7.fc18         @fedora                     
+python-iniparse.noarch         0.4-6.fc18           @koji-override-0/$releasever
+python-inotify.noarch          0.9.4-1.fc18         @updates                    
+python-ipython-console.noarch  0.13.2-1.fc18        @updates                    
+python-iso8601.noarch          0.1.4-5.fc18         @fedora                     
+python-kitchen.noarch          1.1.1-2.fc18         @koji-override-0/$releasever
+python-krbV.x86_64             1.0.90-5.fc18        @fedora                     
+python-libs.x86_64             2.7.3-13.fc18        @koji-override-0/$releasever
+python-logilab-astng.noarch    0.24.1-1.fc18        @updates                    
+python-logilab-common.noarch   0.58.3-1.fc18        @updates                    
+python-magic.x86_64            5.11-4.fc18          @koji-override-0/$releasever
+python-mako.noarch             0.5.0-5.fc18         @koji-override-0/$releasever
+python-markupsafe.x86_64       0.11-7.fc18          @koji-override-0/$releasever
+python-meh.noarch              0.20-1.fc18          @updates                    
+python-mglob.noarch            0.4-7.fc18           @fedora                     
+python-nose.noarch             1.3.0-1.fc18         @updates                    
+python-nss.x86_64              0.13-0.fc18          @updates                    
+python-offtrac.noarch          0.0.4-1.fc18         @updates                    
+python-ordereddict.noarch      1.1-5.fc18           @fedora                     
+python-paste.noarch            1.7.5.1-7.20111221hg1498.fc18
+                                                    @koji-override-0/$releasever
+python-pexpect.noarch          2.5.1-5.fc18         @fedora                     
+python-pwquality.x86_64        1.2.1-1.fc18         @updates                    
+python-pyblock.x86_64          0.53-3.fc18          @koji-override-0/$releasever
+python-pycurl.x86_64           7.19.0-13.1.fc18     @updates                    
+python-reportlab.x86_64        2.5-5.fc18           @fedora                     
+python-requests.noarch         1.1.0-3.fc18         @updates                    
+python-setuptools.noarch       0.6.28-3.fc18        @koji-override-0/$releasever
+python-simplegeneric.noarch    0.8-5.fc18           @fedora                     
+python-simplejson.x86_64       2.6.2-1.fc18         @updates                    
+python-six.noarch              1.2.0-1.fc18         @fedora                     
+python-slip.noarch             0.4.0-1.fc18         @updates                    
+python-slip-dbus.noarch        0.4.0-1.fc18         @updates                    
+python-slip-gtk.noarch         0.4.0-1.fc18         @updates                    
+python-smbc.x86_64             1.0.13-6.fc18        @updates                    
+python-smmap.noarch            0.8.1-5.fc18         @fedora                     
+python-tempita.noarch          0.5.1-4.fc18         @koji-override-0/$releasever
+python-urlgrabber.noarch       3.9.1-24.fc18        @updates                    
+python-urllib3.noarch          1.5-6.fc18           @updates                    
+python-vobject.noarch          0.8.1c-7.fc18        @fedora                     
+python-zmq.x86_64              2.2.0.1-1.fc18       @updates                    
+pytz.noarch                    2012d-2.fc18         @koji-override-0/$releasever
+pyxattr.x86_64                 0.5.1-2.fc18         @fedora                     
+pyxdg.noarch                   0.24-1.fc18          @koji-override-0/$releasever
+qdox.noarch                    1.12.1-2.fc18        @updates                    
+qemu-common.x86_64             2:1.2.2-13.fc18      @updates                    
+qemu-img.x86_64                2:1.2.2-13.fc18      @updates                    
+qemu-kvm.x86_64                2:1.2.2-13.fc18      @updates                    
+qemu-system-x86.x86_64         2:1.2.2-13.fc18      @updates                    
+qrencode-libs.x86_64           3.4.1-1.fc18         @updates                    
+qt.i686                        1:4.8.4-17.fc18      @updates                    
+qt.x86_64                      1:4.8.4-17.fc18      @updates                    
+qt-mobility.i686               1.2.2-0.3.20120224git.fc18
+                                                    @fedora                     
+qt-mobility.x86_64             1.2.2-0.3.20120224git.fc18
+                                                    @fedora                     
+qt-settings.noarch             4.9-21.fc18          @updates                    
+qt-x11.i686                    1:4.8.4-17.fc18      @updates                    
+qt-x11.x86_64                  1:4.8.4-17.fc18      @updates                    
+qt3.x86_64                     3.3.8b-43.fc18       @fedora                     
+qtwebkit.i686                  2.3.1-1.fc18         @updates                    
+qtwebkit.x86_64                2.3.1-1.fc18         @updates                    
+quota.x86_64                   1:4.00-7.fc18        @updates                    
+quota-nls.noarch               1:4.00-7.fc18        @updates                    
+radvd.x86_64                   1.9.1-3.fc18         @koji-override-0/$releasever
+raptor2.x86_64                 2.0.7-2.fc18         @koji-override-0/$releasever
+rasqal.x86_64                  0.9.29-2.fc18        @koji-override-0/$releasever
+rcs.x86_64                     5.8.1-3.fc18         @fedora                     
+rdate.x86_64                   1.4-20.fc18          @koji-override-0/$releasever
+rdesktop.x86_64                1.7.1-1.fc18         @fedora                     
+rdist.x86_64                   1:6.1.5-54.fc18      @koji-override-0/$releasever
+readline.i686                  6.2-5.fc18           @fedora                     
+readline.x86_64                6.2-5.fc18           @koji-override-0/$releasever
+realmd.x86_64                  0.12-1.fc18          @koji-override-0/$releasever
+recordmydesktop.x86_64         0.3.8.1-8.fc18       @fedora                     
+redhat-lsb.x86_64              4.1-10.fc18          @updates                    
+redhat-lsb-core.x86_64         4.1-10.fc18          @updates                    
+redhat-lsb-cxx.x86_64          4.1-10.fc18          @updates                    
+redhat-lsb-desktop.x86_64      4.1-10.fc18          @updates                    
+redhat-lsb-languages.x86_64    4.1-10.fc18          @updates                    
+redhat-lsb-printing.x86_64     4.1-10.fc18          @updates                    
+redhat-lsb-submod-multimedia.x86_64
+                               4.1-10.fc18          @updates                    
+redhat-lsb-submod-security.x86_64
+                               4.1-10.fc18          @updates                    
+redhat-menus.noarch            12.0.2-5.fc18        @koji-override-0/$releasever
+redhat-rpm-config.noarch       9.1.0-37.1.fc18      @updates                    
+redland.x86_64                 1.0.15-3.fc18        @updates                    
+regexp.noarch                  1.5-9.fc18           @fedora                     
+reiserfs-utils.x86_64          2:3.6.21-7.fc18      @koji-override-0/$releasever
+relaxngDatatype.noarch         1.0-8.3.fc18         @fedora                     
+rest.x86_64                    0.7.90-1.fc18        @koji-override-0/$releasever
+rhino.noarch                   1.7R3-6.fc18         @koji-override-0/$releasever
+rhythmbox.x86_64               2.98-4.fc18          @koji-override-0/$releasever
+rmt.x86_64                     1:0.4-0.14.b44.fc18  @updates                    
+rng-tools.x86_64               4-2.fc18             @koji-override-0/$releasever
+rome.noarch                    0.9-12.fc18          @fedora                     
+rootfiles.noarch               8.1-9.fc18           @koji-override-0/$releasever
+rp-pppoe.x86_64                3.10-13.fc18         @koji-override-0/$releasever
+rpcbind.x86_64                 0.2.0-20.fc18        @koji-override-0/$releasever
+rpm.x86_64                     4.10.3.1-1.fc18      @updates                    
+rpm-build.x86_64               4.10.3.1-1.fc18      @updates                    
+rpm-build-libs.x86_64          4.10.3.1-1.fc18      @updates                    
+rpm-devel.x86_64               4.10.3.1-1.fc18      @updates                    
+rpm-libs.x86_64                4.10.3.1-1.fc18      @updates                    
+rpm-python.x86_64              4.10.3.1-1.fc18      @updates                    
+rpmdevtools.noarch             8.3-1.fc18           @fedora                     
+rpmfusion-free-release.noarch  18-3                 @/rpmfusion-free-release-18.noarch
+rpmfusion-nonfree-release.noarch
+                               18-3                 @/rpmfusion-nonfree-release-18.noarch
+rpmlint.noarch                 1.5-1.fc18           @updates                    
+rsync.x86_64                   3.0.9-5.fc18         @koji-override-0/$releasever
+rsyslog.x86_64                 7.2.6-1.fc18         @updates                    
+rtkit.x86_64                   0.11-3.fc18          @koji-override-0/$releasever
+sac.noarch                     1.3-13.fc18          @fedora                     
+samba-common.x86_64            2:4.0.6-3.fc18       @updates                    
+samba-libs.x86_64              2:4.0.6-3.fc18       @updates                    
+sane-backends.x86_64           1.0.23-7.fc18        @updates                    
+sane-backends-devel.x86_64     1.0.23-7.fc18        @updates                    
+sane-backends-drivers-cameras.x86_64
+                               1.0.23-7.fc18        @updates                    
+sane-backends-drivers-scanners.x86_64
+                               1.0.23-7.fc18        @updates                    
+sane-backends-libs.x86_64      1.0.23-7.fc18        @updates                    
+sat4j.noarch                   2.3.0-4.fc18         @fedora                     
+schroedinger.x86_64            1.0.11-3.fc18        @fedora                     
+scummvm.x86_64                 1.6.0-1.fc18         @updates                    
+seabios-bin.noarch             1.7.1-4.fc18         @updates                    
+seahorse.x86_64                3.6.3-1.fc18         @koji-override-0/$releasever
+sed.x86_64                     4.2.1-10.fc18        @koji-override-0/$releasever
+seed.x86_64                    3.2.0-3.fc18.2       @koji-override-0/$releasever
+selinux-policy.noarch          3.11.1-97.fc18       @updates                    
+selinux-policy-devel.noarch    3.11.1-97.fc18       @updates                    
+selinux-policy-doc.noarch      3.11.1-97.fc18       @updates                    
+selinux-policy-targeted.noarch 3.11.1-97.fc18       @updates                    
+sendmail.x86_64                8.14.7-1.fc18        @updates                    
+setools-libs.x86_64            3.3.7-34.fc18        @updates                    
+setools-libs-python.x86_64     3.3.7-34.fc18        @updates                    
+setroubleshoot.x86_64          3.2.3-3.fc18         @updates                    
+setroubleshoot-plugins.noarch  3.0.50-1.fc18        @updates                    
+setroubleshoot-server.x86_64   3.2.3-3.fc18         @updates                    
+setup.noarch                   2.8.57-1.fc18        @koji-override-0/$releasever
+setuptool.x86_64               1.19.11-5.fc18       @koji-override-0/$releasever
+sg3_utils-libs.x86_64          1.34-1.fc18          @koji-override-0/$releasever
+sgabios-bin.noarch             1:0.20110622svn-4.fc18
+                                                    @updates                    
+sgpio.x86_64                   1.2.0.10-10.fc18     @updates                    
+shadow-utils.x86_64            2:4.1.5.1-2.fc18     @updates                    
+shared-mime-info.x86_64        1.1-1.fc18           @updates                    
+sheepdog.x86_64                0.3.0-3.fc18         @koji-override-0/$releasever
+shim.x86_64                    0.2-4.4.fc18         @updates                    
+shim-unsigned.x86_64           0.2-3.fc18           @koji-override-0/$releasever
+shotwell.x86_64                0.13.1-1.fc18        @koji-override-0/$releasever
+sil-abyssinica-fonts.noarch    1.200-4.fc18         @koji-override-0/$releasever
+sil-nuosu-fonts.noarch         2.1.1-5.fc18         @koji-override-0/$releasever
+sil-padauk-fonts.noarch        2.8-2.fc18           @koji-override-0/$releasever
+simple-scan.x86_64             3.6.0-1.fc18         @koji-override-0/$releasever
+sip.x86_64                     4.14.6-1.fc18        @updates                    
+skype.i586                     4.2.0.11-fc16        installed                   
+slang.x86_64                   2.2.4-5.fc18         @koji-override-0/$releasever
+slf4j.noarch                   1.7.2-4.fc18         @fedora                     
+slingshot.noarch               0.8.1p-8.fc18        @fedora                     
+smc-fonts-common.noarch        5.0.1-4.fc18         @updates                    
+smc-meera-fonts.noarch         5.0.1-4.fc18         @updates                    
+snappy.x86_64                  1.0.5-2.fc18         @fedora                     
+socat.x86_64                   1.7.2.2-1.fc18       @updates                    
+sos.noarch                     2.2-30.fc18          @koji-override-0/$releasever
+sound-theme-freedesktop.noarch 0.8-1.fc18           @koji-override-0/$releasever
+soundtouch.i686                1.4.0-6.fc18         @fedora                     
+soundtouch.x86_64              1.4.0-6.fc18         @koji-override-0/$releasever
+sox.x86_64                     14.4.0-2.fc18        @koji-override-0/$releasever
+speech-dispatcher.x86_64       0.7.1-8.fc18         @koji-override-0/$releasever
+speech-dispatcher-python.x86_64
+                               0.7.1-8.fc18         @koji-override-0/$releasever
+speex.x86_64                   1.2-0.15.rc1.fc18    @koji-override-0/$releasever
+spherical-cow-backgrounds-gnome.noarch
+                               18.0.0-2.fc18        @updates                    
+spherical-cow-backgrounds-single.noarch
+                               18.0.0-2.fc18        @updates                    
+spice-glib.x86_64              0.18-1.fc18          @updates                    
+spice-gtk3.x86_64              0.18-1.fc18          @updates                    
+spice-server.x86_64            0.12.2-3.fc18        @updates                    
+spice-vdagent.x86_64           0.14.0-1.fc18        @updates                    
+sqlite.i686                    3.7.13-2.fc18        @fedora                     
+sqlite.x86_64                  3.7.13-2.fc18        @koji-override-0/$releasever
+squashfs-tools.x86_64          4.2-5.fc18           @koji-override-0/$releasever
+sssd.x86_64                    1.9.4-8.fc18         @updates                    
+sssd-client.x86_64             1.9.4-8.fc18         @updates                    
+startup-notification.x86_64    0.12-4.fc18          @koji-override-0/$releasever
+stax2-api.noarch               3.1.1-4.fc18         @fedora                     
+stix-fonts.noarch              1.1.0-2.fc18         @koji-override-0/$releasever
+strace.x86_64                  4.7-2.fc18           @fedora                     
+stunnel.x86_64                 4.53-2.fc18          @koji-override-0/$releasever
+subversion.x86_64              1.7.8-3.fc18         @updates                    
+subversion-javahl.x86_64       1.7.8-3.fc18         @updates                    
+subversion-libs.x86_64         1.7.8-3.fc18         @updates                    
+sudo.x86_64                    1.8.6p7-1.fc18       @updates                    
+suitesparse.x86_64             3.6.1-4.fc18         @fedora                     
+sun-javadb-client.i386         10.6.2-1.1           installed                   
+sun-javadb-common.i386         10.6.2-1.1           installed                   
+sun-javadb-core.i386           10.6.2-1.1           installed                   
+sun-javadb-demo.i386           10.6.2-1.1           installed                   
+sun-javadb-docs.i386           10.6.2-1.1           installed                   
+sun-javadb-javadoc.i386        10.6.2-1.1           installed                   
+sushi.x86_64                   3.6.1-1.fc18         @koji-override-0/$releasever
+swig.x86_64                    2.0.8-1.fc18         @fedora                     
+sword.x86_64                   1.6.2-9.fc18         @fedora                     
+symlinks.x86_64                1.4-6.fc18           @koji-override-0/$releasever
+syslinux.x86_64                4.05-4.fc18          @koji-override-0/$releasever
+sysprof.x86_64                 1.2.0-1.fc18         @fedora                     
+system-config-date.noarch      1.10.5-1.fc18        @updates                    
+system-config-firewall-base.noarch
+                               1.2.29-8.fc18        @koji-override-0/$releasever
+system-config-keyboard.x86_64  1.3.1-9.fc18         @koji-override-0/$releasever
+system-config-keyboard-base.x86_64
+                               1.3.1-9.fc18         @koji-override-0/$releasever
+system-config-lvm.noarch       1.1.18-1.fc18        @fedora                     
+system-config-printer.x86_64   1.3.13-1.fc18        @updates                    
+system-config-printer-libs.noarch
+                               1.3.13-1.fc18        @updates                    
+system-config-printer-udev.x86_64
+                               1.3.13-1.fc18        @updates                    
+system-config-users.noarch     1.3.3-1.fc18         @updates                    
+systemd.x86_64                 201-2.fc18.7         @updates                    
+systemd-libs.i686              201-2.fc18.7         @updates                    
+systemd-libs.x86_64            201-2.fc18.7         @updates                    
+systemd-python.x86_64          201-2.fc18.7         @updates                    
+systemd-sysv.x86_64            201-2.fc18.7         @updates                    
+systemtap.x86_64               2.2.1-1.fc18         @updates                    
+systemtap-client.x86_64        2.2.1-1.fc18         @updates                    
+systemtap-devel.x86_64         2.2.1-1.fc18         @updates                    
+systemtap-runtime.x86_64       2.2.1-1.fc18         @updates                    
+systemtap-sdt-devel.x86_64     2.2.1-1.fc18         @updates                    
+sysvinit-tools.x86_64          2.88-9.dsf.fc18      @koji-override-0/$releasever
+t1lib.x86_64                   5.1.2-10.fc18        @fedora                     
+taglib.x86_64                  1.8-3.20121215git.fc18
+                                                    @updates                    
+talk.x86_64                    0.17-39.fc18         @koji-override-0/$releasever
+tar.x86_64                     2:1.26-12.fc18       @updates                    
+tbb.x86_64                     4.0-7.20120408.fc18  @updates                    
+tboot.x86_64                   1:1.7.3-3.fc18       @updates                    
+tcl.x86_64                     1:8.5.13-1.fc18      @fedora                     
+tcp_wrappers.x86_64            7.6-70.fc18          @koji-override-0/$releasever
+tcp_wrappers-devel.x86_64      7.6-70.fc18          @fedora                     
+tcp_wrappers-libs.i686         7.6-70.fc18          @fedora                     
+tcp_wrappers-libs.x86_64       7.6-70.fc18          @koji-override-0/$releasever
+tcpdump.x86_64                 14:4.3.0-2.fc18      @koji-override-0/$releasever
+tecnoballz.x86_64              0.92-15.fc18         @fedora                     
+telepathy-farstream.x86_64     0.6.0-1.fc18         @koji-override-0/$releasever
+telepathy-filesystem.noarch    0.0.2-4.fc18         @koji-override-0/$releasever
+telepathy-gabble.x86_64        0.16.6-1.fc18        @updates                    
+telepathy-glib.x86_64          0.20.2-1.fc18        @updates                    
+telepathy-haze.x86_64          0.6.0-3.fc18         @updates                    
+telepathy-idle.x86_64          0.1.16-1.fc18        @updates                    
+telepathy-logger.x86_64        0.6.0-3.fc18         @koji-override-0/$releasever
+telepathy-mission-control.x86_64
+                               1:5.14.0-2.fc18      @updates                    
+telepathy-salut.x86_64         0.8.1-1.fc18         @koji-override-0/$releasever
+texinfo.x86_64                 4.13a-18.fc18        @fedora                     
+texlive-algorithms.noarch      2:svn15878.0.1-20.fc18
+                                                    @updates                    
+texlive-amsfonts.noarch        2:svn29208.3.04-20.fc18
+                                                    @updates                    
+texlive-amsmath.noarch         2:svn29327.2.14-20.fc18
+                                                    @updates                    
+texlive-attachfile.noarch      2:svn21866.v1.5b-20.fc18
+                                                    @updates                    
+texlive-babel.noarch           2:svn24756.3.8m-20.fc18
+                                                    @updates                    
+texlive-babelbib.noarch        2:svn25245.1.31-20.fc18
+                                                    @updates                    
+texlive-base.noarch            2:2012-20.20130321_r29448.fc18
+                                                    @updates                    
+texlive-bera.noarch            2:svn20031.0-20.fc18 @updates                    
+texlive-bibleref.noarch        2:svn21145.1.14-20.fc18
+                                                    @updates                    
+texlive-bibleref-doc.noarch    2:svn21145.1.14-20.fc18
+                                                    @updates                    
+texlive-bibleref-mouth.noarch  2:svn25527.1.0-20.fc18
+                                                    @updates                    
+texlive-bibleref-mouth-doc.noarch
+                               2:svn25527.1.0-20.fc18
+                                                    @updates                    
+texlive-bibleref-parse.noarch  2:svn22054.1.1-20.fc18
+                                                    @updates                    
+texlive-bibleref-parse-doc.noarch
+                               2:svn22054.1.1-20.fc18
+                                                    @updates                    
+texlive-booktabs.noarch        2:svn15878.1.61803-20.fc18
+                                                    @updates                    
+texlive-breakurl.noarch        2:svn15878.1.30-20.fc18
+                                                    @updates                    
+texlive-caption.noarch         2:svn29026.3.3__2013_02_03_-20.fc18
+                                                    @updates                    
+texlive-carlisle.noarch        2:svn18258.0-20.fc18 @updates                    
+texlive-chngcntr.noarch        2:svn17157.1.0a-20.fc18
+                                                    @updates                    
+texlive-colortbl.noarch        2:svn25394.v1.0a-20.fc18
+                                                    @updates                    
+texlive-csquotes.noarch        2:svn24393.5.1d-20.fc18
+                                                    @updates                    
+texlive-currfile.noarch        2:svn29012.0.7b-20.fc18
+                                                    @updates                    
+texlive-enumitem.noarch        2:svn24146.3.5.2-20.fc18
+                                                    @updates                    
+texlive-eso-pic.noarch         2:svn21515.2.0c-20.fc18
+                                                    @updates                    
+texlive-etex-pkg.noarch        2:svn15878.2.0-20.fc18
+                                                    @updates                    
+texlive-etoolbox.noarch        2:svn20922.2.1-20.fc18
+                                                    @updates                    
+texlive-fancyvrb.noarch        2:svn18492.2.8-20.fc18
+                                                    @updates                    
+texlive-filecontents.noarch    2:svn24250.1.3-20.fc18
+                                                    @updates                    
+texlive-filehook.noarch        2:svn24280.0.5d-20.fc18
+                                                    @updates                    
+texlive-float.noarch           2:svn15878.1.3d-20.fc18
+                                                    @updates                    
+texlive-fmtcount.noarch        2:svn28068.2.02-20.fc18
+                                                    @updates                    
+texlive-fontspec.noarch        2:svn29412.v2.3a-20.fc18
+                                                    @updates                    
+texlive-footmisc.noarch        2:svn23330.5.5b-20.fc18
+                                                    @updates                    
+texlive-fp.noarch              2:svn15878.0-20.fc18 @updates                    
+texlive-geometry.noarch        2:svn19716.5.6-20.fc18
+                                                    @updates                    
+texlive-graphics.noarch        2:svn25405.1.0o-20.fc18
+                                                    @updates                    
+texlive-hyperref.noarch        2:svn28213.6.83m-20.fc18
+                                                    @updates                    
+texlive-hyphen-base.noarch     2:svn29197.0-20.fc18 @updates                    
+texlive-ifetex.noarch          2:svn24853.1.2-20.fc18
+                                                    @updates                    
+texlive-ifxetex.noarch         2:svn19685.0.5-20.fc18
+                                                    @updates                    
+texlive-index.noarch           2:svn24099.4.1beta-20.fc18
+                                                    @updates                    
+texlive-kastrup.noarch         2:svn15878.0-20.fc18 @updates                    
+texlive-koma-script.noarch     2:svn27255.3.11b-20.fc18
+                                                    @updates                    
+texlive-kpathsea.noarch        2:svn28792.0-20.fc18 @updates                    
+texlive-kpathsea-bin.x86_64    2:svn27347.0-20.20130321_r29448.fc18
+                                                    @updates                    
+texlive-kpathsea-lib.x86_64    2:2012-20.20130321_r29448.fc18
+                                                    @updates                    
+texlive-l3kernel.noarch        2:svn29409.SVN_4469-20.fc18
+                                                    @updates                    
+texlive-l3packages.noarch      2:svn29361.SVN_4467-20.fc18
+                                                    @updates                    
+texlive-latex.noarch           2:svn27907.0-20.fc18 @updates                    
+texlive-latex-fonts.noarch     2:svn28888.0-20.fc18 @updates                    
+texlive-latexconfig.noarch     2:svn28991.0-20.fc18 @updates                    
+texlive-listings.noarch        2:svn15878.1.4-20.fc18
+                                                    @updates                    
+texlive-lm.noarch              2:svn28119.2.004-20.fc18
+                                                    @updates                    
+texlive-lualatex-math.noarch   2:svn29346.1.2-20.fc18
+                                                    @updates                    
+texlive-luaotfload.noarch      2:svn26718.1.26-20.fc18
+                                                    @updates                    
+texlive-luaotfload-bin.noarch  2:svn18579.0-20.20130321_r29448.fc18
+                                                    @updates                    
+texlive-luatex.noarch          2:svn26689.0.70.1-20.fc18
+                                                    @updates                    
+texlive-luatex-bin.x86_64      2:svn26912.0-20.20130321_r29448.fc18
+                                                    @updates                    
+texlive-luatexbase.noarch      2:svn22560.0.31-20.fc18
+                                                    @updates                    
+texlive-marginnote.noarch      2:svn25880.v1.1i-20.fc18
+                                                    @updates                    
+texlive-memoir.noarch          2:svn21638.3.6j_patch_6.0g-20.fc18
+                                                    @updates                    
+texlive-mparhack.noarch        2:svn15878.1.4-20.fc18
+                                                    @updates                    
+texlive-ms.noarch              2:svn24467.0-20.fc18 @updates                    
+texlive-multido.noarch         2:svn18302.1.42-20.fc18
+                                                    @updates                    
+texlive-oberdiek.noarch        2:svn26725.0-20.fc18 @updates                    
+texlive-paralist.noarch        2:svn15878.2.3b-20.fc18
+                                                    @updates                    
+texlive-parallel.noarch        2:svn15878.0-20.fc18 @updates                    
+texlive-pdftex.noarch          2:svn29349.1.40.11-20.fc18
+                                                    @updates                    
+texlive-pdftex-bin.x86_64      2:svn27321.0-20.20130321_r29448.fc18
+                                                    @updates                    
+texlive-pgf.noarch             2:svn22614.2.10-20.fc18
+                                                    @updates                    
+texlive-psnfss.noarch          2:svn23394.9.2a-20.fc18
+                                                    @updates                    
+texlive-pst-3d.noarch          2:svn17257.1.10-20.fc18
+                                                    @updates                    
+texlive-pst-coil.noarch        2:svn24020.1.06-20.fc18
+                                                    @updates                    
+texlive-pst-eps.noarch         2:svn15878.1.0-20.fc18
+                                                    @updates                    
+texlive-pst-fill.noarch        2:svn15878.1.01-20.fc18
+                                                    @updates                    
+texlive-pst-grad.noarch        2:svn15878.1.06-20.fc18
+                                                    @updates                    
+texlive-pst-math.noarch        2:svn20176.0.61-20.fc18
+                                                    @updates                    
+texlive-pst-node.noarch        2:svn27799.1.25-20.fc18
+                                                    @updates                    
+texlive-pst-plot.noarch        2:svn28729.1.44-20.fc18
+                                                    @updates                    
+texlive-pst-text.noarch        2:svn15878.1.00-20.fc18
+                                                    @updates                    
+texlive-pst-tree.noarch        2:svn24142.1.12-20.fc18
+                                                    @updates                    
+texlive-pstricks.noarch        2:svn29482.2.37-20.fc18
+                                                    @updates                    
+texlive-pstricks-add.noarch    2:svn28750.3.59-20.fc18
+                                                    @updates                    
+texlive-qstest.noarch          2:svn15878.0-20.fc18 @updates                    
+texlive-sauerj.noarch          2:svn15878.0-20.fc18 @updates                    
+texlive-setspace.noarch        2:svn24881.6.7a-20.fc18
+                                                    @updates                    
+texlive-showexpl.noarch        2:svn27790.v0.3j-20.fc18
+                                                    @updates                    
+texlive-soul.noarch            2:svn15878.2.4-20.fc18
+                                                    @updates                    
+texlive-subfig.noarch          2:svn15878.1.3-20.fc18
+                                                    @updates                    
+texlive-tetex.noarch           2:svn29349.3.0-20.fc18
+                                                    @updates                    
+texlive-tetex-bin.noarch       2:svn27344.0-20.20130321_r29448.fc18
+                                                    @updates                    
+texlive-thumbpdf.noarch        2:svn26689.3.15-20.fc18
+                                                    @updates                    
+texlive-thumbpdf-bin.noarch    2:svn6898.0-20.20130321_r29448.fc18
+                                                    @updates                    
+texlive-tipa.noarch            2:svn29349.1.3-20.fc18
+                                                    @updates                    
+texlive-tools.noarch           2:svn26263.0-20.fc18 @updates                    
+texlive-underscore.noarch      2:svn18261.0-20.fc18 @updates                    
+texlive-unicode-math.noarch    2:svn29413.0.7d-20.fc18
+                                                    @updates                    
+texlive-url.noarch             2:svn16864.3.2-20.fc18
+                                                    @updates                    
+texlive-varwidth.noarch        2:svn24104.0.92-20.fc18
+                                                    @updates                    
+texlive-xcolor.noarch          2:svn15878.2.11-20.fc18
+                                                    @updates                    
+texlive-xkeyval.noarch         2:svn27995.2.6a-20.fc18
+                                                    @updates                    
+texlive-xunicode.noarch        2:svn23897.0.981-20.fc18
+                                                    @updates                    
+thai-scalable-fonts-common.noarch
+                               0.5.0-5.fc18         @updates                    
+thai-scalable-waree-fonts.noarch
+                               0.5.0-5.fc18         @updates                    
+tigervnc.x86_64                1.2.80-0.10.20130314svn5065.fc18
+                                                    @updates                    
+tigervnc-icons.noarch          1.2.80-0.10.20130314svn5065.fc18
+                                                    @updates                    
+tigervnc-license.noarch        1.2.80-0.10.20130314svn5065.fc18
+                                                    @updates                    
+tigervnc-server-minimal.x86_64 1.2.80-0.10.20130314svn5065.fc18
+                                                    @updates                    
+time.x86_64                    1.7-42.fc18          @koji-override-0/$releasever
+tinyxml.x86_64                 2.6.1-4.fc18         @fedora                     
+tix.x86_64                     1:8.4.3-8.fc18       @fedora                     
+tk.x86_64                      1:8.5.13-1.fc18      @fedora                     
+tkinter.x86_64                 2.7.3-13.fc18        @fedora                     
+tmpwatch.x86_64                2.11-2.fc18          @koji-override-0/$releasever
+tomcat-el-2.2-api.noarch       7.0.40-1.fc18        @updates                    
+tomcat-jsp-2.2-api.noarch      7.0.40-1.fc18        @updates                    
+tomcat-servlet-3.0-api.noarch  7.0.40-1.fc18        @updates                    
+tong.x86_64                    1.0-16.fc18          @fedora                     
+tong-data.noarch               1.0-16.fc18          @fedora                     
+totem.x86_64                   1:3.6.3-2.fc18       @updates                    
+totem-mozplugin.x86_64         1:3.6.3-2.fc18       @updates                    
+totem-nautilus.x86_64          1:3.6.3-2.fc18       @updates                    
+totem-pl-parser.x86_64         3.4.3-1.fc18         @koji-override-0/$releasever
+traceroute.x86_64              3:2.0.19-1.fc18      @updates                    
+tracker.x86_64                 0.14.5-2.fc18        @updates                    
+transmission-common.x86_64     2.77-1.fc18          @updates                    
+transmission-gtk.x86_64        2.77-1.fc18          @updates                    
+tree.x86_64                    1.6.0-5.fc18         @koji-override-0/$releasever
+trousers.x86_64                0.3.10-1.fc18        @koji-override-0/$releasever
+ttmkfdir.x86_64                3.0.9-37.fc18        @fedora                     
+tuxpuck.x86_64                 0.8.2-14.fc18        @fedora                     
+twolame-libs.x86_64            0.3.13-2.fc17        @rpmfusion-free             
+tzdata.noarch                  2013c-1.fc18         @updates                    
+tzdata-java.noarch             2013c-1.fc18         @updates                    
+uboot-tools.x86_64             2012.10-1.fc18       @koji-override-0/$releasever
+uddi4j.noarch                  2.0.5-5.fc18         @fedora                     
+udisks2.x86_64                 2.0.1-2.fc18         @updates                    
+unique3.x86_64                 3.0.2-4.fc18         @koji-override-0/$releasever
+unzip.x86_64                   6.0-9.fc18           @updates                    
+upower.x86_64                  0.9.19-1.fc18        @updates                    
+uqm.x86_64                     0.7.0-4.fc18         @fedora                     
+urw-fonts.noarch               2.4-14.fc18          @updates                    
+usb_modeswitch.x86_64          1.2.5-1.fc18         @koji-override-0/$releasever
+usb_modeswitch-data.noarch     20121109-1.fc18      @koji-override-0/$releasever
+usbmuxd.x86_64                 1.0.8-5.fc18         @koji-override-0/$releasever
+usbredir.x86_64                0.6-1.fc18           @updates                    
+usbutils.x86_64                006-4.fc18           @updates                    
+usermode.x86_64                1.111-1.fc18         @koji-override-0/$releasever
+usermode-gtk.x86_64            1.111-1.fc18         @koji-override-0/$releasever
+ustr.x86_64                    1.0.4-13.fc18        @koji-override-0/$releasever
+util-linux.x86_64              2.22.2-6.fc18        @updates                    
+valgrind.x86_64                1:3.8.1-9.fc18       @updates                    
+vconfig.x86_64                 1.9-11.fc18          @koji-override-0/$releasever
+vdpauinfo.x86_64               0.0.6-5.fc18         @fedora                     
+vgabios.noarch                 0.6c-8.fc18          @updates                    
+vim-X11.x86_64                 2:7.3.944-1.fc18     @updates                    
+vim-common.x86_64              2:7.3.944-1.fc18     @updates                    
+vim-filesystem.x86_64          2:7.3.944-1.fc18     @updates                    
+vim-minimal.x86_64             2:7.3.944-1.fc18     @updates                    
+vinagre.x86_64                 3.6.2-2.fc18         @updates                    
+vlc.x86_64                     2.0.7-1.fc18         @rpmfusion-free-updates     
+vlc-core.x86_64                2.0.7-1.fc18         @rpmfusion-free-updates     
+vlgothic-fonts.noarch          20121230-3.fc18      @updates                    
+vlgothic-p-fonts.noarch        20121230-3.fc18      @updates                    
+vo-amrwbenc.x86_64             0.1.2-1.fc18         @rpmfusion-free             
+vodovod.x86_64                 1.10r19-10.fc18      @fedora                     
+vorbis-tools.x86_64            1:1.4.0-7.fc18       @updates                    
+vpnc.x86_64                    0.5.3-15.svn457.fc18 @koji-override-0/$releasever
+vpnc-script.noarch             0.5.3-15.svn457.fc18 @koji-override-0/$releasever
+vte3.x86_64                    0.34.2-3.fc18        @koji-override-0/$releasever
+warzone2100.x86_64             3.1.0-1.fc18         @updates                    
+wastesedge.noarch              0.3.4-0.18.fc18      @fedora                     
+wavpack.x86_64                 4.60.1-4.fc18        @koji-override-0/$releasever
+webkitgtk.x86_64               1.10.2-3.fc18        @updates                    
+webkitgtk3.x86_64              1.10.2-3.fc18        @updates                    
+webrtc-audio-processing.x86_64 0.1-1.fc18           @koji-override-0/$releasever
+wesnoth.x86_64                 1.10.5-3.fc18        @updates                    
+wesnoth-data.noarch            1.10.5-3.fc18        @updates                    
+wget.x86_64                    1.14-3.fc18          @fedora                     
+which.x86_64                   2.20-4.fc18          @koji-override-0/$releasever
+widelands.x86_64               0-0.33.build17.fc18  @fedora                     
+wireless-tools.x86_64          1:29-8.1.fc18        @koji-override-0/$releasever
+wodim.x86_64                   1.1.11-14.fc18       @koji-override-0/$releasever
+woodstox-core.noarch           4.1.2-3.fc18         @fedora                     
+wpa_supplicant.x86_64          1:1.1-1.fc18         @updates                    
+wqy-zenhei-fonts.noarch        0.9.46-9.fc18        @updates                    
+ws-commons-util.noarch         1.0.1-23.fc18        @fedora                     
+ws-jaxme.noarch                0.5.2-6.fc18         @fedora                     
+wsdl4j.noarch                  1.6.2-7.fc18         @fedora                     
+wsil4j.noarch                  1.0-5.fc18           @fedora                     
+wuja.noarch                    0.0.8-11.fc18        @fedora                     
+wvdial.x86_64                  1.61-6.fc18          @koji-override-0/$releasever
+x264-libs.x86_64               0.128-2.20121118gitf6a8615.fc18
+                                                    @rpmfusion-free             
+xalan-j2.noarch                2.7.1-17.fc18        @fedora                     
+xcb-util.x86_64                0.3.8-3.fc18         @koji-override-0/$releasever
+xcb-util-keysyms.x86_64        0.3.8-4.fc18         @fedora                     
+xdg-user-dirs.x86_64           0.14-3.fc18          @koji-override-0/$releasever
+xdg-user-dirs-gtk.x86_64       0.9-2.fc18           @koji-override-0/$releasever
+xdg-utils.noarch               1.1.0-0.14.20120809git.fc18
+                                                    @koji-override-0/$releasever
+xemacs-filesystem.noarch       21.5.33-4.fc18       @updates                    
+xerces-j2.noarch               2.11.0-11.fc18       @updates                    
+xfsprogs.x86_64                3.1.10-1.fc18        @updates                    
+xiphos.x86_64                  3.1.5-2.fc18         @fedora                     
+xkeyboard-config.noarch        2.6-8.fc18           @updates                    
+xml-common.noarch              0.6.3-37.fc18        @koji-override-0/$releasever
+xml-commons-apis.noarch        1.4.01-11.fc18       @updates                    
+xml-commons-resolver.noarch    1.2-10.fc18          @fedora                     
+xmlrpc-c.x86_64                1.32.5-1800.svn2451.fc18
+                                                    @updates                    
+xmlrpc-c-client.x86_64         1.32.5-1800.svn2451.fc18
+                                                    @updates                    
+xmlrpc-client.noarch           1:3.1.3-2.fc18       @fedora                     
+xmlrpc-common.noarch           1:3.1.3-2.fc18       @fedora                     
+xmlrpc-server.noarch           1:3.1.3-2.fc18       @fedora                     
+xmms.x86_64                    1:1.2.11-17.20071117cvs.fc18
+                                                    @fedora                     
+xmms-faad2.x86_64              1:2.7-2.fc17         @rpmfusion-free             
+xmms-flac.x86_64               1.2.1-4.fc18         @fedora                     
+xmms-libs.x86_64               1:1.2.11-17.20071117cvs.fc18
+                                                    @fedora                     
+xmms-mp3.x86_64                1.2.11-4.20071117cvs.fc17
+                                                    @rpmfusion-free             
+xmms-pulse.x86_64              0.9.4-11.fc18        @fedora                     
+xmms-skins.noarch              1:1.2.10-25          @fedora                     
+xorg-x11-drv-ati.x86_64        7.1.0-5.20130408git6e74aacc5.fc18
+                                                    @updates                    
+xorg-x11-drv-evdev.x86_64      2.7.3-5.fc18         @updates                    
+xorg-x11-drv-fbdev.x86_64      0.4.3-3.fc18         @koji-override-0/$releasever
+xorg-x11-drv-intel.x86_64      2.21.8-1.fc18        @updates                    
+xorg-x11-drv-mga.x86_64        1.6.2-6.fc18         @updates                    
+xorg-x11-drv-modesetting.x86_64
+                               0.6.0-1.fc18         @updates                    
+xorg-x11-drv-nouveau.x86_64    1:1.0.7-1.fc18       @updates                    
+xorg-x11-drv-nvidia-304xx.x86_64
+                               304.88-5.fc18        @rpmfusion-nonfree-updates  
+xorg-x11-drv-nvidia-304xx-libs.x86_64
+                               304.88-5.fc18        @rpmfusion-nonfree-updates  
+xorg-x11-drv-openchrome.x86_64 0.3.3-1.fc18         @updates                    
+xorg-x11-drv-qxl.x86_64        0.1.0-2.fc18         @updates                    
+xorg-x11-drv-synaptics.x86_64  1.6.3-3.fc18         @updates                    
+xorg-x11-drv-vesa.x86_64       2.3.2-2.fc18         @koji-override-0/$releasever
+xorg-x11-drv-vmmouse.x86_64    13.0.0-1.fc18        @updates                    
+xorg-x11-drv-vmware.x86_64     12.0.2-3.20120718gite5ac80d8f.fc18
+                                                    @koji-override-0/$releasever
+xorg-x11-drv-wacom.x86_64      0.16.1-2.fc18        @koji-override-0/$releasever
+xorg-x11-font-utils.x86_64     1:7.5-11.fc18        @updates                    
+xorg-x11-fonts-Type1.noarch    7.5-6.fc18           @fedora                     
+xorg-x11-glamor.x86_64         0.5.0-5.20130401git81aadb8.fc18
+                                                    @updates                    
+xorg-x11-server-Xorg.x86_64    1.13.3-3.fc18        @updates                    
+xorg-x11-server-common.x86_64  1.13.3-3.fc18        @updates                    
+xorg-x11-server-utils.x86_64   7.5-16.fc18          @updates                    
+xorg-x11-utils.x86_64          7.5-7.fc18           @koji-override-0/$releasever
+xorg-x11-xauth.x86_64          1:1.0.7-2.fc18       @koji-override-0/$releasever
+xorg-x11-xinit.x86_64          1.3.2-7.fc18         @koji-override-0/$releasever
+xorg-x11-xkb-utils.x86_64      7.7-5.fc18           @updates                    
+xpp2.noarch                    2.1.10-11.3.fc18     @fedora                     
+xpp3.noarch                    1.1.3.8-7.fc18       @fedora                     
+xrick.x86_64                   0.0.021212-5.fc17    @rpmfusion-nonfree          
+xsane.x86_64                   0.999-1.fc18         @updates                    
+xsane-common.x86_64            0.999-1.fc18         @updates                    
+xu4.x86_64                     1.1-0.18.20120106svn2999.fc18
+                                                    @fedora                     
+xulrunner.x86_64               22.0-1.fc18          @updates                    
+xvidcore.x86_64                1.3.2-3.fc17         @rpmfusion-free             
+xz.x86_64                      5.1.2-2alpha.fc18    @koji-override-0/$releasever
+xz-libs.i686                   5.1.2-2alpha.fc18    @fedora                     
+xz-libs.x86_64                 5.1.2-2alpha.fc18    @koji-override-0/$releasever
+yajl.x86_64                    2.0.4-1.fc18         @koji-override-0/$releasever
+yelp.x86_64                    1:3.6.2-1.fc18       @koji-override-0/$releasever
+yelp-libs.x86_64               1:3.6.2-1.fc18       @koji-override-0/$releasever
+yelp-xsl.noarch                3.6.1-1.fc18         @koji-override-0/$releasever
+ykpers.x86_64                  1.9.0-1.fc18         @fedora                     
+yum.noarch                     3.4.3-54.fc18        @updates                    
+yum-langpacks.noarch           0.3.1-1.fc18         @updates                    
+yum-metadata-parser.x86_64     1.1.4-7.fc18         @koji-override-0/$releasever
+yum-plugin-fastestmirror.noarch
+                               1.1.31-10.fc18       @updates                    
+yum-presto.noarch              0.9.0-1.fc18         @koji-override-0/$releasever
+yum-utils.noarch               1.1.31-10.fc18       @updates                    
+zd1211-firmware.noarch         1.4-7.fc18           @koji-override-0/$releasever
+zenity.x86_64                  3.6.0-1.fc18         @koji-override-0/$releasever
+zeromq3.x86_64                 3.2.3-1.fc18         @updates                    
+zip.x86_64                     3.0-5.fc18           @koji-override-0/$releasever
+zlib.i686                      1.2.7-9.fc18         @fedora                     
+zlib.x86_64                    1.2.7-9.fc18         @koji-override-0/$releasever
+zlib-devel.x86_64              1.2.7-9.fc18         @fedora                     
+zvbi.x86_64                    0.2.33-14.fc18       @fedora                     
+zziplib.x86_64                 0.13.60-2.fc18       @fedora      
+     </pre>
+ </body>
+</html>

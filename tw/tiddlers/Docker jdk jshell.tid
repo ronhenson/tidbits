@@ -1,0 +1,17 @@
+caption: Start docker jdk11 in bash shell
+created: 20200802143501551
+modified: 20200802143735225
+revision: 0
+tags: #Tidbit #Containers
+title: Docker jdk jshell
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+```bash
+# Open docker in jshell
+docker run -it --rm rhenson/openjdk:11-jdk
+
+# Open docker in in bash
+docker run -it --rm rhenson/openjdk:11-jdk /bin/bash
+```

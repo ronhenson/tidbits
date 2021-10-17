@@ -1,0 +1,27 @@
+created: 20160718164625468
+creator: ronh
+modified: 20200716152907330
+modifier: ronh
+revision: 0
+tags: #WIFI #Network #Tidbit
+title: Airlink rtl8812au-dkms
+type: text/vnd.tiddlywiki
+
+! Airlink model
+
+* Airlink 101
+* Wireless AC1200 USB 3.0 Adapter
+* Model: AWLL7086HG
+* Copied Install CD (windows and Mac) drivers <pre># /data/rh/Documents/Airlink_AWLL7086HG </pre>
+
+
+! Airlink driver on Ubuntu
+
+*  Need to install rtl8812au-dkms
+** The dkms does not appear to be working.  After a major upgrade, I need to reinstall <pre># `sudo apt-get install --reinstall rtl8812au-dkms`
+# reboot </pre>
+
+or something similar to this.  Need to verify
+
+<pre>sudo dpkg -i /var/cache/apt/archives/rtl8812au-dkms_4.3.8.12175.20140902+dfsg-0ubuntu2_all.deb</pre>
+

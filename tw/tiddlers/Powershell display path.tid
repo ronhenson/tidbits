@@ -1,0 +1,21 @@
+caption: {{!!title}} - How to display path on different lines in Windows
+created: 20171013210610284
+creator: ronh
+modified: 20200801182026745
+modifier: ronh
+revision: 0
+tags: #Windows #Tidbit #Tech
+title: Powershell display path
+type: text/vnd.tiddlywiki
+
+!! Stackoverflow link to display path on separate lines
+
+* <a href="https://stackoverflow.com/questions/5114985/echo-path-on-separate-lines">stackoverflow - Powershell display path on seperate lines</a> </li>
+
+Try: 
+
+``($env:Path).Replace(';',"&#96;n")``
+
+or
+
+``$env:path.split(";")``

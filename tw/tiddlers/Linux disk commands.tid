@@ -1,0 +1,172 @@
+created: 20141015144200000
+creator: ronh
+modified: 20200716152908984
+modifier: ronh
+revision: 0
+tags: #Disks #LinuxSystems #Tidbit #Tech
+title: Linux disk commands
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! helpful disk commands blkid, gparted, parted 
+
+Note: <code>All commands must be as root:</code>
+
+<!-- Command -->
+!! List all partitions and size
+
+<code>fdisk -l</code>
+
+<!-- Command -->
+!! list UUID and labels of all devices.
+
+ grep LABEL= to find the label.  No space after the = will be the label.
+
+<code>blkid</code>
+<pre>
+/dev/sda1: UUID="a185bbaa-8b9b-42c9-8144-4607fc92e699" TYPE="ext4" PARTUUID="000af0de-01" 
+/dev/sda2: UUID="nbIjt4-8jwR-MxO0-3OHo-xtY5-B3Of-gqI0bw" TYPE="LVM2_member" PARTUUID="000af0de-02" 
+/dev/sdb1: UUID="CIanm3-tYfM-0Joc-ge6N-T4d2-pDUd-EEYG5S" TYPE="LVM2_member" PARTUUID="000efe01-01" 
+/dev/mapper/fedora_00-root: UUID="100dafc5-318c-4be4-9527-48eef2284d74" TYPE="ext4" 
+/dev/mapper/fedora_00-swap: UUID="95097a24-c967-44db-b55e-39713f707b84" TYPE="swap" 
+/dev/sdc1: LABEL="hnsn02" UUID="1C44C9785040BBFA" TYPE="ntfs" PARTUUID="5444352f-3088-45fd-9238-de0db53da262" 
+/dev/mapper/fedora_00-home: UUID="6f99cc7a-e876-43a5-9f91-b31992c346f3" TYPE="ext4" 
+/dev/mapper/fedora01-rh: UUID="5e4ce871-be16-43c0-9100-9a9a941fb1f5" TYPE="ext4" 
+/dev/sdd1: LABEL="Hitachi" UUID="18B49202B491E314" TYPE="ntfs" PARTUUID="3d90d9b8-01" 
+</pre>
+
+<!-- Command -->
+<code>parted -l</code>
+<pre>
+Model: ATA SAMSUNG SSD RBX (scsi)
+Disk /dev/sda: 128GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags: 
+
+Number  Start   End    Size   Type     File system  Flags
+ 1      1049kB  525MB  524MB  primary  ext4         boot
+ 2      525MB   128GB  128GB  primary               lvm
+
+
+Model: ATA ST9500423AS (scsi)
+Disk /dev/sdb: 500GB
+Sector size (logical/physical): 512B/4096B
+Partition Table: msdos
+Disk Flags: 
+
+Number  Start   End    Size   Type     File system  Flags
+ 1      1049kB  500GB  500GB  primary               lvm
+
+
+Model: ST3000DM 001-1CH166 (scsi)
+Disk /dev/sdc: 3001GB
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+Disk Flags: 
+
+Number  Start   End     Size    File system  Name  Flags
+ 1      1049kB  3001GB  3001GB  ntfs
+
+
+Model: HitachiG ST (scsi)
+Disk /dev/sdd: 2000GB
+Sector size (logical/physical): 4096B/4096B
+Partition Table: msdos
+Disk Flags: 
+
+Number  Start  End     Size    Type     File system  Flags
+ 1      258kB  2000GB  2000GB  primary
+
+
+Model: Linux device-mapper (linear) (dm)
+Disk /dev/mapper/fedora01-rh: 500GB
+Sector size (logical/physical): 512B/4096B
+Partition Table: loop
+Disk Flags: 
+
+Number  Start  End    Size   File system  Flags
+ 1      0.00B  500GB  500GB  ext4
+
+
+Model: Linux device-mapper (linear) (dm)
+Disk /dev/mapper/fedora_00-home: 73.2GB
+Sector size (logical/physical): 512B/512B
+Partition Table: loop
+Disk Flags: 
+
+Number  Start  End     Size    File system  Flags
+ 1      0.00B  73.2GB  73.2GB  ext4
+
+
+Model: Linux device-mapper (linear) (dm)
+Disk /dev/mapper/fedora_00-swap: 6317MB
+Sector size (logical/physical): 512B/512B
+Partition Table: loop
+Disk Flags: 
+
+Number  Start  End     Size    File system     Flags
+ 1      0.00B  6317MB  6317MB  linux-swap(v1)
+
+
+Model: Linux device-mapper (linear) (dm)
+Disk /dev/mapper/fedora_00-root: 32.2GB
+Sector size (logical/physical): 512B/512B
+Partition Table: loop
+Disk Flags: 
+
+Number  Start  End     Size    File system  Flags
+ 1      0.00B  32.2GB  32.2GB  ext4
+</pre>
+
+<!-- Command -->
+!! Using parted to partition a disk
+
+# Always use the reported alignment offset as offset.
+# If optimal io size is present in the topology info, use that as grain.
+# If optimal io size is not present in topology info and alignment offset is 0 and minimum io size is a power of 2, use the default optimal alignment (grain 1MiB).
+# If not 2a and 2b, use the minimum io size, or if that is not defined the physical sector size as grain (iow the minimum alignment).
+
+!! In this case, the corresponding sysfs values are:
+
+<pre># cat /sys/block/sdb/queue/optimal_io_size
+1835008
+# cat /sys/block/sdb/queue/minimum_io_size
+262144
+# cat /sys/block/sdb/alignment_offset
+0
+# cat /sys/block/sdb/queue/physical_block_size
+512
+</pre>
+
+With a sector count of 13674214832 for the disk, 13674214831 should be used as the end sector for using parted on this disk. Can use % ex. 100%
+
+With the optimal_io_size value <strong>1835008 exceeding 1MiB</strong>, parted wants to align to the optimal_io_size. <code>1835008 / 512 = 3584</code> sectors for the optimal size in sectors. The start of a partition should be a multiple of 3584 sectors for optimal performance. To make a single partition for this disk with this alignment, the parted command:
+
+<pre>mkpart p ext4 3584s 100%</pre>
+
+This should generate a partition with the optimal alignment and should avoid the warning too.
+
+<pre>(parted) mkpart p ext4 3584s 13674214831s
+Warning: You requested a partition from 1835kB to 7001GB
+The closest location we can manage is 1835kB to 7001GB
+Is this still acceptable to you? Yes/No? Yes
+
+(parted) unit s p
+Model: HP LOGICAL VOLUME (scsi)
+Disk /dev/sdb: 13674214832s
+Sector size (logical/physical): 512B/512B
+Partition Table: gpt
+
+Number Start End Size Filesystem Name Flags 1 3584s 13674214798s 13674211215s p 
+
+!! Will provide a graphical in Xwindow with menu to rescue or create a partition.
+
+<!-- Command -->
+<code>gparted /dev/sdc</code>
+
+<!-- Command -->
+!! GPT fdisk is a text-mode menu-driven program for creation and manipulation of partition tables
+
+<code>gdisk /dev/sdd1</prcodee>

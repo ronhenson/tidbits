@@ -1,0 +1,26 @@
+caption: Custom fields list
+created: 20180302024256040
+creator: ronh
+modified: 20200426220011593
+modifier: ronh
+revision: 0
+tags: #HowTo
+title: Howto-CustomFields
+type: text/vnd.tiddlywiki
+
+<span class=headbutton> {{!!caption}}&nbsp;&nbsp;</span> <$button> <$action-navigate $to={{!!title}}/> {{!!title}}</$button>
+
+<ul>
+<$list filter="[all[tiddlers]fields[]sort[title]] -[all[shadows]removeprefix[$:/language/Docs/Fields/]]" mode="block">
+<li>{{!!title}}</li>
+</$list>
+</ul>
+
+! list all custom fields
+
+!! the following is how to find all tiddlers with a specific field:
+```
+<$list filter="[all[tiddlers]has[location]]"/>
+```
+
+<$list filter="[all[tiddlers]has[location]]"/>

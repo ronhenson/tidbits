@@ -1,0 +1,11 @@
+caption: Security IT <span class="linkbutton">{{!!title}}</span>
+created: 20180714232310976
+creator: ronh
+modified: 20200716154511743
+modifier: ronh
+revision: 0
+tags: #InformationTechnology #Header
+title: #SecurityIT
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}

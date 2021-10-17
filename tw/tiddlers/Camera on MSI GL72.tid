@@ -1,0 +1,10 @@
+created: 20191109212037927
+modified: 20200716152907827
+revision: 0
+tags: #MSI-PC #MSWindows #Tech #Tidbit
+title: Camera on MSI GL72
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<strong>Func+F6</strong> - toggles the camera on and off

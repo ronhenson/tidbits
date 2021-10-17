@@ -1,0 +1,64 @@
+created: 20141110010400000
+creator: ronh
+modified: 20200716152909105
+modifier: ronh
+revision: 0
+tags: #LinuxWindows #Tidbit #Tech
+title: lxde tips
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+ <HR class="h1">
+
+<!-- ALTERING THE NET LINE <DIV..  WILL REQUIRE A CODE CHANGE IN tdbi_new SCRIPT -->
+<div id="tidbitbody">
+
+! LXDE tips autostart application
+
+<ul>
+  <li> How to add to lxde autostart</li>
+  <ul>
+    <li>Insert Rons.desktop into ~/.config/autostart</li>
+    <li>Ron's Desktop example</li>
+    <li><pre style=color:brown;>
+[Desktop Entry]
+Name=Automatically start listed applications when LXDE starts
+Exec=/home/ronh/bin/autostart-lxde
+Icon=/usr/share/icons/5.png
+Terminal=false
+Type=Application
+Categories=Configuration
+    </pre></li>
+    <li>Insert in /home/ronh/bin/ the autostart-lxde file</li>
+    <li>/home/ronh/autostart-lxde example</li>
+    <li><pre style=color:brown;>
+#! /bin/bash
+DELAY=.75
+sleep 10
+APPS='/home/ronh/bin/bashTouchpadToggle \
+  /usr/bin/firefox \
+  /usr/bin/lxterminal \
+  '
+  (for x in $APPS ; do ($X &); sleep $DELAY; done ) &
+    </pre></li>
+  </ul>
+</ul>
+<h4>Command line on xwindow to identify keys on the keyboard</h4>
+<p> <a href='http://www.linuxandlife.com/2012/01/how-to-use-laptop-function-keys-in.html'>TITLE='How to use laptop funciton keys in Archbang'</a><br>Use xorg-xev:</p>
+<pre style=color:brown;>xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'</pre>
+<p>You will see a white window with a black square inside will appear. To find the name of a key, just move the cursor to the white window then hit the key,the name of the key will appear on the terminal. Here is an output sample</p>
+<p>Now you know the name of the function keys of your laptop, to make them work with Archbangn you need to edit the config file of Openbox. The config file for a local user will be ~/.config/openbox/rc.xml. Use editor to open the file and search for <keyboard> , this is where you edit the keybindings in Openbox.</p>
+<p>Here is an example in which I use the MonBrightnessUP key to increase the brightness of my laptop screen:</p>
+
+<pre style=color:brown;>
+  &lt;keybind key="XF86MonBrightnessUp""&gt;   
+   &lt;action name="Execute"&gt;   
+    &lt;command&gt;xbacklight +20&lt;/command&gt;   
+    &lt;startupnotify&gt;   
+    &lt;enabled&gt;yes&lt;/enabled&gt;   
+    &lt;name&gt;Increase screen brightness&lt;/name&gt;   
+    &lt;/startupnotify&gt;   
+   &lt;/action&gt;   
+   &lt;/keybind&gt;  
+</pre>

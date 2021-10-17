@@ -1,0 +1,228 @@
+created: 20150826183400000
+creator: ronh
+modified: 20200716152908739
+modifier: ronh
+revision: 0
+tags: #IP #Network #Tidbit #Tech
+title: IP networks and CIDR blocks
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<style>
+table {
+    border-spacing:0;
+}
+td, th {
+    border-style:solid;
+    border-width:1px;
+}
+</style>
+
+<div id="tidbitbody">
+
+! netmasks
+
+    <table style="font-family:inconsolata;font-size:16px;">
+        <tr style="font-family:helvetica;font-size:10px;">
+            <th>CIDR<br />Block</th>
+            <th>Number of Equivalent<br />Class C networks</th>
+            <th>Number<br />of<br />Network<br />ID bits</th>
+            <th>Number<br />of Host<br />ID bits</th>
+            <th>Total number<br />of Host<br />addresses per<br />segment</th>
+            <th>Number of<br />usable Host<br />addresses per<br />segment</th>
+            <th> </th>
+            <th> </th>
+        </tr>
+        <tr style="font-family:helvetica;font-size:10px;">
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>= (2 ^ # of Host<br />ID bits)</td>
+            <td>= (2 ^ # of<br />HostID bits - 2)</td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>/30</td>
+            <td>1/64 Class C</td>
+            <td align="right">30</td>
+            <td align="right">2</td>
+            <td align="right">4</td>
+            <td align="right">2</td>
+            <td>11111111.11111111.11111111.11111100</td>
+            <td>255.255.255.252</td>
+        </tr>
+        <tr>
+            <td>/29</td>
+            <td>1/32 Class C</td>
+            <td align="right">29</td>
+            <td align="right">3</td>
+            <td align="right">8</td>
+            <td align="right">6</td>
+            <td>11111111.11111111.11111111.11111000</td>
+            <td>255.255.255.248</td>
+        </tr>
+        <tr>
+            <td>/28</td>
+            <td>1/16 Class C</td>
+            <td align="right">28</td>
+            <td align="right">4</td>
+            <td align="right">16</td>
+            <td align="right">14</td>
+            <td>11111111.11111111.11111111.11110000</td>
+            <td>255.255.255.240</td>
+        </tr>
+        <tr>
+            <td>/27</td>
+            <td>1/8 Class C</td>
+            <td align="right">27</td>
+            <td align="right">5</td>
+            <td align="right">32</td>
+            <td align="right">30</td>
+            <td>11111111.11111111.11111111.11100000</td>
+            <td>255.255.255.224</td>
+        </tr>
+        <tr>
+            <td>/26</td>
+            <td>1/4 Class C</td>
+            <td align="right">26</td>
+            <td align="right">6</td>
+            <td align="right">64</td>
+            <td align="right">62</td>
+            <td>11111111.11111111.11111111.11000000</td>
+            <td>255.255.255.192</td>
+        </tr>
+        <tr>
+            <td>/25</td>
+            <td>1/2 Class C</td>
+            <td align="right">25</td>
+            <td align="right">7</td>
+            <td align="right">128</td>
+            <td align="right">126</td>
+            <td>11111111.11111111.11111111.10000000</td>
+            <td>255.255.255.128</td>
+        </tr>
+        <tr>
+            <td>/24</td>
+            <td>1 Class C</td>
+            <td align="right">24</td>
+            <td align="right">8</td>
+            <td align="right">256</td>
+            <td align="right">254</td>
+            <td>11111111.11111111.11111111.00000000</td>
+            <td>255.255.255.0</td>
+        </tr>
+        <tr>
+            <td>/23</td>
+            <td>2 Class C</td>
+            <td align="right">23</td>
+            <td align="right">9</td>
+            <td align="right">512</td>
+            <td align="right">510</td>
+            <td>11111111.11111111.11111110.00000000</td>
+            <td>255.255.254.0</td>
+        </tr>
+        <tr>
+            <td>/22</td>
+            <td>4 Class C</td>
+            <td align="right">22</td>
+            <td align="right">10</td>
+            <td align="right">1,024</td>
+            <td align="right">1,022</td>
+            <td>11111111.11111111.11111100.00000000</td>
+            <td>255.255.252.0</td>
+        </tr>
+        <tr>
+            <td>/21</td>
+            <td>8 Class C</td>
+            <td align="right">21</td>
+            <td align="right">11</td>
+            <td align="right">2,048</td>
+            <td align="right">2,046</td>
+            <td>11111111.11111111.11111000.00000000</td>
+            <td>255.255.248.0</td>
+        </tr>
+        <tr>
+            <td>/20</td>
+            <td>16 Class C</td>
+            <td align="right">20</td>
+            <td align="right">12</td>
+            <td align="right">4,096</td>
+            <td align="right">4,094</td>
+            <td>11111111.11111111.11110000.00000000</td>
+            <td>255.255.240.0</td>
+        </tr>
+        <tr>
+            <td>/19</td>
+            <td>32 Class C</td>
+            <td align="right">19</td>
+            <td align="right">13</td>
+            <td align="right">8,192</td>
+            <td align="right">8,190</td>
+            <td>11111111.11111111.11100000.00000000</td>
+            <td>255.255.224.0</td>
+        </tr>
+        <tr>
+            <td>/18</td>
+            <td>64 Class C</td>
+            <td align="right">18</td>
+            <td align="right">14</td>
+            <td align="right">16,384</td>
+            <td align="right">16,382</td>
+            <td>11111111.11111111.11000000.00000000</td>
+            <td>255.255.192.0</td>
+        </tr>
+        <tr>
+            <td>/17</td>
+            <td>128 Class C</td>
+            <td align="right">17</td>
+            <td align="right">15</td>
+            <td align="right">32,768</td>
+            <td align="right">32,766</td>
+            <td>11111111.11111111.10000000.00000000</td>
+            <td>255.255.128.0</td>
+        </tr>
+        <tr>
+            <td>/16</td>
+            <td>256 Class C</td>
+            <td align="right">16</td>
+            <td align="right">16</td>
+            <td align="right">65,536</td>
+            <td align="right">65,534</td>
+            <td>11111111.11111111.00000000.00000000</td>
+            <td>255.255.0.0</td>
+        </tr>
+        <tr>
+            <td>/15</td>
+            <td>512 Class C</td>
+            <td align="right">15</td>
+            <td align="right">17</td>
+            <td align="right">131,072</td>
+            <td align="right">131,070</td>
+            <td>11111111.11111110.00000000.00000000</td>
+            <td>255.254.0.0</td>
+        </tr>
+        <tr>
+            <td>/14</td>
+            <td>1024 Class C</td>
+            <td align="right">14</td>
+            <td align="right">18</td>
+            <td align="right">262,144</td>
+            <td align="right">262,142</td>
+            <td>11111111.11111100.00000000.00000000</td>
+            <td>255.252.0.0</td>
+        </tr>
+        <tr>
+            <td>/13</td>
+            <td>2048 Class C</td>
+            <td align="right">13</td>
+            <td align="right">19</td>
+            <td align="right">524,288</td>
+            <td align="right">524,286</td>
+            <td>11111111.11111000.00000000.00000000</td>
+            <td>255.248.0.0</td>
+        </tr>
+    </table>
+</div>

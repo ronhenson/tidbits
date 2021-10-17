@@ -1,0 +1,45 @@
+created: 20160114214900000
+modified: 20160114214900000
+tags: Tidbit wifi RV park network 
+title: Kit Fox RV Park Network Patterson
+type: text/vnd.tiddlywiki
+
+<div id="tidbitbody">
+
+! TengoInternet WiFi network and other issues
+
+    <h1> Kit Fox Network </h1>
+    <p style="color:red;font-weight:bold;">  There appears to be a user with a Belkin router trying to extend from TengoInternet:4161.  Unfortunately, he cannot connect and he has his SSID as TengoInternet:4161 which messes up everyone else.  It comes up with a 192.168.206.1 gateway address</p>
+    <p> Appears to be no password on the router </p>
+    <p> arp of "real" TengoInternet.4161:</p>
+    <table border=1>
+
+        <tr>
+            <th> Host / Network </th>
+            <th> IP Address </th>
+            <th> MAC Address </th>
+            <th> Interface </th>
+        </tr>
+        <tr>
+            <td> gwKit_Fox_RV_Park_414161.TengoInternet.com </td>
+            <td> 10.41.61.1 </td>
+            <td> 00:15:6d:69:78:b3 </td>
+            <td>wlp3s0 </td>
+        </tr>
+        <tr>
+            <td> gwKit_Fox_RV_Park_414161.TengoInternet.com </td>
+            <td> 10.41.61.1 </td>
+            <td> 00:15:6d:69:78:b3 </td>
+            <td>wlp3s0 </td>
+        </tr>
+    </table>
+    <br /> <br />
+ <pre> <code>
+Kit Fox gateway   : 10.52.47.1      : TengoInternet.5247 
+Kit Fox gateway   : 10.41.61.1      : TengoInternet.4161  
+TengoInternet.4161: 10.41.61.117/24 : My Address
+win8.ipv6.micro   : 192.168.206.1   : Tengointernet.4161
+TengoInternet.5247: 10.52.47.143/24 : My Address
+ </code> </pre>
+
+</div>

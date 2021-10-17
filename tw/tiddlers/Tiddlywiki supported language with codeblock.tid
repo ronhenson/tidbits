@@ -1,0 +1,78 @@
+created: 20161105013751870
+creator: ronh
+modified: 20200716152910133
+modifier: ronh
+revision: 0
+tags: #Tiddlywiki #Tidbit
+title: Tiddlywiki supported language with codeblock
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! Tiddlywiki Supported Languages highlighting codeblock
+<p style="color:purple;font-weight:bold;"> Languages are listed below </p>
+
+```tiddlywiki
+<$codeblock code="INSERT CODE" language="tiddlywiki"/>
+
+# or 
+
+ ```tiddlywiki
+<!-- INSERT CODE -->
+ ```
+
+```
+
+!! Built-in Language Brushes
+
+<p>The plugin includes support for the following languages (referred to as "brushes" by highlight.js):</p>
+
+*    apache
+*    bash
+*    coffeescript
+*    cpp
+*    cs
+*    css
+*    diff
+*    http
+*    ini
+*    java
+*    javascript
+*    json
+*    makefile
+*    markdown
+*    nginx
+*    objectivec
+*    perl
+*    php
+*    python
+*    ruby
+*    sql
+*    xml
+
+<hr>
+
+! HTML Supported Languages
+
+    <p>Here's a list of supported languages and their aliases:</p>
+
+<table>
+
+<tr> <th> Language        </th>       <th> Aliases                            </th> </tr> 
+<tr> <td> C++                  </td>       <td> cpp, c, c++                       </td></tr>
+<tr> <td> C#                  </td>       <td> c#, c-sharp, csharp       </td> </tr>
+<tr> <td> CSS                </td>       <td> css                                    </td> </tr>
+<tr> <td> Delphi            </td>       <td> delphi, pascal                   </td> </tr>
+<tr> <td> Java               </td>       <td> java                                   </td></tr>
+<tr> <td> Java Script   </td>       <td> js, jscript, javascript     </td></tr>
+<tr> <td> PHP                </td>       <td> php                                    </td> </tr>
+<tr> <td> Python           </td>       <td> py, python                        </td> </tr>
+<tr> <td> Ruby              </td>       <td> rb, ruby, rails, ror            </td> </tr>
+<tr> <td> Sql                 </td>       <td> sql                                      </td> </tr>
+<tr> <td> VB                  </td>      <td> vb, vb.net                           </td> </tr>
+<tr> <td> XML/HTML  </td>      <td> xml, html, xhtml, xslt      </td> </tr>
+
+</table> 
+
+    
+    <p>See <a href="https://code.google.com/p/syntaxhighlighter/wiki/Usage">usage page</a> on how to use aliaes.</p>

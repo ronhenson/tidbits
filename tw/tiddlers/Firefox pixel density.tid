@@ -1,0 +1,16 @@
+created: 20141028175900000
+creator: ronh
+modified: 20200716152908286
+modifier: ronh
+revision: 0
+tags: #PCApps #Tidbit #Tech
+title: Firefox pixel density
+type: text/vnd.tiddlywiki
+
+<div id="tidbitbody">
+
+! Setting to change font default font zoom configuration
+
+<p>
+If you want to set the text size/pixel density in firefox different from that of your system's settings like it was handled in prior versions, enter about:config into the firefox address bar (confirm the info message in case it shows up) & search for the preference named layout.css.devPixelsPerPx. double-click it and change its value to 1.0 (or any other zoom factor that fits your purpose; -1.0 is the default value and will adhere to the system settings). 
+</p>

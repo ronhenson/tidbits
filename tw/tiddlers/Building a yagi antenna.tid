@@ -1,0 +1,41 @@
+caption: YAGI Antenna
+created: 20161105144201283
+creator: ronh
+modified: 20200716152907789
+modifier: ronh
+revision: 0
+tags: #Network #WIFI #Tidbit #Tech
+title: Building a yagi antenna
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! Easy to Build WIFI 2.4GHz Yagi Antenna
+
+[[http://www.instructables.com/id/Easy-to-Build-WIFI-24GHz-Yagi-Antenna/]]
+
+!! What  you need
+ * You need an ink jet printer/ Computer
+ * Popsicle sticks
+ * White glue
+ * Crazy glue
+ * Big paper clips (you could use any stiff solid metal wire instead)
+ * USB WIFI, preferably with an antenna extension OR a 2.4 GHz device
+ * soldering iron and lead
+ * Sanding papers
+ * Scissors
+ * Pliers or preferably a nibbler (see photo below, available at radio shack)
+ * a metric ruler with millimeters or a metric caliper.
+
+!! Building Overview
+
+# Print out the scaled Yagi antenna template* (download from next step).
+# Trim paper clips to size and glue them to the template.
+# Use Popsicle sticks to build the antenna's backbone and hold it together.
+# Connect the USB device to the antenna.
+
+ *I used a Yagi modeler java applet to generate the diagram. This modeler applet is found on many websites (google "yagi modeler") and its owner is W9CF.
+
+The modeler gives a diagram and the elements' lengths and position. I carefully scaled the diagram and turned it into a template in order to make the building process easy.
+
+You can visit AB9IL awesome website  to get more details on using the modeler for this 15 element Yagi and other fine antenna projects, such as a 20 element WIFI Yagi .

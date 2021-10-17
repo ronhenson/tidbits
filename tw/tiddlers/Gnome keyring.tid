@@ -1,0 +1,27 @@
+created: 20141112043800000
+creator: ronh
+modified: 20200716152908446
+modifier: ronh
+revision: 0
+tags: #SecurityIT #Gnome #Tidbit #Tech
+title: Gnome keyring
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<div id="tidbitbody">
+
+! keyring services how to for windows managers
+
+ <pre> <code>
+/usr/share/dbus-1/services/org.freedesktop.secrets.service:Exec=/usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
+/usr/share/dbus-1/services/org.gnome.keyring.service:Exec=/usr/bin/gnome-keyring-daemon --start --foreground --components=secrets 
+ </code> </pre>
+<h4>ps -ef | grep gnome  # lxde session</h4>
+ <pre> <code>
+ronh      1922     1  0 09:21 ?        00:00:00 /usr/bin/gnome-keyring-daemon --start --components=ssh
+ronh      2012     1  0 09:21 ?        00:00:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+ronh      2442     1  1 10:06 ?        00:00:06 /usr/libexec/gnome-terminal-server
+ronh      2454  2442  0 10:06 ?        00:00:00 gnome-pty-helper
+ronh      2718  2455  0 10:13 pts/1    00:00:00 grep --color=auto gnome
+</code> </pre>

@@ -1,0 +1,62 @@
+created: 20160809230847419
+modified: 20200716153213172
+revision: 0
+tags: #Tidbit #Tech #Scanner #Ubuntu
+title: Epson XP-830 scanning
+type: text/vnd.tiddlywiki
+
+# Install xsane or simple-scan
+# Download imagescan-bundle from Epson
+# Install imagescan-bundle
+# I added to /etc/sane.d/epson2.conf <pre> <code>net 10.42.0.30</code> </pre>
+# I removed the comments and changed the settings to /etc/imagescan/imagescan.conf <pre><code>myscanner.udi    = networkscan:esci:&#47;&#47;10.42.0.30:1865
+myscanner.vendor = Epson
+myscanner.model  = XP-830</code></pre>
+
+!  Scanning text documents
+
+Use imagescan
+
+<style>
+td {background:lightyellow;}
+</style>
+
+<table>
+    <tr><th>Description</th><th>Setting</th></tr>
+    <tr><td>Resolution</td><td>150</td></tr>
+    <tr><td>Scan Area</td><td>Manual</td></tr>
+    <tr><td>Image Type</td><td>Grayscale</td></tr>
+    <tr><td>Top Left X</td><td>0.00</td></tr>
+    <tr><td>Top Left Y</td><td>0.00</td></tr>
+    <tr><td>Bottom Right X</td><td>8.50</td></tr>
+    <tr><td>Bottom Right Y</td><td>11.70</td></tr>
+    <tr><td>Skip Blank Pages Settings</td><td>0.00</td></tr>
+    <tr><td>Brightness</td><td>0.20</td></tr>
+    <tr><td>Contrast</td><td>0.40</td></tr>
+    <tr><td>Rotate</td><td>0&#176;</td></tr>
+    <tr><td>Threshold</td><td>128</td></tr>
+</table>
+
+
+! djvu
+
+Also, you can try djvu if you want to make the scans save a lot of space:
+You will need to install djvulibre-bin first.
+
+For color scans you can scan to jpeg first, then convert the scanned images to djvu
+Code:
+<pre>c44 scan0001.jpg page0001.djvu</pre>
+
+If you have a bunch of files you wish to convert:
+Code:
+
+<pre>for f in *jpg ;do echo $f ; c44 $f ${f%.jpg}.djvu ;done</pre>
+
+If you want bitonal use cjb2 and the input file needs to be a pbm file.
+
+When you are done you can join all of the files with djvm:
+Code:
+
+<pre>djvm -c book.djvu page*.djvu</pre>
+
+

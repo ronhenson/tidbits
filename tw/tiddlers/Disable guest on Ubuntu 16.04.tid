@@ -1,0 +1,21 @@
+caption: Disable or remove guest account
+created: 20170104202323720
+creator: ronh
+modified: 20200716152908072
+modifier: ronh
+revision: 0
+tags: #SecurityIT #Tidbit #Ubuntu
+title: Disable guest on Ubuntu 16.04
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+```bash
+sudo sh -c 'printf "[Seat:*]\nallow-guest=false\n" >/etc/lightdm/lightdm.conf.d/50-no-guest.conf'
+```
+
+To enable guest:
+
+```bash
+sudo rm /etc/lightdm/lightdm.conf.d/50-no-guest.conf
+```

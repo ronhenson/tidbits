@@ -1,0 +1,30 @@
+caption: CentOS 7 mounting
+created: 20180709181941426
+creator: ronh
+modified: 20200716152909137
+modifier: ronh
+revision: 0
+tags: #Samba #mount #Tidbit
+title: Mounting cifs with CentOS 7
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<h1> CentOS 7: </h1>
+
+<p>CentOS 7 doesn't have the latest kernel to support SMB 3</p>
+
+<p>When mounting to a share on Windows 10 in CentOS 7</p>
+
+<div style="margin-left:20px;margin-right:20%;">
+
+```bash
+mount -t cifs //172.31.7.100/h01data /mnt/01 -o user=ronh,uid=1000,gid=1000,vers=2.0
+CIFS VFS: ioctl error in smb2_get_dfs_refer rc=5
+```
+
+</div>
+
+<p>It mounts even though I get the error.  Watch and see</p>
+
+

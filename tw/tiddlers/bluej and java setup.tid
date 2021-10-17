@@ -1,0 +1,40 @@
+created: 20160107210200000
+creator: ronh
+modified: 20200716152907715
+modifier: ronh
+revision: 0
+tags: #Tidbit #Tech #Java
+title: bluej and java setup
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<div id="tidbitbody">
+
+! bluej setup
+
+    <h1> Download and Install jdk 8 from oracle <br /><span style="font-size:smaller;">
+            <a  href="http://www.bluej.org/index.html">http://www.bluej.org/index.html</span></a></h1>
+
+<p>Install jdk8 with jdk-8-linux-x64.rpm</p>
+
+<h1> And ..... change jre:</h1>
+
+<p>first locate your jre<br />
+sudo ls /usr/java/jdk1.8.0/jre/bin/</p>
+
+<p>ls /usr/bin/java</p>
+
+<p>Second Assign alternatives<br />
+sudo alternatives --install /usr/bin/java java /usr/java/jdk1.8.0/jre/bin/java 2</p>
+
+<p>sudo alternatives --config java</p>
+
+<h1> Install bluej again </h1>
+
+<p>java -version</p>
+
+<p>java -jar bluej-311.jar <br />
+    Might have to use /usr/java/jdk1.8.0/jre/bin/java -jar bluej-311.jar</p>
+
+</div>

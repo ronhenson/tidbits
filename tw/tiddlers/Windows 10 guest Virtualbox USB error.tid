@@ -1,0 +1,43 @@
+caption: USB - not able to enable USB 2 or 3
+created: 20170107182928327
+creator: ronh
+modified: 20200426220827438
+modifier: ronh
+revision: 0
+tags: #MSWindows #Issues #VirtualBox #Done
+title: Windows 10 guest Virtualbox USB error
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! USB 3.0 windows 10 failure
+Failed to open a session for the virtual machine H01.
+
+Implementation of the USB 3.0 controller not found!
+
+Because the USB 3.0 controller state is part of the saved VM state, the VM cannot be started. To fix this problem, either install the 'Oracle VM VirtualBox Extension Pack' or disable USB 3.0 support in the VM settings (VERR_NOT_FOUND).
+
+Result Code: NS_ERROR_FAILURE (0x80004005)
+Component: ConsoleWrap
+Interface: IConsole {872da645-4a9b-1727-bee2-5585105b9eed}
+
+
+! USB 2.0 Windows 10 failure
+
+Failed to open a session for the virtual machine H01.
+
+Implementation of the USB 2.0 controller not found!
+
+Because the USB 2.0 controller state is part of the saved VM state, the VM cannot be started. To fix this problem, either install the 'Oracle VM VirtualBox Extension Pack' or disable USB 2.0 support in the VM settings.
+
+Note! This error could also mean that an incompatible version of the 'Oracle VM VirtualBox Extension Pack' is installed (VERR_NOT_FOUND).
+
+Result Code: NS_ERROR_FAILURE (0x80004005)
+Component: ConsoleWrap
+Interface: IConsole {872da645-4a9b-1727-bee2-5585105b9eed}
+
+! USB 1.0 Windows 10 
+
+runs.
+
+

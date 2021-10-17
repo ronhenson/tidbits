@@ -1,0 +1,106 @@
+created: 20150313180900000
+creator: ronh
+modified: 20200716162335246
+modifier: ronh
+revision: 0
+tags: #KVM #Tidbit #Tech
+title: qemu and kvm
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! virtualization
+
+<h3> Convert from VirtualBox to KVM/Qemu </h3>
+
+<pre >
+$ VBoxManage clonehd --format RAW Win7.vdi Win7.raw
+$ qemu-img convert -f raw Win7.raw -O qcow2 Win7.img
+</pre>
+
+<h3> Resize an .img/qcow2 file </h3>
+
+<pre>
+$ sudo dnf install libguestfs-tools
+$ sudo virt-filesystems --long --parts --blkdevs -h -a H01_w7a
+
+<blockquote style="color:darkgreen">
+Name       Type       MBR  Size  Parent
+/dev/sda1  partition  07   100M  /dev/sda
+/dev/sda2  partition  07   78G   /dev/sda
+/dev/sda   device     -    78G   -
+</blockquote>
+
+$ truncate -s 100G outdisk
+$ virt-resize --expand /dev/sda2 ./H01_w7a ./outdisk
+
+<blockquote style="color:darkgreen">
+[   0.0] Examining ./H01_w7a.img
+**********
+
+Summary of changes:
+
+/dev/sda1: This partition will be left alone.
+
+/dev/sda2: This partition will be resized from 78.0G to 99.9G.  The 
+filesystem ntfs on /dev/sda2 will be expanded using the 'ntfsresize' 
+method.
+
+**********
+[   5.7] Setting up initial partition table on ./outdisk
+[   5.9] Copying /dev/sda1
+[   6.3] Copying /dev/sda2
+ 100% ⟦▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒⟧ 00:00
+[1762.0] Expanding /dev/sda2 using the 'ntfsresize' method
+
+Resize operation completed with no errors.  Before deleting the old disk, 
+carefully check that the resized disk boots and works correctly.
+
+</blockquote>
+</pre>
+
+<h3> Convert to qcow2 image </h3>
+
+    <pre> 
+$ sudo qemu-img convert  -O qcow2 /data/Downloads/bitdefender-rescue-cd.iso bitdefender_rescue.qcow
+    </pre>
+
+<h3> mount a qemu qcow2 image </h3>
+
+<pre>
+# modprobe nbd max_part=8  # If there is no /dev/nbd* devices
+# qemu-nbd -c /dev/nbd0 H01_w7a.qcow2
+# mount /dev/nbd0p2 /mnt   # mount partition 2 in this case
+
+# To disconnect
+# umount /dev/nbd0p2
+# qemu-nbd -d H01_w7a.gcow2   # to disconnect
+</pre>
+
+<h3>Clipboard use spice-vdagent</h3>
+
+<pre name="code" class="bash">
+sudo systemctl status spice-vdagentd.service
+sudo systemctl start spice-vdagentd.service
+</pre>
+<br />
+
+<h1>Converting qcow virtual disk format to VDI</h1>
+
+<p>UPDATE: October 29, 2013, This information is outdated and so incorrect.  As pointed out in the comments qemu-img handles VDI natively and so you can simply use a single command – qemu-img convert -f qcow2 vdisk.qcow2 -O vdi vdisk.vdi</p>
+<p>I have been playing with several different virtual machines lately and had the need to convert a file in the qcow2 format that KVM utilizes to the VDI format which is VirtualBox’s default format.</p>
+<p>The first step is to convert the qcow2 file to a RAW format that then the VBoxManage utility can convert to the VDI format.</p>
+
+<pre>
+qemu-img convert -f qcow2 vdisk_qcow.img -O raw vdisk_raw.img
+</pre>
+
+<p>Next, now the raw image can be converted by VirtualBox command-line tool into a VDI format that you can then run with VirtualBox.</p>
+
+<pre>
+VBoxManage convertfromraw --format VDI vdisk_raw.img vdi
+</pre>
+
+<p>At this point you can delete the RAW format file.</p>
+
+<p>A shortcoming of KVM and the qemu-img utility is it only supports data output to files. If qemu-img supported output to stdout then this could open a whole number of options for redirecting disk images to remote servers as well as my two commands above could be reduced to one.  Hopefully that is coming soon.</p>

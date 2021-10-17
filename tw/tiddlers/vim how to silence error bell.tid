@@ -1,0 +1,18 @@
+caption: Quiet error bell in vim / gvim
+created: 20170302011935247
+creator: ronh
+modified: 20200716152910555
+modifier: ronh
+revision: 0
+tags: #VIM #Tidbit #Tech
+title: vim how to silence error bell
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<h1> Insert the following in `.vimrc` </h1>
+
+```
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+```

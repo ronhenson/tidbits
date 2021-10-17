@@ -1,0 +1,27 @@
+created: 20161111212610124
+creator: ronh
+modified: 20200716152908330
+modifier: ronh
+revision: 0
+tags: #Tidbit #Tech #C++
+title: gcc
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! gcc parameters Eclipse is initiating on Lynda.com CETR lessons
+
+```
+Building file: ../src/myLibrary1502.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/myLibrary1502.d" -MT"src/myLibrary1502.d" -o "src/myLibrary1502.o" "../src/myLibrary1502.c"
+Finished building: ../src/myLibrary1502.c
+ 
+Building target: 15_02
+Invoking: GCC C Linker
+gcc  -o "15_02"  ./src/15_02.o ./src/myLibrary1502.o   -lm
+Finished building target: 15_02
+ 
+
+14:22:15 Build Finished (took 177ms)
+```

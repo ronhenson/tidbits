@@ -1,0 +1,29 @@
+caption: CentOS - silence the terminal bell
+created: 20180711001340676
+creator: ronh
+modified: 20200716152909839
+modifier: ronh
+revision: 0
+tags: #Ubuntu #CentOS #Tidbit
+title: Silence terminal bell
+type: text/vnd.tiddlywiki
+
+<span class=headbutton> {{!!caption}}&nbsp;&nbsp;</span> <$button class=linkbutton> <$action-navigate $to={{!!title}}/> {{!!title}}</$button><br />
+<$view field="created" format="date" template="Created: YYYY-0MM-0DD DDD"/><br />
+<$view field="modified" format="date" template="Modified: YYYY-0MM-0DD DDD"/><br />
+
+<h1 style="margin-bottom=0;"> Silence the bell in terminal </h1>
+	<p class="var">This may not work</p>
+
+```bash
+echo 'set bell-style none' >> ~/.inputrc
+```
+
+<h1> Turn off bell worked with WSL interface </h1>
+	<p class="var" style="padding-left:4em;">Put the following command in <strong>~\.bashrc</strong> to make it permanent </p>
+
+```bash
+bind "set bell-style none"
+```
+
+

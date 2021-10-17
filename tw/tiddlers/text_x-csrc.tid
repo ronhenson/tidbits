@@ -1,0 +1,13 @@
+created: 20170530013254066
+modified: 20170530013512180
+revision: 0
+tags: 
+title: text_x-csrc.tid
+type: text/vnd.tiddlywiki
+
+```
+title: $:/language/Docs/Types/text/x-csrc
+description: C like
+name: text/x-csrc
+group: Text
+```

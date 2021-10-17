@@ -1,0 +1,23 @@
+caption: RonAJournal journal elements
+created: 20170503065728789
+creator: ronh
+modified: 20200716152909634
+modifier: ronh
+revision: 0
+tags: #Tiddlywiki #Tidbit
+title: RonAJournal journal elements
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+{{!!tldesc}}
+
+homepark: <$link to={{!!homepark}}>{{!!homepark}}</$link>
+
+caption
+homepark
+journal_date
+location
+tldesc
+
+{{Address book location||tldesc}}

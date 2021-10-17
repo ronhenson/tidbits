@@ -1,0 +1,134 @@
+created: 20161203153751806
+modified: 20200716153251955
+revision: 0
+tags: #Ubuntu #Unity #Tidbit #Tech
+title: Unity 8 Ubuntu
+type: text/vnd.tiddlywiki
+
+<h1>Unity 8 preview</h1>
+
+[[Unity 8 preview session|https://insights.ubuntu.com/2016/10/13/unity-8-preview-session-in-ubuntu-16-10-yakkety-yak/]]
+
+<h1>Ubuntu 16.10 Yakkety Yak</h1>
+
+<p>Ubuntu 16.10 Yakkety Yak has landed and brings with it the Unity 8 technical preview desktop session. Unity 8 has been the face of the Ubuntu phone and tablet for a few years and has quickly evolved its convergence feature set to allow it to work seamlessly between form factors such as phones, tablets and desktops. You can now chose to log in to a Unity 8 session directly from the greeter.</p>
+
+<p>The current experience comes with a minimal set of applications; a browser, terminal and systems settings.  Here are a few things you might like to try to flesh out your Unity 8 session and get the most from it.</p>
+
+<h1>Window Management</h1>
+
+Unity 8 is designed from the ground up to work well with touch based displays. Try pressing three fingers on a window to open the touch friendly controls. You can move and resize windows with controls which work well for a touchscreen.
+
+
+
+
+<h1>Enable More Scopes</h1>
+
+<p>Unity 8 ships with only the Apps scope enabled by default. There are many others installed and you can enable them by:</p>
+
+
+<ol>
+<li>    Click on the up arrow at the bottom of the Apps Scope (or if you are using a touch screen drag it up)
+
+<p><a href="http://www.whizzy.org/wp-content/uploads/2016/10/screenshot20161012_100846675.png"><img class="aligncenter size-medium wp-image-770" src="http://www.whizzy.org/wp-content/uploads/2016/10/screenshot20161012_100846675-300x169.png" alt="Manage scopes" width="300" height="169" /></a></p></li>
+
+<li>     Browse the list of available scopes and enable them by clicking on the star icon.  When you click the star you will notice the scope move to the top of the list in the Home section</li>
+ <li>    When you are done you can return to the main scope by clicking on the left arrow next to “Manage”</li>
+<li>     You can now swipe left and right between the scopes you have enabled</li>
+</ol>
+
+<h1>Enable Rich Multi-Media Scopes</h1>
+
+<p>You can browse and play your media directly from Scopes or launch the Media Player app. Make sure you have some supported media in your Music and Videos directories first.</p>
+
+<ol>
+<li>    Open the Terminal App and install the required software:</li>
+
+<li><pre>sudo apt install mediaplayer-app mediascanner2.0 unity-scope-mediascanner2 ubuntu-restricted-extras</pre></li>
+
+<li>    Open the Manage Scopes menu as in the previous step and enable the My Music, Music and My Videos scopes.</li>
+<li>    The Media Scanner may take a few minutes to index your media. Try logging out and logging back in again if nothing appears in the Scopes.</li>
+<li>    Scroll through to the Music scope and you should see your media complete with artwork where available.
+
+<h4>Music Scope image</h4></li>
+
+<li>    You can click play directly from the Scope to listen.
+
+<h4>My Music Scope image</h4></li>
+
+<li>    If you have Videos available as well, scroll through to the My Videos scope, find a video and click Play. The Media Player app will open and play your video.
+
+<h4>Video playback image</h4></li>
+
+</ol>
+
+<h1>Add More Apps</h1>
+
+<p>It wasn’t possible to include all the Unity 8 core apps in the 16.10 image but you can easily install some additional apps as Snaps and from a PPA.</p>
+
+<h1>Snappy Apps!</h1>
+
+<p>These Snap apps are cutting edge and will be updated frequently. Because they are packaged as Snaps you will not be stuck with the version of the app which shipped with 16.10, they will be frequently updated and you will benefit from the freshest version as soon as they are available. (There is a known issue with Snaps opening two windows.  This will be fixed soon.) Once you have installed the apps pull down the Apps Scope to refresh.</p>
+
+<ul>
+ <li>   Gallery App </li>
+    <ul> <li> <pre>sudo snap install --edge --devmode gallery-app</pre> </li> </ul>
+ <li>     Camera App</li>
+    <ul> <li><pre>sudo snap install --edge --devmode camera-app</pre> </li> </ul>
+ <li>     Address Book App</li>
+    <ul> <li><pre>sudo snap install --edge --devmode address-book-app</pre> </li> </ul>
+ <li>     Calendar App</li>
+    <ul> <li><pre>sudo snap install --edge --devmode ubuntu-calendar-app</pre> </li> </ul>
+
+<h4>Install a snap</h4>
+</ul>
+
+<h1>PPA Apps</h1>
+
+<p>You can also add this PPA to give you access to other Unity 8 apps which are built as .deb packages:</p>
+<a href="https://code.launchpad.net/~convergent-apps/+archive/ubuntu/testing">https://code.launchpad.net/~convergent-apps/+archive/ubuntu/testing</a>
+
+<ul>
+<li> To add the PPA open the Terminal app and run:
+        <pre>sudo add-apt-repository ppa:convergent-apps/testing</pre></li> 
+<li> Then run:
+      <pre>sudo apt update</pre></li>
+<li> Music App 
+        <pre>sudo apt install music-app</pre></li>
+<li>Calculator
+       <pre>sudo apt install ubuntu-calculator-app</pre></li>
+<li> Doc Viewer
+        <pre>sudo apt install ubuntu-docviewer-app</pre></li>
+<li>deb apps image></li>
+</ul>
+
+<h1> Enable Xorg dependent Applications</h1>
+
+<p>Unity 8 uses the Mir display server but many older applications need the Xorg display server to work. To support these applications you can install Libertine which will create a container to host the applications and Xmir to provide the Xorg display server. Install the Libertine packages from the archive by typing:</p>
+
+ <pre>sudo apt install libertine libertine-scope libertine-tools</pre>
+
+<p>Once installed you will see the Libertine manager icon in the Apps Scope.</p>
+
+<ul>
+<li> Open Libertine and click on Install</li> 
+<li> Leave the input boxes blank and click OK</li> 
+<li> Wait while Libertine creates the container and installs the necessary packages. This will take a few minutes.</li> 
+<li> Once this is complete click on the “Ubuntu ‘Yakkety Yak’” text and then click on the plus symbol</li> 
+<li> Libertine - add</li> 
+<li> Click “Enter package name” and enter “gimp” and click OK</li> 
+<li> Wait while The Gimp is installed.</li> 
+<li> Once complete you should see a Gimp icon in the Apps Scope, click on this and you’re running Gimp under Unity 8 and Mir</li> .
+<li> <h4>gimp image</h4></li> 
+
+</ul>
+<h1>Points to note</h1>
+
+<p>Mir runs on vty8, whereas Xorg runs on vty7.</p>
+
+<p> If you switch to a text console (e.g. vty1) and want to get back to your Unity 8 graphical session press ctrl-alt-f8.</p>
+
+<h1>About the author</h1>
+
+<p>Will leads the team working on the Ubuntu desktop at Canonical. He has a diverse background originally specialising in data networks and global communications systems and has provided consultancy to clients such as BT, Verizon, Inmarsat and Schlumberger. Will has been using and contributing to Ubuntu since 2005 and in 2015 he was recognised as an Ubuntu Member. He has three kids, plays golf badly and is a member of The Royal Institution of Great Britain.</p>
+

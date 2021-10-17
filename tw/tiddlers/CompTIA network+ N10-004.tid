@@ -1,0 +1,36 @@
+created: 20150616152200000
+creator: ronh
+modified: 20200716152907890
+modifier: ronh
+revision: 0
+tags: #Training #Network #CompTIA #Tidbit #Tech
+title: CompTIA network+ N10-004
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<div id="tidbitbody">
+
+! Common Ports List
+
+<h2>CompTIA Network+ N10-004 Common Ports List:</h2>
+<table>
+<tr> <th>Port Number</th> 	<th>TCP/UDP</th> 	<th>Description</th> </tr>
+<tr> <td>7 </td> <td>both </td> <td>ICMP Echo</td> </tr>
+<tr> <td>20 </td> <td>TCP </td> <td>FTP data transfer channel</td> </tr>
+<tr> <td>21 </td> <td>TCP </td> <td>FTP control channel</td> </tr>
+<tr> <td>22 </td> <td>both </td> <td>SSH</td> </tr>
+<tr> <td>23 </td> <td>TCP </td> <td>Telnet</td> </tr>
+<tr> <td>25 </td> <td>TCP </td> <td>SMTP</td> </tr>
+<tr> <td>53 </td> <td>both </td> <td>DNS</td> </tr>
+<tr> <td>67 </td> <td>UDP </td> <td>DHCP - sending client data to DHCP server</td> </tr>
+<tr> <td>69 </td> <td>UDP </td> <td>TFTP</td> </tr>
+<tr> <td>80 </td> <td>TCP </td> <td>HTTP</td> </tr>
+<tr> <td>110 </td> <td>TCP </td> <td>POP3</td> </tr>
+<tr> <td>119 </td> <td>TCP </td> <td>NNTP</td> </tr>
+<tr> <td>123 </td> <td>UDP </td> <td>NTP</td> </tr>
+<tr> <td>143 </td> <td>TCP </td> <td>IMAP4</td> </tr>
+<tr> <td>161 </td> <td>UDP </td> <td>SNMP</td> </tr>
+<tr> <td>443 </td> <td>TCP </td> <td>HTTPS </td> </tr>
+</table>
+

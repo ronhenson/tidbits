@@ -1,0 +1,11 @@
+caption: Eclipse <span class="linkbutton">{{!!title}}</span>
+created: 20180714214401595
+creator: ronh
+modified: 20200428003140571
+modifier: ronh
+revision: 0
+tags: #Header #IDE
+title: #Eclipse
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}

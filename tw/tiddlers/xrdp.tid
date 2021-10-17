@@ -1,0 +1,83 @@
+caption: Remote Desktop for Ubuntu Install and configuration
+created: 20180723201635049
+creator: ronh
+modified: 20200716152911053
+modifier: ronh
+revision: 0
+tags: #LinuxWindows #SecurityIT #Tidbit #Ubuntu
+title: xrdp
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<style>
+.bash {
+	background-color:#fff7f7;
+}
+ul {
+	list-style-type: none;
+}
+</style>
+
+<p> <a href="https://www.hiroom2.com/2018/04/29/ubuntu-1804-xrdp-gnome-en/">Ubuntu 18.04: Connect to GNOME desktop environment via XRDP </a> </p>
+
+
+<ol>
+	<h1> <li> Install XRDP </li> </h1>
+    	<ul>
+        	<li>
+    
+```
+$ sudo apt install -y xrdp
+```
+			</li>
+			<li>
+            
+```
+$ sudo sed -e 's/^new_cursors=true/new_cursors=false/g' \
+           -i /etc/xrdp/xrdp.ini
+$ sudo systemctl restart xrdp
+```
+			</li>
+		</ul>
+    <h1> <li> Create ~/.xsessionrc </li> </h1>
+    	<ul>
+        	<li>
+            
+```
+$ D=/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+$ cat <<EOF > ~/.xsessionrc
+export GNOME_SHELL_SESSION_MODE=ubuntu
+export XDG_CURRENT_DESKTOP=ubuntu:GNOME
+export XDG_DATA_DIRS=${D}
+export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+EOF
+
+$sudo systemctl restart polkit
+```
+			</li>
+		</ul>
+
+    <h1> <li> Authentication Required dialog </li> </h1>
+    	<ul>
+        	<li>
+            
+```
+$ cat <<EOF | \
+  sudo tee /etc/polkit-1/localauthority/50-local.d/xrdp-color-manager.pkla
+[Netowrkmanager]
+Identity=unix-user:*
+Action=org.freedesktop.color-manager.create-device
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
+EOF
+$ sudo systemctl restart polkit
+```
+			</li>
+        </ul>
+
+    <h1> <li> Connect to GNOME desktop envronment via XRDP </li> </h1>
+    	<ul>
+        	<li> Use Windows RDP to connect. </li>
+        </ul>

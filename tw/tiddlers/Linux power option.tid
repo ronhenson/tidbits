@@ -1,0 +1,26 @@
+caption: Linux how to disable suspend when lid is closed
+created: 20200807172426750
+creator: ronh
+modified: 20200807173036917
+modifier: ronh
+revision: 0
+tags: #Disks #LinuxSystems #Tidbit #Tech
+title: Linux power option
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+!! One way would be to edit /etc/systemd/logind.conf to include:
+
+```bash
+HandleLidSwitch=ignore
+```
+
+This would work all the time, not just when your user is logged in.
+
+!! Another way To disable suspend on lid-close
+
+    Install Tweaks ( `gnome-tweak-tool` ) by running sudo apt-get install gnome-tweak-tool.
+    Launch Tweaks, go to the "Power" section and disable suspend on lid-close.
+
+Nov 2, 2017

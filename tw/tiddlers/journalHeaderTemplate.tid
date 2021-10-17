@@ -1,0 +1,17 @@
+caption: Journal Header Template
+created: 20180711020834739
+creator: ronh
+modified: 20200716152908894
+modifier: ronh
+revision: 0
+tags: #Tidbit
+title: journalHeaderTemplate
+type: text/vnd.tiddlywiki
+
+<$reveal type="nomatch" state="!!caption" text="">
+	<span class="headbutton">{{!!caption}}</span> <$button class="linkbutton"> <$action-navigate $to={{!!title}}/> {{!!title}}</$button>
+</$reveal>
+
+<$reveal type="match" state="!!caption" text="">
+	<$button class="headbutton"> <$action-navigate $to={{!!title}}/> {{!!title}}</$button>
+</$reveal>

@@ -1,0 +1,31 @@
+created: 20141002152200000
+creator: ronh
+modified: 20200426213550448
+modifier: ronh
+revision: 0
+tags: #LinuxWindows #Tech
+title: Windows Managers and Desktops
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<p> Descriptions and options </p>
+<ul>
+    <li>Gnome </li>
+        <ul> <li> Heavy 3D desktop environment </li> </ul>
+    <li>KDE </li>
+        <ul> <li> Heavy 3D desktop environment </li> </ul>
+    <li>XFce </li>
+        <ul> <li> light desktop environment </li> </ul>
+    <li>LXDE </li>
+        <ul> <li> lighter desktop environment on top of Openbox </li> </ul>
+    <li>Openbox </li>
+        <ul> <li> light windows manager </li> </ul>
+        <ul> <li> install on CentOS 6 first <span style=font-weight=bold;background-color:#ffffcc;color:brown;>yum install epel-release</span> (extra packages Enterprise Linux repository) </li> </ul>
+    <li>Fluxbox </li>
+        <ul> <li> light windows manager </li> </ul>
+    <li>IceWM </li>
+        <ul> <li> light windows manager - windows 95 feel </li> </ul>
+    <li>SLiM </li>
+</ul>
+ </div>

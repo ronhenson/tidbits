@@ -1,0 +1,15 @@
+caption: systemctl: list enabled
+created: 20200331165136592
+modified: 20200716152910003
+revision: 0
+tags: #LinuxSystems #Tidbit
+title: systemctl
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+```bash
+systemctl --list-unit-files
+# to list only enabled
+systemctl --list-unit-files | grep enabled
+```

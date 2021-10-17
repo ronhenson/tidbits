@@ -1,0 +1,11 @@
+caption: Hardware <span class="linkbutton">{{!!title}}</span>
+created: 20200426154235404
+creator: ronh
+modified: 20200428001742225
+modifier: ronh
+revision: 0
+tags: #InformationTechnology #Header
+title: #Hardware
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}

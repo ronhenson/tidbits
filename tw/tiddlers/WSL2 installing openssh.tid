@@ -1,0 +1,24 @@
+caption: WSL2 Ubuntu on Windows 10 installing openssh server
+created: 20191112154148251
+creator: ronh
+modified: 20200716152910963
+modifier: ronh
+revision: 0
+tags: #WSL #Tidbit #Ubuntu
+title: WSL2 installing openssh
+type: text/vnd.tiddlywiki
+
+<h1> Installing <strong>openssh</strong> without systemctl</h1>
+
+<pre><code>
+sudo apt-get install openssh-server
+service ssh status
+service ssh start
+</code></pre>
+
+<p> I did run into an issue that no keys (dsa, rsa, ...). resolved by the following then reloaded ssh</p>
+
+<pre><code>
+ssh-keygen -A
+service ssh reload
+</code></pre>

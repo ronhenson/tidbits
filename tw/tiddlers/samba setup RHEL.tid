@@ -1,0 +1,320 @@
+created: 20150317160700000
+creator: ronh
+modified: 20200716152909696
+modifier: ronh
+revision: 0
+tags: #Samba #Tidbit #Tech #FileSystem
+title: samba setup RHEL
+type: text/vnd.tiddlywiki
+
+<$view field="created" format="date" template="Created: YYYY-0MM-0DD DDD"/>
+<div id="tidbitbody">
+
+! CentOS 7 / RHEL 7: Install and setup samba server (tutorial)
+
+<H1> <a href="http://sharadchhetri.com/2014/10/09/centos-7-rhel-7-install-and-setup-samba-server-file-sharing">CentOS 7 / RHEL 7 : Install and setup samba server ( file sharing)  </a> </H1>
+<p> In this tutorial we will learn, how to install and setup samba server ( file sharing server ) on CentOS 7 and RHEL 7 (Red Hat Enterprise Linux 7) . Samba server is popularly use for file and printer server and now a days it is also used as domain controller in network (like Windows Active Directory). </p>
+<h2> Introduction of Samba </h2>
+<p> With arrival of Samba version 3, the definition of Samba server is changed. Now we call samba is a free software suite licensed under GNU General Public License version 3. It is populalry used for file and print services for all clients using the SMB/CIFS protocol.From Samba version 3, we can integrate with a Windows Server domain, either as a Primary Domain Controller (PDC) or as a domain member. It can also be part of an Active Directory domain.</p>
+<p> We will follow almost same steps as we did in our previous post on “How to install and configure samba server in CentOS 6.3“. In CentOS 7 / RHEL 7 , a few steps are changed because of some introuction of new commands and unavailabilty of packages in minimal installed Operating System but logically everything is same. </p>
+<p> <strong> Scenario: </strong>We will shared a directory called sharedrepo where we will permit user called test and group called staff, can access the shared directory from Samba server and can read write the files or directory. </p>
+<h2> Details of Samba server on which practical applied </h2>
+<p> <strong>Operating System: </strong>CentOS 7 <br>
+<strong>Arch: </strong> x86_64 <br>
+<strong>Samba Version: </strong> Samba 4.1.1 (Default from CentOS repo) <br>
+<strong>Kernel Version: </strong> 3.10.0-123.el7.x86_64 <br>
+<strong>IP Address: </strong> 192.168.56.102 <br>
+<strong>Network Subnet: </strong> 192.168.56.0/24 or can be written also as 192.168.56.0/255.255.255.0 <br>
+<strong>Note: </strong>CentOS 7 is installed with minimal packages (minimal installed)
+</p>
+<h2> Samba Server port numbers </h2>
+<p>
+137/tcp <br>
+137/udp <br>
+138/tcp <br>
+138/udp <br>
+139/udp <br>
+139/udp <br>
+445/tcp <br>
+445/udp
+</p>
+<h2> Daemon used in Samba server </h2>
+<p> Samba services are implemented as two daemons: <br>
+<strong>1. smbd</strong>, It provides the file and printer sharing services. <br>
+<strong>2. nmbd</strong> It provides the NetBIOS-to-IP-address name service. NetBIOS over TCP/IP requires some method for mapping NetBIOS computer names to the IP addresses of a TCP/IP network.
+</p>
+<H1> How to install and configure samba server </H1>
+
+<h2> Step 1 : Use yum command to install samba packages</h2>
+<p> (a) policycoreutils-python = For semanage command (Read semanage command not found) </p>
+<pre> <code>
+sudo yum install policycoreutils-python
+</code> </pre>
+<p> (b) samba-client : For smbpasswd (Read smbpasswd command not found) </p>
+<pre> <code>
+sudo yum install samba-client
+</code> </pre>
+
+<p> (c) cups-libs : For printer service </p>
+
+<p> (d) samba and samba-commons : For Samba server </p>
+
+<pre> <code>
+yum install -y samba samba-commons cups-libs policycoreutils-python samba-client
+</code> </pre>
+
+<h2> Step 2: create a directory </h2>
+
+<p> Create a directory called sharedrepo in / (main root) . This directory will be shared with clients. </p>
+
+<pre> <code>
+mkdir /sharedrepo
+</code> </pre>
+
+<h2> Step 3: Add a new group or can use existing group </h2>
+
+<p> To provide access on shared directory,Here we are adding new group called staff. </p>
+
+<pre> <code>
+groupadd staff
+</code> </pre>
+
+<h2> Step 4: Change the group and permission of sharing folder </h2>
+<p> Here we are using /sharedrepo in samba server, hence group and permission are changing for this directory. </p>
+
+<pre> <code>
+chgrp -R staff /sharedrepo
+chmod -R 777 /sharedrepo
+</code> </pre>
+
+<h2> Step 5: Change the selinux security context </h2>
+<p> Change the selinux security context on sharing directory and set the selinux boolean value for samba. </p>
+<p> You can skip this step in case you disable selinux on system. </p>
+
+<pre> <code>
+chcon -R -t samba_share_t /sharedrepo/
+semanage fcontext -a -t samba_share_t /sharedrepo/
+setsebool -P samba_enable_home_dirs on
+</code> </pre>
+
+<h2> Step 6: create user, add into group and set samba password </h2>
+<p> create user and add them in group called staff. And set the samba password for this user. </p>
+
+<pre> <code>
+useradd test
+usermod -G staff test
+smbpasswd -a test
+</code> </pre>
+
+<h2> Step 7: Edit /etc/samba/smb.conf file </h2>
+
+<p> First take backup of /etc/samba/smb.conf file then edit the smb.conf file. </p>
+
+<pre> <code>
+cd /etc/samba/
+cp -p smb.conf smb.conf.orig
+</code> </pre>
+
+<p> And add the below given contents in last line of /etc/samba/smb.conf file. </p>
+
+<pre> <code>
+vi /etc/samba/smb.conf
+
+[sharedrepo]
+comment = shared-directory
+path = /sharedrepo
+public = no
+valid users = test, @staff
+writable = yes
+browseable = yes
+create mask = 0765
+</code> </pre>
+
+<h2> Step 8: Allow network to connect with Samba Server </h2>
+
+<p> Edit these lines in /etc/samba/smb.conf . To allow network to reach samba server. </p>
+
+<ol>
+    <li>
+<strong>interfaces</strong> = Change the value of 192.168.56.0/24 with your subnet. And change the ethernet value which is in used by your system and which you want to allow for traffic.
+    </li>
+    <li>
+<strong>hosts allow</strong> = 192.168.56. is for subnet .Same rule applied to 127. which is for loopback.
+    </li>
+</ol>
+
+<pre> <code>
+interfaces = lo enp0s8 192.168.56.00/24
+hosts allow = 127. 192.168.56.
+</code> </pre>
+
+<p> <strong>Note</strong>: For windows users,if your all PC in your network are using different WORKGROUP name edit the given below line in smb.conf with your workgroup name. Windows system bydefault uses the WORKGROUP as WORKGROUP. Try first without changing the WORKGROUP name,if required do the changes. </p>
+
+<pre> <code>
+workgroup = MYGROUP
+</code> </pre>
+
+<h2> Step 9 : Add services in /etc/services files </h2>
+
+<pre> <code>
+vi /etc/services
+ 
+netbios-ns	137/tcp	# netbios name service
+netbios-ns	137/udp	# netbios name service
+netbios-dgm	138/tcp	# netbios datagram service
+netbios-dgm	138/udp	# netbios datagram service
+netbios-ssn	139/udp	# netbios session service
+netbios-ssn	139/udp	# netbios session service
+</code> </pre>
+
+<h2> Step 10: Now start the smb and nmb services. </h2>
+
+<pre> <code>
+systemctl start smb.service
+systemctl start nmb.service
+</code> </pre>
+
+<h2> Step 11 : Enable smb and nmb service at booting of system </h2>
+
+<pre> <code>
+systemctl enable smb.service
+systemctl enable nmb.service
+</code> </pre>
+
+<p> Below given section is referece: </p>
+
+<pre> <code>
+[root@localhost ~]# systemctl enable nmb.service
+ln -s '/usr/lib/systemd/system/nmb.service' '/etc/systemd/system/multi-user.target.wants/nmb.service'
+[root@localhost ~]# 
+[root@localhost ~]# systemctl enable smb.service
+ln -s '/usr/lib/systemd/system/smb.service' '/etc/systemd/system/multi-user.target.wants/smb.service'
+[root@localhost ~]#
+</code> </pre>
+
+<h2> Step 12 : Add firewalld rule to allow samba </h2>
+
+<p> In RHEL 7/ CentOS 7, firewalld is shipped by default. Now onwards we recommend you to use firewalld instead of iptables. </p>
+
+<p> Here, we are allowing source network 192.168.56.0/24 to connect to samba service, whereas in logging samba prefix is used. </p>
+
+<p> Adding permanent firewalld rule </p>
+
+<pre> <code>
+firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="172.31.11.0/24" service name="samba" log prefix="samba" level="info" limit value="1/m" accept'
+
+firewall-cmd --permanent --zone public --add-service mountd
+
+firewall-cmd --permanent --zone public --add-service rpc-bind
+
+firewall-cmd --permanent --zone public --add-service nfs
+
+</code> </pre>
+
+<p> Now reload firewalld </p>
+
+<pre> <code>
+firewall-cmd --reload
+</code> </pre>
+
+<p> <strong>Note:</strong> firewalld service must be runnig for above procedure. To start firewalld use systemd command i.e <strong> systemctl start firewalld.service </strong>
+
+<h1> How to connect to Samba Server </h1>
+
+<h2> 1. Windows : </h2>
+
+<p> In Windows Operating System, open the run by pressing in combination of <strong>Start key + r</strong>. Then type in this format <strong>\\ip-address-of-samba-server\shared-Direcory-name</strong> </p>
+
+<pre> <code>
+\\192.168.56.102\sharedrepo
+</code> </pre>
+
+<p> Give username and password when it will ask. </p>
+
+<h2> 2. Linux : </h2>
+
+<p> smbclient must be installed on system . </p>
+
+<h3> (A) List the shared files or directory available in samba server </h3>
+
+<pre> <code>
+smbclient -L \\192.168.56.102 -U test 
+</code> </pre>
+
+<p> In above command, <br>
+-L = For listing shared objects. <br>
+Samba Server IP Address = 192.168.56.102 <br>
+User Name = test
+</p>
+
+<p> Below given is sample output </p>
+
+<pre> <code>
+sharad@linuxworld:~$ smbclient -L \\192.168.56.102 -U test
+Enter test's password: 
+Domain=[MYGROUP] OS=[Unix] Server=[Samba 4.1.1]
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	IPC$            IPC       IPC Service (Samba Server Version 4.1.1)
+	sharedrepo      Disk      shared-directory
+	test            Disk      Home Directories
+Domain=[MYGROUP] OS=[Unix] Server=[Samba 4.1.1]
+
+	Server               Comment
+	---------            -------
+	LOCALHOST            Samba Server Version 4.1.1
+
+	Workgroup            Master
+	---------            -------
+	MYGROUP              LOCALHOST
+sharad@linuxworld:~$
+</code> </pre>
+
+<h3> (B) Access using smb console </h3>
+
+<pre> <code>
+smbclient //192.168.56.102/sharedrepo -U test 
+</code> </pre>
+
+<p>After login, you will get smb console. You can use get and put command for getting/putting the file. There are other commands you can use also.</p>
+
+<p>Sample output</p>
+
+<pre> <code>
+sharad@linuxworld:~$ smbclient //192.168.56.102/sharedrepo -U test
+Enter test's password: 
+Domain=[MYGROUP] OS=[Unix] Server=[Samba 4.1.1]
+smb: \> 
+smb: \> help
+?              allinfo        altname        archive        backup         
+blocksize      cancel         case_sensitive cd             chmod          
+chown          close          del            dir            du             
+echo           exit           get            getfacl        geteas         
+hardlink       help           history        iosize         lcd            
+link           lock           lowercase      ls             l              
+mask           md             mget           mkdir          more           
+mput           newer          notify         open           posix          
+posix_encrypt  posix_open     posix_mkdir    posix_rmdir    posix_unlink   
+print          prompt         put            pwd            q              
+queue          quit           readlink       rd             recurse        
+reget          rename         reput          rm             rmdir          
+showacls       setea          setmode        stat           symlink        
+tar            tarmode        timeout        translate      unlock         
+volume         vuid           wdel           logon          listconnect    
+showconnect    tcon           tdis           tid            logoff         
+..             !              
+smb: \> 
+</code> </pre>
+
+<h3> (C) Mount the samba shared directory </h3>
+<p>Mount the samba shared directory in machine , your system must support cifs file system</p>
+
+<pre> <code>
+mount -t cifs //192.168.56.102/sharedrepo -o username=test /mnt/
+</code> </pre>
+<p>In Ubuntu, Click on dash home and simply access the samba server</p>
+
+<pre> <code>
+smb://192.168.56.102/
+</code> </pre>

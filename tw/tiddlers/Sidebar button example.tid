@@ -1,0 +1,40 @@
+created: 20200524234230061
+modified: 20200524235027249
+revision: 0
+tags: 
+title: Sidebar button example
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+# Put a job button on the sidebar
+
+<pre>
+\define NewJobProspect()
+
+&lt;$action-sendmessage $message="tm-new-tiddler"
+   	title=&lt;&lt;now "YYYY-0MM-0DD_0hh0mm"&gt;&gt;
+   	tags="Journal JobProspects"
+
+   	text="{{||JobTableTemplate}}"
+   	address1="NA"
+   	appdone=&lt;&lt;now "YYYY-0MM-0DD"&gt;&gt;
+	caption="{{!!jobname}}"
+    city="Las Vegas"
+    company="NA"
+    companyweb="http://Company_Website.com"
+    jobapp="https://JobApp_Website.com"
+    jobappsite="NA"
+    jobname="NA"
+    mainphone="NA"
+    postalcode="NA"
+    priority="A"
+    state="NV"
+  
+/&gt;
+\end
+
+&lt;$button tooltip="Create new job prospect journal" actions=&lt;&lt;NewJobProspect&gt;&gt; &gt;
+Job
+</$button>
+</pre>

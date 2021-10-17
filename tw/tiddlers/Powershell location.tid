@@ -1,0 +1,23 @@
+caption: Powershell find location of file
+created: 20200801175712327
+creator: ronh
+modified: 20200801182111520
+modifier: ronh
+revision: 0
+tags: #Windows #Tidbit #Tech
+title: Powershell location
+type: text/vnd.tiddlywiki
+
+!! Find the path
+
+```powershell
+Where.exe nameOfFile.
+```
+
+!! Find the path and pipe to @@color:blue;cd@@ command
+
+```powershell
+Where.exe nameOfFile | Split-Path | cd
+```
+
+

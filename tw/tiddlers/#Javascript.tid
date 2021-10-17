@@ -1,0 +1,11 @@
+caption: JavaScript <span class="linkbutton">{{!!title}}</span>
+created: 20180714214808391
+creator: ronh
+modified: 20200428002956331
+modifier: ronh
+revision: 0
+tags: #Header #SoftwareLanguages
+title: #Javascript
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}

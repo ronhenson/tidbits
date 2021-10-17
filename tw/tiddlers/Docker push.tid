@@ -1,0 +1,17 @@
+caption: Docker push to repository
+created: 20200802174124471
+modified: 20200802174750420
+revision: 0
+tags: #Tidbit #Containers
+title: Docker push
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+!! new-repo being the repository you want to push
+
+```bash
+docker tag local-image:tagname new-repo:tagname
+
+docker push rhenson/rh-private-repo:tagname
+```

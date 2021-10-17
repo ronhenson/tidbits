@@ -1,0 +1,11 @@
+caption: Information Technology <span class="linkbutton">{{!!title}}</span>
+created: 20191226145743445
+creator: ronh
+modified: 20200716162753164
+modifier: ronh
+revision: 0
+tags: #Header #Tidbits
+title: #InformationTechnology
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}

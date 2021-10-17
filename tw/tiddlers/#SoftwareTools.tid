@@ -1,0 +1,11 @@
+caption: Software Tools <span class="linkbutton">{{!!title}}</span>
+created: 20180714231333983
+creator: ronh
+modified: 20200716160931207
+modifier: ronh
+revision: 0
+tags: #Header #SoftwareDevelopment
+title: #SoftwareTools
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}

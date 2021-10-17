@@ -1,0 +1,26 @@
+created: 20160903234228724
+creator: ronh
+modified: 20200716152909189
+modifier: ronh
+revision: 0
+tags: #PCApps #Tidbit #Office
+title: OnlyOffice cloud office product
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! Only Office Community Server
+
+* ONLYOFFICE_CommunityServer_Linux.8.9.0.vdi.zip
+* Ubuntu 64 bit Community Server on VirtualBox
+* [[http://download.onlyoffice.com/install/images/ONLYOFFICE_CommunityServer_Linux.8.9.0.vdi.zip#_ga=1.45581284.1544539204.1467647445]]
+* Username: onlyoffice
+* Password: onlyoffice
+
+! Other download options
+
+[[http://www.onlyoffice.com/download.aspx]]
+
+! Can run it on the cloud / monthly cost
+
+[[http://www.onlyoffice.com/saas.aspx]]

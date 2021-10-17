@@ -1,0 +1,13 @@
+caption: Linux <span class="linkbutton">{{!!title}}</span>
+color: blue
+created: 20180714173540786
+creator: ronh
+icon: linux_tux.png
+modified: 20200716154040942
+modifier: ronh
+revision: 0
+tags: #InformationTechnology #Header
+title: #Linux
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}

@@ -1,0 +1,15 @@
+caption: Linux Kernel Module development
+created: 20170526023309304
+creator: ronh
+modified: 20200716152908993
+modifier: ronh
+revision: 0
+tags: #Bookmarks #LinuxSystems #Tidbit #Tech
+title: Linux kernel modules
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+!! Helpful websites
+
+* [[http://www.thegeekstuff.com/2013/07/write-linux-kernel-module]]

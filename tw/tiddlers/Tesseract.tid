@@ -1,0 +1,39 @@
+caption: Tesseract OCR - Optical Character Recognition
+created: 20190531114634551
+creator: ronh
+modified: 20200716152910046
+modifier: ronh
+revision: 0
+tags: #Tech #HowTo #Graphics #Tidbit
+title: Tesseract
+type: text/vnd.tiddlywiki
+
+<h1> Tesseract on Linux </h1>
+
+http://blog.sudobits.com/2013/01/22/image-to-text-converter-ocr-for-ubuntu-linux-mint/
+
+<h1> Tesseract on Windows 10 </h1>
+
+<h2> Install vcpkg ( MS packager to install windows based open source projects) </h2>
+
+https://github.com/Microsoft/vcpkg
+
+<h2> Install Tesseract and usage </h2>
+
+```
+.\vcpkg install tesseract:x64-windows-static
+```
+
+<h2> Convert graphics file to a TIFF </h2>
+
+<strong> Windows </strong>
+
+Open the photo in Picture Manager and go to...File / Export...
+this will open a panel on the right of your screen where you can specify
+a save folder / a name for the file / a format / and file size. 
+
+<strong> Linux </strong> 
+
+```
+convert file_name.png out_file_name.tif
+```

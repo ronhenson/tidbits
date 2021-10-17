@@ -1,0 +1,11 @@
+caption: RHEL  <span class="linkbutton">{{!!title}}</span>
+created: 20180714195446789
+creator: ronh
+modified: 20200716155714845
+modifier: ronh
+revision: 0
+tags: #Header #LinuxOS
+title: #RHEL
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}

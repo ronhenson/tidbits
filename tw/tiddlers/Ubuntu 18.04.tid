@@ -1,0 +1,34 @@
+caption: {{!!title}} install hyper-v guest tools
+created: 20200301181253442
+modified: 20200716152910222
+revision: 0
+tags: #Ubuntu #Hyper-V #Tidbit
+title: Ubuntu 18.04
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+If you are using Hyper-V and running a Ubuntu 18.04 guest, you may not be aware that Microsoft provides Linux Integration Services (LIS), which are basically Microsoft’s version of VMware Tools. In this article we will detail how to enable LIS on our Ubuntu 18.04 virtual machine. The first step is to edit the “modules” file located in /etc/initramfs-tools using the below command:
+
+```
+vim /etc/initramfs-tools/modules
+```
+
+Once in nano, navigate to the last line in the file and enter the following lines:
+
+<ol>
+	<li> hv_vmbus </li>
+	<li> hv_storvsc </li>
+	<li> hv_blkvsc </li>
+	<li>hv_netvsc </li>
+</ol>
+
+Save the file by hitting the ctrl + x and then issuing “y” for yes and then enter. Next, run the following commands to re-initialize the “modules” file, install the virtual tools and reboot the machine:
+
+```
+apt-get install linux-virtual linux-cloud-tools-virtual linux-tools-virtual
+update-initramfs -u 
+reboot
+```
+
+Finally, once the guest virtual machine is rebooted, the LIS drivers and services will be registered in the system. In order to verify the installation, simply run ``lsmod`` in the terminal and look for hid_hyperv, hv_netvsc, hv_utils, hv_storvc and hv_vmbus. If they are present, activation of LIS has been successful.

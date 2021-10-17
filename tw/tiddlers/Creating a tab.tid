@@ -1,0 +1,29 @@
+caption: Adding tab on the sidebar
+created: 20180713180245616
+creator: ronh
+modified: 20200716152907958
+modifier: ronh
+revision: 0
+tags: #Tiddlywiki #Tidbit
+title: Creating a tab
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! Creating the sidebar
+
+* Open the tiddler you want as a tab in the sidebar
+* type in tag name: `$:/tags/SideBar`
+* Select add
+
+! Move the tab in your sidebar
+
+* Create a new field: `list-before`
+* Type in the field: $:/core/ui/SideBar/Open
+* The above will move the tab before the Open tab
+
+! Setting the tab as default
+
+* Open up `control panel`
+* Select `settings` tab
+* Under `Default Sidebar tab`, select the tab you want to open as default

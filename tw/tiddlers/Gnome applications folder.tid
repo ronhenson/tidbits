@@ -1,0 +1,19 @@
+caption: {{!!title}} - *.desktop location
+created: 20210520115808098
+creator: ronh
+modified: 20210520120327188
+modifier: ronh
+tags: #Tidbit #Tech #Gnome
+title: Gnome applications folder
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<h2>Gnome .desktop file location</h2>
+
+ `/usr/share/application/`
+
+<h2> Gnome local .desktop location</h2>
+
+`~/.gnome/app/`
+`~/Desktop`

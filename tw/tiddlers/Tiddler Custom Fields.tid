@@ -1,0 +1,26 @@
+caption: Custom field tiddlers
+created: 20180404210954034
+creator: ronh
+modified: 20200716152910069
+modifier: ronh
+revision: 0
+tags: #Tiddlywiki #Tidbit #Tech
+title: Tiddler Custom Fields
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<ul>
+<$list filter="[all[tiddlers]fields[]sort[title]] -[all[shadows]removeprefix[$:/language/Docs/Fields/]]" mode="block">
+<li>{{!!title}}</li>
+</$list>
+</ul>
+
+! list all custom fields
+
+!! the following is how to find all tiddlers with a specific field:
+```
+<$list filter="[all[tiddlers]has[location]]"/>
+```
+
+<$list filter="[all[tiddlers]has[location]]"/>

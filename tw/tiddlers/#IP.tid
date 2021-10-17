@@ -1,0 +1,11 @@
+caption: IP <span class="linkbutton">{{!!title}}</span>
+created: 20180715001854676
+creator: ronh
+modified: 20200716155118428
+modifier: ronh
+revision: 0
+tags: #Header #Internet
+title: #IP
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}

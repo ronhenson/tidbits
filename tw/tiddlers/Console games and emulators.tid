@@ -1,0 +1,19 @@
+caption: Console games and emulators
+created: 20180623191520143
+creator: ronh
+modified: 20200716152907914
+modifier: ronh
+revision: 0
+tags: #Tidbit
+title: Console games and emulators
+type: text/vnd.tiddlywiki
+
+<span class=headbutton> {{!!caption}}&nbsp;&nbsp;</span> <$button class=linkbutton> <$action-navigate $to={{!!title}}/> {{!!title}}</$button><br />
+<$view field="created" format="date" template="Created: YYYY-0MM-0DD DDD"/><br />
+<$view field="modified" format="date" template="Modified: YYYY-0MM-0DD DDD"/>
+
+
+<p><a href="https://github.com/TASVideos/BizHawk-Prereqs/releases/tag/2.1">TASVideo Prereq for windows before installing Bizhawk </a> </p>
+
+<p> <a href="http://tasvideos.org/BizHawk.html">TASVideo bizhawk home web site"</a> </p>
+<p> <a href="http://tasvideos.org/BizHawk/ReleaseHistory.html">TasVideo release history</a> </p>

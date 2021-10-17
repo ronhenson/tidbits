@@ -1,0 +1,37 @@
+caption: sudo, visudo and related topics
+created: 20170525002109928
+creator: ronh
+modified: 20200716152909990
+modifier: ronh
+revision: 0
+tags: #LinuxSystems #Tech #Tidbit
+title: sudo
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+!! How to change the editor for ``visudo``
+
+Add to the first line in ``sudoers`` file:
+
+```
+Defaults    editor=/usr/bin/vim
+```
+
+!! Change timeout
+
+* Add to ``/etc/sudoers.d`` directory a file, i.e. ``timeout``
+* ``chmod 440 /etc/sudoers.d/timeout``
+* Edit ``timeout`` with ``visudo -f /etc/sudoers.d\timeout``
+* Add ``Defaults                timestamp_timeout=-1``
+* timeout parameter
+    ** ``-1`` : indefinite time
+    ** `` 0`` : always must enter password
+    ** ``10`` : example 10 minutes before requesting a password again
+
+!! Allow a specific user to ``shutdown, reboot, poweroff, halt`` to ``sudoers`` file
+
+* Create ``/etc/sudoers.d`` directory a file, i.e. ``shutdown``
+* ``chmod 440 /etc/sudoers.d/shutdown``
+* Edit ``shutdown`` with ``visudo -f /etc/sudoers.d\shutdown``
+* Add ``ronh   ALL=NOPASSWD:/sbin/shutdown,/sbin/reboot,/sbin/poweroff,/sbin/halt``

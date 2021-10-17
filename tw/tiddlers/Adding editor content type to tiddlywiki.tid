@@ -1,0 +1,27 @@
+created: 20161224014611161
+creator: ronh
+modified: 20200716152907290
+modifier: ronh
+revision: 0
+tags: #Tiddlywiki #Tidbit #codemirror #C++
+title: Adding editor content type to tiddlywiki
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! Adding an editor type using codemirror
+
+* Add the js file, must be <strong>application/javascript</strong> and field <strong>module-type: library</strong>
+* Made a copy of $:/config/CodeMirror shadow file into the tiddler directory
+* Added the js file, see [[CodeMirror $:/config/CodeMirror edits]] in Ron tidbits tiddler
+* Add the $:/config/EditorTypeMappings/text/x-csrc, no content type and text field should have <strong>codemirror</strong>
+* Add in the user tiddler directory <strong>Type</strong> file.  Example below:
+
+filename: <strong>text_x-csrc.tid</strong>
+
+```
+title: $:/language/Docs/Types/text/x-csrc
+description: C like
+name: text/x-csrc
+group: Text
+```

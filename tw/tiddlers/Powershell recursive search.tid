@@ -1,0 +1,13 @@
+caption: Powershell recursive filename search
+created: 20170713192817975
+modified: 20200716152909338
+revision: 0
+tags: #Windows #Tidbit #Tech
+title: Powershell recursive search
+type: text/vnd.tiddlywiki
+
+! <$link to={{!!title}}>{{!!caption}}</$link>
+
+!! Stackoverflow link to perform a powershell search recursiviely for filename
+
+[[Powershell recursive file search|https://stackoverflow.com/questions/8677628/recursive-file-search-using-powershell]]

@@ -1,0 +1,71 @@
+created: 20170530024320083
+modified: 20200716152909354
+revision: 0
+tags: #Windows #Tidbit #Tech
+title: Powershell running scripts
+type: text/vnd.tiddlywiki
+
+! <$link to={{!!title}}>{{!!caption}}</$link>
+
+!! Execution Policy
+
+```powershell
+Get-ExecutionPolicy
+Restricted
+
+# Must be Admin:  Can start and admin console by
+Start-Process powershell -Verb runAs
+Set-ExecutionPolicy -ExecutionPolicy bypass
+```
+
+* "Restricted" is the default policy.
+
+*Restricted
+
+    ** Default execution policy in Windows 8, Windows Server 2012, and Windows 8.1.
+
+    ** Permits individual commands, but will not run scripts.
+
+    ** Prevents running of all script files, including formatting and configuration files (.ps1xml), module script files (.psm1), and Windows PowerShell profiles (.ps1).
+
+* AllSigned
+
+    ** Scripts can run.
+
+    ** Requires that all scripts and configuration files be signed by a trusted publisher, including scripts that you write on the local computer.
+
+    ** Prompts you before running scripts from publishers that you have not yet classified as trusted or untrusted.
+
+    ** Risks running signed, but malicious, scripts.
+
+* RemoteSigned
+
+    ** Scripts can run. This is the default execution policy in Windows Server 2012 R2.
+
+    ** Requires a digital signature from a trusted publisher on scripts and configuration files that are downloaded from the Internet (including e-mail and instant messaging programs).
+
+    ** Does not require digital signatures on scripts that you have written on the local computer (not downloaded from the Internet).
+
+    ** Runs scripts that are downloaded from the Internet and not signed, if the scripts are unblocked, such as by using the Unblock-File cmdlet.
+
+    ** Risks running unsigned scripts from sources other than the Internet and signed, but malicious, scripts.
+
+* Unrestricted
+
+    ** Unsigned scripts can run. (This risks running malicious scripts.)
+
+    ** Warns the user before running srcipts and configuration files that are downloaded from the Internet.
+
+* Bypass
+
+    ** Nothing is blocked and there are no warnings or prompts.
+
+    ** This execution policy is designed for configurations in which a Windows PowerShell script is built in to a a larger application or for configurations in which Windows PowerShell is the foundation for a program that has its own security model.
+
+* Undefined
+
+    ** There is no execution policy set in the current scope.
+
+    ** If the execution policy in all scopes is Undefined, the effective execution policy is Restricted, which is the default execution policy.
+
+<strong>Note</strong>: On systems that do not distinguish Universal Naming Convention (UNC) paths from Internet paths, scripts that are identified by a UNC path might not be permitted to run with the RemoteSigned execution policy.

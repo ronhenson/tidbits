@@ -1,0 +1,15 @@
+created: 20140903161500000
+modified: 20200716152907463
+revision: 0
+tags: #Android #Tidbit #Tech
+title: AndroidX11
+type: text/vnd.tiddlywiki
+
+! Executing X11 using gnuroot
+
+<h1>Launch these commands on your Linux PC:</h1>
+
+```bash
+env DISPLAY=172.31.2.102:0 metacity &amp; env DISPLAY=172.31.2.102:0 gimp
+To Tunnel X over SSH, forward port 6000 in you SSH client
+```

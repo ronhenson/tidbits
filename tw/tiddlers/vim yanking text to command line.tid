@@ -1,0 +1,59 @@
+created: 20170110045512642
+creator: ronh
+modified: 20200716152910760
+modifier: ronh
+revision: 0
+tags: #VIM #Tidbit #Tech #regex
+title: vim yanking text to command line
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<h3>How to copy yanked text to vi command prompt</h3>
+
+```vim
+<ctrl+r>"
+```
+
+where `"` stands for default registe
+Note that this also work in normal insert mode, not only on the command line.
+
+If you use `*` instead of `"`, you'll get the contents of the system clipboard instead (which might be handy).
+
+
+```vim
+<C-R>"
+```
+
+Will paste default buffer. Alternately, you can use q: to open a buffer for the next command. try 
+
+```vim
+:help q:
+```
+
+To save you a step of yanking, if your cursor is on the word you want to use in Ex, use:
+
+```vim
+<ctl-r><ctl-w>
+```
+
+This eschews yanking to paste into the command line; instead, one pastes the word under one's cursor directly onto the command line. E.g.:
+
+```vim
+:%s/<ctl-r><ctl-w>/foo/g
+```
+
+<h3>Delete block of lines between or inclusive search patterns</h3>
+
+<p> The following will:</p>
+<ul>
+    <li>1st line: Search first eight lines for &lt;TITLE&gt; any case and add id=... before the last &gt;</li>
+    <li>2nd line: Search for any case &lt;BODY&gt; and add on the next line &lt;script...</li>
+    <li>3rd line: Search for tidbitheader and the &lt;/script&gt; and delete all lines between including the search.  You can alter this by adding or subtracting lines from the search.  Example, g/tidbitheader/+1;/&lt;\/script&gt;/-1d would delete all lines between tidbitheader and &lt;/script&gt;</li>
+</ul>
+
+```vim
+:1,8s/&lt;\([Tt][Ii][Tt][Ll][Ee]\)&gt;/&lt;\1 id="infoObjectTitle"&gt;/
+:%s/&lt;\([Bb][Oo][Dd][Yy]\)&gt;/&lt;\1&gt;\r&lt;script src="tidbit.js"&gt;&lt;\/script&gt;/
+:g/tidbitheader/;/&lt;\/script&gt;/d
+```

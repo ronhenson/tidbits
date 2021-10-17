@@ -1,0 +1,23 @@
+caption: Tiddlywiki Header Template Example
+created: 20180812010214577
+creator: ronh
+modified: 20200716152910122
+modifier: ronh
+revision: 0
+tags: #Tiddlywiki #Tech #Tidbit
+title: Tiddlywiki Header
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+```markdown
+<$reveal type="nomatch" state="!!caption" text="">
+	<span class="headbutton"> {{!!caption}}</span> <$button class='linkbutton"> <$action-navigate $to={{!!title}}/> {{!!caption}}</$button>
+</$reveal>
+<$reveal type="match" state="!!caption" text="">
+	<$button class="headbutton"> <$action-navigate $to={{!!title}}/> {{!!title}}</$button>
+</$reveal>
+<div class="tinydate">
+	<$view field="created" format="date" template="Created: YYYY-0MM-0DD DDD"/><br />
+	<$view field="modified" format="date" template="Modified: YYYY-0MM-0DD DDD"/>
+```

@@ -1,0 +1,26 @@
+caption: Usaing IPV6 in rsync and ssh
+created: 20191112153505732
+modified: 20200716152908783
+revision: 0
+tags: #Network #LinuxSystems #ssh #Tidbit
+title: IPV6 rsync & ssh
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<h1>ssh command </h1>
+
+<p> <strong>Note</strong> the %interface at the end of the IPV6 address <p>
+<pre><code>
+ssh fe80::215:5dff:feb8:ed48%eth1
+</code></pre>
+
+<h1>rsync</h1>
+
+<p>Wouldn't work with out the interface in my case</p>
+
+<pre><code>
+rsync -av -e ssh ~/.ssh/ ronh@'[fe80::215:5dff:fe09:8905%eth0]':/home/ronh/.ssh/
+</code></pre>
+
+<p style="color:red;">ssh between hyper-v and wsl through IPv6</p>

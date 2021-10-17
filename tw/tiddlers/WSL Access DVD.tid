@@ -1,0 +1,14 @@
+caption: WSL mounting DVD drive
+created: 20200808135251164
+creator: ronh
+modified: 20200808135513872
+modifier: ronh
+revision: 0
+tags: #WSL #Tidbit #Ubuntu
+title: WSL Access DVD
+type: text/vnd.tiddlywiki
+
+```bash
+mkdir /mnt/e  # e being the dvd drive
+sudo mount e: /mnt/e
+```

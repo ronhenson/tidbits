@@ -1,0 +1,21 @@
+caption: {!!title}} - $:/ControlPanel Title of this ~Tiddlywiki:
+created: 20200215222821150
+modified: 20200716152910112
+revision: 0
+tags: #Tech #Tiddlywiki #Tidbit
+title: Tiddlywiki configuration
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<h1>Old colorful background Tiddlywiki title background</h1>
+
+```css
+<span style="font-family:Source Code Pro;"><b style="color:red;background-color:black;">T</b><b style="background-color:yellow;">i</b><b style="color:green;background-color:blue;">&#x238;</b><b style="color:darkbrown;background-color:darkgreen;">i</b><b style="color:violet;background-color:yellow;">t</b><b style="color:red;background-color:black;">s</b> </span>
+```
+
+<h1>Current Tiddlywiki title background as of 2020-02-15</h1>
+
+```css
+<span style="font-family:Source Code Pro;background-color:lime;"><b style="color:red;">T</b><b>i</b><b style="color:red;">&#x238;</b><b style="color:darkbrown;">i</b><b style="color:violet;">t</b><b style="color:red;">s</b> </span>
+```

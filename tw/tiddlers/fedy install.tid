@@ -1,0 +1,15 @@
+created: 20150216154600000
+creator: ronh
+modified: 20200716152908245
+modifier: ronh
+revision: 0
+tags: #Tidbit #Tech #Fedora
+title: fedy install
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<h3> https://satya164.github.io/fedy/ </h3>
+<pre><code>
+su -c  "curl https://satya164.github.io/fedy/fedy-installer -o fedy-installer && chmod +x fedy-installer && ./fedy-installer"
+</code></pre>

@@ -1,0 +1,56 @@
+caption: Unpacking the Intramfs
+created: 20170125044026709
+creator: ronh
+modified: 20200716152908718
+modifier: ronh
+revision: 0
+tags: #CentOS #Tech #Tidbit
+title: initramfs CentOS 7
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+[[ https://www.centos.org/forums/viewtopic.php?t=51621]]
+
+! Re: cpio does not show the whole initramfs archive
+
+    Quote
+
+Postby dharter » 2015/03/19 02:35:53
+I think that I am close to the answer. It seems that there is a file within a file or an archive within a file.
+
+[[https://git.centos.org/blob/rpms!dracut ... l11dzaay27]]
+
+This is a patch and is probably not documented as well.
+
+
+
+! Re: cpio does not show the whole initramfs archive
+
+    Quote
+
+Postby dharter » 2015/03/19 02:45:13
+Here is the command that got me the rest of the "archive"
+
+```bash
+/usr/lib/dracut/skipcpio /boot/initramfs-3.10.0-123.20.1.el7.x86_64.img |zcat| cpio -id --no-absolute-filenames
+```
+It was found in this source file `./dracut-initramfs-restore.sh`
+
+It seems that there are several ways the archive could be packed:
+
+```bash
+"[ -f .need_shutdown -a -f "$IMG" ] || exit 1
+if $SKIP "$IMG" | zcat | cpio -id --no-absolute-filenames --quiet >/dev/null; then
+rm -f -- .need_shutdown
+elif $SKIP "$IMG" | xzcat | cpio -id --no-absolute-filenames --quiet >/dev/null; then
+rm -f -- .need_shutdown
+elif $SKIP "$IMG" | lz4 -d -c | cpio -id --no-absolute-filenames --quiet >/dev/null; then
+rm -f -- .need_shutdown
+else
+# something failed, so we clean up
+echo "Unpacking of $IMG to /run/initramfs failed" >&2
+rm -f -- /run/initramfs/shutdown
+exit 1
+"
+```

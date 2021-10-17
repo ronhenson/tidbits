@@ -1,0 +1,24 @@
+created: 20160727215449860
+creator: ronh
+modified: 20200716152910102
+modifier: ronh
+revision: 0
+tags: #Tiddlywiki #Tidbit #Tech
+title: Tiddlywiki combining folder into one file
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! Compile folders and files into one file
+
+```bash
+tiddlywiki /data/docx/Documents/career/tw/RonAJournal --output D:\Documents\tw\output\backup\ --rendertiddler $:/core/save/all RonAJournal20180531.html text/vnd.tiddlywiki
+
+tiddlywiki /data/docx/Documents/tech/tw/TechNotes --output D:\Documents\tw\output\backup\--rendertiddler $:/core/save/all TechNotes20180531.html text/vnd.tiddlywiki
+
+tiddlywiki /data/docx/Documents/tech/tw/tidbits --output D:\Documents\tw\output\backup\--rendertiddler $:/core/save/all tidbits20180531.html text/vnd.tiddlywiki
+
+tiddlywiki /data/docx/Documents/career/tw/RonJobInfo --output D:\Documents\tw\output\backup\--rendertiddler $:/core/save/all RonJobInfo20180531.html text/vnd.tiddlywiki
+
+tiddlywiki /data/docx/Documents/personal/tw/MyNotebook --output D:\Documents\tw\output\backup\--rendertiddler $:/core/save/all MyNotebook20180531.html text/vnd.tiddlywiki
+```

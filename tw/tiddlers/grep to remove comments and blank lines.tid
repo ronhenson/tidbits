@@ -1,0 +1,15 @@
+created: 20150323185200000
+creator: ronh
+modified: 20200716152908554
+modifier: ronh
+revision: 0
+tags: #LinuxSystems #Tidbit #Tech #grep #search
+title: grep to remove comments and blank lines
+type: text/vnd.tiddlywiki
+
+! simple way to remove from a file any line starting with a # and blank lines
+
+<p> -v --invert-match </p>
+<pre> <code>
+grep -v ^# filename | grep -v ^$ 
+</code> </pre>

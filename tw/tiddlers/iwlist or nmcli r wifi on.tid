@@ -1,0 +1,63 @@
+created: 20150208214900000
+creator: ronh
+modified: 20200716152908795
+modifier: ronh
+revision: 0
+tags: #Network #WIFI #Tidbit #Tech #Fedora
+title: iwlist or nmcli r wifi on
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! Turning on wifi from command line
+
+    <h1> Fedora nmcli wifi from command line </h1>
+
+    <p> <a href="https://fedoraproject.org/wiki/Networking/CLI">https://fedoraproject.org/wiki/Networking/CLI</a> </p>
+
+<h2> Turn on wifi from command line </h2>
+
+<pre># nmcli radio wifi on                       # ### Turn the radio on
+# nmcli --ask connect up HNSN --passwd-file # ### If passwd-file not given, will ask for password
+</pre>
+
+<h2> List available access points to connect to </h2>
+
+<pre ># nmcli device wifi list                       # ### Turn the radio on
+# nmcli --ask connect up HNSN --passwd-file # ### If passwd-file not given, will ask for password
+</pre>
+
+<h1> Set wifi command line on other Linux than Fedora </h1>
+
+<p> <a href="http://www.linuxjournal.com/content/wi-fi-command-line">http://www.linuxjournal.com/content/wi-fi-command-line</a> </p>
+
+<h2> List available access points to connect to </h2>
+
+<pre># sudo iwlist wlan0 scan  # You can grep SSID to see names only, On H10 my wireless: wlp3s0</pre>
+
+<h1>List password fields</h1>
+
+<pre>$ nmcli -s -f 802-11-wireless-security.psk,802-11-wireless-security.wep-key0 c show 8988eeeb-dd07-44a9-ad65-e64b38607a57</pre>
+
+<h1>iwconfig will provide useful network info</h1>
+
+<pre><code>iwconfig</code>
+
+wlp3s0    IEEE 802.11bgn  ESSID:"Kohler"  
+          Mode:Managed  Frequency:2.437 GHz  Access Point: 7C:05:07:63:D7:3C   
+          Bit Rate=65 Mb/s   Tx-Power=15 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:off
+          Link Quality=53/70  Signal level=-57 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:13  Invalid misc:19884   Missed beacon:0
+
+lo        no wireless extensions.
+
+enp5s0    no wireless extensions.
+
+virbr0    no wireless extensions.
+
+vboxnet0  no wireless extensions.
+
+virbr0-nic  no wireless extensions.</pre>

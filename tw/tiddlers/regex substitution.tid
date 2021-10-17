@@ -1,0 +1,31 @@
+caption: regex backreference (capturing) difference in Java and vim
+created: 20191121215322565
+modified: 20200716152909596
+revision: 0
+tags: #regex #Tiddlywiki #Java #VSCode #VIM #Tidbit
+title: regex substitution
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! Back reference, i. e. capturing
+
+<h2> the following would render after substiitution the following line</h2>
+
+<pre><code>
+Hi there is an example
+</code></pre>
+
+<h2>Vim example</h2>
+
+<pre><code>
+Hello there this is an example
+:s/Hello \(there\) this/Hi \1/
+</code></pre>
+
+<h2>Java, vscode and tidddlywiki uses this syntax example</h2>
+
+<pre><code>
+Hello there this is an example
+:s/Hello (there) this/Hi $1/
+</code></pre>

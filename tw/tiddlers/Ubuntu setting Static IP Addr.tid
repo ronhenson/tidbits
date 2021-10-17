@@ -1,0 +1,278 @@
+created: 20191109202337740
+modified: 20200716152910265
+revision: 0
+tags: #Tech #Ubuntu #Tidbit
+title: Ubuntu setting Static IP Addr
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<h1> <a  href="https://www.configserverfirewall.com/ubuntu-linux/configure-ubuntu-server-static-ip-address/">How to Configure static IP address in Ubuntu Server 18.04 LTS</a> </h1>
+
+When you install Ubuntu Server 18.04, it will grab a dynamically assigned IP address from your DHCP server, But you cannot run a server with dynamic IP addresses. So it's important to assign a permanent static IP address in place right away.
+
+When it comes to Ubuntu network interface configuration, the way in which you set a static IP has completely changed. The previous LTS version Ubuntu 16.04 used <strong>/etc/network/interfaces</strong> file to configure static IP addresses, but Ubuntu 18.04 use new method known as <strong>netplan</strong>.
+
+In this tutorial we will learn how to configure network interfaces in Ubuntu server 18.04 Bionic Beaver with netplan. We will look at how to set static IP addresses, default gateway and DNS name servers.
+
+<ol>
+    <li>Identify  available network interface with ip command.</li>
+    <li>Netplan and YAML format interface configuration file.</li>
+    <li>Assigning static IP addresses (IPv4).</li>
+    <li>Configure static IPv6 Addresses on Ubuntu Server.</li>
+    <li>Assign multiple IP addresses to a single network interface.</li>
+    <li>Configure Multiple network interfaces.</li>
+</ol>
+
+<h2>Identify  available network interface with ip command</h2>
+
+Before configure static IP address, you need to identify the available network interfaces on your Ubuntu server 18.04 and what is the device ID assigned to a particular network interface.
+
+If you run ip link show command it will list all available network interfaces on your server.
+
+<pre><code>
+ip link show
+</code></pre>
+
+Identify available network interface with ip command
+
+To view current IP configuration, run the ip addr command:
+
+<pre><code>
+ip addr
+</code></pre>
+
+The output will display the currently assign IP configuration for all network interfaces.
+ubuntu network interfaces
+Netplan and YAML format interface configuration file
+
+the way in which you set a static IP has completely changed. Ubuntu 18.04 uses a new method called netplan. In netplan the interface configuration file resides in the <strong>/etc/netplan</strong> directory and configuration file have <strong>.yaml</strong> extension. YAML syntax is very easy to understand and you don't need to be an expert on yaml format to edit the interface file. You only need to know what is needed for the network configuration.
+
+If you list the content of the  <strong>/etc/netplan</strong> directory, you will see the interface configuration file with yaml extension.
+In netplan the interface configuration file resides in the <strong>/etc/netplan</strong> directory and configuration file have strong>.yaml</strong> extension
+
+In my Ubuntu server name of the file is <strong>50-cloud-init.yaml</strong>, but it could be saved with a different name depends on the Install Type.
+
+<pre>
+<strong>Install Type 	                              Interface file name</strong>
+Ubuntu server Live ISO/Cloud 	                            50-cloud-init.yaml
+Ubuntu Server ISO (Alternative Ubuntu Server installer) 	01-netcfg.yaml
+Ubuntu Desktop ISO 	                                        01-network-manager-all.yaml
+</pre>
+
+On my Ubuntu server content of the file looks like following:
+
+# This file describes the network interfaces available on your system
+# For more information, see <strong>netplan(5)</strong>.
+
+<pre><code>
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      dhcp4: yes
+</code></pre>
+
+By just looking at the last line: <strong>"dhcp4: yes"</strong>, we can say that the  ethernet interface enp0s3 has been configured to lease IP address from the DHCP Server. So this the configuration you need to have if you are planning to assign dynamic IP addresses from a DHCP server.
+Assigning static IP addresses (IPv4)
+
+Here is the sample netplan configuration file with static IP  Assignment (IPV4), In this configuration, interface enp0s3 has been configured with <strong>IP 192.168.1.100 and the default gateway of 192.168.1.1</strong>.
+
+<pre><code>
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      addresses:
+        - 192.168.1.100/24
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses: [8.8.8.8, 4.4.4.4]
+</code></pre>
+
+<h2>In order to apply the configuration, run the netplan command:</h2>
+
+<pre><code>
+sudo netplan apply
+</code></pre>
+
+<h2>Then, run the ip add command to make sure that the changes being applied:</h2>
+
+<pre><code>
+ip add
+</code></pre>
+
+How it works..
+
+In the above example, we configured enp0s3 ethernet interface to use static the IP address 192.168.1.100.
+
+The first line:<strong>"version: 2"</strong> indicate this configuration block use netplan version 2 format.
+
+<pre><code>
+network:
+  version: 2
+</code></pre>
+
+The next line: <strong>"renderer: networkd"</strong> tells that this interface is managed by the <strong>systemd-networkd</strong> service.
+
+<pre><code>
+renderer: networkd
+</code></pre>
+
+An alternative option to networkd is <strong>NetworkManager</strong>, if the interface is managed by the NetworkManager. If you looked at the netplan config file of the Ubuntu 18.04 desktop, the renderer option is set to NetworkManager, because in a graphical desktop environment interfaces are managed by the NetworkManager.
+
+Next, we start the interface configuration:
+
+<pre><code>
+ethernets:
+    enp0s3:
+</code></pre>
+
+Here, enp0s3 is the name of the interface, you can run ip link show command to list network interfaces on your Ubuntu server.
+
+<h2>Next, we set the static IP to 192.168.1.100 with the netmask of 24:</h2>
+
+<pre><code>
+addresses:
+  - 192.168.1.100/24
+</code></pre>
+
+<h2>The address option can be also defined in following format:</h2>
+
+<pre><code>
+addresses: [192.168.0.101/24]
+</code></pre>
+
+<h2>Next, we set the default gateway to 192.168.1.1:</h2>
+
+<pre><code>
+gateway4: 192.168.1.1
+</code></pre>
+
+We used the option gateway4 because this is IPv4 gateway, For IPv6 gateway we need to use gateway6 option.
+
+<h2>Next, we set the DNS servers to 8.8.8.8 and 4.4.4.4.</h2>
+
+<pre><code>
+nameservers:
+  addresses: [8.8.8.8, 4.4.4.4]
+</code></pre>
+
+<h2>To apply new interface configurations, we run the netplan command :</h2>
+
+<pre><code>
+sudo netplan apply
+</code></pre>
+
+The command will Apply current netplan config to running system. We no longer need to do network restart to apply changes.
+
+<h2>Configure static IPv6 Addresses on Ubuntu Server</h2>
+
+The same netplan format use to assign IPv6 address, only difference is , we need to use the gateway6 option instead of gateway4 .
+
+<pre><code>
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      addresses:
+        - 2001:1::1/64
+      gateway6: 2001:1::2
+      nameservers:
+        addresses: [8.8.8.8, 4.4.4.4]
+</code></pre>
+
+<h2>Assign multiple IP addresses to a single network interface</h2>
+
+It is very common to have a single network interface configured with more that one IP address. Following is the sample Ubuntu netplan config file with two IPv4 address assigned to one network interface.
+
+<pre><code>
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      addresses:
+        - 192.168.1.100/24
+        - 192.168.1.101/24
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses: [8.8.8.8, 4.4.4.4]
+</code></pre>
+
+The address option can be also written in following format:
+
+<pre><code>
+addresses: [192.168.1.100/24, 192.168.1.101/24]
+</code></pre>
+
+A single network interface can be configured with both IPv4 and IPv6 addresses as shown in the following netplan file:
+
+<pre><code>
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      addresses:
+        - 192.168.1.100/24
+        - 2001:1::1/64
+      gateway4: 192.168.1.1
+      gateway6: 2001:1::2
+      nameservers:
+        addresses: [8.8.8.8, 4.4.4.4]
+</code></pre>
+
+<h2>Configure Multiple network interfaces</h2>
+
+It is very common to install more that one network interface on a single server. Here's an example netplan file, configured with  static addresses for two network cards:
+
+<pre><code>
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      addresses:
+        - 192.168.1.100/24
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses: [8.8.8.8, 4.4.4.4]
+    enp0s8:
+      addresses:
+        - 10.10.10.2/24
+</code></pre>
+
+Note that only the primary interface has been configured with a default gateway, In this case it is enp0s3. It is not practical to have more than one default gateway,  the default gateway is the address you send traffic when you have no other route for it.
+
+<h2>Let's look at another netplan example where <strong>both static and DHCP addresses being used</strong>:</h2>
+
+<pre><code>
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      addresses:
+        - 192.168.1.100/24
+      gateway4: 192.168.1.1
+      nameservers:
+          addresses: [8.8.8.8, 4.4.4.4]
+  wifis:
+    wlp3s0:
+      dhcp4: yes
+      access-points:
+        #configure SSID and wifi password
+        "my_ssid":
+          password: "my-wifi-password"
+</code></pre>
+
+In the preceding example, the wifi interface  wlp3s0 has been configured to lease IP address from the DHCP server.
+Summary
+
+In this tutorial we learned how to configure static IP address on Ubuntu 18.04 Bionic Beaver, where the old /etc/network/interfaces file is no longer in used. Ubuntu 18 now uses the new method called netplan to manage networking.
+
+With Netplan, configuration files for the network interfaces reside in the /etc/netplan directory, in YAML data format, while the netplan command uses to restart networking after configuration changes.

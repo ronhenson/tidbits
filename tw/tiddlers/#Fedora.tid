@@ -1,0 +1,11 @@
+caption: Fedora  <span class="linkbutton">{{!!title}}</span>
+created: 20180714174314203
+creator: ronh
+modified: 20200716155643523
+modifier: ronh
+revision: 0
+tags: #Header #LinuxOS
+title: #Fedora
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}

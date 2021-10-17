@@ -1,0 +1,90 @@
+created: 20150329211500000
+creator: ronh
+modified: 20200716152909094
+modifier: ronh
+revision: 0
+tags: #LinuxWindows #Tidbit #Tech
+title: lxde adding keyboard shortcuts
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<p> <a href="http://xahlee.info/linux/linux_lxde_add_key_shortcuts.html">Linux: LXDE: How to change/add keyboard shortcuts </a> </p>
+<h1>Linux: LXDE: How to Change/Add Keyboard Shortcuts ⌨</h1>
+
+<div class="byline"><address class="author"><a href="https://plus.google.com/112757647855302148298?rel=author" rel="author">Xah Lee</a></address>, <time>2015-03-14</time></div>
+
+<div id="share-buttons-97729"><div class="g-plusone" data-size="medium" data-annotation="none"></div></div><script defer src="../share_widgets.js"></script>
+
+<p>Edit the file at <code class="path-α">~/.config/openbox/lxde-rc.xml</code></p>
+
+<p>For example, to make <kbd>F9</kbd> key to switch to emacs, add:</p>
+
+<pre class="xml"><span class="comment-delimiter">&lt;!-- </span><span class="comment">set F9 to switch to emacs </span><span class="comment-delimiter">--&gt;</span>
+&lt;<span class="function-name">keybind</span> <span class="variable-name">key</span>=<span class="string">"F9"</span>&gt;
+    &lt;<span class="function-name">action</span> <span class="variable-name">name</span>=<span class="string">"Execute"</span>&gt;
+        &lt;<span class="function-name">command</span>&gt;wmctrl -xa emacs&lt;/<span class="function-name">command</span>&gt;
+    &lt;/<span class="function-name">action</span>&gt;
+&lt;/<span class="function-name">keybind</span>&gt;</pre>
+
+<p>You will need to install <code>wmctrl</code> for switching windows by name. See: <a href="linux_add_keyboard_shortcuts_to_switch_to_app.html">Linux: wmctrl Add Keyboard Shortcuts to Switch to App ⌨</a></p>
+
+<p>Here's more examples:</p>
+
+<pre class="xml">&lt;<span class="function-name">keybind</span> <span class="variable-name">key</span>=<span class="string">"F9"</span>&gt;
+    &lt;<span class="function-name">action</span> <span class="variable-name">name</span>=<span class="string">"Execute"</span>&gt;
+        &lt;<span class="function-name">command</span>&gt;wmctrl -xa emacs&lt;/<span class="function-name">command</span>&gt;
+    &lt;/<span class="function-name">action</span>&gt;
+&lt;/<span class="function-name">keybind</span>&gt;
+
+&lt;<span class="function-name">keybind</span> <span class="variable-name">key</span>=<span class="string">"F10"</span>&gt;
+    &lt;<span class="function-name">action</span> <span class="variable-name">name</span>=<span class="string">"Execute"</span>&gt;
+        &lt;<span class="function-name">command</span>&gt;wmctrl -xa terminal&lt;/<span class="function-name">command</span>&gt;
+    &lt;/<span class="function-name">action</span>&gt;
+&lt;/<span class="function-name">keybind</span>&gt;
+
+&lt;<span class="function-name">keybind</span> <span class="variable-name">key</span>=<span class="string">"F8"</span>&gt;
+    &lt;<span class="function-name">action</span> <span class="variable-name">name</span>=<span class="string">"Execute"</span>&gt;
+        &lt;<span class="function-name">command</span>&gt;wmctrl -xa firefox&lt;/<span class="function-name">command</span>&gt;
+    &lt;/<span class="function-name">action</span>&gt;
+&lt;/<span class="function-name">keybind</span>&gt;
+
+&lt;<span class="function-name">keybind</span> <span class="variable-name">key</span>=<span class="string">"F6"</span>&gt;&lt;<span class="function-name">action</span> <span class="variable-name">name</span>=<span class="string">"Close"</span>/&gt;&lt;/<span class="function-name">keybind</span>&gt;</pre>
+
+<div class="question-box32371">
+<p class="q">How to reload lxde key config file?</p>
+<pre class="bash"><span class="comment-delimiter"># </span><span class="comment">reload lxde's config file at ~/.config/openbox/lxde-rc.xml
+</span>openbox-lxde --reconfigure</pre>
+</div>
+
+<h2>Reference</h2>
+
+<p><span class="ref"><a class="sorc" href="http://openbox.org/wiki/Help:Bindings" data-accessed="2015-03-14">http://openbox.org/wiki/Help:Bindings</a></span></p>
+
+<div class="rltd">
+<ul>
+<li><a href="linux_set_system_keyboard_layout.html">Linux: Set System Keyboard Layout ⌨</a></li>
+<li><a href="linux_keyboard_tools.html">Linux: Keyboard Tools for Key Layout, Keymapping, Keybinding ⌨</a></li>
+<li><a href="linux_xmodmap_tutorial.html">Linux: xmodmap Tutorial ⌨</a></li>
+<li><a href="linux_lxde_keybinding.html">Linux: LXDE Keyboard Shortcuts ⌨</a></li>
+<li><a href="linux_lxde_key_repeat_rate.html">Linux: LXDE Set Key Repeat Rate ⌨</a></li>
+</ul>
+</div>
+
+<div class="ads-bottom-65900">
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 728x90, created 8/12/09 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5125343095650532"
+     data-ad-slot="8521101965"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div id="disqus_thread"></div><script>(function(){var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;dsq.src='http://xahlee.disqus.com/embed.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<footer><span class="xsignet">∑</span> <a href="../index.html">Xah Code</a> <div class="cpr">© 1995, …, 2014 Xah Lee.</div></footer>
+
+<script>(function() { var po=document.createElement('script');po.type='text/javascript';po.async=true;po.src='https://apis.google.com/js/plusone.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po,s);})();</script>
+

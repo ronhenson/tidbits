@@ -1,0 +1,19 @@
+caption: Hyper-V How to change Display size
+created: 20180723200808704
+creator: ronh
+keywords: Hyper-V
+modified: 20200716152908686
+modifier: ronh
+revision: 0
+tags: #Hyper-V #Tech #Tidbit #Ubuntu
+title: Hyper-V Window
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+
+```bash
+GRUB_CMDLINE_LINUX_DEFAULT=video=hyperv_fb:1920x1080 
+GRUB_CMDLINE_LINUX=video=hyperv_fb:1920x1080
+update-grub
+```

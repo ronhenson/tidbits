@@ -1,0 +1,23 @@
+created: 20150617102200000
+creator: ronh
+modified: 20200716152907905
+modifier: ronh
+revision: 0
+tags: #SecurityIT #Network #Training #Tidbit #Tech #CompTIA
+title: CompTIA Network+ N10-006-1.1
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<div id="tidbitbody">
+
+! Instrusion Detection and prevention Systems 
+
+<h1>CompTIA Network+</h1>
+<h2> Instrusion Detection Systems (IDS) and Intrustion Prevention Systems (IPS) </h2>
+<ul>
+    <li> Signature-based </li> <ul> <li> Look for a perfect match               </li> </ul>
+    <li> Anomaly-based   </li> <ul> <li> Build a baseline of what's normal      </li> </ul>
+    <li> Behavior-based  </li> <ul> <li> Observe and report                     </li> </ul>
+    <li> Heuristics      </li> <ul> <li> Use artifical intelligence to identify </li> </ul>
+</ul>

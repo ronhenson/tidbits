@@ -1,0 +1,124 @@
+caption: Debian and Ubuntu Docker install
+created: 20150320165800000
+creator: ronh
+modified: 20200716171729837
+modifier: ronh
+revision: 0
+tags: #Tidbit #Tech #Containers #Ubuntu #Debian
+title: Debian and Ubuntu Docker install
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<p>Docker is supported on the following versions of Debian:</p>
+
+<ul>
+<li><a href="#debian-jessie-80-64-bit"><em>Debian 8.0 Jessie (64-bit)</em></a></li>
+<li><a href="#debian-wheezystable-7x-64-bit"><em>Debian 7.7 Wheezy (64-bit)</em></a></li>
+</ul>
+
+<h2>Debian Jessie 8.0 (64-bit)</h2>
+
+<p>Debian 8 comes with a 3.14.0 Linux kernel, and a <code>docker.io</code> package which
+installs all its prerequisites from Debian's repository.</p>
+
+<blockquote>
+<p><strong>Note</strong>:
+Debian contains a much older KDE3/GNOME2 package called <code>docker</code>, so the
+package and the executable are called <code>docker.io</code>.</p>
+</blockquote>
+
+<h3>Installation</h3>
+
+<p>To install the latest Debian package (may not be the latest Docker release):</p>
+
+<pre><code>
+$ sudo apt-get update
+$ sudo apt-get install docker.io
+</code></pre>
+
+<p>To verify that everything has worked as expected:</p>
+
+<pre><code>
+$ sudo docker run -i -t ubuntu /bin/bash
+</code></pre>
+
+<p>Which should download the <code>ubuntu</code> image, and then start <code>bash</code> in a container.</p>
+
+<blockquote>
+<p><strong>Note</strong>: 
+If you want to enable memory and swap accounting see
+<a href="/installation/ubuntulinux/#memory-and-swap-accounting">this</a>.</p>
+</blockquote>
+
+<h2>Debian Wheezy/Stable 7.x (64-bit)</h2>
+
+<p>Docker requires Kernel 3.8+, while Wheezy ships with Kernel 3.2 (for more details
+on why 3.8 is required, see discussion on
+<a href="https://github.com/docker/docker/issues/407%20kernel%20versions">bug #407</a>).</p>
+<p>Fortunately, wheezy-backports currently has <a href="https://packages.debian.org/search?suite=wheezy-backports&amp;section=all&amp;arch=any&amp;searchon=names&amp;keywords=linux-image-amd64">Kernel 3.16
+</a>,
+which is officially supported by Docker.</p>
+
+<h3>Installation</h3>
+
+<ol>
+<li>
+<p>Install Kernel from wheezy-backports</p>
+<p>Add the following line to your <code>/etc/apt/sources.list</code></p>
+<p><code>deb http://http.debian.net/debian wheezy-backports main</code></p>
+<p>then install the <code>linux-image-amd64</code> package (note the use of
+<code>-t wheezy-backports</code>)</p>
+
+<pre><code>
+$ sudo apt-get update
+$ sudo apt-get install -t wheezy-backports linux-image-amd64
+</code></pre>
+
+</li>
+<li>
+<p>Install Docker using the get.docker.com script:</p>
+<p><code>curl -sSL https://get.docker.com/ | sh</code></p>
+</li>
+</ol>
+
+<h2>Giving non-root access</h2>
+
+<p>The <code>docker</code> daemon always runs as the <code>root</code> user and the <code>docker</code>
+
+daemon binds to a Unix socket instead of a TCP port. By default that
+Unix socket is owned by the user <code>root</code>, and so, by default, you can
+access it with <code>sudo</code>.</p>
+<p>If you (or your Docker installer) create a Unix group called <code>docker</code>
+and add users to it, then the <code>docker</code> daemon will make the ownership of
+the Unix socket read/writable by the <code>docker</code> group when the daemon
+starts. The <code>docker</code> daemon must always run as the root user, but if you
+run the <code>docker</code> client as a user in the <code>docker</code> group then you don't
+need to add <code>sudo</code> to all the client commands. From Docker 0.9.0 you can
+use the <code>-G</code> flag to specify an alternative group.</p>
+
+<blockquote>
+<p><strong>Warning</strong>: 
+The <code>docker</code> group (or the group specified with the <code>-G</code> flag) is
+<code>root</code> -equivalent; see <a href="/articles/security/#docker-daemon-attack-surface"><em>Docker Daemon Attack Surface</em></a> details.</p>
+</blockquote>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>
+# Add the docker group if it doesn't already exist.
+$ sudo groupadd docker
+
+# Add the connected user "${USER}" to the docker group.
+# Change the user name to match your preferred user.
+# You may have to logout and log back in again for
+# this to take effect.
+$ sudo gpasswd -a ${USER} docker
+
+# Restart the Docker daemon.
+$ sudo service docker restart
+</code></pre>
+
+<h2>What next?</h2>
+
+<p>Continue with the <a href="/userguide/">User Guide</a></p>

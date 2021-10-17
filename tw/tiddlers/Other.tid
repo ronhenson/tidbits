@@ -1,0 +1,12 @@
+caption: Tiddlers that do not have tidbit tag
+created: 20180714190410078
+creator: ronh
+modified: 20180715010034410
+modifier: ronh
+revision: 0
+title: Other
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<<list-links filter:"[!tag[Tidbits]!tag[tidbit]!is[system]!is[shadow]]">>

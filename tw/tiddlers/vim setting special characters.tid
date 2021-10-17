@@ -1,0 +1,27 @@
+caption: vim commands to set special characters. i. e. tab, space, eol
+created: 20191018233559848
+creator: ronh
+modified: 20200716152910725
+modifier: ronh
+revision: 0
+tags: #regex #Tech #VIM #Tidbit
+title: vim setting special characters
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! How display special characters such as:
+	* eol
+	* tab
+	* trail
+```
+:set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+:set list
+```
+
+! if you want to show spaces:
+	you would need to undo before writing
+
+```
+:set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+```

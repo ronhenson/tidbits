@@ -1,0 +1,24 @@
+created: 20151014051900000
+creator: ronh
+modified: 20200716152909862
+modifier: ronh
+revision: 0
+tags: #Tidbit #Tech #Gnome
+title: Sound Control Gnome 3
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<html>
+<div id="tidbitbody">
+
+! using command pactl
+
+ <pre>
+pactl set-sink-volume 0 150%   # 0 - HDMI speakers
+pactl set-sink-volume 1 150%   # 1 - Built in Audio Analog speakers
+ </pre>
+
+</div>
+
+</html>

@@ -1,0 +1,10 @@
+caption: DVD movie using Handbrake
+created: 20200808155801673
+modified: 20200831215329094
+revision: 0
+tags: #DVD #Tidbit
+title: Ripping DVD movie
+type: text/vnd.tiddlywiki
+
+!! Download and insert `libdvdcss-2.dll` into Handbrake folder
+Use Handbrake to rip to a M4v file.

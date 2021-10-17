@@ -1,0 +1,11 @@
+caption: Ubuntu <span class="linkbutton">{{!!title}}</span>
+created: 20180714174002738
+creator: ronh
+modified: 20200716155507240
+modifier: ronh
+revision: 0
+tags: #Header #LinuxOS
+title: #Ubuntu
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}

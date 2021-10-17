@@ -1,0 +1,44 @@
+created: 20141111171200000
+creator: ronh
+modified: 20200716152908256
+modifier: ronh
+revision: 0
+tags: #LinuxSystems #Tidbit #Tech #search
+title: find human readable files
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<p>Find human readable files and search for string inside the file.  The example that follows finds all human readable files using file -b.  file -b doesn't pass on the filename.  The second exec executes a search withing the files found.</p>
+
+<pre> <code>
+
+find . -type f -exec sh -c 'file -b {} | grep text &>/dev/null' \; -exec grep -H keyring {} \; </code> </pre>
+
+<p>Find human readable files and prints out the file names</p>
+
+<pre> <code>
+    
+find . -type f -exec sh -c 'file -b {} | grep text &>/dev/null' \; -print;
+</code> </pre>
+<h2> Not to find a pattern </h2>
+<p>  Example below finds all files that don't end with 'ext' </p>
+
+<pre> <code>
+
+find /path -type f -not -name "*.ext"
+</code> </pre>
+
+<h2> Using find to file a files newer</h2>
+
+<p>Create a file with a date then compare against that file </p>
+
+<pre> <code>
+
+# date '%Y%m%d%H%M' in this case year=2016, month=Jun, day=04, time= midnight
+
+touch 201606040000 newfile 
+
+# Will find all files newer than newfile
+find / -type -f -newer ./newfile  
+</code> </pre>

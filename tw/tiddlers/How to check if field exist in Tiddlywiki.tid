@@ -1,0 +1,27 @@
+caption: Testing if field exist in current Tiddler
+created: 20170504204709597
+creator: ronh
+modified: 20200716152908594
+modifier: ronh
+revision: 0
+tags: #Tiddlywiki #Tidbit #Tech
+title: How to check if field exist in Tiddlywiki
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+!! if field "caption" exist display "caption"
+
+```
+<$list filter="[all[current]has[caption]]">
+{{!!caption}}
+</$list>
+```
+
+!! If field "caption" NOT exist display "title"
+
+```
+<$list filter="[all[current]!has[caption]]">
+{{!title}}
+</$list>
+```

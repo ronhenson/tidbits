@@ -1,0 +1,11 @@
+caption: VIM <span class="linkbutton">{{!!title}}</span>
+created: 20180714202522986
+creator: ronh
+modified: 20200428003125590
+modifier: ronh
+revision: 0
+tags: #IDE #Header
+title: #VIM
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}

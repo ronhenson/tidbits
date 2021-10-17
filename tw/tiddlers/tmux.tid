@@ -1,0 +1,35 @@
+caption: {{!!title}} - Installing tmux on git-bash
+created: 20200120140832621
+modified: 20200716152910177
+revision: 0
+tags: #Tidbit
+title: tmux
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<style>
+code {
+	background-color:lightyellow;
+    border-color:lightblue;
+    }
+</style>
+<a href="https://blog.pjsen.eu/?p=440">How to run Tmux in GIT Bash on Windows</a>
+
+<ol>
+	<li>[[Install before-mentioned msys2 package and run bash shell|MYSYS2]]</li>
+	<li>nstall tmux using the following command: <code>pacman -S tmux</code></li>
+	<li>Go to msys2 directory, in my case it is <code>C:\msys64\usr\bin</code></li>
+	<li>Copy <code>tmux.exe and msys-event-2-1-4.dll</code> to your Git for Windows directory, mine is <code>C:\Program Files\Git\usr\bin</code>. Please note, that in future, you can see this file with the version number higher than 2-1-4</li>
+</ol>
+
+<h3>And you are ready to go. Please note, that I do this on 64-bit installations of <code>Git</code> and <code>MSYS</code> . Now when you run Git Bash enter <code>tmux</code>. My most frequently used commands are:</h3>
+
+<ul>
+    <li> CTRL+B, (release and then) C — create new shell within existing terminal window </li>
+    <li> CTRL+B, N — switch between shells </li>
+    <li> CTRL+B, a digit — switch to the chosen shell by the corresponding number </li>
+    <li> CTRL+B, " — split current window horizontally into panels (panels are inside windows) </li>
+    <li> CTRL+B, o — switch between panels in current window </li>
+    <li> CTRL+B, x — close panel </li>
+</ul>

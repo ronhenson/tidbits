@@ -1,0 +1,47 @@
+caption: How to speed up windows 10 network
+created: 20170513023840347
+creator: ronh
+modified: 20200716152910871
+modifier: ronh
+revision: 0
+tags: #Windows #Network #Tech #Tidbit
+title: Windows 10 - speed up network
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+[[http://fasttechbuzz.com/increase-internet-speed/]]
+
+!! Change the speed of the bandwidth:
+
+# STEP 1: Open the '''“Local Group Policy Editor”''' by typing '''“gpedit.msc”''' in the Run Window and hit enter.
+
+# STEP 2: Double Click on '''“Network”''' which is under '''Computer Configuration''' >> '''Administrative Templates'''.
+
+# STEP 3: In the list, you will find '''“QoS Packet Scheduler”''' and double click on it.
+
+# STEP 4: Now, double click on the '''“Limit Reservable Bandwidth”''' and the window opens.
+
+In the Limit Reservable Bandwidth Window, you will be shown default values. Click on the '''“Enable”''' radio button. In the box beside “Bandwidth limit” default value will be 20% and bring it down to '''“0”'''. Click on '''“Apply”''' and “Ok” and everything is set now. It means that, your system reserves 20% of your bandwidth and we made it to zero.
+
+Now, you will find the increase in speed of internet in your device. Restart your PC and your computer will use 100% of the bandwidth which shows the increase in the speed of download.
+
+!! Find list of websites your computer is connecting to secretly:
+
+There are many things that happen in the background. Computer secretly connects to various websites, which would show impact in the download and upload speed. Just use the command as shown below and you will get the output in the file mentioned in that command.
+
+Open the file and you can see the list of websites you computer is secretly connecting to.  Kill those processes or websites and thus increase the speed of internet.
+
+!! netstat command
+
+Here is the example command: ``netstat -abf 5 > getconnectiondetails.txt``. Enter this command in the command prompt and ``exit the prompt after 2 minutes``. Then the list will be prepared in the output file. Here the output file is getconnectiondetails.txt.
+
+!!! list of connections
+
+Here,
+
+#    ‘a’ shows the listening ports and connections.
+#    ‘b’ shows the connection making applications.
+#    ‘f’ shows the full DNS Names for each connection.
+#    ‘5’ mentions that this polling will be taken for every 5 seconds.
+#    You can use the option ‘-n’ to display the IP Address.

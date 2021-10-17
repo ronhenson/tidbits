@@ -1,0 +1,20 @@
+created: 20170615201019640
+creator: ronh
+modified: 20210528183411111
+modifier: ronh
+tags: #Testing
+title: testa
+type: text/vnd.tiddlywiki
+
+{{20170615!!title}}
+{{06-16-2017!!title}}
+
+<$view field="title" format="date" template="DDD"/> 
+
+<<now ddd>>
+! Again
+<$text text=<<myVariable>>/>
+
+!My html special characters
+
+{{html special characters##Symbols}}

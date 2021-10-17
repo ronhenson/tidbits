@@ -1,0 +1,51 @@
+created: 20160401225200000
+creator: ronh
+modified: 20200716152908104
+modifier: ronh
+revision: 0
+tags: #IP #Tidbit #Tech #DNS
+title: DNS addresses
+type: text/vnd.tiddlywiki
+
+<$view field="created" format="date" template="Created: YYYY-0MM-0DD DDD"/><br />
+<$view field="modified" format="date" template="Modified: YYYY-0MM-0DD DDD"/>
+
+<div id="tidbitbody" style="font-family:Inconsolata Medium;">
+    <h1> DNS Addresses </h1>
+
+	<ul>
+        <li class="headbutton">Google DNS </li>
+        	<ul>
+            	<li> 8.8.8.8 </li>
+            	<li> 8.8.4.4 </li>
+                <br />
+            </ul>
+
+        <li class="headbutton"> OpenDNS </li>
+        	<ul>
+            	<li> 208.67.222.222 </li>
+                <li> 208.67.220.220 </li>
+                <br />
+            </ul>
+            
+        <li class="headbutton"> CloudFlare (Free - faster with protection) </li>
+        	<ul>
+        		<li> 1.1.1.1 </li>
+                <li> 1.0.0.1 </li>
+                <li> 2606:4700:4700::1111 </li>
+                <li> 2606:4700:4700::1001 </li>
+               <br />
+            </ul>
+                
+        <li class="headbutton"> Quad9 - IBM security (Free DNS service that protects you) </li>
+        	<ul>
+            	<li> <a href="https://www.quad9.net/faq/">QUAD9 FAQ</a> </li>
+                <li> <a href="https://www.dnsknowledge.com/tutorials/how-to-setup-quad9-dns-on-a-linux/">How to setup Quad9 DNS on a Linux</a> </li>
+        		<li> 9.9.9.9 </li>
+                <li> 149.112.112.112 </li>
+                <li> 2620:fe::fe </li>
+                <li> 2620:fe::9 </li>
+               <br />
+            </ul>
+	</ul>
+</div>

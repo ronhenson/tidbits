@@ -1,0 +1,83 @@
+created: 20140930184300000
+creator: ronh
+modified: 20200716152908862
+modifier: ronh
+revision: 0
+tags: #Tidbit #Tech #Javascript
+title: Javascript date time example
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+```javascript
+
+
+ var startDate, endDate;
+ var eParsedDate, sParsedDate;
+ var eNewPlusOneDate, sNewPlusOneDate, eParsePlusOneDate, sParsePlusOneDate;
+ var eNewDate, sNewDate, sNewPlusOneDate, sNewPlusOneDate;
+ var eNewMonth, eNewDay, eNewYear;
+ var sNewMonth, sNewDay, sNewYear;
+ var eNewFormatDate, sNewFormatDate;
+ var diffdate;
+  
+startDate
+    =prompt(&quot;Enter Start Date: MM-dd-yyyy&quot;,config.options.txtReportStartDates.toString('yyyy-MM-dd'));
+config.options.txtReportStartDates=startDate;
+    
+endDate
+    =prompt(&quot;Enter End Date: MM-dd-yyyy &quot;, config.options.txtReportEndDates.toString('yyyy-MM-dd'));
+ config.options.txtReportEndDates=endDate;
+
+
+document.write(startDate+&quot; ---------  &quot;+endDate+&quot; ----------  &quot;);
+
+  eParsedDate=Date.parse(endDate);
+  sParsedDate=Date.parse(startDate);
+
+  eNewDate=new Date(eParsedDate);
+  sNewDate=new Date(sParsedDate);
+  eParsedPlusOneDate= eParsedDate + 86400
+  eNewPlusOneDate=new Date(eParsedDate + 86400000);
+  sNewPlusOneDate=new Date(sParsedDate + 86400000);
+
+  eNewMonth=('0' + (eNewDate.getMonth() + 1)).slice(-2);
+  eNewDay=('0' + eNewDate.getDate()).slice(-2);
+  eNewYear=eNewDate.getFullYear();
+  eNewFormatDate=eNewYear+&quot;-&quot;+eNewMonth+&quot;-&quot;+eNewDay;
+
+  sNewMonth=('0' + (sNewDate.getMonth() + 1)).slice(-2);
+  sNewDay=('0' + sNewDate.getDate()).slice(-2);
+  sNewYear=sNewDate.getFullYear();
+
+
+  sNewFormatDate=sNewYear+&quot;-&quot;+sNewMonth+&quot;-&quot;+sNewDay;
+
+
+document.write (&quot; ----------- eParsedDate: &quot;+eParsedDate+&quot; ---------- +sParsedDate: &quot;+sParsedDate+&quot; ---------- &quot;);
+document.write (&quot; ----------- eNewPlusOneDate: &quot;+eNewPlusOneDate+&quot; ---------- +sNewPLusOneDate: &quot;+sNewPlusOneDate+&quot; ---------- &quot;);
+
+document.write (&quot; ----------- eNewFormatDate: &quot;+eNewFormatDate+&quot; ---------- &quot;);
+document.write (&quot; ----------- eNewPlusOneDate: &quot;+eNewPlusOneDate+&quot; ---------- &quot;);
+document.write (&quot; ----------- eNewDate: &quot;+eNewDate+&quot;   endDate: &quot;+endDate+&quot; ---------- &quot;);
+
+document.write (&quot; ----------- sNewFormatDate: &quot;+sNewFormatDate+&quot; ----------- &quot;);
+document.write (&quot; ----------- sNewPlusOneDate: &quot;+sNewPlusOneDate+&quot; ----------- &quot;);
+document.write (&quot; ----------- sNewDate: &quot;+sNewDate+&quot;   startDate: &quot;+startDate+&quot; ----------- &quot;);
+
+
+  diffdate= (eParsedDate - sParsedDate) / (1000 * 60 * 60 * 24);
+/***
+  this.getDateDiff = function(startDate, endDate) {
+    return (startDate.getTime() - endDate.getTime()) / (1000 * 60 * 60 * 24);
+ }
+***/
+/***
+for (var i=startDate; i&lt;endDate; i++){
+  dDates[j]=i
+  j++
+}
+
+document.write(&quot;       &quot;+ diffdate);
+**/
+```

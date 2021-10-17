@@ -1,0 +1,42 @@
+caption: vim commands to retrieve filename
+created: 20170110040613841
+creator: ronh
+modified: 20200716152910340
+modifier: ronh
+revision: 0
+tags: #VIM #Tidbit #Tech #regex
+title: vim commands to retrieve filename
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<h3> commands to retrieve filename within vim </h3>
+    <p><A href="http://vim.wikia.com/wiki/Get_the_name_of_the_current_file">VIM get the name of the current file</A></p>
+
+Register `%` contains the name of the current file, and register `#` contains the name of the alternate file. These registers allow the name of the current or alternate files to be displayed or inserted. The name, or full path, or directory containing the file can be used.
+
+For example, in directory `/abc` the command `vim def/my.txt` would edit file `/abc/def/my.txt`. The following commands could be entered to display the information shown.
+
+```vim
+:echo @% 	def/my.txt 	directory/name of file
+:echo expand('%:t') 	my.txt 	name of file ('tail')
+:echo expand('%:p') 	/abc/def/my.txt 	full path
+:echo expand('%:p:h') 	/abc/def 	directory containing file ('head')
+```
+
+If all that is wanted is to display the name of the current file, type `Ctrl-G` (or press `1` then `Ctrl-G` for the full path).
+
+When using `@%`, the name is displayed relative to the current directory.
+
+In insert mode, type `Ctrl-R` then `%` to insert the name of the current file.
+
+In command mode (after typing a colon), type `Ctrl-R` then `%` to insert the name of the current file. The inserted name can then be edited to create a similar name.
+
+In normal mode, type `"%p` to put the name of the current file after the cursor (or `"%P` to insert the name before the cursor).
+
+The following commands insert lines consisting of the full path of the current and alternate files into the buffer:
+
+```vim
+:put =expand('%:p')
+:put =expand('#:p')
+```

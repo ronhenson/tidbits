@@ -1,0 +1,22 @@
+created: 20160827020857535
+creator: ronh
+modified: 20200716152910893
+modifier: ronh
+revision: 0
+tags: #MSWindows #Tidbit
+title: Windows 10 bypass logon
+type: text/vnd.tiddlywiki
+
+! How to change windows 10 to logon without a password
+
+<strong>  Will also work with Windows 7</strong>
+
+*    Hit the Start button, or press the Windows key.
+*    Type netplwiz and then click the entry at the top of the list of search results.
+    **    Or you could press the Windows key and R to bring up the Run dialog and execute the same command.
+*    Select the entry for your account in the list of usernames  that is displayed (if you see more than one that appears to be yours, opt for the one that’s an Administrator).
+*    Uncheck the option labelled ‘Users must enter a user name and password to use this computer’.
+*    When prompted, enter your password, confirm it, and then click OK.
+
+Another web page that illustrate how to.
+ http://www.intowindows.com/how-to-automatically-login-in-windows-10/

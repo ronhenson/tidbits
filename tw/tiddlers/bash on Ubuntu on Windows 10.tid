@@ -1,0 +1,40 @@
+caption: bash on Ubuntu on windows 10
+created: 20170221200500943
+creator: ronh
+modified: 20200716152907605
+modifier: ronh
+revision: 0
+tags: #MSWindows #BASH #Tidbit #Ubuntu
+title: bash on Ubuntu on Windows 10
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! Install Ubunutu
+
+[[https://docs.com/majerus/8108/windows-nt-lxss]]
+
+Turn on features by: Control Panel => Programs and Features
+Select: Turn Windows features on or off
+Select: Windows Sybsystem for Linux (Beta)
+
+To update or install Ubuntu, there is a command LxRun.exe /install located in C:\Windows\System32\ folder
+
+!! To find current release in Ubuntu
+
+```bash
+lsb-release` or 
+cat /etc/lsb-release
+DISTRIB_ID=Ubuntu                       
+DISTRIB_RELEASE=16.04                   
+DISTRIB_CODENAME=xenial                 
+DISTRIB_DESCRIPTION="Ubuntu 16.04.2 LTS"
+```
+
+<h1> Windows Ubuntu root directory and home directory </h1>
+
+```
+C:\Users\ronh\AppData\Local\lxss\
+C:\Users\ronh\AppData\Local\lxss\ronh\ #home directory
+C:\Users\ronh\AppData\Local\lxss\rootfs #root file systems
+```

@@ -1,0 +1,36 @@
+{
+  "require": [
+      "$:/plugins/tiddlywiki/codemirror/addon/dialog/dialog.js",
+      "$:/plugins/tiddlywiki/codemirror/addon/search/searchcursor.js",
+      "$:/plugins/tiddlywiki/codemirror/addon/edit/matchbrackets.js",
+      "$:/plugins/tiddlywiki/codemirror/addon/mode/multiplex.js",
+      "$:/plugins/tiddlywiki/codemirror/mode/css/css.js",
+      "$:/plugins/tiddlywiki/codemirror/mode/htmlembedded/htmlembedded.js",
+      "$:/plugins/tiddlywiki/codemirror/mode/htmlmixed/htmlmixed.js",
+      "$:/plugins/tiddlywiki/codemirror/mode/javascript/javascript.js",
+      "$:/plugins/tiddlywiki/codemirror/mode/markdown/markdown.js",
+      "$:/plugins/tiddlywiki/codemirror/mode/meta.js",
+      "$:/plugins/tiddlywiki/codemirror/mode/tiddlywiki/tiddlywiki.js",
+      "$:/plugins/tiddlywiki/codemirror/mode/xml/xml.js",
+      "$:/plugins/tiddlywiki/codemirror/keymap/vim.js",
+      "$:/plugins/tiddlywiki/codemirror/addon/edit/matchtags.js",
+      "$:/plugins/tiddlywiki/codemirror/keymap/emacs.js",
+      "$:/plugins/tiddlywiki/codemirror/mode/clike/clike.js",
+      "$:/plugins/tiddlywiki/codemirror/addon/fold/foldcode.js",
+      "$:/plugins/tiddlywiki/codemirror/addon/fold/xml-fold.js",
+      "$:/plugins/tiddlywiki/codemirror/addon/fold/foldgutter.js",
+      "$:/plugins/tiddlywiki/codemirror/addon/edit/closetags.js",
+      "$:/plugins/tiddlywiki/codemirror/addon/edit/closebrackets.js"
+  ],
+  "configuration": {
+      "keyMap": "vim",
+      "matchBrackets": true,
+      "showCursorWhenSelecting": true,
+      "matchTags": {"bothTags": true},
+      "foldGutter": true,
+      "autoCloseTags":true,
+      "autoCloseBrackets":true,
+      "gutters": ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+    "extraKeys": {"Ctrl-J": "toMatchingTag"}
+  }
+}

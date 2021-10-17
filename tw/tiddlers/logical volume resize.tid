@@ -1,0 +1,133 @@
+caption: Resize Linux filesystem
+created: 20140930172600000
+creator: ronh
+modified: 20200716152909055
+modifier: ronh
+revision: 0
+tags: #LinuxSystems #Tidbit #Tech
+title: logical volume resize
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+If root boot up on rescue disk or live OS
+
+* Reduce file system and logical volume (lvm) size
+           ** vgchange -a y
+           ** e2fsck -f /dev/mapper/fedora_00-root
+           ** resizefs -p /dev/mapper/fedora_00-root 30G #Reduce or increase size to 30G
+           ** lvreduce -L 30G /dev/mapper/fedora_00-root #Reduce logical volume to 30G
+           ** e2fsck -f /dev/mapper/fedora_00-root #check filesystem
+           ** resizefs -p /dev/mapper/fedora_00-root  #Should be nothing to do
+* Increase logical volume and resize file system
+           ** lvextend -l number-of-extents /dev/mapper/fedora_00-home #if you insert a too large it will come back with an error and tell you number of extents
+           ** resize2fs /dev/mapper/fedora_00-home #resize filesystem
+
+! See <$link to="logical volume resize - Virtualbox">{{logical volume resize - Virtualbox!!caption}}</$link>
+
+! Resize the lvm
+
+```
+pvcreate /dev/sda4
+  Physical volume "/dev/sda4" successfully created.
+```
+
+```
+vgdisplay
+  --- Volume group ---
+  VG Name               cl_h13
+  System ID             
+  Format                lvm2
+  Metadata Areas        2
+  Metadata Sequence No  5
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                2
+  Open LV               2
+  Max PV                0
+  Cur PV                2
+  Act PV                2
+  VG Size               8.99 GiB
+  PE Size               4.00 MiB
+  Total PE              2302
+  Alloc PE / Size       2302 / 8.99 GiB
+  Free  PE / Size       0 / 0   
+  VG UUID               N5066h-DYsr-ApNS-zLzD-nxqr-yzue-kiAKgN
+```
+```
+vgextend cl_h13 /dev/sda4
+  Volume group "cl_h13" successfully extended
+```
+```
+pvscan
+  PV /dev/sda2   VG cl_h13          lvm2 [7.00 GiB / 0    free]
+  PV /dev/sda3   VG cl_h13          lvm2 [2.00 GiB / 0    free]
+  PV /dev/sda4   VG cl_h13          lvm2 [6.00 GiB / 6.00 GiB free]
+  Total: 3 [14.99 GiB] / in use: 3 [14.99 GiB] / in no VG: 0 [0   ]
+```
+
+```
+lvdisplay
+  --- Logical volume ---
+  LV Path                /dev/cl_h13/swap
+  LV Name                swap
+  VG Name                cl_h13
+  LV UUID                c6IClI-yAvc-5bnE-DdMX-jGaS-o2BA-GMUTTQ
+  LV Write Access        read/write
+  LV Creation host, time h13, 2017-01-28 09:26:08 -0800
+  LV Status              available
+  # open                 2
+  LV Size                820.00 MiB
+  Current LE             205
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     8192
+  Block device           253:1
+   
+  --- Logical volume ---
+  LV Path                /dev/cl_h13/root
+  LV Name                root
+  VG Name                cl_h13
+  LV UUID                l63WKi-gSU4-ZUer-xPOe-qzko-IiHx-F7aLOx
+  LV Write Access        read/write
+  LV Creation host, time h13, 2017-01-28 09:26:09 -0800
+  LV Status              available
+  # open                 1
+  LV Size                8.19 GiB
+  Current LE             2097
+  Segments               2
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     8192
+  Block device           253:0
+```
+
+```
+lvextend /dev/cl_h13/root /dev/sda4
+  Size of logical volume cl_h13/root changed from 8.19 GiB (2097 extents) to 14.19 GiB (3632 extents).
+  Logical volume cl_h13/root successfully resized.
+```
+
+<h1> If XFS file system</h1>
+
+```
+xfs_growfs /dev/cl_h13/root
+meta-data=/dev/mapper/cl_h13-root isize=512    agcount=6, agsize=406016 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=0 spinodes=0
+data     =                       bsize=4096   blocks=2147328, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0 ftype=1
+log      =internal               bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+data blocks changed from 2147328 to 3719168
+```
+
+<h1> if ext file system - use the appropriate resize tool </h1>
+
+```
+resize2fs /dev/c1_h13/root
+```

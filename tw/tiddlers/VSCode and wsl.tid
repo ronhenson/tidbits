@@ -1,0 +1,19 @@
+caption: VSCode proxy issue launding remotely on wsl2
+created: 20191121160124422
+creator: ronh
+modified: 20200716152910846
+modifier: ronh
+revision: 0
+tags: #VSCode #WSL #Tech #Python #Tidbit
+title: VSCode and wsl
+type: text/vnd.tiddlywiki
+
+! Created <code>.wsgetrc </code> in home directory
+
+<pre><code>use_proxy=on
+http_proxy=http://127.0.0.1:3128
+https_proxy=http://127.0.0.1:3128
+check_certificate=off
+</code></pre>
+
+! wsl 2 in server code in folder

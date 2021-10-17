@@ -1,0 +1,40 @@
+caption: Search Filter
+created: 20191018230946263
+creator: ronh
+modified: 20200426214606734
+modifier: ronh
+revision: 0
+tags: #search
+title: Filter: Search
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<!---
+! Days created
+
+<$list filter="[!is[system]days:created[-50]!sort[created]]">```
+
+</$list>
+-->
+
+<$reveal type="nomatch" state="$:/state/DaysModified" text="showDaysModified">
+
+<h1><$button class="tc-btn-invisible tc-tiddlylink" set="$:/state/DaysModified" setTo="showDaysModified"><span style="color:brown;">Last 31 days Modified Dates List</span></$button></h1>
+
+</$reveal>
+<$reveal type="match" state="$:/state/DaysModified" text="showDaysModified">
+
+! <$button class="tc-btn-invisible tc-tiddlylink" set="$:/state/DaysModified" setTo="hideDaysModified"><span style="color:green;">Last 31 days Modified Dates List</span></$button>
+
+<ol>
+  <$list filter="[!<is[system]!<currentTiddler>days[-31]!sort[modified]]">
+    <li>
+      <$link><$view field="title"/></$link>
+        <$list filter="[<currentTiddler>days[-7]]"> @@color:red;^^ <$view field="modified" format="date" template="YYYY-0MM-0DD"/> ^^@@</$list>
+         <$list filter="[<currentTiddler>days[-14]!days[-7]]"> @@color:green; ^^<$view field="modified" format="date" template="YYYY-0MM-0DD"/>^^@@</$list>
+         <$list filter="[<currentTiddler>days[-31]!days[-14]]"> @@color:black; ^^<$view field="modified" format="date" template="YYYY-0MM-0DD"/>^^@@</$list>
+    </li>
+  </$list>
+</ol>
+</$reveal>

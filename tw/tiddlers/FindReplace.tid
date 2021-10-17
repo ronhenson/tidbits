@@ -1,0 +1,25 @@
+created: 20160501014345591
+creator: Stephen
+modified: 20170111180007449
+modifier: Stephen
+revision: 0
+title: FindReplace
+type: text/vnd.tiddlywiki
+
+Clicking on the {{$:/core/images/format-find}} button on the tool bar causes this dropdown to appear.
+
+{{$:/sk/Findandreplacedropdown}}
+
+Enter the string of characters you would like to find and the string of characters you would like to replace them with. Find and Replace can locate certain special characters:
+
+*    ^n for newline
+*    ^r for carriage return (13)
+*    ^f for formfeed (10)
+*    ^t for tab (9)
+
+!!Plugin Tiddler
+[[$:/plugins/sk/FindReplace]]
+
+!!Associated Tiddlers
+
+{{FindReplaceList}}

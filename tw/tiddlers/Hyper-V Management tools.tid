@@ -1,0 +1,27 @@
+caption: {{!!title}} - RSAT (remote server administration tools) Windows 10
+created: 20200201201311500
+modified: 20200716152908664
+revision: 0
+tags: #MSWindows #Hyper-V #Tidbit
+title: Hyper-V Management tools
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<ul>
+	<li> Go to "features on demand" </li>
+	<li> "Add an optional feature" </li>
+	<li> Select the RSAT features desired </li>
+</ul>
+
+<h3> Installed on 2020-02-01 the following </h3>
+	<ul>
+		<li>RSAT: DHCP Server Tools</li>
+		<li>RSAT: DNS Sever Tools</li>
+		<li>RSAT: Data Center Bridging LLDP tools</li>
+		<li>RSAT: IP Address Management (IPAM) Client</li>
+		<li>RSAT: Network Controller Management Tools</li>
+		<li>RSAT: Remote Access Management tools</li>
+		<li>RSAT: Remote Desktop Services tools</li>
+		<li>RSAT: Server Manager</li>
+	</ul>

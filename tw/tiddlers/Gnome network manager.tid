@@ -1,0 +1,31 @@
+created: 20140903161500000
+creator: ronh
+modified: 20200716152908456
+modifier: ronh
+revision: 0
+tags: #Gnome #Network #Tidbit #Tech
+title: Gnome network manager
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<div id="tidbitbody">
+
+! Network Manager command line info
+
+<a href="http://linuxmanpages.net/manpages/fedora20/man5/nmcli-examples.5.html">fedora manuals nmcli</a>
+   <pre>
+command line:
+To start vpn:  nmcli c up Fluential    # c(onnection) Fluential is the name.  can find the uuid by nmcli c show
+$nmcli --fields general.device,ip4.address show p5p1
+$nmcli device show
+$nmcli device show wlp3s0
+$nmcli --fields general.device,general.hwaddr  # will show mac addr.
+$nmcli nmcli -t -f general -e yes -m tab dev show p5p1 #escape :
+
+nm-connection-editor # for gui add, edit, delete connections 
+
+/sbin/dhclient -d -sf /usr/libexec/nm-dhcp-helper -pf /var/run/dhclient-vboxnet0.pid -lf /var/lib/NetworkManager/dhclient-15e95232-bdf8-4551-a871-660c1426e64c-vboxnet0.lease -cf /var/lib/NetworkManager/dhclient-vboxnet0.conf vboxnet0
+
+/sbin/dhclient -d -sf /usr/libexec/nm-dhcp-helper -pf /var/run/dhclient-wlp3s0.pid -lf /var/lib/NetworkManager/dhclient-009a2c6a-8559-4a1e-88f0-c9f1f83c7bd8-wlp3s0.lease -cf /var/lib/NetworkManager/dhclient-wlp3s0.conf wlp3s0
+   </pre>

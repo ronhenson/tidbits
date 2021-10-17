@@ -1,0 +1,46 @@
+caption: Ubuntu startup in console mode
+created: 20191103224445450
+creator: ronh
+modified: 20200716152910288
+modifier: ronh
+revision: 0
+tags: #Tidbit #Tech #Ubuntu
+title: Ubuntu startup
+type: text/vnd.tiddlywiki
+
+<p>Yes you can. As described here (ubuntuhandbook.org - Boot into text console ubuntu) you need to edit <strong style="color:purple;">/etc/default/grub</strong> to have the next boot end up in text mode. In summary you will set these parameters:</p>
+
+<h1>Setting up console mode</h1>
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="text"
+GRUB_TERMINAL=console
+```
+
+<h2>After saving changes you need to run:</h2>
+
+```bash
+sudo update-grub2
+sudo systemctl enable multi-user.target --force
+sudo systemctl set-default multi-user.target
+```
+
+<h1>Undoing text-mode</h1>
+
+To undo sudo systemctl set-default multi-user.target simply type
+
+```
+sudo systemctl enable graphical.target --force
+sudo systemctl set-default graphical.target 
+```
+
+<h1>Ubuntu 19.10 setting up <strong style="color:purple;">noop</strong> for hyper-v</h1>
+
+
+Edit <strong style="color:purple;">/etc/default/grub</strong>, such as gksudo gedit <strong style="color:purple;">/etc/default/grub</strong>, here you need to add <strong style="color:purple;">elevator=noop</strong>.
+
+Change <strong style="color:purple;">GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</strong> to 
+<strong style="color:purple;">GRUB_CMDLINE_LINUX_DEFAULT="quiet splash elevator=noop"</strong>.
+
+Then run <strong style="color:purple;">sudo update-grub2</strong> and <strong style="color:purple;">restart</strong>.
+

@@ -1,0 +1,51 @@
+caption: linux release / version
+created: 20170221205103225
+creator: ronh
+modified: 20200716152909024
+modifier: ronh
+revision: 0
+tags: #Tidbit #RHEL #Ubuntu
+title: linux release
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! Finding release / version
+
+Helpful site: [[https://www.linux.com/learn/how-find-your-linux-version-or-distro-release-and-why-it-matters]]
+
+!! Found in the `/etc/os-release` file
+
+!! uname
+
+```bash
+uname -r
+4.4.0-62-generic
+```
+
+!! Finding version
+
+```bash
+lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description: Ubuntu 16.04.1 LTS
+Release: 16.04
+Codename: xenial
+```
+
+!! Application
+
+!!! Debian based
+
+```bash
+dpkg -l applicationPackage
+```
+
+!!! rpm
+
+```bash
+rpm -qa | grep applicationPackage
+```
+
+

@@ -1,0 +1,16 @@
+caption: Tidbits
+created: 20180714172502825
+creator: ronh
+list-before: $:/core/ui/SideBar/Open
+modified: 20200716153744744
+modifier: ronh
+revision: 0
+tags: $:/tags/SideBar
+title: #Tidbits
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<div class="tc-table-of-contents">
+	<<toc-selective-expandable '#Tidbits' sort[title]>>
+</div>

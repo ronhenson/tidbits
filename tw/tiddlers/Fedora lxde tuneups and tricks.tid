@@ -1,0 +1,323 @@
+created: 20140903161500000
+creator: ronh
+modified: 20200716152908236
+modifier: ronh
+revision: 0
+tags: #Tidbit #Tech #Fedora
+title: Fedora lxde tuneups and tricks
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! Fedora 20 LXDE spin tips and tricks by Dietrich Schmitz
+
+<h4 style="color:#8B2323;">Linux Advocates</h4>
+
+<h4>Fedora 20 LXDE Spin Tune-Up Tips and Tricks</h4>
+
+1/21/2014 06:55:00 PM  Anaconda, Btrfs, Fedora, GNOME, Lubuntu, LXDE, Ubuntu, Xfce  No comments
+
+by Dietrich Schmitz
+
+<p>Regular readers will have figured out by now that I have a particular obsession affinity for Fedora.  It has things that make it just 'better' than the competition.</p>
+
+<p>Still, competition exists and Fedora is not everyone's cup of tea.  And isn't that the way of the world?</p>
+
+<p>It seems that it suffers from an arguably undeserved reputation for being more difficult to set up and use.  Some of that is true, still.  But, I maintain that the Fedora Team has done a brilliant job pulling together their twentieth iteration family of spins, Fedora 20 and the 'ease of use' category hasn't been overlooked.</p>
+
+<p>All the spins have their merits -- you have Gnome (Fedora Desktop default), KDE, Xfce, Mate, and <a href='http://lxde.org/' title="LXDE">LXDE</a> spins from which to choose.  Conspicuously missing from the line-up is a Cinnamon Spin, but, fortunately, as with <a href="http://www.enlightenment.org/" title="Enlightenment (windows manager)">Enlightenment 17</a>, Fedora chose to include software groups, should you feel the need to run with those GUIs.  Only you must install one of the aforementioned spins first before installing one of the two guis.</p>
+
+<p>That is all well and good.  But, some of you also know I have this thing about minimalism.  It's not just about visual elements; it's minimal in terms of resource consumption as well.</p>
+
+<p>Thus, I have come to like the LXDE Desktop along the way using Lubuntu.</p>
+
+<p>Let me say that Lubuntu is a very fine Distro for new users coming from a Windows perspective.</p>
+
+I've gone back to Lubuntu several times in the past because of one thing or another that set me off and I got annoyed by so as to induce a reflex response -- go back to that which 'just works well'.  That was, for me, Lubuntu.</p>
+
+<p>It is easy to install, use, familiar, comfortable, lean, minimal and wicked fast.</p>
+
+<p>When briefly using it not long ago, I thought to myself, "Self, why can't Fedora be like this?"  I was left to wonder about it until this past week and I set out to reproduce the "Lubuntu Experience" by seeing if I could tweak up the 'bland' out-of-the-box Fedora 20 LXDE Spin by making a few needed changes.</p>
+
+<p>I was pleasantly surprised to find that I was able to achieve the desired result.  Fedora 20 LXDE tweaking helps more than a bit, I think.  But, you can be the judge.</p>
+
+<p>Here's a run-down on what I've done to tweak up the LXDE Spin a bit.</p>
+
+
+<h4 style="color:#8B2323;">Btrfs Filesystem</h4>
+<p>I don't think this is easy to do on Ubuntu, but, I can't remember if I tried to make Lubuntu run with <a href='https://oss.oracle.com/projects/btrfs/'>btrfs</a> as the root filesystem.  Somewhere, I read that it gives grub major headaches, but, I have found the out-of-the-box selection of Btrfs with auto-configuration makes a separate partition for /boot (512MB) using ext4.  There was no thinking on my part to make that happen, but given grub is running on ext4 is the 'rub'.  Nicely done Fedora Team for making this a 'seamless' process.  There's nothing worse than the feeling one gets after an install seeing on first boot a grub> prompt.  That's a sign that something has gone fubar and it usually requires going back to grub.cfg and/or booting up a pendrive and using fdisk to remedy.  So, I was quite pleased that the new <a href="http://fedoraproject.org/wiki/Anaconda">Anaconda installer</a> handles Btrfs so well.</p>
+
+<h4 style="color:#8B2323;">Full Disk Encryption</h4>
+<p><a href="https://docs.fedoraproject.org/en-US/Fedora/11/html/Security_Guide/sect-Security_Guide-Encryption-Protecting_Data_at_Rest-Full_Disk_Encryption.html">Full Disk Encryption</a> will encrypt your entire HDD/SDD and every time you boot, you will need to input your WDE password to unlock the drive before the system can bootstrap.  This is strongly recommended in today's world where theft of Laptops has become rampant.  As a matter of good security practices, I'd suggest it be used on any hardware, regardless of whether it is a Laptop or not.  In the Anaconda installer, it's a checkbox [x] selectable item.  Check it!</p>
+
+
+<h4 style="color:#8B2323;">Linux Kernel 3.12 zswap</h4>
+<p>My good Friend <a href="https://plus.google.com/113308741660805522664">+birger monsen</a> shows in a Google Plus post how to enable a new feature found in the Linux Kernels >= 3.11 called <a href="https://www.kernel.org/doc/Documentation/vm/zswap.txt">zswap</a>.</p>
+
+<p>Zswap essentially takes data that would otherwise head to I/O disk swap space and compresses it in a kernel ram cache using LZO compression.  Effectively, a speed performance gain can be realized by using zswap.</p>
+
+<p>Interestingly, Lubuntu 13.10 has zRam, a similar technology (but not the same), enabled by default and it helps greatly with older PCs, even ones having as little as 256MB ram will benefit.  Naturally, I have zswap.enabled.  Why?  Because I am bad. :/ Seriously, if you google around, you'll find information that shows IBM is equipping their Linux mainframes with zswap for heavily I/O bound applications yielding measurable performance gains.  Enough said.</p>
+<h4 style="color:#8B2323;">Yum Plugins</h4>
+<p>If you love yum as much as I do, then Fedora is for you.  It's just far superior to Apt-Get for so many reasons.  In Fedora 20, presto has been merged so a separate install of the plugin is not necessary.  But, I installed two delicious plugins: yum-plugin-fastestmirror and yum-plugin-fs-snapshot.  The former, determines the 'closest' mirror to your geo-location -- this actually can make a difference in terms of number of hops your tcp/ip packets must travel to reach your PC, believe it or
+not.  It's a must-have as far as I am concerned.</p>
+
+<p>The latter, yum-plugin-fs-snapshot, is 'money in the bank' if you need to have a restore point from which to recover.  Apple OSX and Microsoft Windows users enjoy having such when things go fubar.  Now, with this plugin installed, whenever using yum to make an update/change/removal, the plugin will diligently create a 'snapshot' (a standard feature in Btrfs).  The plugin automatically backs up each time yum is called.  By virtue of <a href="http://en.wikipedia.org/wiki/Copy-on-write">copy on write</a> (COW) technology Btrfs uses minimal disk space and the backup time is near instantaneous.  The first time I messed with Btrfs a few years ago I thought something was wrong.  The snapshot command returned to a prompt in less than a second.  I thought, "Did it just core dump?"  Nope.</p>
+
+<p>It all seemed counter-intuitive at first but with COW you only get only pointers to read-only data (data that hasn't changed) with any other disk 'writes' getting a full copy.  It's a great idea that Btrfs borrows from the SUN's Solaris ZFS filesystem. (See directly above yum in a terminal session doing an automated fs-snapshot.)</p>
+
+<p>Install both plugins with:</p>
+
+<pre style="background-color:Cornsilk;margin-top:3px;margin-bottom:3px;width:45em;">  $sudo yum install yum-plugin-fastestmirror yum-plugin-fs-snapshot </pre>
+	
+<h4 style="color:#8B2323;">Google Droid True Type Fonts</h4>
+
+<p>Google Droid fonts, easily, are as good as Windows Tahoma TTF and Ubuntu TTF true type fonts and were installed with:</p>
+<pre style="background-color:Cornsilk;margin-top:3px;margin-bottom:3px;width:45em;">  $sudo yum install google-droid*</pre>
+
+<p>After installation, be sure to go to the Preferences->Customize Look and Feel->Fonts tab and make sure hinting is using Rgb and set to 'Full'.  This is especially helpful on LCD Laptop displays.  On the 'Widget' tab, set the 'Default Font' to Droid Sans 10 point.</p>
+
+<h4 style="color:#8B2323;">Adwaita Nemo Widget Theme</h4>
+
+I chose by trial and error Adwaita-Nemo Widget theme.  Install with yum:
+
+<pre style="background-color:Cornsilk;margin-top:3px;margin-bottom:3px;width:45em;">  $sudo yum install adwaita-nemo</pre>
+
+<p>Select from the Customize Look and Feel->Widget tab.</p>
+
+<h4 style="color:#8B2323;">Elementary Icon Theme</h4>
+<p>Just by chance, I decided to try Elementary Icon Theme and liked how it gives LXDE an overall professional feel.  Install it with yum as follows:</p>
+	
+<pre style="background-color:Cornsilk;margin-top:3px;margin-bottom:3px;width:45em;">  $sudo yum install elementary-icon-theme</pre>
+
+<h4 style="color:#8B2323;">FedoraUtils</h4>
+<p><a href="http://satya164.github.io/fedorautils">/FedoraUtils</a> is a 'grab bag' of utilities with a Zenity gui wrapper for a series of shell scripts.  Used judiciously (not all scripts are applicable), one can quickly configure features which otherwise might require additional time when done manually at the terminal command line.</p>
+
+<p>Features include:</p>
+
+  <ul>
+    <li>Install codecs and additional software</li>
+    <li>Fix various problems</li>
+    <li>Tweak and cleanup your system</li>
+    <li>View system information</li>
+    <li>And much more...</li>
+  </ul>
+
+<h4 style="color:#8B2323;">OpenBox 'Flatbox' Window Decorator Theme</h4>
+
+<p>What really sets LXDE apart is it's <a href="http://openbox.org/">OpenBox</a> window manager.  I love OpenBox for it's blazing speed and minimalism.  I went to Box-look.org to check around for other styles of OB window decorations and ultimately chose <a href="http://box-look.org/content/show.php?content=157186">Flatbox</a>.  Download the obt file and import from Preferences-&gt;OpenBox Configuration Menu-&gt;'Install a new theme' button.</p>
+
+<p>The decoration is clean and doesn't cause the eye to break -- it integrates as though it was meant to be.</p>
+
+<p>It's a clean crisp look that when added to the Elementary Icon Theme and Adwaita-Nemo Widget style is simply superb.  In fact, I really think appearance-wise it is better than stock Lubuntu.</p>
+
+<h4 style="color:#8B2323;">Pidgin Instant Messenger - pidgin-libnotify</h4>
+<p>I hate how Google Plus Hangout (formerly GTalk) works.  So, instead I set up Pidgin.  It's really better anyhow, since you'll never miss any message from a friend with Pidgin (such as when your G+  tab is closed).  And if you install pidgin-libnotify along with xfce4-notifyd you'll have notifications screen up when friends come and go.  Don't forget to go to Pidgin-&gt;Tools-&gt;Plugins-&gt;Libnotify Popups (select)-&gt;Configure Plugin button  and checkmark [x] 'Buddy signs off' and 'Buddy
+signs on'.</p>
+<p>Also, in Tools-&gt;Preferences, be sure to have Pidgin minimize to your system tray 'Always'.</p>
+
+<p>Install pidgin-libnotify and xfce4-notifyd with:</p>
+	
+<pre style="background-color:Cornsilk;margin-top:3px;margin-bottom:3px;width:45em;">  $sudo yum install pidgin-libnotify xfce4-notifyd</pre>
+
+<p>If you don't like the default location for Pidgin's popup notifications (top right), open a terminal and type xfce4-notify-config and set the location to lower right as I did.</p>
+
+<h4 style="color:#8B2323;">Compton Composting</h4>
+<p>LXDE in the Fedora Spin is considered lightweight by design.  Thus, you don't get any compositing like KDE, MATE, Gnome Shell, or Cinnamon.</p>
+
+<p>If you have the intestinal fortitude, clone the compton project using git and manually compile as I did.  This rpm 'should' be installable on Fedora.20 if you pass in <pre style="background-color:Cornsilk;margin-top:3px;margin-bottom:3px;width:45em;"> $sudo yum localinstall --releasever=19 &gt;package name&lt;</pre>.  But, I haven't tested it.
+
+<h4 style="color:#8B2323;">RPMFusion Free and Non-Free Repositories</h4>
+<p><a href="http://rpmfusion.org/Configuration">RPMFusion</a> provides Free and Non-Free rpm packages which aren't found in the standard Fedora repository system.  Follow the directions to install the *.repo files and you are good to go.  Once done, I installed VLC Media Player, Mozilla Totem plugins which are accessible from both Chrome and Firefox.</p>
+
+<h4 style="color:#8B2323;">Redshift-Gtk</h4>
+At first, I was skeptical about this technology.  But now, I am sold.  What does <a href="http://jonls.dk/redshift/">Redshift-Gtk</a> do?  Well, it when fed your latitude and longitude, goes to its own database of current weather conditions indexed by time of day, and then makes a display color 'heat' adjustment.  It automatically adjusts throughout the day to the most ideal setting for viewing and eases eye strain accordingly. I strongly recommend it and you will appreciate it most at night when an otherwise 'bright' screen can kill your vision.  Install redshift-gtk with:
+
+pre style="background-color:Cornsilk;margin-top:3px;width:25em;">  $sudo yum install redshift-gtk </pre>
+
+
+With LXDE, you'll need an autostart file in your ~/.config/lxsession/LXDE/ directory.  
+
+
+The commands in mine include starting Pidgin, compton, and redshift as follows:
+
+dietrich@localhost LXDE$ cat autostart
+<!-- Codes by HTMLcodes.ws -->
+<pre style="background-color:Cornsilk;margin-top:3px;margin-bottom:3px;width:45em;">  @compton -c -r 16 -l -24 -t -12 -G -b
+  @pidgin
+  @redshift-gtk -l 43.030718:-74.992302 -t 5700:3600 -g 0.8 -m vidmode -v</pre>
+
+<h4 style="color:#8B2323;">Conclusions</h4>
+
+<p>Looking at the Desktop, it is clean, easy on the eyes.  If you've never tried Fedora, I would suggest LXDE especially for older PCs.  You'll find the machine will return to life and OpenBox's windows paints and LXDE GTk refreshes will snap on screen instantly.  Short of using Lubuntu or #!CrunchBang, I cannot think of any faster Linux Distro setup.  
+Fedora 20 Linux LXDE Spin running with the tweaks shown in this story.</p>
+
+<p>Hopefully, the tune-up tips and tricks I gave will increase your level of enjoyment using Fedora.</p>
+
+<p>Fedora Linux:  The safest operating system on the planet.</p>
+
+<p>I stake my reputation on it.</p>
+
+<p>--Dietrich</p>
+
+
+<h4>Related articles</h4>
+
+<ul>
+  <li>   G+ Conversations on Fedora 20, KDE User Perceptions</li>
+  <li>    Money in the Bank: Fedora Btrfs Filesystem With Yum-plugin-fs-snapshot</li>
+  <li>    Top 5 Linux Desktops: Where Do You Want to Go Today?</li>
+</ul>
+
+<p>Email ThisBlogThis!Share to TwitterShare to FacebookShare to Pinterest</p>
+
+<h4>About the Author</h4>
+
+<p>+Dietrich T. Schmitz is a Health Care IT Consultant based in New York. He can be found on Google+; a Perl Success Story for one of his projects is available on OReilly.com.</p>
+
+<p>Google+</p>
+
+
+
+<p>[Add this widget to your blog]<br />
+Newer Post Older Post Home<br />
+Subscribe to: Post Comments (Atom)<br />
+Social Profiles<br />
+TwitterFacebookGoogle PlusLinkedInRSS FeedEmail</p>
+
+<pre>
+    Popular
+    Tags
+    Blog Archives
+</pre>
+
+<h4>    YUM vs. APT: Which is Best?</h4>
+
+<p>    by Dietrich Schmitz Nothing stirs more debate with fellow Linux enthusiasts than their package manager . It's a passionately con... </p>
+ mn  <p>    Fuduntu: Back to Fundamentals, Gets it Right </p>
+<p>     by Dietrich Schmitz I have spent several months searching for a Linux Distro that meets my requirements.  My trusty Acer Aspire One Net...</p>
+
+ <h4>    Top Ten Sleeper Distros </h4>
+
+<p>    by Dietrich Schmitz With all of the recent stories I've written and my obvious bias toward one particular Linux community Distrib...<br />
+    RetroShare: For the Paranoid in You!<br />
+    by Dietrich Schmitz (Originally published: 6/7/2013) [Edit: Some raised concern about sharing their F2F key via regular email.  To use a...<br />
+    Perl: The Language Everybody Wants to Declare Dead<br />
+    by +Dietrich Schmitz I keep looking, but I still haven't found a language that compares with Perl .  The level to which one can go w...
+
+<h4>Link to Linux Advocates</h4>
+
+
+<p>If you like our blog, then link back to
+Linux Advocates.<br />
+Linux Advocates
+
+Copy and paste the HTML code below
+<a href="http://www.linuxadvocates.com" title="Linux Advocates" style="text-decoration:none;border:0;"> <img src="http://1.bp.blogspot.com/-UyybzPTCZ7o/UT1YVPSE-WI/AAAAAAAAHRg/oKMgfMYma2g/s320/la-penguin-pen-sketch.png" alt="Linux Advocates" style="border:0" /> </a><br />
+
+Google+ Followers<br />
+Facebook Followers<br />
+Contact Form<br /><br />
+
+Name<br />
+
+Email *<br />
+
+Message *<br />
+
+<h4>Recent Comments</h4>
+
+<p>    average linux user	</p>
+
+<p>    And why violating UNIX principles and philosophy is automatically a bad thing? When people...</p>
+
+<p>    Two stories critical of systemd taken offline ~ Linux Advocates · 1 hour ago
+    average linux user</p>	
+
+ <p>   Maybe, but more often than not, people change from being wrong to being right, as it is the case...</p>
+
+<p>    Two stories critical of systemd taken offline ~ Linux Advocates · 1 hour ago
+    MO JO Ham	</p>
+
+<p>    Is fedora desktop edition is safer than FreeBSD desktop edition ? I know that FreeBSD is the most...</p>
+
+ <p>   CryptoWall RansomWare: The Psychology of Mass Insanity ~ Linux Advocates · 5 days ago
+    Alex Boroda	</p>
+
+ <p>   Unfortunately, Fedora 21 Alpha failed to install the bootloader twice and I gave up on installing...</p>
+
+ <p>   Linux Advocates: Fedora 21 Alpha Workstation Impressions · 5 days ago
+    Ranko Kohime	</p>
+
+ <p>   Does anyone know how to do something similar except with KDM instead of LightDM? I have...</p>
+
+ <p>   Making nVidia and Intel Play Nice - Linux Advocates · 2 weeks ago</p>
+
+<p>
+Translate<br />
+Powered by Translate<br /><br />
+Twitter<br />
+Tweets by @LinuxAdvocates<br />
+Contributors<br /><br />
+
+<p>   Max Wachtel
+    Dietrich Schmitz</p>
+
+<h4>Linux Foundation Blogs</h4>
+
+<p>    Rent the Runway: Open Source Practices Improve Culture, Developer Retention - 10/29/2014 - libbyclar<br />
+    Introducing the 2014 Linux Training Scholarship Winners - 10/28/2014 - jennifercloer<br />
+    The Companies That Support Linux: Altera - 10/27/2014 - libbyclark<br />
+    The Companies That Support Linux: DataCentred - 10/20/2014 - libbyclark<br />
+    Video: Linux Kernel Developers Respond to Concerns About Community Culture - 10/17/2014 - libbyclark<br />
+
+<h4>Blog Archive</h4>
+
+    ▼  2014 (41)<br />
+        ►  October (2)<br />
+        ►  September (5)<br />
+        ►  August (5)<br />
+        ►  July (2)<br />
+        ►  June (5)<br />
+        ►  May (2)<br />
+        ►  April (6)<br />
+        ►  March (5)<br />
+        ►  February (3)<br />
+        ▼  January (6)<br />
+
+<p>            Use Bitcoin: Credit Cards Weren't Designed for the...<br />
+            Fedora 20 LXDE Spin Tune-Up Tips and Tricks<br />
+            Linux Consolidation Continues: CentOS Joins Red Ha...<br />
+            Top 5 Linux Desktops: Where Do You Want to Go Toda...<br />
+            Linux Advocacy: Lessons Learned in 2013<br />
+            Insidious Chromebook, Mega Email Preview, Smartwat...<br />
+
+  <p>  ►  2013 (283)</p>
+
+<p> Subscribe in a reader<br />
+Powered by Blogger.<br />
+Make a Donation </p>
+
+
+ 
+
+<p>    O'Reilly News and Commentary<br />
+        #Ebook Deal/Day: Astronomy Hacks - $9.99 (Save 50%) Use code DEAL - 12/19/2012 - O&#39;Reilly Media<br />
+        NY Times ebook initiative could be so much more - 12/19/2012 - Joe Wikert<br />
+        Visualization of the Week: Evaluating basketball teams as networks - 12/19/2012 - Jenn Webb<br />
+        Three lessons for the industrial Internet - 12/19/2012 - Mac Slocum<br />
+        Four short links: 19 December 2012 - 12/19/2012 - Nat Torkington<br />
+
+
+<p>    Syndicators</p>
+
+<p>    Linux Journal - The Original Magazine of the Linux Community<br />
+        November 2014 Issue of Linux Journal: System Administration - 11/3/2014 - Shawn Powers<br />
+        Weapons of MaaS Deployment - 10/30/2014 - Kyle Rankin<br />
+        Ubuntu & SUSE & CentOS, Oh My! - 10/30/2014 - Justin Ryan<br />
+        Easy Watermarking with ImageMagick - 10/29/2014 - Dave Taylor<br />
+        The Only Mac I Use - 10/27/2014 - Kyle Rankin
+
+<h4>   Follow Linux Advocates on G+</h4>
+
+<p>Copyright © 2012 Linux Advocates | Powered by Blogger<br />
+Design by FThemes | Blogger Theme by Lasantha - Premium Blogger Templates | NewBloggerThemes.com<br />

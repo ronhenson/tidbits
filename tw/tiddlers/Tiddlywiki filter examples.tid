@@ -1,0 +1,170 @@
+caption: Tiddlywiki filter examples
+created: 20170527141922909
+creator: ronh
+modified: 20200426220143688
+modifier: ronh
+revision: 0
+tags: #Tiddlywiki #Tech #Filters #regex
+title: Tiddlywiki filter examples
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<style>
+#bd  {
+	border-radius: 10px;
+    border:1px solid darkgreen;
+    padding: 20px;
+}
+</style>
+
+! <$link to={{!!title}}>{{!!caption}}</$link>
+
+!! Search for tiddlers modified or created in so many days
+
+<div id=bd>
+
+```
+# Modified in the last 7 days
+[all[tiddlers]!is[system]days:modified[-7]]
+
+# Modified between 40 days and 300 days
+[all[tiddlers]!is[system]days:created[-300]!days:created[-40]]
+```
+
+</div>
+
+!! Using regexp <code>filter</code> in <code>Advanced search</code>
+
+<div id=bd>
+
+```
+[regexp:tldesc[^{{Weed*]]
+```
+
+</div>
+
+!! Using a regexp on a caption field
+
+The following filter example will find all tiddlers with `VirtualBox` tags excluding any caption (Can use any field) that has the word `Mount`
+
+<div id=bd>
+
+Using `Advanced Search filter`, syntax is:
+
+```
+[tag[VirtualBox]]-[regexp:caption[Mount]]
+```
+[tag[VirtualBox]]-[regexp:caption[Mount]]
+
+</div>
+<br />
+<div id=bd>
+
+To use the filter in a tiddler need to surround the filter with 3 braces
+
+```
+{{{ [tag[VirtualBox]]-[regexp:caption[Mount]] }}}
+```
+
+{{{ [tag[VirtualBox]]-[regexp:caption[Mount]] }}}
+</div>
+<br />
+<div id=bd>
+
+```
+<<list-links filter:[tag[VirtualBox]]-[regexp:caption[Mount]]>>
+```
+<<list-links filter:[tag[VirtualBox]]-[regexp:caption[Mount]]>>
+</div>
+
+If you replace the `-` with `+` then find `VirtualBox` tag and must have the regexp `Mount` in the caption field.
+
+If you remove the `-` or `+` it becomes an `or`
+
+
+<div id=bd>
+
+!! The following example will display caption with tags on second line. 
+
+```c-like
+<table>
+<$list filter="[tag[VirtualBox]]+[regexp:caption[Mount]]">
+	<tr>
+		<td><<currentTiddler>></td>
+		<td>{{||$:/core/ui/ViewTemplate/tags}}</td>
+	</tr>
+</$list>
+</table>
+```
+<table>
+<$list filter="[tag[VirtualBox]]+[regexp:caption[Mount]]">
+	<tr>
+		<td><<currentTiddler>></td>
+		<td>{{||$:/core/ui/ViewTemplate/tags}}</td>
+	</tr>
+</$list>
+</table>
+</div>
+<br />
+<div id=bd>
+
+!! The following example will display subtitle
+
+```
+<$list filter="[tag[VirtualBox]sort[title]]" template="$:/core/ui/ViewTemplate/subtitle"/>
+```
+<$list filter="[tag[VirtualBox]sort[title]]" template="$:/core/ui/ViewTemplate/subtitle"/>
+</div>
+<br />
+<div id=bd>
+
+!! Display the caption and subtitle in a table
+
+```c
+<table>
+<$list filter="[tag[VirtualBox]sort[title]]+[regexp:caption[Mount]]">
+	<tr>
+		<td> {{!!caption}} </td>
+		<td>{{||$:/core/ui/ViewTemplate/}}</td>
+	</tr>
+</$list>
+</table>
+```
+
+<table>
+<$list filter="[tag[VirtualBox]sort[title]]+[regexp:caption[Mount]]" template="">
+	<tr>
+		<td> {{!!caption}} </td>
+		<td>{{||$:/core/ui/ViewTemplate/}}</td>
+	</tr>
+</$list>
+</table>
+</div>
+<br />
+<div id=bd>
+
+!! View as a order link list
+
+```
+<ol>
+<$list filter="[tag[VirtualBox]sort[title]]+[regexp:caption[Mount]]">
+	<li>
+		<$link to={{!!title}}>
+			<$view field="caption"/>
+		</$link>
+	</li>
+</$list>
+</ol>
+```
+<ol>
+<$list filter="[tag[VirtualBox]sort[title]]+[regexp:caption[Mount]]">
+	<li>
+		<$link to={{!!title}}>
+			<$view field="caption"/>
+		</$link>
+	</li>
+</$list>
+</ol>
+
+</div>

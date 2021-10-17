@@ -1,0 +1,56 @@
+created: 20161108161328977
+creator: ronh
+modified: 20200426203016096
+modifier: ronh
+revision: 0
+tags: #Tools
+title: Drafts List
+type: text/vnd.tiddlywiki
+
+{{!!title||journalHeaderTemplate}}
+
+<h1 style="color:brown;font-weight:normal;">Draft of tiddlers</h1>
+
+<div style="margin-left:5%;margin-right:35%;" class="blk">
+	<<list-links filter:"[prefix[Draft of]]">>
+</div>
+
+<!--     Last Created list        -->
+
+<$reveal type="nomatch" state="$:/state/LastCreatedList" text="showLastCreatedList">
+
+<h1><$button class="tc-btn-invisible tc-tiddlylink" set="$:/state/LastCreatedList" setTo="showLastCreatedList"><span style="color:brown;">Created list Timeline</span></$button></h1>
+
+</$reveal>
+<$reveal type="match" state="$:/state/LastCreatedList" text="showLastCreatedList">
+
+! <$button class="tc-btn-invisible tc-tiddlylink" set="$:/state/LastCreatedList" setTo="hideLastCreatedList"><span style="color:green;">Created list Timeline</span></$button>
+
+<div style="margin-left:5%;margin-right:35%;background-color:lightyellow;color:brown;" class="blk">
+	<<timeline limit:45 format:"YYYY-MMM-DD ddd" dateField:created>>
+	<h2 style="color:red;"> Last 45 days </h2>
+</div>
+
+</$reveal>
+
+<!--     Last Created list END        -->
+
+<!--     Last Modified list           -->
+
+<$reveal type="nomatch" state="$:/state/LastModifiedList" text="showLastModifiedList">
+
+<h1><$button class="tc-btn-invisible tc-tiddlylink" set="$:/state/LastModifiedList" setTo="showLastModifiedList"><span style="color:brown;">Modified list Timeline</span></$button></h1>
+
+</$reveal>
+<$reveal type="match" state="$:/state/LastModifiedList" text="showLastModifiedList">
+
+! <$button class="tc-btn-invisible tc-tiddlylink" set="$:/state/LastModifiedList" setTo="hideLastModifiedList"><span style="color:green;">Modified list Timeline</span></$button>
+
+<div style="margin-left:5%;margin-right:35%;background-color:lightyellow" class="blk">
+	<<timeline limit:45 format:"YYYY-MMM-DD ddd" dateField:modified>>
+    
+	<h2 style="color:red;"> Last 45 days </h2>
+</div>
+</$reveal>
+
+<!--     Last Modified list END          -->

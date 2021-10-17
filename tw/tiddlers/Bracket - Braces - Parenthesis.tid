@@ -1,0 +1,17 @@
+caption: Brackets, Braces, Parenthesis and the like
+created: 20170527144614052
+creator: ronh
+modified: 20200716152907746
+modifier: ronh
+revision: 0
+tags: #PersonalGrowth #Tidbit
+title: Bracket - Braces - Parenthesis
+type: text/vnd.tiddlywiki
+
+! <$link to={{!!title}} >{{!!caption}}</$link>
+
+* {} are `braces`, often referred to as "`squiggly brackets`" or "`curly brackets`"
+* [] are `brackets`, often referred to as "`square brackets`"
+* () are `parentheses`
+* <> are `less-than` and `greater-tha`n often referred as  "`angle brackets`"
+* «» are chevrons.

@@ -1,0 +1,17 @@
+created: 20181113005935546
+creator: ronh
+modified: 20200716152910689
+modifier: ronh
+revision: 0
+tags: #Tidbit #Tech #VIM
+title: VIM macro to make columns
+type: text/vnd.tiddlywiki
+
+! vim macro to make columns..
+
+```
+register a: 0f<70i ^[023ldw              ; column 2
+register b: 0f<vf>*nn70i ^[0100ldw       ; column 3
+register d: 0f<vf>*nn70i ^[0100ldw       ; column 4
+register e: 0f<vf>*nnn70i ^[0138ldw      ; column 5
+```

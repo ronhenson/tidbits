@@ -1,0 +1,26 @@
+caption: ssh-agent and keychain
+created: 20170516205547007
+creator: ronh
+modified: 20200716152909941
+modifier: ronh
+revision: 0
+tags: #SecurityIT #ssh #Tidbit #Tech
+title: ssh-agent and keychain
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+!! keychain
+
+```
+sudo apt-get install keychain
+
+vi $HOME/.bashrc
+
+```
+
+Add/append the following lines:
+
+```
+eval $(keychain --eval ~/.ssh/id_rsa_Home)
+```

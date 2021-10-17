@@ -1,0 +1,40 @@
+created: 20160720002907305
+creator: ronh
+modified: 20200716152910298
+modifier: ronh
+revision: 0
+tags: #Tidbit #Ubuntu
+title: Ubuntu Unity turnoff autostart apps
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! Webpage
+
+[[http://www.upubuntu.com/2011/10/how-to-view-and-disable-hidden-startup.html]]
+
+! How
+
+<pre>
+# cd /etc/xdg/autostart/
+# ls
+a11y-profile-manager-indicator-autostart.desktop  indicator-printers.desktop
+at-spi-dbus-bus.desktop                           indicator-session.desktop
+deja-dup-monitor.desktop                          indicator-sound.desktop
+gnome-keyring-pkcs11.desktop                      nautilus-autostart.desktop
+gnome-keyring-secrets.desktop                     nm-applet.desktop
+gnome-keyring-ssh.desktop                         onboard-autostart.desktop
+gnome-screensaver.desktop                         orca-autostart.desktop
+gnome-software-service.desktop                    polkit-gnome-authentication-agent-1.desktop
+gnome-user-share-obexpush.desktop                 print-applet.desktop
+gnome-user-share-webdav.desktop                   pulseaudio.desktop
+gsettings-data-convert.desktop                    unity-fallback-mount-helper.desktop
+indicator-application.desktop                     unity-settings-daemon.desktop
+indicator-bluetooth.desktop                       update-notifier.desktop
+indicator-datetime.desktop                        user-dirs-update-gtk.desktop
+indicator-keyboard.desktop                        vino-server.desktop
+indicator-messages.desktop                        zeitgeist-datahub.desktop
+indicator-power.desktop
+
+# sudo sed --in-place 's/NoDisplay=true/NoDisplay=false/g' app-name.desktop
+</pre>

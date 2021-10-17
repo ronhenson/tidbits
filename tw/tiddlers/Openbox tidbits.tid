@@ -1,0 +1,91 @@
+caption: lightweight manager
+created: 20150723021800000
+modified: 20200716152909198
+revision: 0
+tags: #LinuxWindows #Tidbit #Tech
+title: Openbox tidbits
+type: text/vnd.tiddlywiki
+
+<div id="tidbitbody">
+
+! various helps for openbox
+
+<h2> Set default browser and email client </h2>
+
+<pre> <code>
+$ libfm-pref-apps
+</code> </pre>
+
+<h2> config files found ~/.config/openbox </h2>
+
+<pre> <code>
+ls ~/.config/openbox
+autostart  lxde-rc.xml  menu.xml  rc.xml
+</code> </pre>
+
+<h2> autostart file in ~/.config/openbox </h2>
+
+<pre> <code>
+# Programs that will run after Openbox has started
+DELAY=.75
+
+# Set wallpaper
+/usr/bin/feh --bg-fill /home/ronh/Pictures/PuertoVarasChile.jpg /home/ronh/Pictures/RockRestaurantZanzibar.jpg &
+sleep $DELAY
+
+# Set composite manager
+xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
+sleep $DELAY
+
+# Set policy authentication - using LXDE policykit authentication 
+/usr/libexec/lxpolkit &
+sleep $DELAY
+
+# launch clock in dock
+wmCalClock -24 &
+sleep $DELAY
+
+# launch terminal (comment out because it is in .config/autostart folder)
+# /usr/bin/gnome-terminal &
+# sleep $DELAY
+
+# launch bleachbit(comment out because it is in .config/autostart folder)
+# /usr/bin/bleachbit &
+# sleep $DELAY
+
+# Add apps to run
+APPS=''
+</code> </pre>
+
+<h2> rc.xml example </h2>
+
+<pre> <code>
+<keyboard>
+  <keybind key="A-F4">
+    <action name="Close"/>
+  </keybind>
+  <keybind key="A-Escape">
+    <action name="Lower"/>
+    <action name="FocusToBottom"/>
+    <action name="Unfocus"/>
+  </keybind>
+  <keybind key="A-space">
+    <action name="ShowMenu"><menu>client-menu</menu></action>
+  </keybind>
+</keyboard>
+</code> </pre>
+
+<h2> rc.xml Modifiers </h2>
+
+<table>
+    <tr><td><strong>S</strong></td> <td>Shift key</td></tr>
+    <tr><td><strong>C</strong></td> <td>Control key</td></tr>
+    <tr><td><strong>A</strong></td> <td>Alt key</td></tr>
+    <tr><td><strong>W</strong></td> <td>Super key (Usually bound  to the Windows key on keyboards which have one)</td></tr>
+    <tr><td><strong>M</strong></td> <td>Meta key</td></tr>
+    <tr><td><strong>H</strong></td> <td>Hyper key (If it is bound to something</td></tr>
+</table>
+
+
+<p> note: lxde-rc.xml is for lxde </p>
+

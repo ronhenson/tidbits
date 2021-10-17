@@ -1,0 +1,30 @@
+caption: Windows xterm "like" interface
+created: 20170222030636838
+creator: ronh
+modified: 20200426214504807
+modifier: ronh
+revision: 0
+tags: #Powershell #MSWindows
+title: conemu
+type: text/vnd.tiddlywiki
+
+! <$link to={{!!title}}>{{!!caption}}</$link>
+
+[[Sourceforge link to download|https://sourceforge.net/projects/conemu/]]
+
+! Features
+* proper smooth and friendly window resizing
+* several programs (even simple GUI) in tabs and splits
+* Quake style drop-down
+* Windows 7 Jump Lists and Progress on Taskbar buttons
+* easily run old DOS applications (games) in Windows 7 or 64-bit OS
+* configurable and clickable status bar
+* optional per-application settings (e.g. palettes)
+* normal, maximized and full screen window graphic modes
+* customizable font family, height, width, bold, italic, anti-aliasing (standard, clear type, disabled)
+* using normal/bold/italic fonts for different parts of console simultaneously
+* user friendly text and block selection
+* vertical or horisontal cursor
+* ANSI X3.64 and Xterm 256 colors
+* drag and drop (explorer style), thumbnails and tiles in Far manager
+* and more, and more...

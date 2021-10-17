@@ -1,0 +1,32 @@
+created: 20140930162100000
+creator: ronh
+modified: 20200716152909036
+modifier: ronh
+revision: 0
+tags: #LinuxSystems #Tidbit #Tech
+title: logical volume copy
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+! logical volume copy to another volume group
+
+   <p style=background-color:lightyellow;> lvcreate --snapshot --name &lt;the-name-of-the-snapshot&gt; --size &lt;the size&gt; /dev/volume-group/logical-volume
+   <br>lvcreate --name &lt;logical-volume-name&gt; --size &lt;size&gt; the-new-volume-group-name
+   <br>dd if=/dev/volume-group/snapshot-name of=/dev/new-volume-group/new-logical-volume</p>
+
+<p>OR if you want to make a copy to go to another volume group</p>
+<ol>
+    <li> Take a snapshot of the targeting logical volume.
+        <blockquote style=background-color:lightyellow;>lvcreate --snapshot --name &lt;the-name-of-the-snapshot&gt; --size &lt;the size&gt; /dev/volume-group/logical-volume</blockquote>
+
+        <p>Note : Size of the snapshot can be as large as or as small as you wish. What matters is having enough space to capture changes during snapshot period. </p> </li>
+
+    <li>Create an image copy of the snapshot content using dd
+        <blockquote style=background-color:lightyellow;>dd if=/dev/volume-group/snapshot-name of=/tmp/backup.img </blockquote></li>
+    <li>Create a new logical volume of enough size in the targeting (new) volume group.
+        <blockquote style=background-color:lightyellow;>lvcreate --name &lt;logical-volume-name&gt; --size &lt;size&gt; the-new-volume-group-name </blockquote></li>
+    <li>Write data to the new logical volume from the image backup using dd
+        <blockquote style=background-color:lightyellow;>dd if=/tmp/backup.img of=/dev/new-volume-group/new-logical-volume </blockquote></li>
+    <li>delete the snapshot and image backup using lvremove and rm respectively.</li>
+    <p> That's all folks... Hope this helps to someone :)</p>

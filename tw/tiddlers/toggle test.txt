@@ -1,0 +1,90 @@
+{{||journalHeaderTemplate}}
+
+! xinput synclient commands to toggle
+
+<html>
+<h1> bashTouchpadToggle script using synclient </h1>
+<p> Doesn't turn off mouse buttons </p>
+</html>
+
+```bash
+#! /bin/bash
+# Script to toggle touchpad on / off
+# Uses lspci to find a Kensington mouse.  If exist turn off mousepad
+/usr/bin/synclient TouchpadOff=$(lsusb | grep -E 'Kensington Expert Mouse|Microsoft Corp|Optical Wheel Mouse' | wc -l) 
+#echo "$(lsusb | grep -E 'Kensington Expert Mouse|Microsoft Corp|Optical Mouse' | wc -l)"
+```
+
+<h1> Uses xinput to disable Touch mouse pad </h1>
+<p> Does turn off mouse buttons and touch pad </p>
+
+```bash
+ronh@H10:~$ sudo xinput
+⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
+⎜   ↳ Kensington      Kensington Expert Mouse 	id=10	[slave  pointer  (2)]
+⎜   ↳ SynPS/2 Synaptics TouchPad              	id=13	[slave  pointer  (2)]
+⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]
+    ↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]
+    ↳ Power Button                            	id=6	[slave  keyboard (3)]
+    ↳ Video Bus                               	id=7	[slave  keyboard (3)]
+    ↳ Sleep Button                            	id=8	[slave  keyboard (3)]
+    ↳ ASUS USB2.0 Webcam                      	id=9	[slave  keyboard (3)]
+    ↳ Asus WMI hotkeys                        	id=11	[slave  keyboard (3)]
+    ↳ AT Translated Set 2 keyboard            	id=12	[slave  keyboard (3)]
+ronh@H10:~$ sudo xinput set-prop 13 "Device Enabled" 0
+```
+
+<h1> Manual turn off keyboard and mouse </h1>
+
+```bash
+xinput float 'AT Translated Set 2 keyboard' # Turn off keyboard
+xinput float 'Ideapad extra buttons' # Turn off button
+xinput float 'SynPS Synaptics Touchpad' #Turn off Mouse
+```
+
+<h1> Automated turn off keyboard </h1>
+
+<p> Site: <a href="http://unix.stackexchange.com/questions/228988/how-to-automatically-disable-laptop-keyboard-mouse-with-xinput-when-external-key">http://unix.stackexchange.com/questions/228988/how-to-automatically-disable-laptop-keyboard-mouse-with-xinput-when-external-key </a></p>
+
+<h2> /etc/udev/rules.d/00-usb-keyboard.rules </h2>
+
+```bash
+ATTRS{idVendor}=="09da", ATTRS{idProduct}=="0260", OWNER="YOURUSERNAME"
+ACTION=="add", RUN+="/home/YOURUSERNAME/.bin/usb-keyboard-in_udev"
+ACTION=="remove", RUN+="/home/YOURUSERNAME/.bin/usb-keyboard-out_udev"
+```
+
+<h2> /home/YOURUSERNAME/.bin/usb-keyboard-in_udev </h2>
+
+```bash
+#!/bin/bash
+/home/YOURUSERNAME/.bin/usb-keyboard-in &
+
+#!/bin/bash
+sleep 1
+DISPLAY=":0.0"
+HOME=/home/YOURUSERNAME/
+XAUTHORITY=$HOME/.Xauthority
+export DISPLAY XAUTHORITY HOME
+YOUR_COMMAND_HERE
+```
+
+<h2> /home/YOURUSERNAME/.bin/usb-keyboard-out-udev & </h2>
+
+```bash
+#!/bin/bash
+/home/YOURUSERNAME/.bin/usb-keyboard-out &
+```
+
+<h2> /home/YOURUSERNAME/.bin/usb-keyboard-out </h2>
+
+```bash
+#!/bin/bash
+sleep 1
+DISPLAY=":0.0"
+HOME=/home/YOURUSERNAME/
+XAUTHORITY=$HOME/.Xauthority
+export DISPLAY XAUTHORITY HOME
+YOUR_COMMAND_HERE
+```

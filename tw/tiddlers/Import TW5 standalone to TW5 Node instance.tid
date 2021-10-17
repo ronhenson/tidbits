@@ -1,0 +1,14 @@
+created: 20151021172125080
+modified: 20200716152908698
+revision: 0
+tags: #Tidbit #Tech
+title: Import TW5 standalone to TW5 Node instance
+type: text/vnd.tiddlywiki
+
+"""
+mkdir MyWiki
+tiddlywiki ./MyWiki --load path/to/my-tw5-wiki-file.html
+"""
+As of 5.0.7, you'll be able to do this with encryped wiki files, too:
+
+tiddlywiki ./MyWiki --password pa55w0rd --load path/to/my-tw5-wiki-file.html

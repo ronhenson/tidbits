@@ -1,0 +1,18 @@
+caption: To update or to install Powershell 6
+created: 20191018233749743
+creator: ronh
+modified: 20200716152909315
+modifier: ronh
+revision: 0
+tags: #Powershell #Tech #Tidbit
+title: Powershell install
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+
+! To update or to install Powershell 6:
+
+```
+iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"
+```

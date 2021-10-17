@@ -1,0 +1,27 @@
+created: 20141117172000000
+creator: ronh
+modified: 20200716152909209
+modifier: ronh
+revision: 0
+tags: #IP #Network #Tidbit #Tech #selinux
+title: Openvpn and SELinux config
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<div id="tidbitbody">
+
+! SELinux issue restorecon -Rv ~/.cert*
+
+<h4>Openvpn Selinux issue</h4>
+
+<p>(Works for Fedora 21 also)For Fedora 14, place all your certificates under ~/.cert. When you've created that directory and moved your certs to this directory, run this command:</p>
+
+<pre style='color:brown;'>restorecon -Rv ~/.cert*</pre>
+
+<p>You might also need to enable a SELinux boolean. Run this as root:</p>
+
+<pre style='color:brown;'>setsebool openvpn_enable_homedirs on</pre>
+
+<p>SELinux in Fedora 14 is set up to restrict which files OpenVPN are allowed to access. So this should be the proper way how to make that work.</p>
+</pre>

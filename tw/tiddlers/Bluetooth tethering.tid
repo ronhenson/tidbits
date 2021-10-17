@@ -1,0 +1,33 @@
+created: 20160702163656942
+creator: ronh
+modified: 20200716152907737
+modifier: ronh
+revision: 0
+tags: #Network #Tidbit #Tech
+title: Bluetooth tethering
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+{{{ [[##library]]}}}
+<style>
+.preclass { color:brown }
+.bt { color:darkblue; font-weight:bold; }
+</style>
+
+! Setting up bluetooth tethering command line
+
+<pre class="preclass">
+# bluetoothctl
+<span class="bt">[bluetooth]</span># devices
+Device 18:83:31:1C:05:BE rh-phone
+Device 28:BA:B5:61:51:37 SM-N900V
+Device 40:88:05:2F:6D:38 h100
+<span class="bt">[bluetooth]</span># connect 40:88:05:2F:6D:38
+Attempting to connect to 40:88:05:2F:6D:38
+[CHG] Device 40:88:05:2F:6D:38 Connected: yes
+Connection successful
+<span style class="bt">[h100]</span># quit
+# nmcli d connect 40:88:05:2F:6D:38Device '40:88:05:2F:6D:38' successfully activated with 'f1928423-9a15-4ef1-ab35-b5c64c3817fb'.
+#
+</pre>

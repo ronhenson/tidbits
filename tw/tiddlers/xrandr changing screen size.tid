@@ -1,0 +1,56 @@
+created: 20150318004900000
+creator: ronh
+modified: 20200716152911033
+modifier: ronh
+revision: 0
+tags: #LinuxWindows #Tidbit #Tech
+title: xrandr changing screen size
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
+
+<h1> xrandr changing screen size </h1>
+<pre>
+xrandr -q
+Screen 0: minimum 320 x 200, current 3840 x 1080, maximum 8192 x 8192
+LVDS-1 connected primary 1920x1080+0+0 (normal left inverted right x axis y axis) 382mm x 215mm
+   1920x1080     60.02*+  59.96  
+   1680x1050     59.95  
+   1400x1050     59.98  
+   1280x1024     59.89  
+   1280x960      59.94  
+   1152x864      59.96  
+   1024x768      59.92  
+   800x600       59.86  
+   640x480       59.38  
+   720x400       59.55  
+   640x400       59.95  
+   640x350       59.77  
+VGA-1 disconnected (normal left inverted right x axis y axis)
+HDMI-1 connected 1920x1080+1920+0 (normal left inverted right x axis y axis) 598mm x 336mm
+   1920x1080     60.00*+  50.00    59.94  
+   1920x1080i    60.00    50.00    50.00    59.94  
+   1600x1200     60.00  
+   1680x1050     59.88  
+   1400x1050     59.95  
+   1280x1024     75.02    60.02  
+   1440x900      74.98    59.90  
+   1280x960      60.00  
+   1360x768      60.02  
+   1152x864      75.00  
+   1280x720      60.00    50.00    59.94  
+   1024x768      75.08    70.07    60.00  
+   832x624       74.55  
+   800x600       72.19    75.00    60.32    56.25  
+   720x576       50.00  
+   720x480       60.00    59.94  
+   640x480       75.00    72.81    66.67    60.00    59.94  
+   720x400       70.08  
+
+# Choose one of the modes, ie.
+xrandr --output LVDS-1 --mode 1024x768
+or 
+xrandr -s 6  #(start counting from top with 0... 6 is 1024x768) 
+</pre>
+
+</div>

@@ -1,0 +1,27 @@
+caption: How to change a column of text to numeric
+created: 20171213202727785
+creator: ronh
+modified: 20200716152908952
+modifier: ronh
+revision: 0
+tags: #Office #Tidbit
+title: libreoffice
+type: text/vnd.tiddlywiki
+
+<h1> <$link to={{!!title}}> {{!!title}} - {{!!caption}} </$link> </h1>
+<$view field="created" format="date" template="Created: YYYY-0MM-0DD DDD"/><br />
+<$view field="modified" format="date" template="Modified: YYYY-0MM-0DD DDD"/>
+
+<h1> Re: Delete apostrophy before numbers in all cells? </h1>
+
+<p> The apostrophe isn't really part of the cell content, it just signifies that the cell is formatted as text. To reenter all the data as number: </p>
+
+<ol>
+	<li> Highlight all of the cells and use Format -> Cells to change the cell format to an appropriate number format. </li>
+	<li> With all of the cells still selected, go to the menu Edit -> Find & Replace </li>
+	<li> In the Search For box enter <code>.*</code> (period asterisk) </li>
+	<li> In the Replace with box enter <code>&</code> </li>
+	<li> Select More Options and check Current Selection Only and Regular Expressions </li>
+	<li> Click Replace All </li>
+
+<p> The .* "means zero or more of any character" and & means "whatever was found". These are regular expressions which are explained in the help section </p>

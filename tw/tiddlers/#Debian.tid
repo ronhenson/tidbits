@@ -1,0 +1,11 @@
+caption: Debian  <span class="linkbutton">{{!!title}}</span>
+created: 20180714173920652
+creator: ronh
+modified: 20200716155615707
+modifier: ronh
+revision: 0
+tags: #Header #LinuxOS
+title: #Debian
+type: text/vnd.tiddlywiki
+
+{{||journalHeaderTemplate}}
