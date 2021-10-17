@@ -1,9 +1,10 @@
 ---
 title: "Firefox Tab Address Bar Font Size"
 created: 2021-07-02 13:42:59
+---
+
 tags: #howto
 keywords: font, firefox
----
 
 # Firefox Tab Address Bar Font Size
 

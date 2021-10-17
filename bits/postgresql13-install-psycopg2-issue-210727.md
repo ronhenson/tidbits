@@ -1,9 +1,10 @@
 ---
 title: "Postgresql13 Install Psycopg2 Issue 210727"
 created: 2021-07-27 14:21:20
-tags:
-keywords: postgresql, pip, python, psycopg
 ---
+
+tags: #database
+keywords: postgresql, pip, python, psycopg
 
 # Postgresql13 Install Psycopg2 Issue 210727
 

@@ -1,9 +1,11 @@
 ---
 title: "Katex algebraic notation in markdown"
 created: 2021-06-13 07:50:51
+---
+
 tags: #markdown, #example
 keywords: math
----
+
 # Katex-algebraic-notation-in-markdown
 
 Area of a circle is $\pi r^2$

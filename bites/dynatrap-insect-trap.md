@@ -1,9 +1,10 @@
 ---
 title: "Dynatrap Insect Trap"
 created: 2021-09-19 19:03:00
+---
+
 tags: #bites, #home
 keywords: bugs, insect, trap, dynatrap,
----
 
 # Dynatrap Insect Trap
 

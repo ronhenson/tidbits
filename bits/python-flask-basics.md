@@ -1,9 +1,10 @@
 ---
 title: "Python Flask Basics"
 created: 2021-07-26 11:50:32
-tags:
-keywords: flask, python, environment, web
 ---
+
+tags: #web, #coding
+keywords: flask, python, environment, web
 
 # create and active venv
 

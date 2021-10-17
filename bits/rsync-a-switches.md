@@ -1,9 +1,10 @@
 ---
 title: "rsync a switches"
 created: 2021-06-14 06:38:58
+---
+
 tags: #backups
 keywords: rsync, copy, synchronizing
----
 
 # rsync for synch backup example
 

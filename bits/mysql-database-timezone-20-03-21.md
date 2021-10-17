@@ -1,9 +1,11 @@
 ---
 title: "Mysql Database timezone 20 03 21"
 created: 2003-11-10 10:10:10
+---
+
 tags: #database, #issue
 keywords: java, spring-boot, mysql, date, time, datetime
----
+
 # Mysql Database timezone 20 03 21
 
 Connecting to local database through Spring when Pacific Standard time moved to PDT:

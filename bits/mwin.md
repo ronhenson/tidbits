@@ -1,9 +1,11 @@
 ---
 title: "Mwin"
 created: 2021-06-25 14:37:20
+---
+
 tags: #mwin, #toc
 keywords: microsoft, windows, wsl, menu, vm
----
+
 # Mwin
 
 ## windows 10 branch

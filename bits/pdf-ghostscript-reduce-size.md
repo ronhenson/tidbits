@@ -1,9 +1,10 @@
 ---
 title: "Pdf Ghostscript Reduce Size"
 created: 2021-08-11 17:37:52
+---
+
 tags: #tidbit
 keywords: gs, ghostscript, pdf
----
 
 # [Pdf Ghostscript Reduce Size](https://itsfoss.com/compress-pdf-linux/)
 

@@ -1,9 +1,10 @@
 ---
 title: "Properties Template"
 created: 2021-07-27 14:21:20
+---
+
 tags: #markdown
 keywords: markdown, template, foam
----
 
 # Properties Template
 

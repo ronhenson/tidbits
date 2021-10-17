@@ -1,9 +1,10 @@
 ---
 title: "Msi Pc"
 created: 2021-07-19 19:35:04
+---
+
 tags: #bites, #hardware
 keywords: msi, ron, pc
----
 
 # [Msi Pc](http://us.msi.com)
 

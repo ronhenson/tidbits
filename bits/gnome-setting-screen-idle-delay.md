@@ -1,9 +1,10 @@
 ---
 title: "Gnome Setting Screen Idle Delay"
 created: 2021-08-26 14:55:28
+---
+
 tags: #devops
 keywords: gnome, settings, config
----
 
 # Gnome Setting Screen Idle Delay
 
