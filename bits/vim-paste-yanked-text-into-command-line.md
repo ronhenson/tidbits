@@ -1,10 +1,9 @@
 ---
 title: "Vim paste yanked text into command line"
 created: 2021-06-13 06:23:25
----
-
-tags: #ide, #vim
+tags: ide, vim
 keywords: vim, neovim, nvim, copy, registers
+---
 
 links
 : [[vim-neovim-how-to-see-default-directories]]

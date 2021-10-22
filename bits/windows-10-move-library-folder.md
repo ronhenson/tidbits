@@ -1,7 +1,7 @@
 ---
 title: "Windows 10 Move Library Folder"
 created: 2021-09-26 08:11:55
-tags: #devops
+tags: devops
 keywords: windows, folder, directory, drive, hard link, mlink
 ---
 

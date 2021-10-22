@@ -1,10 +1,9 @@
 ---
 title: "Postgresql Install"
 created: 2021-07-26 18:07:17
----
-
-tags: #database
+tags: database
 keywords: postgreq, sql, init, systemctl, firewall-cmd
+---
 
 # Postgresql Install
 

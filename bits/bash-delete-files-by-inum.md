@@ -1,10 +1,9 @@
 ---
 title: "Bash Delete Files By Inum"
 created: 2021-08-09 10:52:32
----
-
-tags: #shell, #devops
+tags: shell, devops
 keywords: bash, find
+---
 
 # Bash Delete Files By Inum
 

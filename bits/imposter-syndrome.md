@@ -1,10 +1,9 @@
 ---
 title: "Imposter syndrome"
 created: 2021-06-13 18:21:58
----
-
-tags: #brain
+tags: brain
 keywords: self-help, goals
+---
 
 # Imposter syndrome
 

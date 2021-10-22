@@ -1,10 +1,9 @@
 ---
 title: "Python Xonsh Install"
 created: 2021-07-15 08:19:38
----
-
-tags: #devops, #python]
+tags: devops, python]
 keywords: python, xonsh, install
+---
 
 # Python Xonsh Install
 

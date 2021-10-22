@@ -1,10 +1,9 @@
 ---
 title: "Greek letters in markdown"
 created: 2021-06-13 07:55:03
----
-
-tags: #markdown
+tags: markdown
 keywords: greek, alphabet
+---
 
 # Greek letters in markdown
 

@@ -1,7 +1,7 @@
 ---
 title: "Windows 10 Path Size"
 created: 2021-09-26 08:56:12
-tags: #tags
+tags: tags
 keywords: template
 ---
 

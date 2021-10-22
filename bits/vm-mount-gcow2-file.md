@@ -1,12 +1,11 @@
 ---
 title: "Vm Mount Gcow2 File"
 created: 2021-09-26 09:40:18
-tags: #tags
+tags: tags
 keywords: template
----
-
 # Vm Mount Gcow2 File
 
+---
 - Load nbd module
 
 ```bash

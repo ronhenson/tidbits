@@ -1,7 +1,7 @@
 ---
 title: "X11vnc Setup Start With Interactive User"
 created: 2021-08-13 18:40:23
-tags:
+tags: devops
 keywords: x11, vnc
 ---
 

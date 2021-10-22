@@ -1,10 +1,9 @@
 ---
 title: "Python Alternatives Version"
 created: 2021-09-15 06:43:39
----
-
-tags: #coding, #python
+tags: coding, python
 keywords: python, alternative, version, globally, linux
+---
 
 # Python Alternatives Version
 

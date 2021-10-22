@@ -1,10 +1,9 @@
 ---
 title: "Memory Kave Cogs Method"
 created: 2021-09-02 09:42:53
----
-
-tags: #brain
+tags: brain
 keywords: self help, memory
+---
 
 # Memory Kave Cogs Method - Anthony Metivier
 

@@ -1,10 +1,9 @@
 ---
 title: "Interview Questions Generic"
 created: 2021-09-06 08:46:09
----
-
-tags: #tags
+tags: tags
 keywords: template
+---
 
 # Interview Questions Generic
 

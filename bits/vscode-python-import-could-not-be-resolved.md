@@ -1,7 +1,7 @@
 ---
 title: "Vscode_python_import_could_not_be_resolved"
 created: 2021-07-19 10:22:25
-tags: #ide, #vscode
+tags: ide, vscode
 keywords: vscode, python, pytest, import, pylance
 ---
 

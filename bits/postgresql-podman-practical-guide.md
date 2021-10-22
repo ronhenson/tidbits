@@ -1,10 +1,9 @@
 ---
 title: "Postgresql Podman Practical Guide"
 created: 2021-10-03 17:49:56
----
-
-tags: #tags
+tags: tags
 keywords: template
+---
 
 # Postgresql Podman Practical Guide
 

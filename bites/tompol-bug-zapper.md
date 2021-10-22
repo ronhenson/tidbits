@@ -1,10 +1,9 @@
 ---
 title: "Tompol Bug Zapper"
 created: 2021-07-17 17:21:17
----
-
-tags: #bites, #home
+tags: bites, home
 keywords: bugs, zapper
+---
 
 # [Tompol Bug Zapper][web]
 

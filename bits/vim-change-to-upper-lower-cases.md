@@ -1,10 +1,9 @@
 ---
 title: "Vim change to upper lower case"
 created: 2021-06-11 17:55:11
----
-
-tags: #ide, #vim
+tags: ide, vim
 keywords: vim, nvim, uppercase, lowercase, capitalization, capital
+---
 
 links
 : [[vim-paste-yanked-text-into-command-line]]

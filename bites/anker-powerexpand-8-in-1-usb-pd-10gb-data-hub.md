@@ -1,10 +1,9 @@
 ---
 title: "Anker Powerexpand 8 In 1 Usb Pd 10gb Data Hub"
 created: 2021-07-24 18:15:23
----
-
-tags: #bites, #hardware
+tags: bites, hardware
 keywords: hub, usb
+---
 
 # Anker Powerexpand 8 In 1 Usb Pd 10gb Data Hub
 

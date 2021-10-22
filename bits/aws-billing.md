@@ -1,10 +1,9 @@
 ---
 title: "Aws Billing"
 created: 2021-09-04 07:08:47
----
-
-tags: #devops
+tags: devops
 keywords: aws, billing, free, tier
+---
 
 # Aws Billing
 

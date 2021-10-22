@@ -1,7 +1,7 @@
 ---
 title: "Vm Qemu Kvm Tpm2 simulator"
 created: 2021-09-28 07:17:11
-tags: #devopts
+tags: devopts
 keywords: secure boot, tpm, trusted platform module, swtpm
 ---
 

@@ -1,10 +1,9 @@
 ---
 title: "Python Calculate Bulb Expiration Example"
 created: 2021-09-20 06:50:14
----
-
-tags: #python, #example
+tags: python, example
 keywords: date, python, calculate expiration date
+---
 
 # Python Calculate Bulb Expiration Example
 

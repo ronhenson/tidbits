@@ -1,10 +1,9 @@
 ---
 title: "Memory Learning And Understanding"
 created: 2021-09-02 17:34:15
----
-
-tags: #brain
+tags: brain
 keywords: memory, learning
+---
 
 # Memory Learning And Understanding
 

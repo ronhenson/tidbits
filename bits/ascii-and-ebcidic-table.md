@@ -1,10 +1,9 @@
 ---
 title: "ASCII and EBCIDIC table"
 created: 2021-06-13 07:08:45
----
-
-tags: #coding
+tags: coding
 keywords: characters, translation
+---
 
 # ASCII-and-EBCIDIC-table
 

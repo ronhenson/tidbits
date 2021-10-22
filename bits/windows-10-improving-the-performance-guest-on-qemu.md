@@ -1,7 +1,7 @@
 ---
 title: "Windows 10 improving the performance guest on QEMU"
 created: 2021-03-01 10:10:00
-tags: #devops
+tags: devops
 keywords: vm, windows 10, qemu, kvm, boxes, tuning
 ---
 

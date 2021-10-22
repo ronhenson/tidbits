@@ -1,10 +1,9 @@
 ---
 title: "Gnome Reordering Favorites"
 created: 2021-07-06 09:25:14
----
-
-tags: #devops
+tags: devops
 keywords: gnome, favorites, dock, docking, order
+---
 
 # Gnome Reordering Favorites
 
