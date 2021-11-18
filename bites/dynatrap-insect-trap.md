@@ -20,15 +20,19 @@ keywords: bugs, insect, trap, dynatrap,
 
 ## Product Information
 
-| Item               | Spec                |
-| :----------------- | :------------------ |
-| Received           | 2021-07-23          |
-| Product Dimensions | 13 x 13 x 20 inches |
-| Item Weight        | 12.32 pounds        |
-| Manufacturer       | DynaTrap            |
-| ASIN               | B0866CJR5J          |
-| Country of Origin  | China               |
-| Item model number  | DT2000XLP-AZSR      |
+| Item                  | Spec                                  |
+| :-------------------- | :------------------------------------ |
+| Received              | 2021-07-21                            |
+| Product Dimensions    | 13 x 13 x 20 inches                   |
+| Item Weight           | 12.32 pounds                          |
+| Manufacturer          | DynaTrap                              |
+| ASIN                  | B0866CJR5J                            |
+| Country of Origin     | China                                 |
+| Item model number     | DT2000XLP-AZSR                        |
+| Warranty registration | https://www.DynaTrap.com/registration |
+| Warranty Phone Number | 877-403-TRAP(8727)                    |
+| Customer care email   | customercare@dsw-llc.com              |
+| Website               | https://www.DynaTrap.com              |
 
 ## Replacement bulbs (requires 2 bulbs)
 
@@ -42,23 +46,23 @@ keywords: bugs, insect, trap, dynatrap,
 
 **Bulb expiration estimate time (recommend replace every 3000 hours)**: 2021-11-25 (based on installation: 2021-08-01)
 
-| Item                            | Specification         |
-| :------------------------------ | :-------------------- |
-| Manufacturer                    | ‎Dynatrap             |
-| Part Number                     | ‎006199               |
-| ASIN                            | B004AHLX32            |
-| Item Weight                     | ‎2.22  ounces         |
-| Product Dimensions              | ‎9 x 0.6 x 0.6 inches |
-| Item model number               | ‎32050                |
-| Is Discontinued By Manufacturer | ‎No                   |
-| Size                            | ‎2 Count              |
-| Color                           | ‎White                |
-| Style                           | ‎6-Watt UV Bulbs      |
-| Pattern                         | ‎Insect Trap          |
-| Shape                           | ‎Bulb                 |
-| Wattage                         | ‎6                    |
-| Item Package Quantity           | ‎1                    |
-| Type of Bulb                    | ‎Fluorescent          |
+| Item                            | Specification        |
+| :------------------------------ | :------------------- |
+| Manufacturer                    | Dynatrap             |
+| Part Number                     | 006199               |
+| ASIN                            | B004AHLX32           |
+| Item Weight                     | 2.22  ounces         |
+| Product Dimensions              | 9 x 0.6 x 0.6 inches |
+| Item model number               | 32050                |
+| Is Discontinued By Manufacturer | No                   |
+| Size                            | 2 Count              |
+| Color                           | White                |
+| Style                           | 6-Watt UV Bulbs      |
+| Pattern                         | Insect Trap          |
+| Shape                           | Bulb                 |
+| Wattage                         | 6                    |
+| Item Package Quantity           | 1                    |
+| Type of Bulb                    | Fluorescent          |
 
 ## Shepherd's Hook
 
@@ -66,19 +70,23 @@ keywords: bugs, insect, trap, dynatrap,
 
 | Item                            | Specification                      |
 | :------------------------------ | :--------------------------------- |
-| Manufacturer                    | ‎Dynatrap                           |
-| Part Number                     | ‎42010                              |
+| Manufacturer                    | Dynatrap                           |
+| Part Number                     | 42010                              |
 | ASIN                            | B01JMSF0OG                         |
-| Item Weight                     | ‎3.41 pounds                        |
-| Product Dimensions              | ‎0.5 x 9.13 x 49.6 inches           |
-| Country of Origin               | ‎China                              |
-| Item model number               | ‎42010                              |
-| Is Discontinued By Manufacturer | ‎No                                 |
-| Size                            | ‎49 Inches                          |
-| Color                           | ‎Black                              |
-| Material                        | ‎Stainless_steel                    |
-| Item Package Quantity           | ‎1                                  |
-| Included Components             | ‎Shepherd's Hook, connecting screws |
-| Batteries Included?             | ‎No                                 |
-| Batteries Required?             | ‎No                                 |
-| Warranty Description            | ‎90 days                            |
+| Item Weight                     | 3.41 pounds                        |
+| Product Dimensions              | 0.5 x 9.13 x 49.6 inches           |
+| Country of Origin               | China                              |
+| Item model number               | 42010                              |
+| Is Discontinued By Manufacturer | No                                 |
+| Size                            | 49 Inches                          |
+| Color                           | Black                              |
+| Material                        | Stainless_steel                    |
+| Item Package Quantity           | 1                                  |
+| Included Components             | Shepherd's Hook, connecting screws |
+| Batteries Included?             | No                                 |
+| Batteries Required?             | No                                 |
+| Warranty Description            | 90 days                            |
+
+## Dynatrap Manual
+
+[Dynatrap DT2000xlp-azsr](../attachments/dynatrap-product-manual-dt2000xlp-azsr.pdf)
