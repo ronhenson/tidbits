@@ -94,7 +94,7 @@ If you have permission problems with the hidden service directory after restarti
 vim /usr/lib/systemd/system/tor.service
 ```
 
-#### And add these two abilities:
+#### And add these two abilities
 
 - CAP_CHOWN CAP_DAC_OVERRIDE to CapabilityBoundingSet
 - So the line looks like this:
@@ -110,7 +110,7 @@ systemctl daemon-reload
 systemctl restart tor
 ```
 
-**Troubleshooting**
+### Troubleshooting
 
 Use journalctl to view any errors after starting the service. Type G to get to the end of the log.
 
