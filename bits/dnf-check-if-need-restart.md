@@ -7,5 +7,5 @@ keywords: dnf, restart, reboot, update, upgrade
 
 # Dnf Check If Need Restart
 
-- Install `dnf install dnf-plugins-tracer`
+- Install `dnf install python3-tracer`
 - run `sudo tracer`
