@@ -1,8 +1,8 @@
 ---
 title: "Vm Qemu Kvm Secure Boot"
 created: 2021-09-26 12:45:49
-tags: devops
-keywords: secure boot, qemu, kvm, uefi, gpt, mbr, keys
+tags: vm
+keywords: secure boot, qemu, kvm, uefi, gpt, mbr, keys, vm
 ---
 
 # Vm Qemu Kvm Secure Boot

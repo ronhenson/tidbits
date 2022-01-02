@@ -1,8 +1,8 @@
 ---
 title: "VM Tail Tor Os Install"
 created: 2021-08-19 18:23:45
-tags: devops
-keywords: vm, tor, virtual machine
+tags: vm
+keywords: tor, virtual machine, vm
 ---
 
 # [VM Tail Tor Os Install](https://fedoratips.wordpress.com/2013/05/29/run-tails-in-a-virtual-machine-for-anonymous-internet-access/)

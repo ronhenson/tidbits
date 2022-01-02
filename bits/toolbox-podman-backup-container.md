@@ -1,11 +1,11 @@
 ---
-title: "Vm Toolbox Podman Backup Container"
+title: "Toolbox Podman Backup Container"
 created: 2021-09-25 07:23:04
-tags: devops
+tags: container
 keywords: podman, virtual, backup, containers, toolbox
 ---
 
-# Vm Toolbox Podman Backup Container
+# Toolbox Podman Backup Container
 
 [Backup toolbox container using podman](https://fedoramagazine.org/backup-and-restore-toolboxes-with-podman/)
 

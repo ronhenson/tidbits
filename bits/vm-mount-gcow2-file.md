@@ -1,8 +1,9 @@
 ---
 title: "Vm Mount Gcow2 File"
 created: 2021-09-26 09:40:18
-tags: tags
-keywords: template
+tags: vm
+keywords: mount, gcow2, image, vm
+
 # Vm Mount Gcow2 File
 
 ---

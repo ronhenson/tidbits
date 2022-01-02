@@ -1,7 +1,7 @@
 ---
 title: "Vm Kvm Qemu Change Storage Pool"
 created: 2021-09-02 11:38:20
-tags: devops
+tags: vm
 keywords: vm, kvm, qemu, virtual machine
 # Vm Kvm Qemu Change Storage Pool
 
