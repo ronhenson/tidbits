@@ -1,8 +1,8 @@
 ---
 title: "Postgresql Pgadmin Podman Compose"
 created: 2021-10-04 09:53:09
-tags: tags
-keywords: template
+tags: database
+keywords: postgresql,
 ---
 
 # Postgresql Pgadmin Podman Compose
