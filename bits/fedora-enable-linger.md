@@ -17,3 +17,8 @@ loginctl enable-linger ronh
 ```bash
 loginctl disable-linger ronh
 ```
+
+::: hello
+this i a tip
+second line
+:::
