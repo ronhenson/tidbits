@@ -1,9 +1,10 @@
 ---
 title: "Mysql Database timezone 20 03 21"
 created: 2003-11-10 10:10:10
-tags: #database, #issue
+tags: database, issue
 keywords: java, spring-boot, mysql, date, time, datetime
 ---
+
 # Mysql Database timezone 20 03 21
 
 Connecting to local database through Spring when Pacific Standard time moved to PDT:
@@ -51,4 +52,4 @@ default-time-zone = "-7:00"  # had to add this statement
 
 Added this to `my.cnf`.
 
-### Solved the problem
+## Solved the problem

@@ -1,9 +1,10 @@
 ---
 title: "ASCII and EBCIDIC table"
 created: 2021-06-13 07:08:45
-tags: #data
+tags: coding
 keywords: characters, translation
 ---
+
 # ASCII-and-EBCIDIC-table
 
 ## Equivalent characters in the ASCII and EBCDIC character sets

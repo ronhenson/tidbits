@@ -23,6 +23,6 @@
   "pasteImage.showFilePathConfirmInputBox": true,
   "prettier.singleQuote": false,
   "spellright.notificationClass": "warning",
-  "vscodeMarkdownNotes.noteCompletionConvention": "noExtensions",
+  "vscodeMarkdownNotes.noteCompletionConvention": "noExtension",
   "vscodeMarkdownNotes.slugifyMethod": "github-slugger",
 }

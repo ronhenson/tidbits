@@ -1,23 +1,24 @@
 ---
 title: "Gnome Wayland or X11 command"
 created: 2021-06-13 18:45:30
-tags: #devops
+tags: devops
 keywords: gnome, wayland, x11
 ---
 
 [[gnome-fix-windows-from-opening-full-screen]]
+
 # Gnome Wayland or X11 command
 
 ! How to know whether Wayland or X11 is being used and set
 
-```bsh
+```bash
 $loginctl
 SESSION  UID  USER    SEAT  TTY
       5  1001 debiron seat0 tty2
 
 $ loginctl show-session 5 -p Type
 Type=X11
-# or 
+# or
 Type=wayland
 ```
 
@@ -38,19 +39,20 @@ Go to the line which looks like the following:
         WaylandEnable=false
 ```
 
-        Change it to (even if the line was commented):
-    
+> Change it to (even if the line was commented):
+
 ```yml
         [daemon]
         WaylandEnable=true
 ```
-        Save the file and exit.
+
+> Save the file and exit.
 
 TL;DR: Comment out all Wayland-disabling lines in `/usr/lib/udev/rules.d/61-gdm.rules` (thanks to this forum thread)
 
-        Open `/usr/lib/udev/rules.d/61-gdm.rules` for editing (root, again).
+> Open `/usr/lib/udev/rules.d/61-gdm.rules` for editing (root, again).
 
-        Comment lines which causes Wayland not to start; usually, it's related to proprietary NVIDIA drivers. The comments before each line should help you on that. For example, I commented the following line:
+Comment lines which causes Wayland not to start; usually, it's related to proprietary NVIDIA drivers. The comments before each line should help you on that. For example, I commented the following line:
 
 ```yml
 # disable Wayland when using the proprietary nvidia driver
@@ -61,8 +63,8 @@ Save the file and exit.
 
 Note: As you are probably using NVIDIA proprietary drivers, this step should make you able to use Wayland alongside these drivers. See egl-wayland and this.
 
-However, you may not experience the best performance, as well as having other problems. For example, nvidia-settings only work in `X11`, `Xwayland` has problems with 3D hardware accelerations, and as a result, `glxinfo` shows `llvmpipe` as the renderer (also the About section on recent version of Gnome Settings). Nonetheless, you can verify the running driver by 
-    
+However, you may not experience the best performance, as well as having other problems. For example, nvidia-settings only work in `X11`, `Xwayland` has problems with 3D hardware accelerations, and as a result, `glxinfo` shows `llvmpipe` as the renderer (also the About section on recent version of Gnome Settings). Nonetheless, you can verify the running driver by
+
 ```bsh
 lspci -vnn
 ```

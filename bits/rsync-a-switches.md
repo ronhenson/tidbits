@@ -1,11 +1,11 @@
 ---
 title: "rsync a switches"
 created: 2021-06-14 06:38:58
-tags: #backups
+tags: backups
 keywords: rsync, copy, synchronizing
 ---
 
-## rsync for synch backup example
+# rsync for synch backup example
 
 ```bash
 # for d03 synch
@@ -15,7 +15,7 @@ sudo rsync -avPx --delete /etc /run/media/ronh/d03/ronh/2021/synch/etc/
 # for d02 synch
 rsync -avPx --delete /data/ /run/media/ronh/d02/ronh/2021/synch/data/
 rsync -avPx --delete /home/ronh/ /run/media/ronh/d02/ronh/2021/synch/ronh/
-rds: backup rsync 
+rds: backup rsync
 ---
 sudo rsync -avPx --delete /etc/ /run/media/ronh/d02/ronh/2021/synch/etc/
 ```
@@ -32,13 +32,14 @@ rsync -avPx /data/ /run/media/ronh/d02/ronh/2021/backup/data/
 rsync -avPx /home/ronh/ /run/media/ronh/d02/ronh/2021/backup/ronh/
 sudo rsync -avPx /etc/ /run/media/ronh/d02/ronh/2021/backup/etc/
 ```
+
 # rsync `a` switches
 
 ```text
 provides these switches: rlptgoD (no -H,-A,-X)
 ```
 
-## __IMPORTANT__  when backing up a directory, to keep from crossing mount points use:
+## __IMPORTANT__  when backing up a directory, to keep from crossing mount points use
 
 __-x__, __--one-file-system__
 : avoid crossing filesystem boundary when recursing,  Also will not cross symlinks to directories on another filesystem
@@ -78,10 +79,10 @@ __-x__
 : Explained above (do not cross file boundaries)
 
 __-P__
-: __--progress
-: __--partial
+: --progress
+: --partial
 
-__--delete
+--delete
 : Used to delete files during synch of target that do not exist on source
 : Good to use for backups so you do not restore everything
 : Do a backup with --delete to ./synch folder

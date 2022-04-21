@@ -1,7 +1,7 @@
 ---
 title: "Windows 10 GPU passthrough on high end laptops"
 created: 2021-06-14 06:14:50
-tags: #devops
+tags: devops
 keywords: vm, windows 10, linux, kvm, qemu, boxes
 ---
 
@@ -10,9 +10,7 @@ links
 
 # [Windows-10-GPU-passthrough-on-high-end-laptops][1]
 
-```text
-  Specifically on a Dell Precision 7450 (May 2020)
-```
+Specifically on a Dell Precision 7450 (May 2020)
 
 The purpose of this blog post is to provide a collated guide for the setup of a graphically accelerated virtual machine for the purpose of gaming or productivity on a Windows 10 Guest. The host machine is running Manjaro Linux and QEMU/KVM wrapped by libvirt as a virtualization provider.
 
@@ -21,19 +19,19 @@ In this setup we will pass the laptop’s Quadro T1000 to the virtual machine an
 This setup is meant to work on an external monitor and has only been tested using HDMI output but should work with all output ports.
 Steps Summary
 
-    Setup IOMMU
-    Isolate graphics
-    Configure the virtual machine
-    Install the guest operating system
-    Correct code 31 & code 43
-    Optional performance tuning
+- Setup IOMMU
+- Isolate graphics
+- Configure the virtual machine
+- Install the guest operating system
+- Correct code 31 & code 43
+- Optional performance tuning
 
 ## Prerequisites
 
 You must have installed QEMU and all of its dependencies
 
-```
-$ sudo pacman -S qemu libvirt edk2-ovmf virt-manager ebtables dnsmasq
+```bash
+sudo pacman -S qemu libvirt edk2-ovmf virt-manager ebtables dnsmasq
 ```
 
 ### Step 1 — Setup IOMMU
@@ -42,27 +40,27 @@ $ sudo pacman -S qemu libvirt edk2-ovmf virt-manager ebtables dnsmasq
 
 First we need to establish if IOMMU is enabled on your machine:
 
-```
+```bash
 # Check whether IOMMU is enable on your system
-$ sudo dmesg | grep -i -e DMAR -e IOMMU[    0.000000] ACPI: DMAR 0x00000000BDCB1CB0 0000B8 (v01 INTEL  BDW      00000001 INTL 00000001)
+sudo dmesg | grep -i -e DMAR -e IOMMU[    0.000000] ACPI: DMAR 0x00000000BDCB1CB0 0000B8 (v01 INTEL  BDW      00000001 INTL 00000001)
 [    0.000000] Intel-IOMMU: enabled
 ...
 ```
 
 If there is no output related to IOMMU as a result of running this command then you need to enable IOMMU as a kernel parameter
 
-```
+```bash
 # Edit your grub file
-$ sudo nano /etc/default/grub# Locate the line containing
+sudo nano /etc/default/grub# Locate the line containing
 GRUB_CMDLINE_LINUX_DEFAULT="..."# Add the following value like such
 GRUB_CMDLINE_LINUX_DEFAULT="... intel_iommu=on ..."# Save the file, quit nano and update grub
-$ sudo update-grub# Reboot
-$ sudo reboot now
+sudo update-grub# Reboot
+sudo reboot now
 ```
 
 Save the following script to `~/Documents/iommu.sh` (or anywhere that suits your purpose)
 
-```
+```bash
 #!/bin/bash
 shopt -s nullglob
 for g in /sys/kernel/iommu_groups/*; do
@@ -75,9 +73,9 @@ done;
 
 Make it executable and execute it from your home
 
-```
+```log
 # From your home, execute
-$ ./Documents/iommu.sh
+./Documents/iommu.sh
 IOMMU Group 10:
   00:1d.0 USB controller: Intel Corporation 7 Series/C210 Series Chipset Family USB Enhanced Host Controller #1 [8086:0e26] (rev 04)
 IOMMU Group 13:
@@ -89,7 +87,7 @@ If you see several groups then your machine is correctly configured. Now locate 
 
 Here is my output as an example:
 
-```
+```log
 IOMMU Group 1:
  00:01.0 PCI bridge [0604]: Intel Corporation Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor PCIe Controller (x16) [8086:1901] (rev 0d)
  01:00.0 VGA compatible controller [0300]: NVIDIA Corporation TU117GLM [Quadro T1000 Mobile] [10de:1fb9] (rev a1)
@@ -106,30 +104,30 @@ Now we need to make sure that the operating system doesn’t load the GPU and th
 
 First we need to add the following kernel parameter to GRUB (make sure to update it with your device ids)
 
-```
+```toml
 vfio-pci.ids=10de:10fa,10de:1fb9
 ```
 
 Now add this in ``/etc/default/grub GRUB_CMDLINE_LINUX_DEFAULT`
 
-```
+```toml
 # Edit your grub file
-$ sudo nano /etc/default/grub# Add the following value like such
+sudo nano /etc/default/grub# Add the following value like such
 GRUB_CMDLINE_LINUX_DEFAULT="... vfio-pci.ids=10de:10fa,10de:1fb9 intel_iommu=on ..."# Save the file, quit nano and update grub
-$ sudo update-grub
+sudo update-grub
 ```
 
 Now we need to tell the kernel to load vfio-pci before nouveau (which is the module that binds the GPU to the host).
 
-```
-$ sudo nano /etc/mkinitcpio.conf# Locate the line that sais
+```toml
+sudo nano /etc/mkinitcpio.conf# Locate the line that sais
 MODULES=(...)# And add those values (Make sure that nouveau is after vfio)
 MODULES=(... vfio_pci vfio vfio_iommu_type1 vfio_virqfd nouveau ...)
 ```
 
 Now we need to update the initrd image that GRUB uses to take those values in account:
 
-```
+```yaml
 # Check the name of the image that GRUP loads
 $ sudo update-grub
 Generating grub configuration file ...
@@ -144,7 +142,7 @@ done
 
 Since grub loads `/boot/initramfs-5.6-x86_64.img` as shown in the previous command output we will update this image:
 
-```
+```yaml
 $ sudo mkinitcpio -c /etc/mkinitcpio.conf -g /boot/initramfs-5.6-x86_64.img
 ==> Starting build: 5.6.11-1-MANJARO
   -> Running build hook: [base]
@@ -165,7 +163,7 @@ $ sudo mkinitcpio -c /etc/mkinitcpio.conf -g /boot/initramfs-5.6-x86_64.img
 
 At this point we are ready to reboot and confirm that our GPU was correctly bound by the vfio-pci driver:
 
-```
+```bash
 $ sudo reboot now
 ...# After reboot
 $ sudo lspci -nnk
@@ -201,15 +199,14 @@ Simply install windows as you normally would using the spice RDP. Once you have 
 
 ### Step 5.1 Correct code 31
 
-
 Out of the box the GPU will have the incorrect subsystem vendor and devie ids. For a reason yet unknown it is necessary to assign the Intel iGPU subsystem Ids to the card in order for it to be recognized. If you know why this as such, kindly leave an comment about it.
 
 For people who don’t have a Precision 7450 you may want to try setting it to your GPU subsystem ids.
 
 To get your Dell Precision 7450, iGPU subsystem id run the following command:
 
-```
-$ lspci -nnk | grep "Subsystem: Dell UHD Graphics"
+```bash
+lspci -nnk | grep "Subsystem: Dell UHD Graphics"
 Subsystem: Dell UHD Graphics 630 (Mobile) [1028:0926]
 ```
 
@@ -217,8 +214,8 @@ In my case the vendor id is `1028` and the device is `0926`
 
 Open a terminal and run the following command to edit your virtual machine configuration file. Replace your_vm_name with (well you’ve guessed it) the name you have given to your VM earlier (default should be win10).
 
-```bsh
-$ sudo EDITOR=nano virsh edit your_vm_name# Locate the following line
+```bash
+sudo EDITOR=nano virsh edit your_vm_name# Locate the following line
 ```
 
 `Output`
@@ -357,11 +354,11 @@ CONFIG_PREEMPT_VOLUNTARY=y
 
 [The instructions on how to achieve this are outlined in this article][3]
 
-**Final thoughts**
+## Final thoughts
 
 There are many ways that this procedure can go wrong, make sure to follow every step very carefully and comment if you are having issues!
 
-**Sources**
+### Sources
 
 I would like to give my thanks [Misairu-G][4] and [/u/keyhoad][5] for their invaluable work! If it hadn’t been for their work, I wouldn’t have been able to get this working at all.
 

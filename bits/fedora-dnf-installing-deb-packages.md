@@ -1,9 +1,10 @@
 ---
 title: "Fedora dnf installing deb packages"
 created: 2021-06-13 19:05:46
-tags: #linux, #devops
+tags: linux, devops
 keywords: dnf, debian, yum
 ---
+
 # Fedora dnf installing deb packages
 
 ## Convert .deb to .rpm **Doesn't always work**

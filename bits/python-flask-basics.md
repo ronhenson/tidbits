@@ -1,7 +1,7 @@
 ---
 title: "Python Flask Basics"
 created: 2021-07-26 11:50:32
-tags:
+tags: web, coding
 keywords: flask, python, environment, web
 ---
 

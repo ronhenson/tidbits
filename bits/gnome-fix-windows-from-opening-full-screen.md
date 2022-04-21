@@ -1,7 +1,7 @@
 ---
 title: "Gnome Fix Windows From Opening Full Screen"
 created: 2021-07-04 09:18:39
-tags: #devops
+tags: devops
 keywords: gnome, window, full screen
 ---
 

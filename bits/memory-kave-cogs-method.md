@@ -1,7 +1,7 @@
 ---
 title: "Memory Kave Cogs Method"
 created: 2021-09-02 09:42:53
-tags:
+tags: brain
 keywords: self help, memory
 ---
 
@@ -27,9 +27,8 @@ keywords: self help, memory
 ## Memorize future things
 
 - Prospective memory
-  - 
 
 ## Books
 
-  - Happiness Beyond Thought - Gary Weber
-  - Victorious Mind - Anthony Metivier
+- Happiness Beyond Thought - Gary Weber
+- Victorious Mind - Anthony Metivier

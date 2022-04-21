@@ -1,7 +1,7 @@
 ---
 title: "Python Gpg"
 created: 2018-07-30 05:59:48
-tags:
+tags: devops, python
 keywords: gpg, pgp, python
 ---
 

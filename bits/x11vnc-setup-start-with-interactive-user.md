@@ -1,13 +1,13 @@
 ---
 title: "X11vnc Setup Start With Interactive User"
 created: 2021-08-13 18:40:23
-tags:
+tags: devops
 keywords: x11, vnc
 ---
 
 # [X11vnc Setup Start With Interactive User](https://gist.githubusercontent.com/mgeeky/8e068b978095053b100ad49a6e9559d8/raw/161797a6eca86bc72338889e040be9a8a959e77b/ubuntu-x11vnc.md)
 
-## Ubuntu x11vnc setup with start upon interactive user login to the without-monitor box.
+## Ubuntu x11vnc setup with start upon interactive user login to the without-monitor box
 
 ### Quick intro
 
@@ -16,19 +16,17 @@ This should be stated, that I've come a long journey from systemd/init.d configu
 
 Finally, this below setup got me working with VNC.
 
-
 ### Setup
 
 Initial installation and VNC password creation:
 
 ```bash
-$ sudo apt-get install x11vnc
-$ sudo x11vnc -storepasswd "vnc-password" /etc/x11vnc.pass
-$ sudo chmod a+r /etc/x11vnc.pass
+sudo apt-get install x11vnc
+sudo x11vnc -storepasswd "vnc-password" /etc/x11vnc.pass
+sudo chmod a+r /etc/x11vnc.pass
 ```
 
 The last command may be arguably **very unsafe** but it's necessary for launching x11vnc as an ordinary user in _rfbauth_ access mode.
-
 
 First of all, we have to install _xorg dummy video driver_ like so:
 `sudo apt-get install xserver-xorg-video-dummy`
@@ -74,41 +72,41 @@ vncoptions="-display :0 -xrandr -forever -loop -noxdamage -repeat -rfbauth /etc/
 action=$1
 
 function start_vpn {
-	$vncpath $vncoptions > $vnclog 2>&1 &
-	echo $! > $pidfile
-	cat $pidfile
-	sleep 1
+  $vncpath $vncoptions > $vnclog 2>&1 &
+  echo $! > $pidfile
+  cat $pidfile
+  sleep 1
 
-	if netstat -plutan 2>/dev/null | grep LISTEN | grep x11vnc | grep -q 5904 ; then	
-		echo "x11vnc started listening on port 5904."
-	else
-		echo "[!] x11vnc is not listening!"
-	fi
+  if netstat -plutan 2>/dev/null | grep LISTEN | grep x11vnc | grep -q 5904 ; then
+    echo "x11vnc started listening on port 5904."
+  else
+    echo "[!] x11vnc is not listening!"
+  fi
 }
 
 if [ -f "$pidfile" ]; then
-	if [ "$action" == "start" ] || [ "$action" == "" ]; then
-		if [ -s "$pidfile" ] && [[ `cat $pidfile` > 0 ]]; then 
-			if pgrep $vncpath ; then
-				echo "x11vnc: running (pid file)."
-			else
-				killall $vncpath 2> /dev/null
-				echo 0 > $pidfile
-				start_vpn
-			fi
-		elif pgrep $vncpath ; then
-			echo "x11vnc: running (pgrep)."
-		else 
-			start_vpn
-		fi
-	elif [ "$action" == "stop" ]; then
-		killall $vncpath 2> /dev/null
-		echo 0 > $pidfile
-		cat $pidfile
-	fi
+  if [ "$action" == "start" ] || [ "$action" == "" ]; then
+    if [ -s "$pidfile" ] && [[ `cat $pidfile` > 0 ]]; then
+      if pgrep $vncpath ; then
+        echo "x11vnc: running (pid file)."
+      else
+        killall $vncpath 2> /dev/null
+        echo 0 > $pidfile
+        start_vpn
+      fi
+    elif pgrep $vncpath ; then
+      echo "x11vnc: running (pgrep)."
+    else
+      start_vpn
+    fi
+  elif [ "$action" == "stop" ]; then
+    killall $vncpath 2> /dev/null
+    echo 0 > $pidfile
+    cat $pidfile
+  fi
 
 else
-	echo "[!] PIDFILE: $pidfile does not exists, cannot proceed."
+  echo "[!] PIDFILE: $pidfile does not exists, cannot proceed."
 fi
 ```
 
@@ -140,7 +138,7 @@ You have new mail.
 Last login: Thu Jan 19 16:36:32 2017
 3241
 x11vnc started listening on port 5904.
-user@hostname:~$ 
+user@hostname:~$
 ```
 
 We can observe from the second to the last line that the VNC server has been observed to listening.
