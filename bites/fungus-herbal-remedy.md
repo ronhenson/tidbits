@@ -1,8 +1,8 @@
 ---
 title: "Fungus Herbal Remedy"
 created: 2022-04-07 09:02:19
-tags: tags
-keywords: template
+tags: health
+keywords: toenail, fungus
 ---
 
 # Fungus Herbal Remedy
